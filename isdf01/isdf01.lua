@@ -355,7 +355,7 @@ function Start() --This function is called upon the first frame
 	Mission.squad1_c = GetHandle("squad1_c")
 	Mission.wingman = GetHandle("wingman")
 	Mission.comm_building = GetHandle("comm_building")
-	Mission.player_ship = GetHandle("player_ship")
+	--Mission.player_ship = GetHandle("player_ship")
 	Mission.storage_bay = GetHandle("storage_bay")
 	Mission.condor1 = GetHandle("condor1")
 	Mission.condor2 = GetHandle("condor2")
@@ -400,6 +400,14 @@ function Start() --This function is called upon the first frame
 	
 	Ally(1,3)
 	Ally(3,1)
+	
+	--get player into vsr scout
+	PlayerTeam = GetTeamNum(Mission.player)
+	xfrm = GetTransform(Mission.player)
+	RemoveObject(Mission.player)
+	Mission.player = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
+	SetAsUser(Mission.player, PlayerTeam)
+	Mission.player_ship = GetPlayerHandle()
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
@@ -441,7 +449,7 @@ function missionCode() --
 	
 	-- this checks to see of the Mission.player is out of his ship
 
-	if (IsOdf(Mission.player,"ivplysct")) then
+	if (IsOdf(Mission.player,"ivscout_vsr")) then
 	
 		Mission.out_of_ship = false
 	
