@@ -370,7 +370,7 @@ function Start() --This function is called upon the first frame
 	Mission.ship2 = GetHandle("ship2")
 	Mission.ship3 = GetHandle("ship3")
 	Mission.ship4 = GetHandle("ship4")	
-	truck = GetHandle("truck")
+	Mission.truck = GetHandle("truck")
 	Mission.armory = GetHandle("armory")
 	--tech_center = GetHandle("tech_center")
 	--startbase_cbunk = GetHandle("startbase_cbunk")
@@ -544,9 +544,9 @@ if (not Mission.ON_HOLD) then
 			end
 
 
-			if ((IsAlive(truck)) and (IsAlive(Mission.player))) then
+			if ((IsAlive(Mission.truck)) and (IsAlive(Mission.player))) then
 			
-				if (GetTime() - GetLastFriendShot(truck) < .2) then
+				if (GetTime() - GetLastFriendShot(Mission.truck) < .2) then
 				
 					AudioMessage("ff02.wav") -- (truck) watch your firing!
 					Mission.fire_check = GetTime() + 2.0
@@ -667,9 +667,9 @@ if (not Mission.ON_HOLD) then
 			Mission.look_time = GetTime() + 13.0
 			Mission.at_player = true
 		
-		elseif (IsAlive(truck)) then
+		elseif (IsAlive(Mission.truck)) then
 		
-			LookAt(Mission.shabayev,truck)
+			LookAt(Mission.shabayev,Mission.truck)
 			Mission.look_time = GetTime() + 9.0
 			Mission.at_player = false
 		end
@@ -697,11 +697,11 @@ Mission.shabayev have the service truck repair some of the other ships.
 	
 	if (not start_done) then
 	
-		Stop(truck)
+		Stop(Mission.truck)
 		SetGroup(Mission.shab,-1)
 		SetTeamNum(Mission.shab,1)
-		SetGroup(truck,-1)
-		SetTeamNum(truck,1)
+		SetGroup(Mission.truck,-1)
+		SetTeamNum(Mission.truck,1)
 		ClearObjectives()
 		AddObjective("to_ship.otf", "WHITE")
 		SetPerceivedTeam(Mission.builder1,1)
@@ -721,11 +721,11 @@ Mission.shabayev have the service truck repair some of the other ships.
 
 	-- this makes the service truck repair the wounded shout
 
-	if ((not Mission.service_scout) and (GetDistance(Mission.player,truck) < 100.0)) then
+	if ((not Mission.service_scout) and (GetDistance(Mission.player,Mission.truck) < 100.0)) then
 	
 		Mission.holder = BuildObject("stayput",0,Mission.ship4)
 		Damage(Mission.ship4,200)
-		Service(truck,Mission.ship4,1)
+		Service(Mission.truck,Mission.ship4,1)
 		Mission.service_time2 = GetTime() + 5.0
 		Mission.service_scout = true
 	end
@@ -737,7 +737,7 @@ Mission.shabayev have the service truck repair some of the other ships.
 	if ((Mission.service_scout) and (not Mission.stop_service) and (Mission.service_time2 < GetTime())) then
 	
 		SetCurHealth(Mission.ship4,1800)
-		LookAt(truck,Mission.player)
+		LookAt(Mission.truck,Mission.player)
 		RemoveObject(Mission.holder)
 		Mission.service_time2 = GetTime() + 999999.9
 		Mission.stop_service = true
@@ -899,18 +899,18 @@ Mission.shabayev have the service truck repair some of the other ships.
 	
 		--RemoveObject(Mission.holder)
 		SetCurHealth(Mission.ship4,1800)
-		SetBestGroup(truck)
+		SetBestGroup(Mission.truck)
 		--LookAt(truck,Mission.player,0)
-		Goto(truck,"truck_move",0)
-		--Goto(truck,"trucky_ducky",0)
+		Goto(Mission.truck,"truck_move",0)
+		--Goto(Mission.truck,"trucky_ducky",0)
 		Mission.shabayev = BuildObject("ivpscou",1,Mission.temp_shabayev)
 		RemoveObject(Mission.temp_shabayev)
 
 		SetAvoidType(Mission.shabayev,0)
-		SetAvoidType(truck,0)
-		SetObjectiveOn(truck)
+		SetAvoidType(Mission.truck,0)
+		SetObjectiveOn(Mission.truck)
 		tempstr = TranslateString("Mission0103")  -- Service Truck
-		SetObjectiveName(truck,tempstr)
+		SetObjectiveName(Mission.truck,tempstr)
 		SetObjectiveOn(Mission.shabayev)
 		SetObjectiveName(Mission.shabayev,"Cmd. Shabayev")	
 		Retreat(Mission.shabayev,"oldbase_center")
@@ -946,7 +946,7 @@ Mission.shabayev have the service truck repair some of the other ships.
 
 	if (Mission.bool_dump) then
 	
-		if ((not Mission.first_over) and (IsSelected(truck))) then
+		if ((not Mission.first_over) and (IsSelected(Mission.truck))) then
 		
 			if (not Mission.selected_message) then
 			
@@ -979,16 +979,16 @@ Mission.shabayev have the service truck repair some of the other ships.
 
 	if (not Mission.player_lost) then
 		
-		if ((IsAlive(truck)) and (not IsSelected(truck)) and (not Mission.repairs_needed)) then
+		if ((IsAlive(Mission.truck)) and (not IsSelected(Mission.truck)) and (not Mission.repairs_needed)) then
 		
 			if ((not Mission.truck_following) and (Mission.truck_check < GetTime())) then
 			
 				Mission.truck_check = GetTime() + 0.5
 
 
-				if (GetCurrentCommand(truck) == 5) then
+				if (GetCurrentCommand(Mission.truck) == 5) then
 				
-					Mission.leader = GetCurrentWho(truck)
+					Mission.leader = GetCurrentWho(Mission.truck)
 
 
 					if ((not Mission.shab_message1) and (Mission.leader == Mission.player)) then
@@ -1027,7 +1027,7 @@ Mission.shabayev have the service truck repair some of the other ships.
 				Mission.truck_check = GetTime() + 2.0
 
 
-				if (GetCurrentCommand(truck) ~= 5) then
+				if (GetCurrentCommand(Mission.truck) ~= 5) then
 				
 					--Mission.get_truck_time =  GetTime() + 3.0
 					Mission.truck_check = GetTime() + 1.0
@@ -1158,7 +1158,7 @@ if ((not Mission.shab_at_point) and (Mission.shab_message1) and (IsAlive(Mission
 			
 				if (Mission.truck_following) then
 				
-					if (GetDistance(Mission.player,truck) < 70.0) then
+					if (GetDistance(Mission.player,Mission.truck) < 70.0) then
 					
 						Mission.talk = AudioMessage("isdf0209.wav") -- (Mission.shab) ok, follow me
 						--Mission.check1_time = GetTime() + 1.0
@@ -1441,12 +1441,12 @@ if ((not Mission.shab_at_point) and (Mission.shab_message1) and (IsAlive(Mission
 
 			if (IsAlive(Mission.scion2)) then
 			
-				Attack(Mission.scion2,truck)
-				Attack(Mission.scion1,truck)
+				Attack(Mission.scion2,Mission.truck)
+				Attack(Mission.scion1,Mission.truck)
 			
 			else
 			
-				Attack(Mission.scion1,truck)
+				Attack(Mission.scion1,Mission.truck)
 			end
 
 			Mission.dead_message = true
@@ -1457,7 +1457,7 @@ if ((not Mission.shab_at_point) and (Mission.shab_message1) and (IsAlive(Mission
 			ClearObjectives()
 			AddObjective("defend_truck.otf", "WHITE")
 			Attack(Mission.shabayev,Mission.scion2)
-			Attack(Mission.scion2,truck)
+			Attack(Mission.scion2,Mission.truck)
 			Mission.jammer_message_time = GetTime() + 999999.9
 			Mission.dead_message = true
 		
@@ -1505,9 +1505,9 @@ if ((not Mission.shab_at_point) and (Mission.shab_message1) and (IsAlive(Mission
 				AudioMessage("isdf0247.wav") -- (Mission.shab) Good Job John - give me a hand with this other one
 				Attack(Mission.shabayev,Mission.scion2)
 
-				if (IsAlive(truck)) then
+				if (IsAlive(Mission.truck)) then
 				
-					Attack(Mission.scion2,truck)
+					Attack(Mission.scion2,Mission.truck)
 				end
 
 				SetObjectiveOn(Mission.scion2)
@@ -1523,9 +1523,9 @@ if ((not Mission.shab_at_point) and (Mission.shab_message1) and (IsAlive(Mission
 				AudioMessage("isdf0247.wav") -- (Mission.shab) Good Job John - give me a hand with this other one
 				Attack(Mission.shabayev,Mission.scion1)
 
-				if (IsAlive(truck)) then
+				if (IsAlive(Mission.truck)) then
 				
-					Attack(Mission.scion1,truck)
+					Attack(Mission.scion1,Mission.truck)
 				end
 
 				SetObjectiveOn(Mission.scion1)
@@ -1569,7 +1569,7 @@ if ((not Mission.shab_at_point) and (Mission.shab_message1) and (IsAlive(Mission
 				Mission.point_check = GetTime() + 1.0
 				
 				
-				if (GetCurrentCommand(truck) == 5) then
+				if (GetCurrentCommand(Mission.truck) == 5) then
 				
 					Mission.talk = AudioMessage("isdf0230.wav")--(Mission.shab) rondezvous with me
 					ClearObjectives()
@@ -1591,7 +1591,7 @@ if ((not Mission.shab_at_point) and (Mission.shab_message1) and (IsAlive(Mission
 			
 				LookAt(Mission.shabayev,Mission.player)
 
-				if (GetCurrentCommand(truck) == 5) then
+				if (GetCurrentCommand(Mission.truck) == 5) then
 				
 					Mission.talk = AudioMessage("isdf0230.wav")--(Mission.shab) rondezvous with me
 					ClearObjectives()
@@ -1870,10 +1870,10 @@ if ((not Mission.after_first_message) and (Mission.shab_at_point)) then
 			if (not Mission.shab_full_health) then
 			
 				SetCurHealth(Mission.shabayev,1200)
-				Service(truck,Mission.shabayev,1)
+				Service(Mission.truck,Mission.shabayev,1)
 				AudioMessage("isdf0248.wav") -- Truck - repair me
 				Mission.look_time = GetTime() + 2.0
-				Service(truck,Mission.shabayev)
+				Service(Mission.truck,Mission.shabayev)
 				Mission.service_time = GetTime() + 8.0
 				Mission.shab_first = true
 				Mission.bert = true
@@ -1911,7 +1911,7 @@ if ((not Mission.after_first_message) and (Mission.shab_at_point)) then
 		
 			if (Mission.shab_full_health) then
 			
-				Follow(truck,Mission.player,0)
+				Follow(Mission.truck,Mission.player,0)
 				--Stop(truck,0)
 				Mission.repairs_needed = false
 				Mission.john_full_health = true
@@ -2061,7 +2061,7 @@ if ((not Mission.after_first_message) and (Mission.shab_at_point)) then
 				end
 
 
-				if (GetCurrentCommand(truck) ~= 5) then
+				if (GetCurrentCommand(Mission.truck) ~= 5) then
 				
 					Mission.get_truck_time =  GetTime() + 3.0
 					Mission.truck_check = GetTime() + 5.0
@@ -2077,7 +2077,7 @@ if ((not Mission.after_first_message) and (Mission.shab_at_point)) then
 				Mission.checkpoint2_check = GetTime() + 1.0
 
 
-				if (GetCurrentCommand(truck) ~= 5) then
+				if (GetCurrentCommand(Mission.truck) ~= 5) then
 				
 					Mission.get_truck_time =  GetTime() + 5.0
 					Mission.truck_check = GetTime() + 5.0
@@ -2146,7 +2146,7 @@ end
 
 if ((Mission.part_two) and (not Mission.at_base)) then
 
-	if ((not Mission.on_to_base) and (IsAlive(Mission.shabayev)) and (IsAlive(truck))) then
+	if ((not Mission.on_to_base) and (IsAlive(Mission.shabayev)) and (IsAlive(Mission.truck))) then
 	
 		-- this is the code gives the Mission.player the "show"
 		if (not Mission.no_show) then
@@ -2478,7 +2478,7 @@ if ((Mission.part_two) and (not Mission.at_base)) then
 				Mission.point_check = GetTime() + 1.0
 
 				
-				if (GetCurrentCommand(truck) == 5) then
+				if (GetCurrentCommand(Mission.truck) == 5) then
 				
 					Mission.talk = AudioMessage("isdf0230.wav")--(Mission.shab) rondezvous with me
 					ClearObjectives()
@@ -2526,7 +2526,7 @@ if ((Mission.part_two) and (not Mission.at_base)) then
 			
 					if (GetDistance(Mission.player,Mission.shabayev) > 80.0) then
 					
-						if (GetCurrentCommand(truck) == 5) then
+						if (GetCurrentCommand(Mission.truck) == 5) then
 						
 							LookAt(Mission.shabayev,Mission.player)
 							Mission.talk = AudioMessage("isdf0230.wav")--(Mission.shab) rondezvous with me
@@ -2566,7 +2566,7 @@ if ((Mission.part_two) and (not Mission.at_base)) then
 					Mission.onto_base_time = GetTime() + 5.0
 
 
-					if (GetCurrentCommand(truck) ~= 5) then
+					if (GetCurrentCommand(Mission.truck) ~= 5) then
 					
 						Mission.get_truck_time =  GetTime() + 3.0
 						Mission.truck_check = GetTime() + 5.0
@@ -2600,7 +2600,7 @@ if ((Mission.part_two) and (not Mission.at_base)) then
 	end
 
 
-	if ((Mission.on_to_base) and (IsAlive(Mission.shabayev)) and (IsAlive(truck))) then
+	if ((Mission.on_to_base) and (IsAlive(Mission.shabayev)) and (IsAlive(Mission.truck))) then
 	
 		if (Mission.onto_base_time < GetTime()) then
 		
@@ -2747,9 +2747,9 @@ if ((Mission.temp_spawn) and (not Mission.jammer2_dead)) then
 					
 						AudioMessage("isdf0251.wav")--(Mission.shab) we got 3 left
 
-						Attack(Mission.temp1,truck)
-						Attack(Mission.temp2,truck)
-						Attack(Mission.temp3,truck)
+						Attack(Mission.temp1,Mission.truck)
+						Attack(Mission.temp2,Mission.truck)
+						Attack(Mission.temp3,Mission.truck)
 
 						Mission.three_to_go = true
 						Mission.jammer2_dead_message = true
@@ -2758,8 +2758,8 @@ if ((Mission.temp_spawn) and (not Mission.jammer2_dead)) then
 					
 						AudioMessage("isdf0252.wav")--(Mission.shab) we got 2 left
 
-						Attack(Mission.temp1,truck)
-						Attack(Mission.temp2,truck)
+						Attack(Mission.temp1,Mission.truck)
+						Attack(Mission.temp2,Mission.truck)
 
 						Mission.two_to_go = true
 						Mission.jammer2_dead_message = true
@@ -2769,8 +2769,8 @@ if ((Mission.temp_spawn) and (not Mission.jammer2_dead)) then
 				
 					AudioMessage("isdf0252.wav")--(Mission.shab) we got 2 left
 
-					Attack(Mission.temp1,truck)
-					Attack(Mission.temp3,truck)
+					Attack(Mission.temp1,Mission.truck)
+					Attack(Mission.temp3,Mission.truck)
 
 					Mission.two_to_go = true
 					Mission.jammer2_dead_message = true
@@ -2779,7 +2779,7 @@ if ((Mission.temp_spawn) and (not Mission.jammer2_dead)) then
 				
 					AudioMessage("isdf0253.wav")--(Mission.shab) we got 1 left
 
-					Attack(Mission.temp1,truck)
+					Attack(Mission.temp1,Mission.truck)
 
 					Mission.one_to_go = true
 					Mission.jammer2_dead_message = true
@@ -2791,8 +2791,8 @@ if ((Mission.temp_spawn) and (not Mission.jammer2_dead)) then
 				
 					AudioMessage("isdf0252.wav")--(Mission.shab) we got 2 left
 					
-					Attack(Mission.temp2,truck)
-					Attack(Mission.temp3,truck)
+					Attack(Mission.temp2,Mission.truck)
+					Attack(Mission.temp3,Mission.truck)
 					
 					Mission.two_to_go = true
 					Mission.jammer2_dead_message = true
@@ -2801,7 +2801,7 @@ if ((Mission.temp_spawn) and (not Mission.jammer2_dead)) then
 				
 					AudioMessage("isdf0253.wav")--(Mission.shab) we got 1 left
 
-					Attack(Mission.temp2,truck)
+					Attack(Mission.temp2,Mission.truck)
 
 					Mission.one_to_go = true
 					Mission.jammer2_dead_message = true
@@ -2811,7 +2811,7 @@ if ((Mission.temp_spawn) and (not Mission.jammer2_dead)) then
 			
 				AudioMessage("isdf0253.wav")--(Mission.shab) we got 1 left
 
-				Attack(Mission.temp3,truck)
+				Attack(Mission.temp3,Mission.truck)
 
 				Mission.one_to_go = true
 				Mission.jammer2_dead_message = true
@@ -2918,7 +2918,7 @@ end
 
 if (Mission.at_base) then
 
-	if ((IsAlive(Mission.shabayev)) and (IsAlive(truck))) then
+	if ((IsAlive(Mission.shabayev)) and (IsAlive(Mission.truck))) then
 	
 		if ((not Mission.move_to_center) and (Mission.onto_base_time < GetTime())) then
 		
@@ -3097,7 +3097,7 @@ if (Mission.at_base) then
 				Mission.onto_base_time = GetTime() + 3.0
 				
 				LookAt(Mission.shabayev,Mission.player)
-				Goto(truck,"sue_point",0)
+				Goto(Mission.truck,"sue_point",0)
 
 				--if (IsAround(Mission.dead_power1)) then
 				--
@@ -3447,7 +3447,7 @@ if (not Mission.game_over) then
 
 	if ((not Mission.shab_hop_out) and (Mission.free_truck) and (not IsAround(Mission.shabayev))) then
 	
-		if (IsAlive(truck)) then
+		if (IsAlive(Mission.truck)) then
 		
 			AudioMessage("isdf0243.wav") -- (truck) you let the commander get killed!
 			FailMission(GetTime() + 7.0)
@@ -3461,7 +3461,7 @@ if (not Mission.game_over) then
 	
 	elseif ((Mission.startup_over) and (not IsAround(Mission.shabayev))) then
 	
-		if (IsAlive(truck)) then
+		if (IsAlive(Mission.truck)) then
 		
 			AudioMessage("isdf0243.wav") -- (truck) you let the commander get killed!
 			FailMission(GetTime() + 7.0)
@@ -3476,7 +3476,7 @@ if (not Mission.game_over) then
 	------------------------------------------------/
 
 
-	if ((not IsAlive(truck)) and (IsAlive(Mission.shabayev))) then
+	if ((not IsAlive(Mission.truck)) and (IsAlive(Mission.shabayev))) then
 	
 		AudioMessage("isdf0244.wav") -- (Mission.shab) you let the truck get killed!
 		FailMission(GetTime() + 7.0)
@@ -3494,7 +3494,7 @@ if (not Mission.game_over) then
 
 	if (Mission.shab_dead) then
 	
-		if (IsAlive(truck)) then
+		if (IsAlive(Mission.truck)) then
 		
 			AudioMessage("isdf0243.wav") -- (truck) you let the commander get killed!
 			FailMission(GetTime() + 7.0)
