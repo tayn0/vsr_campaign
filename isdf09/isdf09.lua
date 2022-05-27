@@ -81,11 +81,85 @@ function Start() --This function is called upon the first frame
 --  handles
 	Mission.ruin = GetHandle("ruins")
 	Mission.objective = GetHandle("objective")
-
-
+	Mission.player = GetPlayerHandle()
+	Mission.misl1 = GetHandle("missile1")
+	Mission.misl2 = GetHandle("missile2")
+	Mission.misl3 = GetHandle("missile3")
+	Mission.tank1 = GetHandle("tank1")
+	Mission.tank2 = GetHandle("tank2")
+	Mission.tank3 = GetHandle("tank3")
+	Mission.serv = GetHandle("unnamed_ivserv")
+	Mission.fact = GetHandle("unnamed_ibfact")
+	Mission.scav = GetHandle("unnamed_ivscav")
+	Mission.rec = GetHandle("unnamed_ivrecy")
 --  integers
 	Mission.mission_state = 0
 	Mission.shab_state = 0
+	
+	PlayerTeam = GetTeamNum(Mission.player)
+	xfrm = GetTransform(Mission.player)
+	RemoveObject(Mission.player)
+	Mission.player = BuildObject("ivtank_vsr", PlayerTeam, xfrm)
+	SetAsUser(Mission.player, PlayerTeam)
+	
+	PlayerTeam = GetTeamNum(Mission.misl1)
+	xfrm = GetTransform(Mission.misl1)
+	RemoveObject(Mission.misl1)
+	Mission.misl1 = BuildObject("ivmisl_vsr", PlayerTeam, xfrm)
+	SetGroup(Mission.misl1, 1)
+
+	PlayerTeam = GetTeamNum(Mission.misl2)
+	xfrm = GetTransform(Mission.misl2)
+	RemoveObject(Mission.misl2)
+	Mission.misl2 = BuildObject("ivmisl_vsr", PlayerTeam, xfrm)
+	SetGroup(Mission.misl2, 1)
+	
+	PlayerTeam = GetTeamNum(Mission.misl3)
+	xfrm = GetTransform(Mission.misl3)
+	RemoveObject(Mission.misl3)
+	Mission.misl3 = BuildObject("ivmisl_vsr", PlayerTeam, xfrm)
+	SetGroup(Mission.misl3, 1)
+	
+	PlayerTeam = GetTeamNum(Mission.tank1)
+	xfrm = GetTransform(Mission.tank1)
+	RemoveObject(Mission.tank1)
+	Mission.tank1 = BuildObject("ivtank_vsr", PlayerTeam, xfrm)
+	SetGroup(Mission.tank1, 0)
+	
+	PlayerTeam = GetTeamNum(Mission.tank2)
+	xfrm = GetTransform(Mission.tank2)
+	RemoveObject(Mission.tank2)
+	Mission.tank2 = BuildObject("ivtank_vsr", PlayerTeam, xfrm)
+	SetGroup(Mission.tank2, 0)
+	
+	PlayerTeam = GetTeamNum(Mission.tank3)
+	xfrm = GetTransform(Mission.tank3)
+	RemoveObject(Mission.tank3)
+	Mission.tank3 = BuildObject("ivtank_vsr", PlayerTeam, xfrm)
+	SetGroup(Mission.tank3, 0)
+	
+	PlayerTeam = GetTeamNum(Mission.serv)
+	xfrm = GetTransform(Mission.serv)
+	RemoveObject(Mission.serv)
+	Mission.serv = BuildObject("ivserv_vsr", PlayerTeam, xfrm)
+	SetGroup(Mission.serv, 4)
+	
+	PlayerTeam = GetTeamNum(Mission.scav)
+	xfrm = GetTransform(Mission.scav)
+	RemoveObject(Mission.scav)
+	Mission.scav = BuildObject("ivscav_vsr", PlayerTeam, xfrm)
+	SetGroup(Mission.scav, 5)
+	
+	PlayerTeam = GetTeamNum(Mission.fact)
+	xfrm = GetTransform(Mission.fact)
+	RemoveObject(Mission.fact)
+	Mission.fact = BuildObject("ibfact_vsr", PlayerTeam, xfrm)
+	
+	PlayerTeam = GetTeamNum(Mission.rec)
+	xfrm = GetTransform(Mission.rec)
+	RemoveObject(Mission.rec)
+	Mission.rec = BuildObject("ibrecy_vsr", PlayerTeam, xfrm)
+
    
 end
 

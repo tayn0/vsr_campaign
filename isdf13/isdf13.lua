@@ -233,7 +233,7 @@ function Start() --This function is called upon the first frame
 
 --  handles
 	Mission.player_ship = GetHandle("player_ship")
-	Mission.player = GetPlayerHandle()
+	Mission.player = GetPlayerHandle()	
 	Mission.burns = GetHandle("burns")
 	Mission.recycler = GetHandle("recycler")
 	Mission.forge = GetHandle("forge")
@@ -303,9 +303,19 @@ function Start() --This function is called upon the first frame
 	Mission.kick1 = nil
 	Mission.kick2 = nil
 	Mission.carrier = nil
+
+
+	--get player into vsr tank
+	PlayerTeam = GetTeamNum(Mission.player)
+	xfrm = GetTransform(Mission.player)
+	RemoveObject(Mission.player)
+	Mission.player = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
+	SetAsUser(Mission.player, PlayerTeam)
+	GiveWeapon(Mission.player,"gchainvsr_c")
+
 	
 	PreloadODF("ivcarr")
-	PreloadODF("ivrecy")
+	PreloadODF("ivrecy_vsr")
    
 end
 
@@ -629,9 +639,9 @@ end
 function HaveScav()
 
 	a = CountUnitsNearObject(nil,99999.0,2,"fbscup")
-	
+	PrintConsoleMessage("a is"..a)
 	b = CountUnitsNearObject(nil,99999.0,2,"fbscav")
-
+	PrintConsoleMessage("b is"..b)
 	up_scavs = a
 	scavs = a+b
 
@@ -648,8 +658,8 @@ end
 
 function HaveScav2()
 
-	x = CountUnitsNearObject(nil,99999.0,2,"ibscup")
-	z = CountUnitsNearObject(nil,99999.0,2,"ibscav")
+	x = CountUnitsNearObject(nil,99999.0,2,"ibscup_vsr")
+	z = CountUnitsNearObject(nil,99999.0,2,"ibscav_vsr")
 
 	scavs2 = x+z;
 
@@ -1358,7 +1368,7 @@ if ((not Mission.part_two) and (not Mission.game_over)) then
 		
 			pos = GetPosition(Mission.recycler)
 			RemoveObject(Mission.recycler)
-			Mission.recycler = BuildObject("ivrecy",1,pos)
+			Mission.recycler = BuildObject("ivrecy_vsr",1,pos)
 			SetGroup(Mission.recycler,0)
 			AddScrap(1,40)
 			SetObjectiveOff(Mission.nav1)
@@ -1446,13 +1456,13 @@ end
 	--PrintConsoleMessage(tostring(GetTime()))
 	--PrintConsoleMessage(tostring(Mission.plan_check))
 	if (Mission.plan_check < GetTime()) then
-
+	
 		Mission.plan_check = GetTime() + 60
 
 		if (not Mission.titan_plan) then
 			PrintConsoleMessage("Running HaveScav")
 			if ((HaveScav()) and (IsAround(Mission.overseer)) and (IsAround(Mission.stronghold))) then
-
+			
 				SetAIP("isdf1303.aip",2)
 				Mission.titan_plan = true
 			end
@@ -1818,7 +1828,7 @@ end
 				end
 			end
 
-			if ((IsOdf(Mission.player,"ivtank13")) and (GetCurAmmo(Mission.player_ship) < 1500)) then
+			if ((GetAmmo(Mission.player) < 1)) then
 			
 				UnAlly(2,1)
 				UnAlly(1,2)
@@ -1828,15 +1838,6 @@ end
 				Mission.game_over = true						
 			end
 
-			if ((IsOdf(Mission.player,"isuser")) and (GetCurAmmo(Mission.player) < 100)) then
-			
-				UnAlly(2,1)
-				UnAlly(1,2)
-				StopAudioMessage(Mission.talk)
-				AudioMessage("isdf1317.wav")--(Kossieh) They've called off the meeting because of your incompedencenot 
-				FailMission(GetTime() + 15.0,"isdf13l1.txt")
-				Mission.game_over = true						
-			end
 		end
 
 		if ((not Mission.game_over) and (not IsAlive(Mission.recycler))) then

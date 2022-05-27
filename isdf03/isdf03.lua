@@ -256,7 +256,6 @@ function Start() --This function is called upon the first frame
 
 --  handles
 	Mission.player = GetPlayerHandle()
-	Mission.player_ship = GetHandle("player_ship")
 	Mission.shabayev = GetHandle("shabayev")
 	Mission.truck = GetHandle("truck")
 	Mission.power1 = GetHandle("power1")
@@ -300,8 +299,21 @@ function Start() --This function is called upon the first frame
 	Mission.extra2 = nil
 	Mission.pilot = nil
 	
-
-
+	PlayerTeam = GetTeamNum(Mission.dead_tank)
+	xfrm = GetTransform(Mission.dead_tank)
+	RemoveObject(Mission.dead_tank)
+	Mission.dead_tank = BuildObject("ivtank_vsr", PlayerTeam, xfrm)
+	RemovePilot(Mission.dead_tank)
+	SetLabel(Mission.dead_tank, "dead_tank")
+	
+	PlayerTeam = GetTeamNum(Mission.player)
+	xfrm = GetTransform(Mission.player)
+	RemoveObject(Mission.player)
+	Mission.player = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
+	SetAsUser(Mission.player, PlayerTeam)
+	SetLabel(Mission.player, "player_ship")
+	Mission.player_ship = GetPlayerHandle()
+	
 
 PreloadODF("fvtug3")
 PreloadODF("fvpscou3")
@@ -404,7 +416,7 @@ if (not Mission.ON_HOLD) then
 	-- this is checking to see what vehicle the Mission.player is in
 
 
-	if (IsOdf(Mission.player,"ivtank")) then
+	if (IsOdf(Mission.player,"ivtank_vsr")) then
 	
 		Mission.first_tank_check = true
 		Mission.player_in_tank = true
@@ -415,7 +427,7 @@ if (not Mission.ON_HOLD) then
 	end
 
 
-	if ((IsOdf(Mission.player,"ivplysct")) or (IsOdf(Mission.player,"ivtank"))) then
+	if ((IsOdf(Mission.player,"ivscout_vsr")) or (IsOdf(Mission.player,"ivtank_vsr"))) then
 	
 		Mission.john_in_ship = true
 	
@@ -2566,7 +2578,7 @@ end
 	-- this is if the Mission.player's ship gets destroyed then
 
 	if ((not IsAround(Mission.player_ship)) and (not Mission.ship_destroyed)) then
-	
+		PrintConsoleMessage("Mission.player_ship is " .. tostring(Mission.player_ship))
 		Mission.ship_destroyed_time = GetTime() + 5.0
 		Mission.ship_destroyed = true
 	end

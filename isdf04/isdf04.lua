@@ -447,6 +447,28 @@ function Start() --This function is called upon the first frame
 	Mission.dust1 = nil
 	Mission.dust2 = nil
 	Mission.pilot = nil
+	
+	PlayerTeam = GetTeamNum(Mission.player)
+	xfrm = GetTransform(Mission.player)
+	RemoveObject(Mission.player)
+	Mission.player = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
+	SetAsUser(Mission.player, PlayerTeam)
+	SetLabel(Mission.player, "player_ship")
+	Mission.player_ship = GetPlayerHandle()
+	
+	PlayerTeam = GetTeamNum(Mission.empty_scout1)
+	xfrm = GetTransform(Mission.empty_scout1)
+	RemoveObject(Mission.empty_scout1)
+	Mission.empty_scout1 = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
+	SetLabel(Mission.empty_scout1, "empty_scout1")
+	RemovePilot(Mission.empty_scout1)
+	
+	PlayerTeam = GetTeamNum(Mission.empty_scout2)
+	xfrm = GetTransform(Mission.empty_scout2)
+	RemoveObject(Mission.empty_scout2)
+	Mission.empty_scout2 = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
+	SetLabel(Mission.empty_scout2, "empty_scout2")
+	RemovePilot(Mission.empty_scout2)
    
 end
 
@@ -861,7 +883,7 @@ if (not Mission.ON_HOLD) then
 
 	-- I'm checking to see if the Mission.player looses his ship then
 
-	if ((IsOdf(Mission.player,"ivplysct")) or (IsOdf(Mission.player,"ivtank")) or (IsOdf(Mission.player,"ivscav")) or (IsOdf(Mission.player,"ivturr"))) then
+	if ((IsOdf(Mission.player,"ivscout_vsr")) or (IsOdf(Mission.player,"ivtank")) or (IsOdf(Mission.player,"ivscav")) or (IsOdf(Mission.player,"ivturr"))) then
 	
 		Mission.player_on_foot = false
 		Mission.player_in_ship = true

@@ -150,6 +150,8 @@ function Start() --This function is called upon the first frame
 	
 	PreloadODF("ivtank")
 	PreloadODF("ivmbike")
+	
+
    
 end
 
@@ -200,9 +202,9 @@ function missionCode() --
 		SetScrap(1,30)
 ]]	
 -- These ships circle the ruin you're in at the beginning, then leave
-		Mission.pilot1 = BuildObject("fvtank",2,"pilot_1")
-		Mission.pilot2 = BuildObject("fvtank",2,"pilot_2")
-		Mission.pilot3 = BuildObject("fvsent",2,"pilot_3")
+		Mission.pilot1 = BuildObject("fvtank_vsr",2,"pilot_1")
+		Mission.pilot2 = BuildObject("fvtank_vsr",2,"pilot_2")
+		Mission.pilot3 = BuildObject("fvsent_vsr",2,"pilot_3")
 
 -- They are dumb
 		SetIndependence(Mission.pilot1,0)
@@ -236,9 +238,9 @@ function missionCode() --
  --   SetIndependence(Mission.espir1,0)
 
 -- These 3 ships patrol different areas
-    Mission.scout1 = BuildObject("fvtank",2,"patrol_1")
+    Mission.scout1 = BuildObject("fvtank_vsr",2,"patrol_1")
 		Patrol(Mission.scout1,"patrol_1",0)
-		Mission.scout2 = BuildObject("fvtank",2,"patrol_2")
+		Mission.scout2 = BuildObject("fvtank_vsr",2,"patrol_2")
 		Patrol(Mission.scout2,"patrol_2",0)
 
 		-- this should be a bazooka or something
@@ -412,9 +414,9 @@ function missionCode() --
       (GetDistance(Mission.player,"exitruin_2")<80.0))  and
       (not trigger1)) then
   
-    Mission.attack1 = BuildObject("fvtank",2,"attack_1")
-    Mission.attack2 = BuildObject("fvsent",2,"attack_2")
-    Mission.attack3 = BuildObject("fvtank",2,"attack_3")
+    Mission.attack1 = BuildObject("fvtank_vsr",2,"attack_1")
+    Mission.attack2 = BuildObject("fvsent_vsr",2,"attack_2")
+    Mission.attack3 = BuildObject("fvtank_vsr",2,"attack_3")
     Attack(Mission.attack1,Mission.player)
     Attack(Mission.attack2,Mission.player)
     Attack(Mission.attack3,Mission.player)
@@ -487,9 +489,9 @@ function missionCode() --
       (GetDistance(Mission.player,"enterbase_3")<100.0))  and
       (not Mission.trigger2)) then 
   
-    Mission.rescue1 = BuildObject("ivtank",1,"rescue_1")
-    Mission.rescue2 = BuildObject("ivmbike",1,"rescue_2")
-    Mission.rescue3 = BuildObject("ivtank",1,"rescue_3")
+    Mission.rescue1 = BuildObject("ivtank_vsr",1,"rescue_1")
+    Mission.rescue2 = BuildObject("ivmbike_vsr",1,"rescue_2")
+    Mission.rescue3 = BuildObject("ivtank_vsr",1,"rescue_3")
     Attack(Mission.rescue1,Mission.attack1)
     Attack(Mission.rescue2,Mission.attack1)
     Attack(Mission.rescue3,Mission.attack1)

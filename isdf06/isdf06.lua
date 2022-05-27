@@ -45,6 +45,8 @@ local Mission = {
 	goal,
 	mbike1,
 	mbike2,
+	ivmisl2,
+	ivmisl3,
 --	mbike3,
 --	Mission.constructor,
 	scav,
@@ -86,6 +88,8 @@ function Start() --This function is called upon the first frame
 	Mission.goal=GetHandle("goal")
 	Mission.mbike1=GetHandle("bike1")
 	Mission.mbike2=GetHandle("bike2")
+	Mission.misl2=GetHandle("ivmisl2")
+	Mission.misl3=GetHandle("ivmisl3")
 --	mbike3=GetHandle("bike3")
 --	constructor=GetHandle("constructor")
 	Mission.scav1=GetHandle("scav1")
@@ -96,7 +100,35 @@ function Start() --This function is called upon the first frame
 	Mission.basepool2 = GetHandle("basepool2")
 	Mission.basepool3 = GetHandle("basepool3")
 
+	PlayerTeam = GetTeamNum(Mission.player)
+	xfrm = GetTransform(Mission.player)
+	RemoveObject(Mission.player)
+	Mission.player = BuildObject("ivmisl_vsr", PlayerTeam, xfrm)
+	SetAsUser(Mission.player, PlayerTeam)
 	
+	PlayerTeam = GetTeamNum(Mission.mbike1)
+	xfrm = GetTransform(Mission.mbike1)
+	RemoveObject(Mission.mbike1)
+	Mission.mbike1 = BuildObject("ivmbike_vsr", PlayerTeam, xfrm)
+	SetGroup(Mission.mbike1, 1)	
+	
+	PlayerTeam = GetTeamNum(Mission.mbike2)
+	xfrm = GetTransform(Mission.mbike2)
+	RemoveObject(Mission.mbike2)
+	Mission.mbike2 = BuildObject("ivmbike_vsr", PlayerTeam, xfrm)	
+	SetGroup(Mission.mbike2, 1)
+	
+	PlayerTeam = GetTeamNum(Mission.misl2)
+	xfrm = GetTransform(Mission.misl2)
+	RemoveObject(Mission.misl2)
+	Mission.misl2 = BuildObject("ivmisl_vsr", PlayerTeam, xfrm)
+	SetGroup(Mission.misl2, 0)
+	
+	PlayerTeam = GetTeamNum(Mission.misl3)
+	xfrm = GetTransform(Mission.misl3)
+	RemoveObject(Mission.misl3)
+	Mission.misl3 = BuildObject("ivmisl_vsr", PlayerTeam, xfrm)
+	SetGroup(Mission.misl3, 0)
 	
 	PreloadODF("ivcon6")
 	PreloadODF("fvscav")
@@ -316,7 +348,7 @@ function missionCode() --
 		AddHealth(temp,-2500)
 		temp=GetHandle("gtow2")
 		AddHealth(temp,-2500)
-		GiveWeapon(Mission.player, "gshadow_c")
+		GiveWeapon(Mission.player, "gshadowvsr_c")
 		--[[
 		turret1=BuildObject("ivturr",3,"turret1")
 		turret2=BuildObject("ivturr",3,"turret2")

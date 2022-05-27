@@ -174,6 +174,12 @@ function Start() --This function is called upon the first frame
 	Mission.pgen2 = nil
 	Mission.cbunker = nil
 	
+	PlayerTeam = GetTeamNum(Mission.player)
+	xfrm = GetTransform(Mission.player)
+	RemoveObject(Mission.player)
+	Mission.player = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
+	SetAsUser(Mission.player, PlayerTeam)
+	
 	PreloadODF("fvsent")
 	PreloadODF("ivtank")
 	PreloadODF("fvtank")
@@ -344,7 +350,7 @@ function missionCode() --
 	end
 
 	-- determining if the Mission.player is out of his ship then
-	if (IsOdf(Mission.player,"isuser")) then
+	if (IsOdf(Mission.player,"ispilo")) then
 	
 		if (not Mission.out_of_ship) then 
 		GiveWeapon(Mission.player, "igsatc")

@@ -241,9 +241,7 @@ function AddObject(h) --This function is called when an object appears in the ga
     elseif ((not Mission.wrecker_a) and (IsOdf(h,"apwrck"))) then
  
             Mission.wrecker_a = true
-       
- 
-        
+
  
         -- GUARDIAN
     elseif ((not Mission.guard1_a) and (IsOdf(h,"fvturr"))) then
@@ -358,6 +356,7 @@ SetAutoGroupUnits(false)
     Mission.start_scout2 = GetHandle("start_scout2")
     Mission.start_scout3 = GetHandle("start_scout3")
     Mission.start_scout4 = GetHandle("start_scout4")
+	Mission.forge = GetHandle("forge")
     Mission.condor1 = GetHandle("condor1")
     Mission.condor2 = GetHandle("condor2")
     Mission.ivturr1 = GetHandle("ivturr1")
@@ -373,7 +372,69 @@ SetAutoGroupUnits(false)
     Mission.convoy_cons = GetHandle("convoy_cons")
     Mission.cpool1 = GetHandle("cpool1")
     Mission.cpool2 = GetHandle("cpool2")
+	
+	PlayerTeam = GetTeamNum(Mission.recycler)
+	xfrm = GetTransform(Mission.recycler)
+	RemoveObject(Mission.recycler)
+	Mission.recycler = BuildObject("ivrecy_vsr", PlayerTeam, xfrm)
 
+	PlayerTeam = GetTeamNum(Mission.player)
+	xfrm = GetTransform(Mission.player)
+	RemoveObject(Mission.player)
+	Mission.player = BuildObject("ivtank_vsr", PlayerTeam, xfrm)
+	SetAsUser(Mission.player, PlayerTeam)
+	
+	PlayerTeam = GetTeamNum(Mission.ivturr1)
+	xfrm = GetTransform(Mission.ivturr1)
+	RemoveObject(Mission.ivturr1)
+	Mission.ivturr1 = BuildObject("ivturr_vsr", PlayerTeam, xfrm)
+	SetGroup(Mission.ivturr1, 1)
+	
+	PlayerTeam = GetTeamNum(Mission.ivturr2)
+	xfrm = GetTransform(Mission.ivturr2)
+	RemoveObject(Mission.ivturr2)
+	Mission.ivturr2 = BuildObject("ivturr_vsr", PlayerTeam, xfrm)
+	SetGroup(Mission.ivturr2, 2)
+	
+	PlayerTeam = GetTeamNum(Mission.start_war1)
+	xfrm = GetTransform(Mission.start_war1)
+	RemoveObject(Mission.start_war1)
+	Mission.start_war1 = BuildObject("fvtank_vsr", PlayerTeam, xfrm)
+	
+	PlayerTeam = GetTeamNum(Mission.start_war2)
+	xfrm = GetTransform(Mission.start_war2)
+	RemoveObject(Mission.start_war2)
+	Mission.start_war2 = BuildObject("fvtank_vsr", PlayerTeam, xfrm)
+	
+	PlayerTeam = GetTeamNum(Mission.start_sent1)
+	xfrm = GetTransform(Mission.start_sent1)
+	RemoveObject(Mission.start_sent1)
+	Mission.start_sent1 = BuildObject("fvsent_vsr", PlayerTeam, xfrm)
+	
+	PlayerTeam = GetTeamNum(Mission.start_sent2)
+	xfrm = GetTransform(Mission.start_sent2)
+	RemoveObject(Mission.start_sent2)
+	Mission.start_sent2 = BuildObject("fvsent_vsr", PlayerTeam, xfrm)
+	
+	PlayerTeam = GetTeamNum(Mission.srecycler)
+	xfrm = GetTransform(Mission.srecycler)
+	RemoveObject(Mission.srecycler)
+	Mission.srecycler = BuildObject("fvrecy_vsr", PlayerTeam, xfrm)
+
+	PlayerTeam = GetTeamNum(Mission.forge)
+	xfrm = GetTransform(Mission.forge)
+	RemoveObject(Mission.forge)
+	Mission.forge = BuildObject("fbforg_vsr", PlayerTeam, xfrm)
+	
+	PlayerTeam = GetTeamNum(Mission.start_scout1)
+	xfrm = GetTransform(Mission.start_scout1)
+	RemoveObject(Mission.start_scout1)
+	Mission.start_scout1 = BuildObject("fvscout_vsr", PlayerTeam, xfrm)
+	
+	PlayerTeam = GetTeamNum(Mission.start_scout4)
+	xfrm = GetTransform(Mission.start_scout4)
+	RemoveObject(Mission.start_scout4)
+	Mission.start_scout4 = BuildObject("fvscout_vsr", PlayerTeam, xfrm)
  
    
 end

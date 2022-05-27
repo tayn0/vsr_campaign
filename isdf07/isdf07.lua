@@ -95,7 +95,8 @@ function Start() --This function is called upon the first frame
 	Ally(3,1)
 	Ally(1,3)
 	
-	Mission.player = nil
+	Mission.player = GetPlayerHandle()
+	Mission.recy = GetHandle("recycler")
 	Mission.shabayev = nil
 	Mission.spawn1 = nil
 	Mission.spawn2 = nil
@@ -121,12 +122,23 @@ function Start() --This function is called upon the first frame
 	PreloadODF("fvartl")
 	PreloadODF("fvarch")
 	
+	PlayerTeam = GetTeamNum(Mission.player)
+	xfrm = GetTransform(Mission.player)
+	RemoveObject(Mission.player)
+	Mission.player = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
+	SetAsUser(Mission.player, PlayerTeam)
+	
+	PlayerTeam = GetTeamNum(Mission.recy)
+	xfrm = GetTransform(Mission.recy)
+	RemoveObject(Mission.recy)
+	Mission.recy = BuildObject("ivrecy_vsr", PlayerTeam, xfrm)
+	SetGroup(Mission.recy,0)
    
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
 
-	if (IsOdf(h,"ibrecy")) then
+	if (IsOdf(h,"ibrecy_vsr")) then
 	
 		temp = BuildObject("fvscout", Mission.comp_team, Mission.spawn1)
 		Attack(temp, h, 1)
@@ -135,39 +147,42 @@ function AddObject(h) --This function is called when an object appears in the ga
 	end
 
 
-	if ((not Mission.scavBuilt) and (IsOdf(h,"ivscav:1")))  then
+	if ((not Mission.scavBuilt) and (IsOdf(h,"ivscav_vsr:1")))  then
 --		temp = BuildObject("fvsent", Mission.comp_team, Mission.spawn1)
 --		Attack(temp, h, 1)
 		Mission.scavBuilt = true
 	
-	elseif ((not Mission.powerBuilt) and (IsOdf(h,"ibpgen")))	 then
+	elseif ((not Mission.powerBuilt) and (IsOdf(h,"ibpgen_vsr")))	 then
 		Mission.powerBuilt = true
 	
 	elseif ((not Mission.wallsBuilt) and (IsOdf(h,"ibwall")))  then
 		Mission.wallsBuilt = true
 
 		
-	elseif ((not Mission.constBuilt) and (IsOdf(h,"ivcons:1")))  then
+	elseif ((not Mission.constBuilt) and (IsOdf(h,"ivcons_vsr:1")))  then
 		SendEnemies(2, h)
 		Mission.constBuilt = true
 	
-	elseif ((not Mission.relayBuilt) and (IsOdf(h,"ibcbun"))) then
+	elseif ((not Mission.relayBuilt) and (IsOdf(h,"ibcbun_vsr"))) then
 	
 		SendEnemies(3,h)
 		Mission.relayBuilt = true
 	
-	elseif ((not Mission.gunTowBuilt) and (IsOdf(h,"ibgtow")))  then
+	elseif ((not Mission.gunTowBuilt) and (IsOdf(h,"ibgtow_vsr")))  then
 		SendEnemies(4, h)
 		gtow = h
 		Mission.gunTowBuilt = true
 	
-	elseif ((not Mission.shabOutOfVehicle) and (IsOdf(h,"ispilo")))  then
+	elseif ((not Mission.shabOutOfVehicle) and (IsOdf(h,"ispilo")) and h ~= Mission.player)  then
+		PrintConsoleMessage("checking hop")
 		if (Mission.justHoped)  then
+			PrintConsoleMessage("shab out")
 			Mission.shabOnFoot = h
 			Mission.shabOutOfVehicle = true
 		end
 	
-	elseif ((Mission.shabOutOfVehicle) and (IsOdf(h,"isuser")))  then
+	elseif ((Mission.shabOutOfVehicle) and (IsOdf(h,"ispilo")) and h == GetPlayerHandle())  then
+		PrintConsoleMessage("player out")
 		Mission.playerOnFoot = true
 		Mission.oldPlayer = Mission.player
 	end
@@ -177,11 +192,11 @@ function AddObject(h) --This function is called when an object appears in the ga
 
 
 	
-	elseif (IsOdf(h,"ivrckt"))   then --react to the Mission.player building a rocket tank then
+	elseif (IsOdf(h,"ivrckt_vsr:1"))   then --react to the Mission.player building a rocket tank then
 		SendEnemies(1, h)
 
 		
-	elseif (IsOdf(h,"ivturr"))   then --react to the Mission.player building a turret then
+	elseif (IsOdf(h,"ivturr_vsr:1"))   then --react to the Mission.player building a turret then
 		SendEnemies(3, h)
 	end
 
@@ -577,7 +592,6 @@ function missionCode() --
 		Mission.creature4 = BuildObject("mcjak01",0,"creature4")
 
 		Mission.shabayev = BuildObject("ivtank",3,"spawn_shab")
-		Mission.recy = GetHandle("recycler")
 		Mission.ruins = GetHandle("ruins")
 		SetScrap(1, 40)
 --			Mission.playerEnemy1 = BuildObject("fvtank", 2, Mission.spawn3)

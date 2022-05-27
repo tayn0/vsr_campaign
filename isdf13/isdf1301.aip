@@ -1,0 +1,38 @@
+[Start]
+scrapCount = 100
+scavClass = "fvscav"
+consClass = "fvcons"
+IdleAllCraft = false // Prevent Interrupting AI.
+
+[IdleDispatcher]
+UnitIdleSeconds = 999999 // Don't send out units via Dispatch.
+
+[Match]
+targetType1 = "ivtank"
+attackType1_1 = "fvtank"
+
+targetType2 = "ivtank"
+attackType2_1 = "fvsent"
+attackType2_2 = "fvsent"
+
+targetType3 = "ivscout"
+attackType3_1 = "fvsent"
+
+targetType4 = "ivscout"
+attackType4_1 = "fvscout"
+
+targetType5 = "ibgtow"
+attackType5_1 = "fvtank"
+attackType5_2 = "fvtank"
+
+targetType6 = "ibgtow"
+attackType6_1 = "fvatank"
+
+targetType7 = "ivturr"
+attackType7_1 = "fvsent"
+attackType7_2 = "fvsent"
+
+targetType8 = "ivatank"
+attackType8_1 = "fvscout"
+attackType8_2 = "fvscout"
+attackType8_3 = "fvscout"
