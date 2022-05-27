@@ -201,8 +201,8 @@ local Mission = {
 	swap_time = 999999.9,
 	talk_time = 999999.9,
 	sound_time = 999999.9,
-	AllyMinRadiusAway=20.0,
-	AllyMaxRadiusAway=40.0,
+	AllyMinRadiusAway=nil,
+	AllyMaxRadiusAway=nil,
 
   --handles
 	player,
@@ -636,9 +636,9 @@ function missionCode() --
 
 	if ((not Mission.free_player) and (Mission.big_switch) and (Mission.swap_time < GetTime())) then
 		Mission.swap_time = GetTime() + 999999.9
-		controls = {}
-		controls.fire = true
-		SetControls(Mission.player, controls)
+		--controls = {}
+		--controls.fire = true
+		--SetControls(Mission.player, controls)
 		Mission.free_player = true
 	end
 
@@ -2367,6 +2367,7 @@ if (not Mission.ON_HOLD) then
 			Mission.turret_time = GetTime() + 120.0
 			CameraReady()
 			Mission.camera_time = GetTime() + 7.0
+			--Mission.dropship = BuildObject("ivpdrop",1,"new_turr1")
 			SetAnimation(Mission.dropship, "fly", 0)
 			Mission.drop_message3 = true
 		end
@@ -2395,7 +2396,7 @@ if (not Mission.ON_HOLD) then
 			pos = GetPosition(Mission.dropship)
 			pos.x = pos.x + 2
 			SetCameraPosition(pos, pos)
-			CameraObject(Mission.dropship, 0, 0, 0, Mission.dropship)
+			CameraObject(Mission.dropship, 40, 60, 30, Mission.dropship)
 		end
 
 
@@ -3093,7 +3094,7 @@ if (Mission.ON_HOLD) then
 		if ((Mission.two_land) and (Mission.landing_time < GetTime())) then
 			RemoveObject(Mission.dropshipa)
 			RemoveObject(Mission.dropshipb)
-			Mission.  = BuildObject("ivpdrop",1,"drop_point1")
+			Mission.dropshipa = BuildObject("ivpdrop",1,"drop_point1")
 			Mission.dropshipb = BuildObject("ivpdrop",1,"drop_point2")
 			SetAnimation(Mission.dropshipa, "deploy", 1)
 			SetAnimation(Mission.dropshipb, "deploy", 1)
