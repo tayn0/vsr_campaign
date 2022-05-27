@@ -7,7 +7,7 @@ Date: 7-11-2021
 Description: Campagin mission isdf11 ported to LUA
 References:
 1. https:--steamcommunity.com-sharedfiles-filedetails-?id=1488402495
-2. https:www.lua.org-docs.html
+2. https:www.lua.org-docs.html 
 ]] --
 local Mission = {
    TPS = 0,
