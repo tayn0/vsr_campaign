@@ -447,6 +447,8 @@ function Start() --This function is called upon the first frame
 	Mission.dust1 = nil
 	Mission.dust2 = nil
 	Mission.pilot = nil
+
+	SetTeamNum(Mission.armory, 0)
    
 end
 
@@ -1317,6 +1319,7 @@ if (not Mission.ON_HOLD) then
 		Mission.pause = GetTime() + 3.0
 		SetAIP("isdf0402.aip",1) -- builds turrets
 		Mission.shab_message2 = true
+		SetTeamNum(Mission.armory, 1)	
 	end
 	--------------------------------------------
 
