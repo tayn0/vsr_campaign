@@ -513,7 +513,40 @@ SetAutoGroupUnits(false)
 	
 	PreloadODF("bcrhino")
 	PreloadODF("ivrecy10a")
+	
+	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
+	GiveWeapon(Mission.player,"gchainvsr_c")
+	GiveWeapon(Mission.player,"gshadowvsr_c")
+	GiveWeapon(Mission.player,"gproxminvsr")
+	
+	Mission.wingman = UnitToVSR(Mission.wingman, "ivscout_vsr", 0)
+	Stop(Mission.wingman, 0)
+	SetGroup(Mission.wingman,0)
+	
+	Mission.forge = UnitToVSR(Mission.forge, "fbforg_vsr", 0)
+	Mission.srecycler = UnitToVSR(Mission.srecycler, "fbrecy_vsr", 0)
+
+
+
 end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
+end
+
+
 
 function Update() --This function runs on every frame.
 	Mission.TurnCounter = Mission.TurnCounter + 1
@@ -777,7 +810,7 @@ if (not Mission.ON_HOLD) then
 	
 	if ((not Mission.stop_guard1_dead) and (not IsAlive(Mission.stop_guard1))) then
 	
-		Mission.stop_guard1 = BuildObject("fvturr",2,"new_turr1")  -- QA complained that these respawn
+		Mission.stop_guard1 = BuildObject("fvturr_vsr",2,"new_turr1")  -- QA complained that these respawn
 		Goto(Mission.stop_guard1,"sspawn1")
 		Mission.guard1_time = GetTime() + 25.0
 		Mission.stop_guard1_dead = true
@@ -802,7 +835,7 @@ if (not Mission.ON_HOLD) then
 
 	if ((not Mission.stop_guard2_dead) and (not IsAlive(Mission.stop_guard2))) then
 	
-		Mission.stop_guard2 = BuildObject("fvturr",2,"new_turr2")
+		Mission.stop_guard2 = BuildObject("fvturr_vsr",2,"new_turr2")
 		Goto(Mission.stop_guard2,"sspawn1")
 		Mission.guard2_time = GetTime() + 25.0
 		Mission.stop_guard2_dead = true
@@ -1025,8 +1058,8 @@ if (not Mission.ON_HOLD) then
 
 			if ((Mission.patrol1_dead) and (Mission.patrol1_time < GetTime())) then
 			
-				Mission.scion1 = BuildObject("fvsent10x",2,"sspawn1")
-				Mission.scion2 = BuildObject("fvsent10x",2,"sspawn2")
+				Mission.scion1 = BuildObject("fvsent_vsr",2,"sspawn1")
+				Mission.scion2 = BuildObject("fvsent_vsr",2,"sspawn2")
 				Patrol(Mission.scion1,"patrol_path1a")
 				Follow(Mission.sent2,Mission.scion1)
 				Mission.discover1_time = GetTime() + 2.0
@@ -1048,8 +1081,8 @@ if (not Mission.ON_HOLD) then
 
 			if ((Mission.patrol2_dead) and (Mission.patrol1_time < GetTime())) then
 			
-				Mission.scion3 = BuildObject("fvsent10x",2,"sspawn3")
-				Mission.scion4 = BuildObject("fvsent10x",2,"sspawn4")
+				Mission.scion3 = BuildObject("fvsent_vsr",2,"sspawn3")
+				Mission.scion4 = BuildObject("fvsent_vsr",2,"sspawn4")
 				Patrol(Mission.scion3,"patrol_path1a")
 				Follow(Mission.scion4,Mission.scion3)
 				Mission.discover2_time = GetTime() + 2.0
@@ -1478,8 +1511,8 @@ if (not Mission.ON_HOLD) then
 			if ((not Mission.cheat2) and (Mission.at_one) and (Mission.cheat2_time < GetTime())) then
 			
 				Mission.cheat2_time = GetTime() + 180.0
-				Mission.cheat_tank1 = BuildObject("fvtank10x",2,"cheat_spawn4")
-				Mission.cheat_tank2 = BuildObject("fvsent10x",2,"cheat_spawn5")
+				Mission.cheat_tank1 = BuildObject("fvtank_vsr",2,"cheat_spawn4")
+				Mission.cheat_tank2 = BuildObject("fvsent_vsr",2,"cheat_spawn5")
 				Attack(Mission.cheat_tank1,Mission.recycler)
 				Follow(Mission.cheat_tank2,Mission.cheat_tank1)
 				Mission.cheat2 = true
@@ -2342,7 +2375,7 @@ if (not Mission.ON_HOLD) then
 			RecyGroup = GetGroup(Mission.recycler)
 			xfrm = GetTransform(Mission.recycler)
 			RemoveObject(Mission.recycler)
-			Mission.recycler = BuildObject("ivrecy10a", RecyTeam, xfrm)
+			Mission.recycler = BuildObject("ivrecy_vsr", RecyTeam, xfrm)
 			SetGroup(Mission.recycler, RecyGroup)
 			SetScrap(1,40)
 			Follow(Mission.transport, Mission.recycler,0)
@@ -2382,9 +2415,9 @@ if (not Mission.ON_HOLD) then
 			SetObjectiveOn(Mission.transport)
 			tempstr = TranslateString("Mission1003")  -- Transport
 			SetObjectiveName(Mission.transport,tempstr)
-			Mission.cheat_tank1 = BuildObject("fvsent10x",2,"cheat_spawn4")
-			Mission.cheat_tank2 = BuildObject("fvsent10x",2,"cheat_spawn5")
-			Mission.cheat_tank3 = BuildObject("fvtank10x",2,"cheat_spawn6")
+			Mission.cheat_tank1 = BuildObject("fvsent_vsr",2,"cheat_spawn4")
+			Mission.cheat_tank2 = BuildObject("fvsent_vsr",2,"cheat_spawn5")
+			Mission.cheat_tank3 = BuildObject("fvtank_vsr",2,"cheat_spawn6")
 			Mission.drop_message4 = true
 		end	
 		--------------------------------------------
@@ -2462,8 +2495,8 @@ if (not Mission.ON_HOLD) then
 
 		if ((not Mission.second_patrol1) and (Mission.patrol_time < GetTime())) then
 		
-			Mission.patrol_sent1 = BuildObject("fvsent10x",2,"cheat_spawn5")
-			Mission.patrol_sent2 = BuildObject("fvsent10x",2,"cheat_spawn6")
+			Mission.patrol_sent1 = BuildObject("fvsent_vsr",2,"cheat_spawn5")
+			Mission.patrol_sent2 = BuildObject("fvsent_vsr",2,"cheat_spawn6")
 
 			Patrol(Mission.patrol_sent1,"patrol_path2")
 			Follow(Mission.patrol_sent2,Mission.patrol_sent1)

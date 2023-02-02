@@ -373,70 +373,47 @@ SetAutoGroupUnits(false)
     Mission.cpool1 = GetHandle("cpool1")
     Mission.cpool2 = GetHandle("cpool2")
 	
-	PlayerTeam = GetTeamNum(Mission.recycler)
-	xfrm = GetTransform(Mission.recycler)
-	RemoveObject(Mission.recycler)
-	Mission.recycler = BuildObject("ivrecy_vsr", PlayerTeam, xfrm)
+	Mission.recycler = UnitToVSR(Mission.recycler, "ivrecy_vsr", 0)
 
-	PlayerTeam = GetTeamNum(Mission.player)
-	xfrm = GetTransform(Mission.player)
-	RemoveObject(Mission.player)
-	Mission.player = BuildObject("ivtank_vsr", PlayerTeam, xfrm)
-	SetAsUser(Mission.player, PlayerTeam)
+	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
+	GiveWeapon(Mission.player,"gchainvsr_c")
+	GiveWeapon(Mission.player,"gshadowvsr_c")
+	GiveWeapon(Mission.player,"gproxminvsr")
 	
-	PlayerTeam = GetTeamNum(Mission.ivturr1)
-	xfrm = GetTransform(Mission.ivturr1)
-	RemoveObject(Mission.ivturr1)
-	Mission.ivturr1 = BuildObject("ivturr_vsr", PlayerTeam, xfrm)
+	Mission.ivturr1 = UnitToVSR(Mission.ivturr1, "ivturr_vsr", 0)
 	SetGroup(Mission.ivturr1, 1)
-	
-	PlayerTeam = GetTeamNum(Mission.ivturr2)
-	xfrm = GetTransform(Mission.ivturr2)
-	RemoveObject(Mission.ivturr2)
-	Mission.ivturr2 = BuildObject("ivturr_vsr", PlayerTeam, xfrm)
+	Mission.ivturr2 = UnitToVSR(Mission.ivturr2, "ivturr_vsr", 0)
 	SetGroup(Mission.ivturr2, 2)
 	
-	PlayerTeam = GetTeamNum(Mission.start_war1)
-	xfrm = GetTransform(Mission.start_war1)
-	RemoveObject(Mission.start_war1)
-	Mission.start_war1 = BuildObject("fvtank_vsr", PlayerTeam, xfrm)
+	Mission.start_war1 = UnitToVSR(Mission.start_war1, "fvtank_vsr", 0)
+	Mission.start_war2 = UnitToVSR(Mission.start_war2, "fvtank_vsr", 0)
 	
-	PlayerTeam = GetTeamNum(Mission.start_war2)
-	xfrm = GetTransform(Mission.start_war2)
-	RemoveObject(Mission.start_war2)
-	Mission.start_war2 = BuildObject("fvtank_vsr", PlayerTeam, xfrm)
+	Mission.start_sent1 = UnitToVSR(Mission.start_sent1, "fvsent_vsr", 0)
+	Mission.start_sent2 = UnitToVSR(Mission.start_sent2, "fvsent_vsr", 0)
 	
-	PlayerTeam = GetTeamNum(Mission.start_sent1)
-	xfrm = GetTransform(Mission.start_sent1)
-	RemoveObject(Mission.start_sent1)
-	Mission.start_sent1 = BuildObject("fvsent_vsr", PlayerTeam, xfrm)
+	Mission.srecycler = UnitToVSR(Mission.srecycler, "fvrecy_vsr", 0)
+	Mission.forge = UnitToVSR(Mission.forge, "fbforg_vsr", 0)
 	
-	PlayerTeam = GetTeamNum(Mission.start_sent2)
-	xfrm = GetTransform(Mission.start_sent2)
-	RemoveObject(Mission.start_sent2)
-	Mission.start_sent2 = BuildObject("fvsent_vsr", PlayerTeam, xfrm)
-	
-	PlayerTeam = GetTeamNum(Mission.srecycler)
-	xfrm = GetTransform(Mission.srecycler)
-	RemoveObject(Mission.srecycler)
-	Mission.srecycler = BuildObject("fvrecy_vsr", PlayerTeam, xfrm)
-
-	PlayerTeam = GetTeamNum(Mission.forge)
-	xfrm = GetTransform(Mission.forge)
-	RemoveObject(Mission.forge)
-	Mission.forge = BuildObject("fbforg_vsr", PlayerTeam, xfrm)
-	
-	PlayerTeam = GetTeamNum(Mission.start_scout1)
-	xfrm = GetTransform(Mission.start_scout1)
-	RemoveObject(Mission.start_scout1)
-	Mission.start_scout1 = BuildObject("fvscout_vsr", PlayerTeam, xfrm)
-	
-	PlayerTeam = GetTeamNum(Mission.start_scout4)
-	xfrm = GetTransform(Mission.start_scout4)
-	RemoveObject(Mission.start_scout4)
-	Mission.start_scout4 = BuildObject("fvscout_vsr", PlayerTeam, xfrm)
+	Mission.start_scout1 = UnitToVSR(Mission.start_scout1, "fvscout_vsr", 0)
+	Mission.start_scout2 = UnitToVSR(Mission.start_scout2, "fvscout_vsr", 0)
  
    
+end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
 function Update() --This function runs on every frame.

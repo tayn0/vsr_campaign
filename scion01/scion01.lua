@@ -440,11 +440,44 @@ function Start() --This function is called upon the first frame
 	Mission.blah1 = nil
 	
 	SetTeamColor(5,85,255,85) --Amini (rebel scion)
+
+	Mission.player = GetHandle("player")
+
+	Mission.player = UnitToVSR(Mission.player, "fvsent_vsr", 0)
+	RemovePilot(Mission.player)
+	Mission.kiln = UnitToVSR(Mission.kiln, "fbkiln_vsr", 0)
+	Mission.lung_built = false
+
+	Mission.playersrecy = UnitToVSR(Mission.playersrecy, "fbrecy_vsr", 0)
+	
+	Mission.lung = GetHandle("unnamed_fblung_vsr")
+	RemoveObject(Mission.lung)
+	
+	Mission.fvcons1 = UnitToVSR(Mission.fvcons1, "fvcons_vsr",0)
+	SetGroup(Mission.fvcons1, 0)
+
+
    
 end
 
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
+end
+
 function AddObject(h) --This function is called when an object appears in the game. --
-	if ((not Mission.lung_built) and (IsOdf(h,"fblung"))) then
+	if ((not Mission.lung_built) and (IsOdf(h,"fblung_vsr"))) then
 	
 		Mission.lung_built = true  
 	end
@@ -718,7 +751,7 @@ function missionCode() --
 		
 			Mission.lung_check = GetTime() + 1.0
 
-			Mission.a = CountUnitsNearObject(0,99999.0,1,"fblung")
+			Mission.a = CountUnitsNearObject(0,99999.0,1,"fblung_vsr")
 
 			if (Mission.a > 1) then
 			

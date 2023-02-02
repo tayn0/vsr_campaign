@@ -299,25 +299,36 @@ function Start() --This function is called upon the first frame
 	Mission.extra2 = nil
 	Mission.pilot = nil
 	
-	PlayerTeam = GetTeamNum(Mission.dead_tank)
-	xfrm = GetTransform(Mission.dead_tank)
-	RemoveObject(Mission.dead_tank)
-	Mission.dead_tank = BuildObject("ivtank_vsr", PlayerTeam, xfrm)
+	Mission.dead_tank = UnitToVSR(Mission.dead_tank, "ivtank_vsr", 0)
 	RemovePilot(Mission.dead_tank)
 	SetLabel(Mission.dead_tank, "dead_tank")
 	
-	PlayerTeam = GetTeamNum(Mission.player)
-	xfrm = GetTransform(Mission.player)
-	RemoveObject(Mission.player)
-	Mission.player = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
-	SetAsUser(Mission.player, PlayerTeam)
+	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
 	SetLabel(Mission.player, "player_ship")
 	Mission.player_ship = GetPlayerHandle()
-	
+	GiveWeapon(Mission.player,"gchainvsr_c")
+	GiveWeapon(Mission.player,"gshadowvsr_c")
+	GiveWeapon(Mission.player,"gproxminvsr")
 
 PreloadODF("fvtug3")
 PreloadODF("fvpscou3")
 PreloadODF("fvpsnt3")
+
+end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
 
 end
 

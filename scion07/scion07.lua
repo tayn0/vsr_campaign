@@ -296,8 +296,47 @@ function Start() --This function is called upon the first frame
 	Mission.attacker5b = nil
 	Mission.nav4 =  nil
 	Mission.msgcin1 = nil
-   
-   
+	
+	Mission.playersrecy = UnitToVSR(Mission.playersrecy, "fvrecy_vsr", 0)
+	SetGroup(Mission.playersrecy, 0)
+		
+	Mission.player = GetPlayerHandle()
+	Mission.player = UnitToVSR(Mission.player, "fvsent_vsr", 1)
+	
+	Mission.ibrecy1 = UnitToVSR(Mission.ibrecy1, "ibrecy_vsr", 0)
+	Mission.enemyfact = UnitToVSR(GetHandle("unnamed_ibfact"), "ibfact_vsr", 0)
+	
+	Mission.tank1 = UnitToVSR(Mission.tank1, "ivtank_vsr", 0)
+	Mission.tank2 = UnitToVSR(Mission.tank2, "ivtank_vsr", 0)
+	Mission.tank3 = UnitToVSR(Mission.tank3, "ivtank_vsr", 0)
+	Mission.tank4 = UnitToVSR(Mission.tank4, "ivtank_vsr", 0)
+	Mission.tank5 = UnitToVSR(Mission.tank5, "ivtank_vsr", 0)
+	Mission.tank6 = UnitToVSR(Mission.tank6, "ivtank_vsr", 0)
+	Mission.tank7 = UnitToVSR(Mission.tank7, "ivtank_vsr", 0)
+	
+	Mission.rover1 = UnitToVSR(Mission.rover1, "ivscout_vsr", 0)
+	Mission.rover2a = UnitToVSR(Mission.rover2a, "ivscout_vsr", 0)
+   Mission.rover2b = UnitToVSR(Mission.rover2b, "ivscout_vsr", 0)
+   Mission.rover3 = UnitToVSR(Mission.rover3, "ivscout_vsr", 0)
+   Mission.rover4 = UnitToVSR(Mission.rover4, "ivscout_vsr", 0)
+   Mission.rover5 = UnitToVSR(Mission.rover5, "ivscout_vsr", 0)
+   Mission.rover6 = UnitToVSR(Mission.rover6, "ivscout_vsr", 0)
+end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
@@ -309,37 +348,37 @@ function AddObject(h) --This function is called when an object appears in the ga
 			Mission.extractor1 = h
 		
 
-		elseif ((Mission.turret1 == nil) and (IsOdf(h,"ivturr"))) then
+		elseif ((Mission.turret1 == nil) and (IsOdf(h,"ivturr_vsr"))) then
 		
 			Mission.turret1 = h	
 		
 
-		elseif ((Mission.turret2 == nil) and (IsOdf(h,"ivturr"))) then
+		elseif ((Mission.turret2 == nil) and (IsOdf(h,"ivturr_vsr"))) then
 		
 			Mission.turret2 = h	
 		
 
-		elseif ((Mission.basetank1 == nil) and (IsOdf(h,"ivtank"))) then
+		elseif ((Mission.basetank1 == nil) and (IsOdf(h,"ivtank_vsr"))) then
 		
 			Mission.basetank1 = h	
 		
 	
-		elseif ((Mission.basetank2 == nil) and (IsOdf(h,"ivtank"))) then
+		elseif ((Mission.basetank2 == nil) and (IsOdf(h,"ivtank_vsr"))) then
 		
 			Mission.basetank2 = h	
 		
 
-		elseif ((Mission.basescout1 == nil) and (IsOdf(h,"ivscout"))) then
+		elseif ((Mission.basescout1 == nil) and (IsOdf(h,"ivscout_vsr"))) then
 		
 			Mission.basescout1 = h	
 		
 
-		elseif ((Mission.basescout2 == nil) and (IsOdf(h,"ivscout"))) then
+		elseif ((Mission.basescout2 == nil) and (IsOdf(h,"ivscout_vsr"))) then
 		
 			Mission.basescout2 = h	
 		
 
-		elseif ((Mission.basescout3 == nil) and (IsOdf(h,"ivscout"))) then
+		elseif ((Mission.basescout3 == nil) and (IsOdf(h,"ivscout_vsr"))) then
 		
 			Mission.basescout3 = h	
 		end
@@ -595,7 +634,7 @@ function missionCode() --
 
 		if ((not Mission.pool1guarda_attack) and (Mission.pool1guarda_attacktime < GetTime())) then
 		
-			Mission.pool1guarda = BuildObject("ivscout",2,"pool1guarda")
+			Mission.pool1guarda = BuildObject("ivscout_vsr",2,"pool1guarda")
 			SetSkill(Mission.pool1guarda,0)
 			Goto(Mission.pool1guarda,"pool1")
 			Mission.pool1guarda_attack = true
@@ -603,7 +642,7 @@ function missionCode() --
 
 		if ((not Mission.pool1guardb_attack) and (Mission.pool1guardb_attacktime < GetTime())) then
 		
-			Mission.pool1guardb = BuildObject("ivtank",2,"pool1guardb")
+			Mission.pool1guardb = BuildObject("ivtank_vsr",2,"pool1guardb")
 			SetSkill(Mission.pool1guardb,0)
 			Goto(Mission.pool1guardb,"pool1")
 			Mission.settimes_pool1 = false
@@ -676,7 +715,7 @@ function missionCode() --
 
 		if ((not Mission.pool2guarda_attack) and (Mission.pool2guarda_attacktime < GetTime())) then
 		
-			Mission.pool2guarda = BuildObject("ivscout",2,"pool2guarda")
+			Mission.pool2guarda = BuildObject("ivscout_vsr",2,"pool2guarda")
 			SetSkill(Mission.pool2guarda,0)
 			Goto(Mission.pool2guarda,"pool2")
 			Mission.pool2guarda_attack = true
@@ -684,7 +723,7 @@ function missionCode() --
 
 		if ((not Mission.pool2guardb_attack) and (Mission.pool2guardb_attacktime < GetTime())) then
 		
-			Mission.pool2guardb = BuildObject("ivtank",2,"pool2guardb")
+			Mission.pool2guardb = BuildObject("ivtank_vsr",2,"pool2guardb")
 			SetSkill(Mission.pool2guardb,0)
 			Goto(Mission.pool2guardb,"pool2")
 			Mission.settimes_pool2 = false
@@ -749,7 +788,7 @@ function missionCode() --
 
 		if ((not Mission.pool3guarda_attack) and (Mission.pool3guarda_attacktime < GetTime())) then
 		
-			Mission.pool3guarda = BuildObject("ivscout",2,"pool3guarda")
+			Mission.pool3guarda = BuildObject("ivscout_vsr",2,"pool3guarda")
 			SetSkill(Mission.pool3guarda,0)
 			Goto(Mission.pool3guarda,"pool3")
 			Mission.pool3guarda_attack = true
@@ -757,7 +796,7 @@ function missionCode() --
 
 		if ((not Mission.pool3guardb_attack) and (Mission.pool3guardb_attacktime < GetTime())) then
 		
-			Mission.pool3guardb = BuildObject("ivtank",2,"pool3guardb")
+			Mission.pool3guardb = BuildObject("ivtank_vsr",2,"pool3guardb")
 			SetSkill(Mission.pool3guardb,0)
 			Goto(Mission.pool3guardb,"pool3")
 			Mission.settimes_pool3 = false
@@ -992,8 +1031,8 @@ function missionCode() --
 	
 		if ((not Mission.base_attack1) and (Mission.base_attack1time < GetTime())) then
 		
-			 Mission.attacker1 = BuildObject("ivscout",2,"base_attacker1")	
-			 Mission.attacker2 = BuildObject("ivscout",2,"base_attacker2")
+			 Mission.attacker1 = BuildObject("ivscout_vsr",2,"base_attacker1")	
+			 Mission.attacker2 = BuildObject("ivscout_vsr",2,"base_attacker2")
 			 Goto(Mission.attacker1,Mission.playersrecy)
 			 Goto(Mission.attacker2,Mission.playersrecy)
 			 SetAvoidType(Mission.attacker1,0)
@@ -1005,8 +1044,8 @@ function missionCode() --
 	
 		if ((not Mission.base_attack2) and (Mission.base_attack2time < GetTime())) then
 		
-			 Mission.attacker3 = BuildObject("ivtank",2,"base_attacker1")	
-			 Mission.attacker4 = BuildObject("ivmbike",2,"base_attacker2")
+			 Mission.attacker3 = BuildObject("ivtank_vsr",2,"base_attacker1")	
+			 Mission.attacker4 = BuildObject("ivmbike_vsr",2,"base_attacker2")
 			 Goto(Mission.attacker3,Mission.playersrecy)
 			 Goto(Mission.attacker4,Mission.playersrecy)
 			 SetAvoidType(Mission.attacker3,0)
@@ -1018,8 +1057,8 @@ function missionCode() --
 
 		if ((not Mission.base_attack3) and (Mission.base_attack3time < GetTime())) then
 		
-			 Mission.attacker5 = BuildObject("ivtank",2,"base_attacker1")	
-			 Mission.attacker5b = BuildObject("ivtank",2,"base_attacker2")	
+			 Mission.attacker5 = BuildObject("ivtank_vsr",2,"base_attacker1")	
+			 Mission.attacker5b = BuildObject("ivtank_vsr",2,"base_attacker2")	
 			 Goto(Mission.attacker5,Mission.playersrecy)
 			 Goto(Mission.attacker5b,Mission.playersrecy)
 			 SetAvoidType(Mission.attacker5,0)

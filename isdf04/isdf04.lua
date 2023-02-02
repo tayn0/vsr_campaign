@@ -448,28 +448,34 @@ function Start() --This function is called upon the first frame
 	Mission.dust2 = nil
 	Mission.pilot = nil
 	
-	PlayerTeam = GetTeamNum(Mission.player)
-	xfrm = GetTransform(Mission.player)
-	RemoveObject(Mission.player)
-	Mission.player = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
-	SetAsUser(Mission.player, PlayerTeam)
+	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
 	SetLabel(Mission.player, "player_ship")
 	Mission.player_ship = GetPlayerHandle()
 	
-	PlayerTeam = GetTeamNum(Mission.empty_scout1)
-	xfrm = GetTransform(Mission.empty_scout1)
-	RemoveObject(Mission.empty_scout1)
-	Mission.empty_scout1 = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
+	Mission.empty_scout1 = UnitToVSR(Mission.empty_scout1, "ivscout_vsr", 0)
 	SetLabel(Mission.empty_scout1, "empty_scout1")
 	RemovePilot(Mission.empty_scout1)
 	
-	PlayerTeam = GetTeamNum(Mission.empty_scout2)
-	xfrm = GetTransform(Mission.empty_scout2)
-	RemoveObject(Mission.empty_scout2)
-	Mission.empty_scout2 = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
+	Mission.empty_scout2 = UnitToVSR(Mission.empty_scout2, "ivscout_vsr", 0)
 	SetLabel(Mission.empty_scout2, "empty_scout2")
 	RemovePilot(Mission.empty_scout2)
    
+end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --

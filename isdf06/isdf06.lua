@@ -100,34 +100,21 @@ function Start() --This function is called upon the first frame
 	Mission.basepool2 = GetHandle("basepool2")
 	Mission.basepool3 = GetHandle("basepool3")
 
-	PlayerTeam = GetTeamNum(Mission.player)
-	xfrm = GetTransform(Mission.player)
-	RemoveObject(Mission.player)
-	Mission.player = BuildObject("ivmisl_vsr", PlayerTeam, xfrm)
-	SetAsUser(Mission.player, PlayerTeam)
+	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
+	GiveWeapon(Mission.player,"gchainvsr_c")
+	GiveWeapon(Mission.player,"gshadowvsr_c")
+	GiveWeapon(Mission.player,"gproxminvsr")
 	
-	PlayerTeam = GetTeamNum(Mission.mbike1)
-	xfrm = GetTransform(Mission.mbike1)
-	RemoveObject(Mission.mbike1)
-	Mission.mbike1 = BuildObject("ivmbike_vsr", PlayerTeam, xfrm)
+	Mission.mbike1 = UnitToVSR(Mission.mbike1, "ivmbike_vsr", 0)
 	SetGroup(Mission.mbike1, 1)	
 	
-	PlayerTeam = GetTeamNum(Mission.mbike2)
-	xfrm = GetTransform(Mission.mbike2)
-	RemoveObject(Mission.mbike2)
-	Mission.mbike2 = BuildObject("ivmbike_vsr", PlayerTeam, xfrm)	
+	Mission.mbike2 = UnitToVSR(Mission.mbike2, "ivmbike_vsr", 0)	
 	SetGroup(Mission.mbike2, 1)
 	
-	PlayerTeam = GetTeamNum(Mission.misl2)
-	xfrm = GetTransform(Mission.misl2)
-	RemoveObject(Mission.misl2)
-	Mission.misl2 = BuildObject("ivmisl_vsr", PlayerTeam, xfrm)
+	Mission.misl2 = UnitToVSR(Mission.misl2, "ivmisl_vsr", 0)
 	SetGroup(Mission.misl2, 0)
 	
-	PlayerTeam = GetTeamNum(Mission.misl3)
-	xfrm = GetTransform(Mission.misl3)
-	RemoveObject(Mission.misl3)
-	Mission.misl3 = BuildObject("ivmisl_vsr", PlayerTeam, xfrm)
+	Mission.misl3 = UnitToVSR(Mission.misl3, "ivmisl_vsr", 0)
 	SetGroup(Mission.misl3, 0)
 	
 	PreloadODF("ivcon6")
@@ -138,6 +125,22 @@ function Start() --This function is called upon the first frame
 	PreloadODF("fvscout")
 
    
+end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --

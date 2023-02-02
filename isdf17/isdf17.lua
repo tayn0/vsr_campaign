@@ -184,8 +184,8 @@ end
 
 function Start() --This function is called upon the first frame
 --  handles
+	Mission.player = GetPlayerHandle()
 	Mission.core = GetHandle("core")
-	Mission.player = nil
 	Mission.dropship = nil
 	Mission.msg1 = nil
 	Mission.msg2 = nil
@@ -259,12 +259,32 @@ function Start() --This function is called upon the first frame
 	Mission.sound_poled = GetHandle("sound_poled")
 	Mission.sound_polee = GetHandle("sound_polee")
 	Mission.sound_polef = GetHandle("sound_polef")
+
+
+	Mission.player = UnitToVSR(Mission.player, "ivtank_vsr", 1)
    
+end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
 
 end
+
 
 
 function DeleteObject(h) --This function is called when an object is deleted in the game.

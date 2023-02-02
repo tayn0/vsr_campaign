@@ -70,6 +70,9 @@ local Mission = {
 	titan2,
 	sentry1,
 	sentry2,
+	rckt1,
+	rckt2,
+	rckt3,
 	
 	
 	goal1 = GetHandle("goal1"),
@@ -169,7 +172,33 @@ function Start() --This function is called upon the first frame
 	PreloadODF("")
 	PreloadODF("")
 	PreloadODF("")
+
+
+	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
+	GiveWeapon(Mission.player,"gchainvsr_c")
+	GiveWeapon(Mission.player,"gshadowvsr_c")
+	GiveWeapon(Mission.player,"gproxminvsr")
+	
+	Mission.recy = UnitToVSR(Mission.recy, "ivrecy_vsr", 0)
+	SetGroup(Mission.recy,0)
    
+end
+
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
@@ -266,15 +295,15 @@ function LateAttacks()
 		
 			if ((not IsAlive(Mission.atk2_1)) and (not IsAlive(Mission.atk2_2)) and (not IsAlive(Mission.atk2_3))) then
 			
-				Mission.atk2_1 = BuildObject("fvwalk",Mission.comp_team,"convoy1")
+				Mission.atk2_1 = BuildObject("fvwalk_vsr",Mission.comp_team,"convoy1")
 --				GiveWeapon(Mission.atk2_1,"gquill_a")
 --				Attack(Mission.atk2_1,Mission.recy)
 --			PrintConsoleMessage("fvwalk-Mission.atk2_1 built at convoy1")
-				Mission.atk2_2 = BuildObject("fvwalk",Mission.comp_team,"convoy2")
+				Mission.atk2_2 = BuildObject("fvwalk_vsr",Mission.comp_team,"convoy2")
 --				GiveWeapon(Mission.atk2_2,"gquill_a")
 --				Attack(Mission.atk2_2,Mission.recy)
 --			PrintConsoleMessage("fvwalk-Mission.atk2_2 built at convoy2")
-				Mission.atk2_3 = BuildObject("fvwalk",Mission.comp_team,"convoy3")
+				Mission.atk2_3 = BuildObject("fvwalk_vsr",Mission.comp_team,"convoy3")
 --				GiveWeapon(Mission.atk2_3,"gquill_a")
 --				Attack(Mission.atk2_3,Mission.recy)
 --			PrintConsoleMessage("fvwalk-Mission.atk2_3 built at convoy3")
@@ -285,14 +314,17 @@ function LateAttacks()
 
 			if ((not IsAlive(Mission.atk2_7)) and (not IsAlive(Mission.atk2_8)) and (not IsAlive(Mission.atk2_9))) then
 			
-				Mission.atk2_7 = BuildObject("fvscout",Mission.comp_teamc,"attack1")
+				Mission.atk2_7 = BuildObject("fvscout_vsr",Mission.comp_teamc,"attack1")
 				GiveWeapon(Mission.atk2_7,"garc_c")
+				GiveWeapon(Mission.atk2_7,"gseekervsr")
 				GiveWeapon(Mission.atk2_7,"gshield")
-				Mission.atk2_8 = BuildObject("fvscout",Mission.comp_teamc,"attack2")
+				Mission.atk2_8 = BuildObject("fvscout_vsr",Mission.comp_teamc,"attack2")
 				GiveWeapon(Mission.atk2_8,"garc_c")
+				GiveWeapon(Mission.atk2_8,"gseekervsr")
 				GiveWeapon(Mission.atk2_8,"gshield")
-				Mission.atk2_9 = BuildObject("fvscout",Mission.comp_teamc,"attack3")
+				Mission.atk2_9 = BuildObject("fvscout_vsr",Mission.comp_teamc,"attack3")
 				GiveWeapon(Mission.atk2_9,"garc_c")
+				GiveWeapon(Mission.atk2_9,"gseekervsr")
 				GiveWeapon(Mission.atk2_9,"gshield")
 --		SetObjectiveOn(Mission.atk2_7)
 --		SetObjectiveOn(Mission.atk2_8)
@@ -305,13 +337,13 @@ function LateAttacks()
 			if ((IsAlive(Mission.atk2_1)) and (IsAlive(Mission.atk2_2)) and (IsAlive(Mission.atk2_3)) 
 			and (not IsAlive(Mission.atk2_4)) and (not IsAlive(Mission.atk2_5)) and (not IsAlive(Mission.atk2_6))) then
 			
-				Mission.atk2_4 = BuildObject("fvsent",Mission.comp_teamc,"convoy4")
+				Mission.atk2_4 = BuildObject("fvsent_vsr",Mission.comp_teamc,"convoy4")
 				GiveWeapon(Mission.atk2_4,"glock_c")
 				GiveWeapon(Mission.atk2_4,"gshield")
-				Mission.atk2_5 = BuildObject("fvsent",Mission.comp_teamc,"convoy5")
+				Mission.atk2_5 = BuildObject("fvsent_vsr",Mission.comp_teamc,"convoy5")
 				GiveWeapon(Mission.atk2_5,"glock_c")
 				GiveWeapon(Mission.atk2_5,"gshield")
-				Mission.atk2_6 = BuildObject("fvsent",Mission.comp_teamc,"convoy6")
+				Mission.atk2_6 = BuildObject("fvsent_vsr",Mission.comp_teamc,"convoy6")
 				GiveWeapon(Mission.atk2_6,"glock_c")
 				GiveWeapon(Mission.atk2_6,"gshield")
 
@@ -435,12 +467,12 @@ function missionCode() --
 			enemy data transfer facillity.  
 		]]
 
-		Mission.atk1 = BuildObject("fvarch",Mission.comp_team,"attack1")
-		Mission.atk2 = BuildObject("fvarch",Mission.comp_team,"attack2")
-		Mission.atk3 = BuildObject("fvarch",Mission.comp_team,"attack3")
-		Mission.atk4 = BuildObject("fvatank",Mission.comp_team,"attack4")
-		Mission.atk5 = BuildObject("fvatank",Mission.comp_team,"attack5")
-		Mission.atk6 = BuildObject("fvserv",Mission.comp_team,"ScoutEnemy2")
+		Mission.atk1 = BuildObject("fvarch_vsr",Mission.comp_team,"attack1")
+		Mission.atk2 = BuildObject("fvarch_vsr",Mission.comp_team,"attack2")
+		Mission.atk3 = BuildObject("fvarch_vsr",Mission.comp_team,"attack3")
+		Mission.atk4 = BuildObject("fvatank_vsr",Mission.comp_team,"attack4")
+		Mission.atk5 = BuildObject("fvatank_vsr",Mission.comp_team,"attack5")
+		Mission.atk6 = BuildObject("fvserv_vsr",Mission.comp_team,"ScoutEnemy2")
 --SetObjectiveOn(Mission.atk1)
 --SetObjectiveName(Mission.atk1, "Attack1")
 --SetObjectiveOn(Mission.atk2)
@@ -452,15 +484,15 @@ function missionCode() --
 	--SetObjectiveOn(atk6)
 --	Mission.pool1 = GetHandle("pool1")
 --	SetObjectiveOn(Mission.pool1)
-		tempturr = BuildObject("fvturr",Mission.comp_team,"turret1")
+		tempturr = BuildObject("fvturr_vsr",Mission.comp_team,"turret1")
 		Deploy(tempturr)
-		tempturr = BuildObject("fvturr",Mission.comp_team,"turret2")
+		tempturr = BuildObject("fvturr_vsr",Mission.comp_team,"turret2")
 		Deploy(tempturr)
-		tempturr = BuildObject("fvturr",Mission.comp_team,"turret3")
+		tempturr = BuildObject("fvturr_vsr",Mission.comp_team,"turret3")
 		Deploy(tempturr)
-		tempturr = BuildObject("fvturr",Mission.comp_team,"turret4")
-		BuildObject("fvrecy",Mission.comp_team,"RecyclerEnemy")
-		BuildObject("fvrecy",Mission.comp_teamb,"base2") -- buh hah hahnot not 
+		tempturr = BuildObject("fvturr_vsr",Mission.comp_team,"turret4")
+		BuildObject("fvrecy_vsr",Mission.comp_team,"RecyclerEnemy")
+		BuildObject("fvrecy_vsr",Mission.comp_teamb,"base2") -- buh hah hahnot not 
 		SetScrap(1,60)
 		SetScrap(Mission.comp_team,40)
 		SetAIP("misn16.aip",Mission.comp_team)
@@ -507,11 +539,11 @@ function missionCode() --
 	if (Mission.time_counter == 400)	 then -- at 50 seconds into the mission then
 	
 		AudioMessage("isdf1640.wav")
-		tempturr = BuildObject("fvwalk",Mission.comp_team,"turret1")
+		tempturr = BuildObject("fvwalk_vsr",Mission.comp_team,"turret1")
 --	PrintConsoleMessage("fvwalk-tempturr built at turret1")
 --	SetObjectiveOn(tempturr)
 		Attack(tempturr,Mission.player)
-		tempturr = BuildObject("fvwalk",Mission.comp_team,"turret2")
+		tempturr = BuildObject("fvwalk_vsr",Mission.comp_team,"turret2")
 --	PrintConsoleMessage("fvwalk-tempturr built at turret2")
 --	SetObjectiveOn(tempturr)
 		Attack(tempturr,Mission.player)
@@ -542,20 +574,20 @@ function missionCode() --
 			We need to get to that
 			structure.
 		]]
-		Mission.titan1 = BuildObject("fvatank",Mission.comp_team,"convoy1")
+		Mission.titan1 = BuildObject("fvatank_vsr",Mission.comp_team,"convoy1")
 		Goto(Mission.titan1, "convoy_path")
 		Mission.ConvoyTug = BuildObject("fvtug",Mission.comp_team,"convoy2")
 --		Goto(Mission.ConvoyTug,"convoy_path")
 		Follow(Mission.ConvoyTug, Mission.titan1)
-		Mission.titan2 = BuildObject("fvatank",Mission.comp_team,"convoy3")
+		Mission.titan2 = BuildObject("fvatank_vsr",Mission.comp_team,"convoy3")
 		Follow(Mission.titan2,Mission.ConvoyTug)
-		Mission.sentry1 = BuildObject("fvsent",Mission.comp_team,"convoy4")
+		Mission.sentry1 = BuildObject("fvsent_vsr",Mission.comp_team,"convoy4")
 		Follow(Mission.sentry1, Mission.titan2)
-		Mission.sentry2 = BuildObject("fvsent",Mission.comp_team,"convoy5")
+		Mission.sentry2 = BuildObject("fvsent_vsr",Mission.comp_team,"convoy5")
 		Follow(Mission.sentry2,Mission.ConvoyTug)
-		Mission.healer1 = BuildObject("fvserv",Mission.comp_team,"convoy4")
+		Mission.healer1 = BuildObject("fvserv_vsr",Mission.comp_team,"convoy4")
 		Follow(Mission.healer1, Mission.titan1)
-		Mission.healer2 = BuildObject("fvserv",Mission.comp_team,"convoy5")
+		Mission.healer2 = BuildObject("fvserv_vsr",Mission.comp_team,"convoy5")
 		Follow(Mission.healer2, Mission.ConvoyTug)
 		Mission.mission_state = 7
 		Mission.convoy_timer = 200
@@ -843,9 +875,9 @@ function missionCode() --
 
 			if ((not IsAlive(Mission.atk1)) and (not IsAlive(Mission.atk2)) and (not IsAlive(Mission.atk3))) then
 			
-				Mission.atk1 = BuildObject("fvatank",Mission.comp_team,"attack1")
-				Mission.atk2 = BuildObject("fvatank",Mission.comp_team,"attack2")
-				Mission.atk3 = BuildObject("fvserv",Mission.comp_team,"attack3")
+				Mission.atk1 = BuildObject("fvatank_vsr",Mission.comp_team,"attack1")
+				Mission.atk2 = BuildObject("fvatank_vsr",Mission.comp_team,"attack2")
+				Mission.atk3 = BuildObject("fvserv_vsr",Mission.comp_team,"attack3")
 		--SetObjectiveOn(Mission.atk1)
 		--SetObjectiveOn(Mission.atk2)
 		--SetObjectiveOn(Mission.atk3)
@@ -853,11 +885,11 @@ function missionCode() --
 
 			if ((not IsAlive(Mission.atk4)) and (not IsAlive(Mission.atk5)) and (not IsAlive(Mission.atk6))) then
 			
-				Mission.atk4 = BuildObject("fvwalk",Mission.comp_team,"attack4")
+				Mission.atk4 = BuildObject("fvwalk_vsr",Mission.comp_team,"attack4")
 --				PrintConsoleMessage("fvwalk-Mission.atk4 built at attack4")
-				Mission.atk5 = BuildObject("fvwalk",Mission.comp_team,"attack5")
+				Mission.atk5 = BuildObject("fvwalk_vsr",Mission.comp_team,"attack5")
 --				PrintConsoleMessage("fvwalk-Mission.atk5 built at attack5")
-				Mission.atk6 = BuildObject("fvwalk",Mission.comp_team,"attack6")
+				Mission.atk6 = BuildObject("fvwalk_vsr",Mission.comp_team,"attack6")
 --				PrintConsoleMessage("fvwalk-atk6 built at attack6")
 			--SetObjectiveOn(Mission.atk4)
 			--SetObjectiveOn(Mission.atk5)
@@ -872,9 +904,9 @@ function missionCode() --
 		Mission.sneak_timer = Mission.sneak_timer + 1
 		if (Mission.sneak_timer%4000==0)   then -- was 8000 then
 		
-			Mission.sneak1 = BuildObject("fvartl",Mission.comp_team,"attack1")
-			Mission.sneak2 = BuildObject("fvartl",Mission.comp_team,"attack2")
-			Mission.sneak3 = BuildObject("fvartl",Mission.comp_team,"attack3")
+			Mission.sneak1 = BuildObject("fvartl_vsr",Mission.comp_team,"attack1")
+			Mission.sneak2 = BuildObject("fvartl_vsr",Mission.comp_team,"attack2")
+			Mission.sneak3 = BuildObject("fvartl_vsr",Mission.comp_team,"attack3")
 		--SetObjectiveOn(Mission.sneak1)
 		--SetObjectiveOn(Mission.sneak2)
 		--SetObjectiveOn(Mission.sneak3)

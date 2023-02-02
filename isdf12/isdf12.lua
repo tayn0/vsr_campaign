@@ -493,7 +493,8 @@ function Start() --This function is called upon the first frame
 	Mission.tbolt1 = GetHandle("scout1")
 	Mission.tbolt2 = GetHandle("scout2")
 	Mission.rocket1 = GetHandle("rocket1")
-	Mission.constructor = GetHandle("constructor")
+	Mission.con1 = GetHandle("constructor")
+	Mission.con2 = GetHandle("unnamed_ivcons")
 	Mission.tug = GetHandle("tug")
 	--spool1 = GetHandle("spool1")
 	--spool2 = GetHandle("spool2")
@@ -515,13 +516,55 @@ function Start() --This function is called upon the first frame
 	Mission.sturret9 = GetHandle("sturret9")
 	Mission.sturret10 = GetHandle("sturret10")
 
+	Mission.factory = UnitToVSR(Mission.factory, "ibfact_vsr", 0)
+	Mission.armory = UnitToVSR(Mission.armory, "ibarmo_vsr", 0)
+	Mission.forge = UnitToVSR(Mission.forge, "fbforg_vsr", 0)
+	Mission.srecycler = UnitToVSR(Mission.srecycler, "fbrecy_vsr", 0)
+
+	Mission.tbolt1 = UnitToVSR(Mission.tbolt1, "ivscout_vsr", 0)
+	SetGroup(Mission.tbolt1, 0)
+	Mission.tbolt2 = UnitToVSR(Mission.tbolt2, "ivscout_vsr", 0)
+	SetGroup(Mission.tbolt2, 0)
+
+	Mission.tank1 = UnitToVSR(Mission.tank1, "ivtank_vsr", 0)
+	SetGroup(Mission.tank1, 1)
+	Mission.tank2 = UnitToVSR(Mission.tank2, "ivtank_vsr", 0)
+	SetGroup(Mission.tank2, 1)
+
+
+
+	Mission.rocket1 = UnitToVSR(Mission.rocket1, "ivrckt_vsr", 0)
+	SetGroup(Mission.rocket1, 2)
+
+
+
+	Mission.con1 = UnitToVSR(Mission.con1, "ivcons_vsr", 0)
+	SetGroup(Mission.con1, 4)
+
+
    
+end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
  function IsPowered (bldg)
 
-	Mission.a = CountUnitsNearObject(nil,99999.0,1,"ibfact")-- Mission.factory
-	Mission.b = CountUnitsNearObject(nil,99999.0,1,"ibarmo")-- Mission.armory
+	Mission.a = CountUnitsNearObject(nil,99999.0,1,"ibfact_vsr")-- Mission.factory
+	Mission.b = CountUnitsNearObject(nil,99999.0,1,"ibarmo_vsr")-- Mission.armory
 	Mission.c = CountUnitsNearObject(nil,99999.0,1,"ibsbay")-- Mission.service bay
 	Mission.d = CountUnitsNearObject(nil,99999.0,1,"ibcbun")-- comm bunker
 	Mission.e = CountUnitsNearObject(nil,99999.0,1,"ibtrain")-- Mission.training facility 
@@ -698,19 +741,19 @@ function missionCode() --
 		ClearObjectives()
 		AddObjective("isdf1201.otf", "WHITE")
 		
-		Mission.start_sent1 = BuildObject("fvsent",2,"sent1_spawn")
-		Mission.start_sent2 = BuildObject("fvsent",2,"sent2_spawn")
-		Mission.start_war1 = BuildObject("fvtank",2,"war1_spawn")
-		Mission.start_war2 = BuildObject("fvtank",2,"war2_spawn")
-		Mission.start_war3 = BuildObject("fvtank",2,"war3_spawn")
-		Mission.cons2 = BuildObject("ivcons",1,"train_point")
+		Mission.start_sent1 = BuildObject("fvsent_vsr",2,"sent1_spawn")
+		Mission.start_sent2 = BuildObject("fvsent_vsr",2,"sent2_spawn")
+		Mission.start_war1 = BuildObject("fvtank_vsr",2,"war1_spawn")
+		Mission.start_war2 = BuildObject("fvtank_vsr",2,"war2_spawn")
+		Mission.start_war3 = BuildObject("fvtank_vsr",2,"war3_spawn")
+		Mission.cons2 = BuildObject("ivcons_vsr",1,"train_point")
 		SetGroup(Mission.cons2,4)
 
-		SetSkill(Mission.spire1,2)
+		SetSkill(Mission.spire1,3)
 		SetSkill(Mission.spire2,3)
-		SetSkill(Mission.spire3,2)
-		SetSkill(Mission.start_war2,2)
-		SetSkill(Mission.start_war3,2)
+		SetSkill(Mission.spire3,3)
+		SetSkill(Mission.start_war2,3)
+		SetSkill(Mission.start_war3,3)
 		SetSkill(Mission.rocket1,2)
 
 		SetAIP("isdf1204.aip",2)
@@ -812,11 +855,11 @@ function missionCode() --
 	
 		-- this is kepping the things alive
 
-		if (IsAlive(Mission.constructor)) then
+		if (IsAlive(Mission.con1)) then
 		
-			if (GetCurHealth(Mission.constructor) < 500) then
+			if (GetCurHealth(Mission.con1) < 500) then
 			
-				SetCurHealth(Mission.constructor,500)
+				SetCurHealth(Mission.con1,500)
 			end
 		end
 

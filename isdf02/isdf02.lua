@@ -395,42 +395,58 @@ function Start() --This function is called upon the first frame
 	Mission.pole11 = GetHandle("pole11")
 	Mission.look_pole = GetHandle("look_pole")
 	
-	--get player into vsr scout
-	PlayerTeam = GetTeamNum(Mission.ship1)
-	xfrm = GetTransform(Mission.ship1)
-	RemoveObject(Mission.ship1)
-	Mission.ship1 = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
+
+	Mission.ship1 = UnitToVSR(Mission.ship1, "ivscout_vsr", 0)
 	RemovePilot(Mission.ship1)
 	SetLabel(Mission.ship1, "ship1")
+	GiveWeapon(Mission.ship1,"gchainvsr_c")
+	GiveWeapon(Mission.ship1,"gshadowvsr_c")
+	GiveWeapon(Mission.ship1,"gproxminvsr")
 	
-	--get player into vsr scout
-	PlayerTeam = GetTeamNum(Mission.ship2)
-	xfrm = GetTransform(Mission.ship2)
-	RemoveObject(Mission.ship2)
-	Mission.ship2 = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
+	Mission.ship2 = UnitToVSR(Mission.ship2, "ivscout_vsr", 0)
 	RemovePilot(Mission.ship2)
 	SetLabel(Mission.ship2, "ship2")
-	
-	--get player into vsr scout
-	PlayerTeam = GetTeamNum(Mission.ship3)
-	xfrm = GetTransform(Mission.ship3)
-	RemoveObject(Mission.ship3)
-	Mission.ship3 = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
+	GiveWeapon(Mission.ship2,"gchainvsr_c")
+	GiveWeapon(Mission.ship2,"gshadowvsr_c")
+	GiveWeapon(Mission.ship2,"gproxminvsr")
+
+	Mission.ship3 = UnitToVSR(Mission.ship3, "ivscout_vsr", 0)
 	RemovePilot(Mission.ship3)
 	SetLabel(Mission.ship3, "ship3")
-	
-	--get player into vsr scout
-	PlayerTeam = GetTeamNum(Mission.ship4)
-	xfrm = GetTransform(Mission.ship4)
-	RemoveObject(Mission.ship4)
-	Mission.ship4 = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
+	GiveWeapon(Mission.ship3,"gchainvsr_c")
+	GiveWeapon(Mission.ship3,"gshadowvsr_c")
+	GiveWeapon(Mission.ship3,"gproxminvsr")
+
+	Mission.ship4 = UnitToVSR(Mission.ship4, "ivscout_vsr", 0)
 	RemovePilot(Mission.ship4)
 	SetLabel(Mission.ship4, "ship4")
+	GiveWeapon(Mission.ship4,"gchainvsr_c")
+	GiveWeapon(Mission.ship4,"gshadowvsr_c")
+	GiveWeapon(Mission.ship4,"gproxminvsr")
+
    
    PreloadODF("fvpcon")
    PreloadODF("ivcons2")
    PreloadODF("ivpscou")
    PreloadODF("fvpsnt")
+end
+
+
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
@@ -482,7 +498,7 @@ end
 
 function Update() --This function runs on every frame.
 Mission.TurnCounter = Mission.TurnCounter + 1
-Mission.player = GetPlayerHandle()
+
 missionCode() --Calling our missionCode function in Update.
 end
 

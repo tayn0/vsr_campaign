@@ -401,13 +401,30 @@ function Start() --This function is called upon the first frame
 	Ally(1,3)
 	Ally(3,1)
 	
-	--get player into vsr scout
-	PlayerTeam = GetTeamNum(Mission.player)
-	xfrm = GetTransform(Mission.player)
-	RemoveObject(Mission.player)
-	Mission.player = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
-	SetAsUser(Mission.player, PlayerTeam)
+
+
+	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
+	SetLabel(Mission.player, "player_ship")
 	Mission.player_ship = GetPlayerHandle()
+	GiveWeapon(Mission.player,"gchainvsr_c")
+	GiveWeapon(Mission.player,"gshadowvsr_c")
+	GiveWeapon(Mission.player,"gproxminvsr")
+end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
@@ -446,6 +463,7 @@ end
 function missionCode() --
 
 	Mission.player = GetPlayerHandle()
+
 	
 	-- this checks to see of the Mission.player is out of his ship
 
@@ -3863,6 +3881,7 @@ end
 		
 			AudioMessage("isdf0154.wav") -- (shab) we don't have another ship in the area!
 			FailMission(GetTime() + 15.0)
+
 			Mission.game_over = true
 		end
 		------------------------------------------------/

@@ -305,18 +305,31 @@ function Start() --This function is called upon the first frame
 	Mission.carrier = nil
 
 
-	--get player into vsr tank
-	PlayerTeam = GetTeamNum(Mission.player)
-	xfrm = GetTransform(Mission.player)
-	RemoveObject(Mission.player)
-	Mission.player = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
-	SetAsUser(Mission.player, PlayerTeam)
-	GiveWeapon(Mission.player,"gchainvsr_c")
 
+	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
+	GiveWeapon(Mission.player,"gchainvsr_c")
+	GiveWeapon(Mission.player,"gshadowvsr_c")
+	GiveWeapon(Mission.player,"gproxminvsr")
 	
 	PreloadODF("ivcarr")
 	PreloadODF("ivrecy_vsr")
    
+end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --

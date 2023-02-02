@@ -113,6 +113,24 @@ function Start() --This function is called upon the first frame
 	Mission.esent_4 = nil
 	Mission.annoy_scout1 = nil
 	Mission.annoy_scout2 = nil
+
+	Mission.player = UnitToVSR(Mission.player, "ivwalk_vsr", 1)
+end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
 
@@ -147,8 +165,8 @@ function PeriodicAttack()
 	end
 	if (Mission.annoy_timer==300) then
 	
-		Mission.annoy_scout1 = BuildObject("ivscout",Mission.comp_team,"lung2")
-		Mission.annoy_scout2 = BuildObject("ivscout",Mission.comp_team,"lung2")
+		Mission.annoy_scout1 = BuildObject("ivscout_vsr",Mission.comp_team,"lung2")
+		Mission.annoy_scout2 = BuildObject("ivscout_vsr",Mission.comp_team,"lung2")
 		Attack(Mission.annoy_scout1,Mission.player)
 		Attack(Mission.annoy_scout2,Mission.serv_1)
 		seen_scout1 = false
@@ -191,7 +209,7 @@ function missionCode() --
 	if Mission.mission_state == 0 then
 				-- build this stuff at start
 	--[[	
-			recy = BuildObject("ivrecy",1,"Recycler")
+			recy = BuildObject("ivrecy_vsr",1,"Recycler")
 			grp = GetFirstEmptyGroup()
 		SetGroup(recy,grp)			
 		SetScrap(1,30)
@@ -202,9 +220,9 @@ function missionCode() --
 		Mission.mbike_2 = BuildObject("ivmbike",3,"mbike2")
 		Mission.mbike_3 = BuildObject("ivmbike",3,"mbike3")
 		]]
-		Mission.tank_1 = BuildObject("ivatank",1,"tank1")  -- was atank
+		Mission.tank_1 = BuildObject("ivatank_vsr",1,"tank1")  -- was atank
 		SetGroup(Mission.tank_1,0)
-		Mission.tank_2 = BuildObject("ivrckt",1,"tank2")  -- was atank
+		Mission.tank_2 = BuildObject("ivrckt_vsr",1,"tank2")  -- was atank
 		SetGroup(Mission.tank_2,1)
 		-- serv= BuildObject("ivserv",1,"serv")
 		-- Set
@@ -214,21 +232,21 @@ function missionCode() --
 --			Mission.rckt_2 = BuildObject("ivrckt",1,"rckt2")
 		SetGroup(Mission.rckt_1,1)
 		SetGroup(Mission.rckt_2,1)
-		Mission.serv_1 = BuildObject("ivserv",1,"scav1")
+		Mission.serv_1 = BuildObject("ivserv_vsr",1,"scav1")
 		SetGroup(Mission.serv_1,2)
 
-		Mission.espir_2 = BuildObject("ibgtow",Mission.comp_team,"base_here")
-		Mission.esent_1 = BuildObject("ivmisl",Mission.comp_team,"esentpath1")
-		Mission.esent_2 = BuildObject("ivmisl",Mission.comp_team,"esentpath1")
-		Mission.espir_1 = BuildObject("ibgtow",Mission.comp_team,"espir1")
-		Mission.base_1 = BuildObject("ibfact",Mission.comp_team,"estro1")
-		Mission.base_2 = BuildObject("ibpgen",Mission.comp_team,"ekiln1")
+		Mission.espir_2 = BuildObject("ibgtow_vsr",Mission.comp_team,"base_here")
+		Mission.esent_1 = BuildObject("ivmisl_vsr",Mission.comp_team,"esentpath1")
+		Mission.esent_2 = BuildObject("ivmisl_vsr",Mission.comp_team,"esentpath1")
+		Mission.espir_1 = BuildObject("ibgtow_vsr",Mission.comp_team,"espir1")
+		Mission.base_1 = BuildObject("ibfact_vsr",Mission.comp_team,"estro1")
+		Mission.base_2 = BuildObject("ibpgen_vsr",Mission.comp_team,"ekiln1")
 
-		Mission.base_3 = BuildObject("ibpgen",Mission.comp_team,"power_x")  -- was eforg1
-		Mission.base_4 = BuildObject("ibcbun",Mission.comp_team,"bunker_x")
-		Mission.espir_3 = BuildObject("ibgtow",Mission.comp_team,"espir3")
-		Mission.esent_3 = BuildObject("ivscout",Mission.comp_team,"esent3")
-		Mission.esent_4 = BuildObject("ivscout",Mission.comp_team,"esent4")
+		Mission.base_3 = BuildObject("ibpgen_vsr",Mission.comp_team,"power_x")  -- was eforg1
+		Mission.base_4 = BuildObject("ibcbun_vsr",Mission.comp_team,"bunker_x")
+		Mission.espir_3 = BuildObject("ibgtow_vsr",Mission.comp_team,"espir3")
+		Mission.esent_3 = BuildObject("ivscout_vsr",Mission.comp_team,"esent3")
+		Mission.esent_4 = BuildObject("ivscout_vsr",Mission.comp_team,"esent4")
 		ClearObjectives()
 		AddObjective("isdf20a.otf","WHITE",10.0)
 		Patrol(Mission.esent_1,"esentpath1")
@@ -282,7 +300,7 @@ function missionCode() --
 			--	Goto(Mission.mbike_3,"front_ambush")
 			--	Goto(Mission.rckt_1,"front_ambush")
 			--	Goto(Mission.rckt_2,"front_ambush")
-				temp = BuildObject("ivscout",Mission.comp_team,"lung2")
+				temp = BuildObject("ivscout_vsr",Mission.comp_team,"lung2")
 				Attack(temp,Mission.player)
 				Mission.mission_state = Mission.mission_state + 1
 			end
@@ -321,7 +339,7 @@ function missionCode() --
 			]]
 	--		Goto(Mission.rckt_1,"front_ambush")
 	--		Goto(Mission.rckt_2,"front_ambush")
-	--		temp = BuildObject("ivscout",2,"lung2")
+	--		temp = BuildObject("ivscout_vsr",2,"lung2")
 	--		Attack(temp,serv_1)
 			Mission.mission_state = Mission.mission_state + 1
 		end
@@ -332,7 +350,7 @@ function missionCode() --
 			(GetDistance(Mission.rckt_2,"front_ambush")<75.0)  or
 			(GetDistance(Mission.player,"front_ambush")<75.0)))  then
 			
-				temp = BuildObject("ivscout",Mission.comp_team,"lung2")
+				temp = BuildObject("ivscout_vsr",Mission.comp_team,"lung2")
 				Attack(temp,Mission.player)
 				AudioMessage("isdf2002.wav") -- use your assault tanks
 				ClearObjectives()
@@ -355,7 +373,7 @@ function missionCode() --
 	--			AudioMessage("isdf2003.wav") -- now let's press on to the base
 	--			Goto(Mission.rckt_1,"exit1")
 	--			Goto(Mission.rckt_2,"exit1")
-	--			temp = BuildObject("ivscout",2,"lung2")
+	--			temp = BuildObject("ivscout_vsr",2,"lung2")
 	--			Attack(temp,serv_1)
 				Mission.mission_state = Mission.mission_state + 1
 
@@ -445,22 +463,22 @@ function missionCode() --
 	elseif Mission.mission_state == 13 then
 		if (GetTime()>Mission.ambush_delay)  then
 		
-			Mission.eatank_1 = BuildObject("ivtank",Mission.comp_team,"eatank1")
-			Mission.eatank_2 = BuildObject("ivtank",Mission.comp_team,"eatank2")
-			Mission.eatank_3 = BuildObject("ivmbike",Mission.comp_team,"eatank3")
+			Mission.eatank_1 = BuildObject("ivtank_vsr",Mission.comp_team,"eatank1")
+			Mission.eatank_2 = BuildObject("ivtank_vsr",Mission.comp_team,"eatank2")
+			Mission.eatank_3 = BuildObject("ivmbike_vsr",Mission.comp_team,"eatank3")
 			SetSkill(Mission.eatank_1,2)
 			SetSkill(Mission.eatank_2,2)
 			SetSkill(Mission.eatank_3,2)
 			Attack(Mission.eatank_1,Mission.player)
 			Attack(Mission.eatank_2,Mission.player)
 			Attack(Mission.eatank_3,Mission.player)
-			Mission.etank_1 = BuildObject("ivtank",Mission.comp_team,"etank1")
-			Mission.etank_2 = BuildObject("ivtank",Mission.comp_team,"etank2")
-			etank_3 = BuildObject("ivmbike",Mission.comp_team,"etank3")
-			Mission.earch_1 = BuildObject("ivtank",Mission.comp_team,"earch1")
-			Mission.earch_2 = BuildObject("ivtank",Mission.comp_team,"earch2")
-			earch_3 = BuildObject("ivmisl",Mission.comp_team,"earch3")
-			Mission.manson = BuildObject("ivatank",Mission.comp_team,"manson")
+			Mission.etank_1 = BuildObject("ivtank_vsr",Mission.comp_team,"etank1")
+			Mission.etank_2 = BuildObject("ivtank_vsr",Mission.comp_team,"etank2")
+			etank_3 = BuildObject("ivmbike_vsr",Mission.comp_team,"etank3")
+			Mission.earch_1 = BuildObject("ivtank_vsr",Mission.comp_team,"earch1")
+			Mission.earch_2 = BuildObject("ivtank_vsr",Mission.comp_team,"earch2")
+			earch_3 = BuildObject("ivmisl_vsr",Mission.comp_team,"earch3")
+			Mission.manson = BuildObject("ivatank_vsr",Mission.comp_team,"manson")
 			Attack(Mission.etank_1,Mission.player)
 			Attack(Mission.etank_2,Mission.player)
 			Attack(etank_3,Mission.player)

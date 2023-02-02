@@ -445,8 +445,31 @@ function Start() --This function is called upon the first frame
 	Mission.aan_cinscout1 = GetHandle("aan_cinscout1")
 
 	SetTeamColor(3,0,127,255)  --BRADDOCK
+
+	Mission.playersrecy = UnitToVSR(Mission.playersrecy, "fvrecy_vsr", 0)
+	Mission.bridgetank = UnitToVSR(Mission.bridgetank, "ivatank_vsr", 0)
+	Mission.bridgescout = UnitToVSR(Mission.bridgescout, "ivscout_vsr", 0)
+	Mission.cons = UnitToVSR(GetHandle("unnamed_fvcons"), "fvcons_vsr", 0)
+	SetGroup(Mission.cons,0)
    
 end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
+end
+
 
 function AddObject(h) --This function is called when an object appears in the game. --
 
@@ -522,7 +545,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 
 --****AAN BASE VEHICLES****--
 		if ((Mission.baseturr1 == nil) and (GetTeamNum(h) == 2) and (GetDistance(h,"aanbase") < 150) 
-		and (IsOdf(h,"ivturr"))) then
+		and (IsOdf(h,"ivturr_vsr"))) then
 		
 			Mission.baseturr1 = h
 		end
@@ -530,7 +553,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 --TANK1
 		if (not Mission.basetank1alive) then
 		
-			if ((IsOdf(h,"ivtank")) and (GetTeamNum(h) == 2) and (GetDistance(h,"aanbase") < 150)) then
+			if ((IsOdf(h,"ivtank_vsr")) and (GetTeamNum(h) == 2) and (GetDistance(h,"aanbase") < 150)) then
 		
 			
 				Mission.basetank1 = h
@@ -542,7 +565,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 --TANK2
 		elseif (not Mission.basetank2alive) then
 		
-			if ((IsOdf(h,"ivtank")) and (GetTeamNum(h) == 2) and (GetDistance(h,"aanbase") < 150)) then
+			if ((IsOdf(h,"ivtank_vsr")) and (GetTeamNum(h) == 2) and (GetDistance(h,"aanbase") < 150)) then
 		
 			
 				Mission.basetank2 = h
@@ -554,7 +577,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 --TANK3
 		elseif (not Mission.basetank3alive) then
 		
-			if ((IsOdf(h,"ivtank")) and (GetTeamNum(h) == 2) and (GetDistance(h,"aanbase") < 150)) then
+			if ((IsOdf(h,"ivtank_vsr")) and (GetTeamNum(h) == 2) and (GetDistance(h,"aanbase") < 150)) then
 		
 			
 				Mission.basetank3 = h
@@ -814,34 +837,34 @@ function missionCode() --
 			RemoveObject(Mission.aan_cons)
 		end
 
-		Mission.aan_cingtow1 = BuildObject("ibgtow",2,"aigtow")--gtow
-		Mission.aan_cbunk = BuildObject("ibcbun",2,"aicbun")--com bunk
-		Mission.aan_cons = BuildObject("ivcons",2,"aan_cons")--com bunk
+		Mission.aan_cingtow1 = BuildObject("ibgtow_vsr",2,"aigtow")--gtow
+		Mission.aan_cbunk = BuildObject("ibcbun_vsr",2,"aicbun")--com bunk
+		Mission.aan_cons = BuildObject("ivcons_vsr",2,"aan_cons")--com bunk
 
 		--factory
 		pos_aan_fact = GetTransform(Mission.aan_fact)
 		RemoveObject(Mission.aan_fact)
-		Mission.aan_fact = BuildObject("ibfact",2,pos_aan_fact)
+		Mission.aan_fact = BuildObject("ibfact_vsr",2,pos_aan_fact)
 
 		--pgen1
 		pos_aanpgen1 = GetTransform(Mission.aanpgen1)
 		RemoveObject(Mission.aanpgen1)
-		Mission.aanpgen1 = BuildObject("ibpgen",2,pos_aanpgen1)
+		Mission.aanpgen1 = BuildObject("ibpgen_vsr",2,pos_aanpgen1)
 
 		--pgen2
 		pos_aanpgen2 = GetTransform(Mission.aanpgen2)
 		RemoveObject(Mission.aanpgen2)
-		Mission.aanpgen2 = BuildObject("ibpgen",2,pos_aanpgen2)
+		Mission.aanpgen2 = BuildObject("ibpgen_vsr",2,pos_aanpgen2)
 
 		--recy
 		pos_aan_recy = GetTransform(Mission.aanrecy)
 		RemoveObject(Mission.aanrecy)
-		Mission.aanrecy = BuildObject("ibrecy",2,pos_aan_recy)
+		Mission.aanrecy = BuildObject("ibrecy_vsr",2,pos_aan_recy)
 
 		--sbay
 		pos_aan_recy = GetTransform(Mission.aansbay)
 		RemoveObject(Mission.aansbay)
-		Mission.aansbay = BuildObject("ibsbay",2,pos_aan_sbay)
+		Mission.aansbay = BuildObject("ibsbay_vsr",2,pos_aan_sbay)
 
 		SetScrap(1,40)
 		SetScrap(2,40)
@@ -857,7 +880,7 @@ function missionCode() --
 	
 		if ((not Mission.pk1attack) and (Mission.pk1time < GetTime())) then
 		
-			Mission.pk1 = BuildObject("ivscout",3,"pk1")
+			Mission.pk1 = BuildObject("ivscout_vsr",3,"pk1")
 			SetSkill(Mission.pk1,1)
 			Goto(Mission.pk1,"playerbase")
 			Mission.pk2time = (GetTime() + 60)
@@ -866,8 +889,8 @@ function missionCode() --
 
 		if ((not Mission.pk2attack) and (Mission.pk2time < GetTime())) then
 		
-			Mission.pk2 = BuildObject("ivscout",3,"pk2")
-			Mission.pk2b = BuildObject("ivscout",3,"pk3")
+			Mission.pk2 = BuildObject("ivscout_vsr",3,"pk2")
+			Mission.pk2b = BuildObject("ivscout_vsr",3,"pk3")
 			SetSkill(Mission.pk2,1)
 			SetSkill(Mission.pk2b,2)
 			Goto(Mission.pk2,"playerbase")
@@ -879,7 +902,7 @@ function missionCode() --
 		if ((not Mission.pk3attack) and (Mission.pk3time < GetTime())) then
 		
 			AudioMessage("scion0504.wav")  --Manson -- "We just lost a guntowernot "
-			Mission.pk3 = BuildObject("ivmbike",3,"pk1")
+			Mission.pk3 = BuildObject("ivmbike_vsr",3,"pk1")
 			SetSkill(Mission.pk3,1)
 			Goto(Mission.pk3,"playerbase")
 			Mission.pk4time = (GetTime() + 75)
@@ -888,8 +911,8 @@ function missionCode() --
 
 		if ((not Mission.pk4attack) and (Mission.pk4time < GetTime())) then
 		
-			Mission.pk4 = BuildObject("ivtank",3,"pk1")
-			Mission.pk4b = BuildObject("ivmbike",3,"pk1")
+			Mission.pk4 = BuildObject("ivtank_vsr",3,"pk1")
+			Mission.pk4b = BuildObject("ivmbike_vsr",3,"pk1")
 			SetSkill(Mission.pk4,1)
 			SetSkill(Mission.pk4b,1)
 			Goto(Mission.pk4,"playerbase")
@@ -900,8 +923,8 @@ function missionCode() --
 
 		if ((not Mission.pk5attack) and (Mission.pk5time < GetTime())) then
 		
-			Mission.pk5 = BuildObject("ivscout",3,"pk2")
-			Mission.pk5b = BuildObject("ivtank",3,"pk1")
+			Mission.pk5 = BuildObject("ivscout_vsr",3,"pk2")
+			Mission.pk5b = BuildObject("ivtank_vsr",3,"pk1")
 			SetSkill(Mission.pk5,1)
 			SetSkill(Mission.pk5b,1)
 			Goto(Mission.pk5,"playerbase")
@@ -912,8 +935,8 @@ function missionCode() --
 
 		if ((not Mission.pk6attack) and (Mission.pk6time < GetTime())) then
 		
-			Mission.pk6 = BuildObject("ivscout",3,"pk1")
-			Mission.pk6b = BuildObject("ivscout",3,"pk2")
+			Mission.pk6 = BuildObject("ivscout_vsr",3,"pk1")
+			Mission.pk6b = BuildObject("ivscout_vsr",3,"pk2")
 			SetSkill(Mission.pk6,1)
 			SetSkill(Mission.pk6b,1)
 			Goto(Mission.pk6,"playerbase")
@@ -924,8 +947,8 @@ function missionCode() --
 
 		if ((not Mission.pk7attack) and (Mission.pk7time < GetTime())) then
 		
-			Mission.pk7 = BuildObject("ivmbike",3,"pk1")
-			Mission.pk7b = BuildObject("ivtank",3,"pk1b")
+			Mission.pk7 = BuildObject("ivmbike_vsr",3,"pk1")
+			Mission.pk7b = BuildObject("ivtank_vsr",3,"pk1b")
 			SetSkill(Mission.pk7,2)
 			SetSkill(Mission.pk7b,1)
 			Goto(Mission.pk7,"playerbase")
@@ -936,8 +959,8 @@ function missionCode() --
 		
 		if ((not Mission.pk8attack) and (Mission.pk8time < GetTime())) then
 		
-			Mission.pk8 = BuildObject("ivtank",3,"pk1")
-			Mission.pk8b = BuildObject("ivtank",3,"pk2")
+			Mission.pk8 = BuildObject("ivtank_vsr",3,"pk1")
+			Mission.pk8b = BuildObject("ivtank_vsr",3,"pk2")
 			SetSkill(Mission.pk8,1)
 			SetSkill(Mission.pk8b,2)
 			Goto(Mission.pk8,"playerbase")
@@ -948,8 +971,8 @@ function missionCode() --
 
 		if ((not Mission.pk9attack) and (Mission.pk9time < GetTime())) then
 		
-			Mission.pk9 = BuildObject("ivscout",3,"pk1")
-			Mission.pk9b = BuildObject("ivscout",3,"pk1")
+			Mission.pk9 = BuildObject("ivscout_vsr",3,"pk1")
+			Mission.pk9b = BuildObject("ivscout_vsr",3,"pk1")
 			SetSkill(Mission.pk9,1)
 			SetSkill(Mission.pk9b,2)
 			Goto(Mission.pk9,"playerbase")
@@ -961,9 +984,9 @@ function missionCode() --
 		if ((not Mission.pk10attack) and (Mission.pk10time < GetTime())) then
 		
 			AudioMessage("scion0512.wav")-- Manson We just lost powernot 
-			Mission.pk10 = BuildObject("ivtank",3,"pk2")
-			Mission.pk10b = BuildObject("ivscout",3,"pk2")
-			Mission.pk10c = BuildObject("ivmbike",3,"pk2")
+			Mission.pk10 = BuildObject("ivtank_vsr",3,"pk2")
+			Mission.pk10b = BuildObject("ivscout_vsr",3,"pk2")
+			Mission.pk10c = BuildObject("ivmbike_vsr",3,"pk2")
 			SetSkill(Mission.pk10,1)
 			SetSkill(Mission.pk10b,1)
 			SetSkill(Mission.pk10c,2)
@@ -977,9 +1000,9 @@ function missionCode() --
 
 		if ((not Mission.pk11attack) and (Mission.pk11time < GetTime())) then
 		
-			Mission.pk11 = BuildObject("ivtank",3,"pk2")
-			Mission.pk11b = BuildObject("ivtank",3,"pk4")
-			Mission.pk11c = BuildObject("ivmbike",3,"pk1")
+			Mission.pk11 = BuildObject("ivtank_vsr",3,"pk2")
+			Mission.pk11b = BuildObject("ivtank_vsr",3,"pk4")
+			Mission.pk11c = BuildObject("ivmbike_vsr",3,"pk1")
 			SetSkill(Mission.pk11,2)
 			SetSkill(Mission.pk11b,2)
 			SetSkill(Mission.pk11c,1)
@@ -993,9 +1016,9 @@ function missionCode() --
 
 		if ((not Mission.pk12attack) and (Mission.pk12time < GetTime())) then
 		
-			Mission.pk12 = BuildObject("ivtank",3,"pk2")
-			Mission.pk12b = BuildObject("ivtank",3,"pk4")
-			Mission.pk12c = BuildObject("ivmbike",3,"pk4b")
+			Mission.pk12 = BuildObject("ivtank_vsr",3,"pk2")
+			Mission.pk12b = BuildObject("ivtank_vsr",3,"pk4")
+			Mission.pk12c = BuildObject("ivmbike_vsr",3,"pk4b")
 			SetSkill(Mission.pk12,2)
 			SetSkill(Mission.pk12b,2)
 			SetSkill(Mission.pk12c,2)
@@ -1058,7 +1081,7 @@ function missionCode() --
 	--this will spawn in a couple scouts to harras the players base after he has left base
 	if ((not Mission.after_spawn) and (Mission.vo2) and (Mission.after_spawntime < GetTime())) then
 	
-		Mission.pk1 = BuildObject("ivscout",3,"pk4")	
+		Mission.pk1 = BuildObject("ivscout_vsr",3,"pk4")	
 		SetSkill(Mission.pk1,2)
 		Goto(Mission.pk1,"playerbase")
 		Mission.after_spawntime = (GetTime() + 250)
@@ -1068,14 +1091,14 @@ function missionCode() --
 	--force to nuke the AAN base
 	if ((not Mission.playertakingtoolong1) and (not Mission.playeratbridge) and (Mission.playertakingtoolong1time < GetTime())) then
 	
-		Mission.death1 = BuildObject("ivmisl",3,"death1")	
-		Mission.death2 = BuildObject("ivmisl",3,"death2")
-		Mission.death3 = BuildObject("ivmisl",3,"death3")
-		Mission.death4 = BuildObject("ivmisl",3,"death4")
-		Mission.death5 = BuildObject("ivatank",3,"death5")
-		Mission.death6 = BuildObject("ivatank",3,"death6")
-		Mission.death7 = BuildObject("ivatank",3,"death7")
-		Mission.death8 = BuildObject("ivatank",3,"death8")
+		Mission.death1 = BuildObject("ivmisl_vsr",3,"death1")	
+		Mission.death2 = BuildObject("ivmisl_vsr",3,"death2")
+		Mission.death3 = BuildObject("ivmisl_vsr",3,"death3")
+		Mission.death4 = BuildObject("ivmisl_vsr",3,"death4")
+		Mission.death5 = BuildObject("ivatank_vsr",3,"death5")
+		Mission.death6 = BuildObject("ivatank_vsr",3,"death6")
+		Mission.death7 = BuildObject("ivatank_vsr",3,"death7")
+		Mission.death8 = BuildObject("ivatank_vsr",3,"death8")
 
 		SetMaxHealth(Mission.death5,10000)
 		SetCurHealth(Mission.death5,10000)
@@ -1123,14 +1146,14 @@ function missionCode() --
 	--to NUKE the base (bad playernot )
 	if ((not Mission.player_at_aan_early) and (not Mission.vo2) and (GetDistance(Mission.player,"aanbase") < 200)) then
 	
-		Mission.death1 = BuildObject("ivmisl",3,"death1")	
-		Mission.death2 = BuildObject("ivmisl",3,"death2")
-		Mission.death3 = BuildObject("ivmisl",3,"death3")
-		Mission.death4 = BuildObject("ivmisl",3,"death4")
-		Mission.death5 = BuildObject("ivatank",3,"death5")
-		Mission.death6 = BuildObject("ivatank",3,"death6")
-		Mission.death7 = BuildObject("ivatank",3,"death7")
-		Mission.death8 = BuildObject("ivatank",3,"death8")
+		Mission.death1 = BuildObject("ivmisl_vsr",3,"death1")	
+		Mission.death2 = BuildObject("ivmisl_vsr",3,"death2")
+		Mission.death3 = BuildObject("ivmisl_vsr",3,"death3")
+		Mission.death4 = BuildObject("ivmisl_vsr",3,"death4")
+		Mission.death5 = BuildObject("ivatank_vsr",3,"death5")
+		Mission.death6 = BuildObject("ivatank_vsr",3,"death6")
+		Mission.death7 = BuildObject("ivatank_vsr",3,"death7")
+		Mission.death8 = BuildObject("ivatank_vsr",3,"death8")
 
 		SetMaxHealth(Mission.death5,10000)
 		SetCurHealth(Mission.death5,10000)
@@ -1185,8 +1208,8 @@ function missionCode() --
 ----spawning in 2 IVATANK to be crossing the bridge when the Mission.player is there
 	if ((not Mission.playeratbridge) and (Mission.vo2) and (GetDistance(Mission.player,Mission.bstr1) < 190)) then
 	
-		Mission.atank1 = BuildObject("ivatank",3,"atankspawn")
-		Mission.atank2 = BuildObject("ivatank",3,"atankspawn2")
+		Mission.atank1 = BuildObject("ivatank_vsr",3,"atankspawn")
+		Mission.atank2 = BuildObject("ivatank_vsr",3,"atankspawn2")
 		SetMaxHealth(Mission.atank1,4500)
 		SetCurHealth(Mission.atank1,4500)
 		SetMaxHealth(Mission.atank2,4500)
@@ -1341,8 +1364,8 @@ function missionCode() --
 	
 		if ((not Mission.spawn1) and (Mission.spawn1time < GetTime())) then
 		
-			Mission.spawner1 = BuildObject("ivtank",3,"spawn4")
-			Mission.spawner2 = BuildObject("ivtank",3,"spawn1")
+			Mission.spawner1 = BuildObject("ivtank_vsr",3,"spawn4")
+			Mission.spawner2 = BuildObject("ivtank_vsr",3,"spawn1")
 			SetSkill(Mission.spawner1,1)
 			SetSkill(Mission.spawner2,1)
 			Goto(Mission.spawner1,"aanbase")
@@ -1365,8 +1388,8 @@ function missionCode() --
 		--WAVE 2
 		if ((not Mission.spawn2) and (Mission.spawn2time < GetTime())) then
 		
-			Mission.spawner4 = BuildObject("ivatank",3,"spawn4")
-			Mission.spawner5 = BuildObject("ivatank",3,"spawn3")	
+			Mission.spawner4 = BuildObject("ivatank_vsr",3,"spawn4")
+			Mission.spawner5 = BuildObject("ivatank_vsr",3,"spawn3")	
 			SetSkill(Mission.spawner4,1)
 			SetSkill(Mission.spawner5,1)
 			Goto(Mission.spawner4,"trackedpath")
@@ -1377,9 +1400,9 @@ function missionCode() --
 	-- WAVES 3 - 8 ATTACKING THE AAN BASE
 		if ((not Mission.spawn3) and (Mission.spawn3time < GetTime())) then
 		
-			Mission.spawner6 = BuildObject("ivscout",3,"pk1")	
-			Mission.spawner7 = BuildObject("ivtank",3,"below1")
-			Mission.spawner8 = BuildObject("ivtank",3,"below2")
+			Mission.spawner6 = BuildObject("ivscout_vsr",3,"pk1")	
+			Mission.spawner7 = BuildObject("ivtank_vsr",3,"below1")
+			Mission.spawner8 = BuildObject("ivtank_vsr",3,"below2")
 			SetSkill(Mission.spawner6,0)
 			SetSkill(Mission.spawner7,0)
 			SetSkill(Mission.spawner8,1)
@@ -1391,8 +1414,8 @@ function missionCode() --
 
 		if ((not Mission.spawn4) and (Mission.spawn4time < GetTime())) then
 		
-			Mission.spawner9 = BuildObject("ivtank",3,"death7")	
-			Mission.spawner10 = BuildObject("ivscout",3,"death8")
+			Mission.spawner9 = BuildObject("ivtank_vsr",3,"death7")	
+			Mission.spawner10 = BuildObject("ivscout_vsr",3,"death8")
 			SetSkill(Mission.spawner9,1)
 			SetSkill(Mission.spawner10,1)
 			Goto(Mission.spawner9,"hoverpath")
@@ -1402,10 +1425,10 @@ function missionCode() --
 
 		if ((not spawn5) and (Mission.spawn5time < GetTime())) then
 		
-			Mission.spawner11 = BuildObject("ivtank",3,"below1")	
-			Mission.spawner12 = BuildObject("ivtank",3,"below2")
+			Mission.spawner11 = BuildObject("ivtank_vsr",3,"below1")	
+			Mission.spawner12 = BuildObject("ivtank_vsr",3,"below2")
 
-			Mission.spawner14 = BuildObject("ivscout",3,"spawn3")		
+			Mission.spawner14 = BuildObject("ivscout_vsr",3,"spawn3")		
 			SetSkill(Mission.spawner11,1)
 			SetSkill(Mission.spawner12,1)
 
@@ -1419,9 +1442,9 @@ function missionCode() --
 
 		if ((not Mission.spawn6) and (Mission.spawn6time < GetTime())) then
 		
-			Mission.spawner13 = BuildObject("ivtank",3,"spawn2")
-			Mission.spawner15 = BuildObject("ivtank",3,"spawn4")	
-			Mission.spawner16 = BuildObject("ivtank",3,"spawn1")
+			Mission.spawner13 = BuildObject("ivtank_vsr",3,"spawn2")
+			Mission.spawner15 = BuildObject("ivtank_vsr",3,"spawn4")	
+			Mission.spawner16 = BuildObject("ivtank_vsr",3,"spawn1")
 			SetSkill(Mission.spawner13,1)	
 			SetSkill(Mission.spawner15,1)
 			SetSkill(Mission.spawner16,1)
@@ -1433,9 +1456,9 @@ function missionCode() --
 
 		if ((not Mission.spawn7) and (Mission.spawn7time < GetTime())) then
 		
-			Mission.spawner17 = BuildObject("ivtank",3,"pk1")	
-			Mission.spawner18 = BuildObject("ivatank",3,"spawn1")
-			Mission.spawner19 = BuildObject("ivatank",3,"spawn2")
+			Mission.spawner17 = BuildObject("ivtank_vsr",3,"pk1")	
+			Mission.spawner18 = BuildObject("ivatank_vsr",3,"spawn1")
+			Mission.spawner19 = BuildObject("ivatank_vsr",3,"spawn2")
 			SetSkill(Mission.spawner17,1)
 			SetSkill(Mission.spawner18,1)
 			SetSkill(Mission.spawner19,2)
@@ -1447,9 +1470,9 @@ function missionCode() --
 
 		if ((not Mission.spawn8) and (Mission.spawn8time < GetTime())) then
 		
-			Mission.spawner20 = BuildObject("ivwalk",3,"walk2spawn")	
-			Mission.spawner21 = BuildObject("ivwalk",3,"walk1spawn")
-			Mission.spawner22 = BuildObject("ivtank",3,"spawn1")
+			Mission.spawner20 = BuildObject("ivwalk_vsr",3,"walk2spawn")	
+			Mission.spawner21 = BuildObject("ivwalk_vsr",3,"walk1spawn")
+			Mission.spawner22 = BuildObject("ivtank_vsr",3,"spawn1")
 			SetSkill(Mission.spawner20,1)
 			SetSkill(Mission.spawner21,1)
 			SetSkill(Mission.spawner22,2)
@@ -1461,9 +1484,9 @@ function missionCode() --
 
 		if ((not Mission.spawn9) and (Mission.spawn9time < GetTime())) then
 		
-			Mission.spawner1 = BuildObject("ivwalk",3,"walk2spawn")	
-			Mission.spawner2 = BuildObject("ivwalk",3,"walk1spawn")
-			Mission.spawner3 = BuildObject("ivatank",3,"below1")
+			Mission.spawner1 = BuildObject("ivwalk_vsr",3,"walk2spawn")	
+			Mission.spawner2 = BuildObject("ivwalk_vsr",3,"walk1spawn")
+			Mission.spawner3 = BuildObject("ivatank_vsr",3,"below1")
 			SetSkill(Mission.spawner1,1)
 			SetSkill(Mission.spawner2,1)
 			SetSkill(Mission.spawner3,2)
@@ -1476,9 +1499,9 @@ function missionCode() --
 
 		if ((not Mission.spawn10) and (Mission.spawn10time < GetTime())) then
 		
-			Mission.lastspawn1 = BuildObject("ivwalk",3,"walk2spawn")	
-			Mission.lastspawn2 = BuildObject("ivwalk",3,"walk1spawn")
-			Mission.lastspawn3 = BuildObject("ivatank",3,"spawn1")
+			Mission.lastspawn1 = BuildObject("ivwalk_vsr",3,"walk2spawn")	
+			Mission.lastspawn2 = BuildObject("ivwalk_vsr",3,"walk1spawn")
+			Mission.lastspawn3 = BuildObject("ivatank_vsr",3,"spawn1")
 			SetSkill(Mission.lastspawn1,1)
 			SetSkill(Mission.lastspawn2,1)
 			SetSkill(Mission.lastspawn3,2)

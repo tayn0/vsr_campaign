@@ -249,7 +249,44 @@ function Start() --This function is called upon the first frame
 	Mission.spawner7b = nil
 	Mission.spawner8a = nil
 	Mission.spawner8b = nil
+	
+	Mission.player = GetPlayerHandle()
+	Mission.player = UnitToVSR(Mission.player, "fvsent_vsr", 1)
+
+	Mission.ivrckt1 = UnitToVSR(Mission.ivrckt1, "ivrckt_vsr", 0)
+	Mission.ivrckt2 = UnitToVSR(Mission.ivrckt2, "ivrckt_vsr", 0)
+	Mission.ivrckt3 = UnitToVSR(Mission.ivrckt3, "ivrckt_vsr", 0)
+	Mission.ivrckt4 = UnitToVSR(Mission.ivrckt4, "ivrckt_vsr", 0)
+	Mission.ivrckt5 = UnitToVSR(Mission.ivrckt5, "ivrckt_vsr", 0)
+	Mission.ivrckt6 = UnitToVSR(Mission.ivrckt6, "ivrckt_vsr", 0)
+	Mission.ivrckt7 = UnitToVSR(Mission.ivrckt7, "ivrckt_vsr", 0)
+
+	Mission.playersrecy = UnitToVSR(Mission.playersrecy, "fvrecy_vsr", 0)
+	SetGroup(Mission.playersrecy, 0)
+
+	Mission.misl1 = UnitToVSR(Mission.misl1, "ivmisl_vsr", 0)
+	Mission.misl2 = UnitToVSR(Mission.misl2, "ivmisl_vsr", 0)
+
+	Mission.recy1 = UnitToVSR(Mission.recy1, "ibrecy_vsr", 0)
+	Mission.fact = UnitToVSR(GetHandle("unnamed_ibfact"), "ibfact_vsr", 0)
+
    
+end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
@@ -791,8 +828,8 @@ function missionCode() --
 	
 		if ((not Mission.wave1) and (Mission.wave1time < GetTime())) then
 		
-			Mission.spawner1a = BuildObject("ivscout",3,"spawn1")
-			Mission.spawner1b = BuildObject("ivscout",3,"spawn2")
+			Mission.spawner1a = BuildObject("ivscout_vsr",3,"spawn1")
+			Mission.spawner1b = BuildObject("ivscout_vsr",3,"spawn2")
 			SetSkill(Mission.spawner1a,2)
 			SetSkill(Mission.spawner1b,1)
 			Goto(Mission.spawner1a,"playerbase")
@@ -803,8 +840,8 @@ function missionCode() --
 
 		if ((not Mission.wave2) and (Mission.wave2time < GetTime())) then
 		
-			Mission.spawner2a = BuildObject("ivscout",3,"spawn3")
-			Mission.spawner2b = BuildObject("ivscout",3,"spawn4")
+			Mission.spawner2a = BuildObject("ivscout_vsr",3,"spawn3")
+			Mission.spawner2b = BuildObject("ivscout_vsr",3,"spawn4")
 			SetSkill(Mission.spawner2a,2)
 			SetSkill(Mission.spawner2b,1)
 			Goto(Mission.spawner2a,"playerbase")
@@ -878,8 +915,8 @@ function missionCode() --
 
 		if ((not Mission.wave3) and (Mission.wave3time < GetTime())) then
 		
-			Mission.spawner3a = BuildObject("ivscout",3,"spawn1")
-			Mission.spawner3b = BuildObject("ivmbike",3,"spawn4")
+			Mission.spawner3a = BuildObject("ivscout_vsr",3,"spawn1")
+			Mission.spawner3b = BuildObject("ivmbike_vsr",3,"spawn4")
 			SetSkill(Mission.spawner3a,1)
 			SetSkill(Mission.spawner3b,1)
 			Goto(Mission.spawner3a,"playerbase")
@@ -890,8 +927,8 @@ function missionCode() --
 
 		if ((not Mission.wave4) and (Mission.wave4time < GetTime())) then
 		
-			Mission.spawner4a = BuildObject("ivtank",3,"spawn1")
-			Mission.spawner4c = BuildObject("ivtank",3,"spawn3")
+			Mission.spawner4a = BuildObject("ivtank_vsr",3,"spawn1")
+			Mission.spawner4c = BuildObject("ivtank_vsr",3,"spawn3")
 			SetSkill(Mission.spawner4a,1)
 			SetSkill(Mission.spawner4c,2)
 			Goto(Mission.spawner4a,"playerbase")
@@ -902,8 +939,8 @@ function missionCode() --
 
 		if ((not Mission.wave5) and (Mission.wave5time < GetTime())) then
 		
-			Mission.spawner5a = BuildObject("ivmbike",3,"spawn1")
-			Mission.spawner5c = BuildObject("ivtank",3,"spawn2")
+			Mission.spawner5a = BuildObject("ivmbike_vsr",3,"spawn1")
+			Mission.spawner5c = BuildObject("ivtank_vsr",3,"spawn2")
 			SetSkill(Mission.spawner5a,1)
 			SetSkill(Mission.spawner5c,2)
 			Goto(Mission.spawner5a,"playerbase")
@@ -914,8 +951,8 @@ function missionCode() --
 
 		if ((not Mission.wave6) and (Mission.wave5time < GetTime())) then
 		
-			Mission.spawner6a = BuildObject("ivmbike",3,"spawn4")
-			Mission.spawner6b = BuildObject("ivrckt",3,"spawn3")
+			Mission.spawner6a = BuildObject("ivmbike_vsr",3,"spawn4")
+			Mission.spawner6b = BuildObject("ivrckt_vsr",3,"spawn3")
 			SetSkill(Mission.spawner6a,1)
 			SetSkill(Mission.spawner6b,2)
 			Goto(Mission.spawner6a,"playerbase")
@@ -951,7 +988,7 @@ function missionCode() --
 		--sending a tank to attack the location after Mission.player has killed scav
 		if ((not Mission.scav_attack) and (Mission.player_took_scav) and (Mission.scav_attacktime < GetTime())) then
 		
-			Mission.scav_attacker = BuildObject("ivtank",3,"enemybase")
+			Mission.scav_attacker = BuildObject("ivtank_vsr",3,"enemybase")
 			SetSkill(Mission.scav_attacker,2)
 			SetAvoidType(Mission.scav_attacker,0)
 			Goto(Mission.scav_attacker,"scav1")

@@ -122,18 +122,30 @@ function Start() --This function is called upon the first frame
 	PreloadODF("fvartl")
 	PreloadODF("fvarch")
 	
-	PlayerTeam = GetTeamNum(Mission.player)
-	xfrm = GetTransform(Mission.player)
-	RemoveObject(Mission.player)
-	Mission.player = BuildObject("ivscout_vsr", PlayerTeam, xfrm)
-	SetAsUser(Mission.player, PlayerTeam)
-	
-	PlayerTeam = GetTeamNum(Mission.recy)
-	xfrm = GetTransform(Mission.recy)
-	RemoveObject(Mission.recy)
-	Mission.recy = BuildObject("ivrecy_vsr", PlayerTeam, xfrm)
+	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
+	GiveWeapon(Mission.player,"gchainvsr_c")
+	GiveWeapon(Mission.player,"gshadowvsr_c")
+	GiveWeapon(Mission.player,"gproxminvsr")
+
+	Mission.recy = UnitToVSR(Mission.recy, "ivscout_vsr", 0)
 	SetGroup(Mission.recy,0)
    
+end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --

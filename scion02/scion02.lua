@@ -96,38 +96,56 @@ function Start() --This function is called upon the first frame
 	Mission.artillery = nil
 	Mission.artillery2 = nil  -- fail safe
 	Mission.player = GetPlayerHandle()
+
+	Mission.player = UnitToVSR(Mission.player, "fvsent_vsr", 1)
    
 end
 
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
+end
+
 function AddObject(h) --This function is called when an object appears in the game. --
-	if (IsOdf(h,"fbrecy")) then
+	if (IsOdf(h,"fbrecy_vsr")) then
 	
 		Mission.recycler = h
 	end
-	if (IsOdf(h,"fbjas2")) then
+	if (IsOdf(h,"fbjamm_vsr")) then
 	
 		Mission.jammer_exists = true
 		Mission.jammer = h
 	end
-	if ((IsOdf(h,"fvars2")) and (Mission.artillery==nil)) then
+	if ((IsOdf(h,"fvartl_vsr")) and (Mission.artillery==nil)) then
 	
 		Mission.artillery = h
 	end
-	if ((IsOdf(h,"fvartl:1")) and (Mission.artillery==nil)) then
+	if ((IsOdf(h,"fvartl_vsr:1")) and (Mission.artillery==nil)) then
 	
 		Mission.artillery = h
 	end
-	if ((IsOdf(h,"fvars2")) and (Mission.artillery2==nil)) then
+	if ((IsOdf(h,"fvartl_vsr")) and (Mission.artillery2==nil)) then
 	
 		Mission.artillery2 = h
 	end
-	if ((IsOdf(h,"fvartl:1")) and (Mission.artillery2==nil)) then
+	if ((IsOdf(h,"fvartl_vsr:1")) and (Mission.artillery2==nil)) then
 	
 		Mission.artillery2 = h
 	end
 
 --[[
-    if ((Mission.ant_mound == nil) and (IsOdf(h,"fbantm"))) then
+    if ((Mission.ant_mound == nil) and (IsOdf(h,"fbantm_vsr"))) then
 	
 		Mission.ant_mound = h
 	end
@@ -159,12 +177,12 @@ function HandleScout()
 	if Mission.scout_state == 0 then
 		if (Mission.mission_state>2) then
 		
-			Mission.scout = BuildObject("ivscout",Mission.comp_team,"spawn_scout1")  -- may get stuck?
+			Mission.scout = BuildObject("ivscout_vsr",Mission.comp_team,"spawn_scout1")  -- may get stuck?
 			Goto(Mission.scout,"scav_1")
 		
 		else
 		
-			Mission.scout = BuildObject("ivscout",Mission.comp_team,"spawn_scout2")  -- may get stuck?
+			Mission.scout = BuildObject("ivscout_vsr",Mission.comp_team,"spawn_scout2")  -- may get stuck?
 			Goto(Mission.scout,"tank_1")
 		end
 		Mission.oldscout = Mission.scout
@@ -281,40 +299,40 @@ function missionCode() --
 
 		-- Your starting base
 			Mission.grp = GetFirstEmptyGroup()			
-			Mission.recycler = BuildObject("fvrec2",1,"recycler")
+			Mission.recycler = BuildObject("fvrecy_vsr",1,"recycler")
 			SetGroup(Mission.recycler,Mission.grp)	
 
 			Mission.grp = Mission.grp + 1
-			Mission.scav1 = BuildObject("fvscav",1,"scav_1")
+			Mission.scav1 = BuildObject("fvscav_vsr",1,"scav_1")
 			SetGroup(Mission.scav1,Mission.grp)
 			Mission.grp = Mission.grp + 1
-			Mission.scav2 = BuildObject("fvscav",1,"scav_2")
+			Mission.scav2 = BuildObject("fvscav_vsr",1,"scav_2")
 			SetGroup(Mission.scav2,Mission.grp)	
 		
 			Mission.grp = Mission.grp + 1
-			Mission.turret1 = BuildObject("fvturr",1,"turret_1")
+			Mission.turret1 = BuildObject("fvturr_vsr",1,"turret_1")
 			SetGroup(Mission.turret1,Mission.grp)
-			Mission.turret2 = BuildObject("fvturr",1,"turret_2")
+			Mission.turret2 = BuildObject("fvturr_vsr",1,"turret_2")
 			SetGroup(Mission.turret2,Mission.grp)
 
 			Mission.grp = Mission.grp + 1
-			Mission.sent1 = BuildObject("fvtank",1,"tank_1")
+			Mission.sent1 = BuildObject("fvtank_vsr",1,"tank_1")
 			SetGroup(Mission.sent1,Mission.grp)
-			Mission.sent2 = BuildObject("fvtank",1,"tank_2")
+			Mission.sent2 = BuildObject("fvtank_vsr",1,"tank_2")
 			SetGroup(Mission.sent2,Mission.grp)
 
 			Mission.grp = Mission.grp + 1
-			Mission.constructor = BuildObject("fvcos2",1,"cons_1")
+			Mission.constructor = BuildObject("fvcons_vsr",1,"cons_1")
 			SetGroup(Mission.constructor,Mission.grp)
 
 			Mission.objective = BuildObject("ibnav",1,"Jammer")
 
 --	These units have smaller engage ranges
-			Mission.enemytank1 = BuildObject("ivtas2",2,"etank_1")
-			Mission.enemyscout1 = BuildObject("ivscos2",2,"escout_1")	
+			Mission.enemytank1 = BuildObject("ivtank_vsr",2,"etank_1")
+			Mission.enemyscout1 = BuildObject("ivscout_vsr",2,"escout_1")	
 
-			Mission.enemytank2 = BuildObject("ivtas2",2,"etank_2")
-			Mission.enemyscout2 = BuildObject("ivscos2",2,"escout_2")
+			Mission.enemytank2 = BuildObject("ivtank_vsr",2,"etank_2")
+			Mission.enemyscout2 = BuildObject("ivscout_vsr",2,"escout_2")
 
 			Patrol(Mission.enemytank1,"isdf_patrol1",0)
 			Patrol(Mission.enemyscout1,"isdf_patrol1",0)
@@ -322,19 +340,19 @@ function missionCode() --
 			Patrol(Mission.enemytank2,"isdf_patrol2",0)
 			Patrol(Mission.enemyscout2,"isdf_patrol2",0)
 
-			BuildObject("ibgtow",Mission.comp_team,"egtow_1")
-			BuildObject("ibgtow",Mission.comp_team,"egtow_2")
-			Mission.power1 = BuildObject("ibpgen",Mission.comp_team,"epgen_1")
-			Mission.power2 = BuildObject("ibpgen",Mission.comp_team,"epgen_2")
-			BuildObject("ibsbay",Mission.comp_team,"esbay")
-			BuildObject("ibfact",Mission.comp_team,"efact")
-			Mission.enemybase = BuildObject("ibrecy",Mission.comp_team,"erecy")
-			BuildObject("ibarmo",Mission.comp_team,"earmo")
+			BuildObject("ibgtow_vsr",Mission.comp_team,"egtow_1")
+			BuildObject("ibgtow_vsr",Mission.comp_team,"egtow_2")
+			Mission.power1 = BuildObject("ibpgen_vsr",Mission.comp_team,"epgen_1")
+			Mission.power2 = BuildObject("ibpgen_vsr",Mission.comp_team,"epgen_2")
+			BuildObject("ibsbay_vsr",Mission.comp_team,"esbay")
+			BuildObject("ibfact_vsr",Mission.comp_team,"efact")
+			Mission.enemybase = BuildObject("ibrecy_vsr",Mission.comp_team,"erecy")
+			BuildObject("ibarmo_vsr",Mission.comp_team,"earmo")
 
-			Mission.base_unit_1 = BuildObject("ivtank",Mission.comp_team,"base_unit_1")
-			Mission.base_unit_2 = BuildObject("ivmisl",Mission.comp_team,"base_unit_2")
-			Mission.base_unit_3 = BuildObject("ivtank",Mission.comp_team,"base_unit_3")
-			Mission.base_unit_4 = BuildObject("ivmisl",Mission.comp_team,"base_unit_4")
+			Mission.base_unit_1 = BuildObject("ivtank_vsr",Mission.comp_team,"base_unit_1")
+			Mission.base_unit_2 = BuildObject("ivmisl_vsr",Mission.comp_team,"base_unit_2")
+			Mission.base_unit_3 = BuildObject("ivtank_vsr",Mission.comp_team,"base_unit_3")
+			Mission.base_unit_4 = BuildObject("ivmisl_vsr",Mission.comp_team,"base_unit_4")
 			
 			Mission.mission_state = Mission.mission_state + 1
 	
@@ -480,7 +498,7 @@ function missionCode() --
 				AddObjective("scion0206.otf","WHITE",5.0)
 				Mission.last_objective = true
 			end
-			Mission.atk1 = BuildObject("ivscout",2,"base_unit_2")
+			Mission.atk1 = BuildObject("ivscout_vsr",2,"base_unit_2")
 			Attack(Mission.atk1,Mission.artillery)
 		end
 		if ((not IsAlive(Mission.power1)) or (not IsAlive(Mission.power2))) then
@@ -508,11 +526,11 @@ function missionCode() --
 			Mission.increment = Mission.increment + 1
 			if (Mission.increment%300==0) then
 			
-				Mission.atk = BuildObject("ivtank",Mission.comp_team,"efact")
+				Mission.atk = BuildObject("ivtank_vsr",Mission.comp_team,"efact")
 				Attack(Mission.atk,Mission.recycler)
-				Mission.atk = BuildObject("ivmbike",Mission.comp_team,"efact")
+				Mission.atk = BuildObject("ivmbike_vsr",Mission.comp_team,"efact")
 				Attack(Mission.atk,Mission.recycler)
-				Mission.atk = BuildObject("ivrckt",Mission.comp_team,"spawn_scout1")
+				Mission.atk = BuildObject("ivrckt_vsr",Mission.comp_team,"spawn_scout1")
 				Goto(Mission.atk,"strike1")
 			end
 		

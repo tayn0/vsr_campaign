@@ -353,9 +353,42 @@ function Start() --This function is called upon the first frame
 	Mission.cheat4 = nil
 	Mission.cheat5 = nil
 	Mission.cheat6 = nil
+
+	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
+	GiveWeapon(Mission.player,"gchainvsr_c")
+	GiveWeapon(Mission.player,"gshadowvsr_c")
+	GiveWeapon(Mission.player,"gproxminvsr")
+
+	Mission.tbolt1 = UnitToVSR(Mission.tbolt, "ivscout_vsr", 0)
+	SetGroup(Mission.tbolt1,2)
+
+	Mission.tank1 = UnitToVSR(Mission.tank1, "ivtank_vsr", 0)
+	SetGroup(Mission.tank1,1)
+
+	Mission.recycler = UnitToVSR(Mission.recycler, "ivrecy_vsr", 0)
+	SetGroup(Mission.recycler,0)
+
+	Mission.srecycler = UnitToVSR(Mission.srecycler, "fbrecy_vsr", 0)
+	Mission.forge = UnitToVSR(Mission.forge, "fbforg_vsr", 0)
 	
 	PreloadODF("fvtank14x")
    
+end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --

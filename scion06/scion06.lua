@@ -332,6 +332,35 @@ function Start() --This function is called upon the first frame
 	SetTeamColor(2,0,127,255)  --BRADDOCK	
 	SetTeamColor(3,85,255,85) --REBELS
 	SetTeamColor(4,0,127,255)  --BRADDOCK	
+	
+	Mission.playersrecy = UnitToVSR(Mission.playersrecy, "ibrecy_vsr", 0)
+	Mission.playersfact = UnitToVSR(Mission.playersfact, "ibfact_vsr", 0)
+	
+	Mission.enemyrecy = UnitToVSR(Mission.enemyrecy, "ibrecy_vsr", 0)
+	Mission.enemyfact = UnitToVSR(Mission.enemyfact, "ibfact_vsr", 0)
+	
+	Mission.player = GetPlayerHandle()
+	Mission.player = UnitToVSR(Mission.player, "fvsent_vsr", 1)
+	
+	Mission.cons = UnitToVSR(GetHandle("unnamed_ivcons", "ivcons_vsr", 0)
+	SetGroup(Mission.cons, 0)
+	
+end
+
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
@@ -344,37 +373,37 @@ function AddObject(h) --This function is called when an object appears in the ga
 		
 
 		if ((Mission.turret1 == nil) and (GetTeamNum(h) == 2) and (GetDistance(h,Mission.enemyrecy) < 50) 
-		and (IsOdf(h,"ivturr"))) then
+		and (IsOdf(h,"ivturr_vsr"))) then
 		
 			Mission.turret1 = h
 		end
 	
 		if ((Mission.basetank1 == nil) and (GetTeamNum(h) == 2) and (GetDistance(h,Mission.enemyfact) < 50) 
-		and (IsOdf(h,"ivtank"))) then
+		and (IsOdf(h,"ivtank_vsr"))) then
 		
 			Mission.basetank1 = h
 		
 
 		elseif ((Mission.basetank2 == nil) and (GetTeamNum(h) == 2) and (GetDistance(h,Mission.enemyfact) < 50) 
-		and (IsOdf(h,"ivtank"))) then
+		and (IsOdf(h,"ivtank_vsr"))) then
 		
 			Mission.basetank2 = h
 		
 
 		elseif ((Mission.basetank3 == nil) and (GetTeamNum(h) == 2) and (GetDistance(h,Mission.enemyfact) < 50) 
-		and (IsOdf(h,"ivtank"))) then
+		and (IsOdf(h,"ivtank_vsr"))) then
 		
 			Mission.basetank3 = h
 		
 
 		elseif ((Mission.ass1 == nil) and (GetTeamNum(h) == 2) and (GetDistance(h,Mission.enemyfact) < 50) 
-		and (IsOdf(h,"ivatank"))) then
+		and (IsOdf(h,"ivatank_vsr"))) then
 		
 			Mission.ass1 = h
 		
 
 		elseif ((Mission.ass2 == nil) and (GetTeamNum(h) == 2) and (GetDistance(h,Mission.enemyfact) < 50) 
-		and (IsOdf(h,"ivatank"))) then
+		and (IsOdf(h,"ivatank_vsr"))) then
 		
 			Mission.ass2 = h
 		end
@@ -470,8 +499,8 @@ function missionCode() --
 --1st WAVE
 	if ((not Mission.spawn1) and (Mission.spawn1time < GetTime())) then
 	
-		Mission.spawner1a = BuildObject("ivscout",4,"spawn1a")	
-		Mission.spawner1b = BuildObject("ivscout",4,"spawn2b")	
+		Mission.spawner1a = BuildObject("ivscout_vsr",4,"spawn1a")	
+		Mission.spawner1b = BuildObject("ivscout_vsr",4,"spawn2b")	
 		SetSkill(Mission.spawner1a,1)
 		SetSkill(Mission.spawner1b,2)
 		Goto(Mission.spawner1a,"playerbase")
@@ -549,7 +578,7 @@ function missionCode() --
 	--2nd WAVE
 	if ((not Mission.spawn2) and (Mission.spawn2time < GetTime())) then
 	
-		Mission.spawner2a = BuildObject("ivtank",4,"spawn2a") 
+		Mission.spawner2a = BuildObject("ivtank_vsr",4,"spawn2a") 
 		SetSkill(Mission.spawner2a,1)
 		Goto(Mission.spawner2a,"playerbase")
 		Mission.spawn3time = (GetTime() + 140)
@@ -629,8 +658,8 @@ function missionCode() --
 		--3rd WAVE
 		if ((not Mission.spawn3) and (Mission.spawn3time < GetTime())) then
 		
-			Mission.spawner3a = BuildObject("ivtank",4,"spawn3a")
-			Mission.spawner3b = BuildObject("ivscout",4,"spawn3b")
+			Mission.spawner3a = BuildObject("ivtank_vsr",4,"spawn3a")
+			Mission.spawner3b = BuildObject("ivscout_vsr",4,"spawn3b")
 			SetSkill(Mission.spawner3a,1)
 			SetSkill(Mission.spawner3b,1)
 			Goto(Mission.spawner3a,"playerbase")
@@ -642,8 +671,8 @@ function missionCode() --
 		--4th wave
 		if ((not Mission.spawn4) and (Mission.spawn4time < GetTime())) then
 		
-			Mission.spawner4a = BuildObject("ivtank",4,"spawn1a")
-			Mission.spawner4b = BuildObject("ivmbike",4,"spawn1b")
+			Mission.spawner4a = BuildObject("ivtank_vsr",4,"spawn1a")
+			Mission.spawner4b = BuildObject("ivmbike_vsr",4,"spawn1b")
 			SetSkill(Mission.spawner4a,1)
 			SetSkill(Mission.spawner4b,1)
 			Goto(Mission.spawner4a,"playerbase")
@@ -655,9 +684,9 @@ function missionCode() --
 		--5th wave
 		if ((not Mission.spawn5) and (Mission.spawn5time < GetTime())) then
 		
-			Mission.spawner5a = BuildObject("ivtank",4,"spawn3a")
-			Mission.spawner5b = BuildObject("ivmbike",4,"spawn3b")
-			Mission.spawner5c = BuildObject("ivtank",4,"spawn4a")
+			Mission.spawner5a = BuildObject("ivtank_vsr",4,"spawn3a")
+			Mission.spawner5b = BuildObject("ivmbike_vsr",4,"spawn3b")
+			Mission.spawner5c = BuildObject("ivtank_vsr",4,"spawn4a")
 
 			SetSkill(Mission.spawner5a,1)
 			SetSkill(Mission.spawner5b,1)
@@ -672,8 +701,8 @@ function missionCode() --
 		--6th wave
 		if ((not Mission.spawn6) and (Mission.spawn6time < GetTime())) then
 		
-			Mission.spawner6a = BuildObject("ivtank",4,"spawn4a")
-			Mission.spawner6b = BuildObject("ivatank",4,"spawn3b")
+			Mission.spawner6a = BuildObject("ivtank_vsr",4,"spawn4a")
+			Mission.spawner6b = BuildObject("ivatank_vsr",4,"spawn3b")
 			SetSkill(Mission.spawner6a,1)
 			SetSkill(Mission.spawner6b,1)
 			Goto(Mission.spawner6a,"playerbase")
@@ -685,9 +714,9 @@ function missionCode() --
 		-- 7th wave
 		if ((not Mission.spawn7) and (Mission.spawn7time < GetTime())) then
 		
-			Mission.spawner7a = BuildObject("ivatank",4,"spawn1a")
-			Mission.spawner7b = BuildObject("ivatank",4,"spawn1b")
-			Mission.spawner7c = BuildObject("ivatank",4,"spawn1b")
+			Mission.spawner7a = BuildObject("ivatank_vsr",4,"spawn1a")
+			Mission.spawner7b = BuildObject("ivatank_vsr",4,"spawn1b")
+			Mission.spawner7c = BuildObject("ivatank_vsr",4,"spawn1b")
 			SetSkill(Mission.spawner7a,1)
 			SetSkill(Mission.spawner7b,1)
 			SetSkill(Mission.spawner7c,2)
@@ -701,9 +730,9 @@ function missionCode() --
 		-- 8th wave
 		if ((not Mission.spawn8) and (Mission.spawn8time < GetTime())) then
 		
-			Mission.spawner8a = BuildObject("ivtank",4,"spawn1a")
-			Mission.spawner8b = BuildObject("ivmbike",4,"spawn4a")
-			Mission.spawner8c = BuildObject("ivmbike",4,"spawn4b")
+			Mission.spawner8a = BuildObject("ivtank_vsr",4,"spawn1a")
+			Mission.spawner8b = BuildObject("ivmbike_vsr",4,"spawn4a")
+			Mission.spawner8c = BuildObject("ivmbike_vsr",4,"spawn4b")
 			SetSkill(Mission.spawner8a,1)
 			SetSkill(Mission.spawner8b,2)
 			SetSkill(Mission.spawner8c,2)
@@ -717,9 +746,9 @@ function missionCode() --
 		-- 9th wave
 		if ((not Mission.spawn9) and (Mission.spawn9time < GetTime())) then
 		
-			Mission.spawner9a = BuildObject("ivatank",4,"spawn1a")
-			Mission.spawner9b = BuildObject("ivatank",4,"spawn1b")
-			Mission.spawner9c = BuildObject("ivmbike",4,"spawn3a")
+			Mission.spawner9a = BuildObject("ivatank_vsr",4,"spawn1a")
+			Mission.spawner9b = BuildObject("ivatank_vsr",4,"spawn1b")
+			Mission.spawner9c = BuildObject("ivmbike_vsr",4,"spawn3a")
 			SetSkill(Mission.spawner9a,1)
 			SetSkill(Mission.spawner9b,2)
 			SetSkill(Mission.spawner9c,2)
@@ -733,9 +762,9 @@ function missionCode() --
 		-- 10th wave
 		if ((not Mission.spawn10) and (Mission.spawn10time < GetTime())) then
 		
-			Mission.spawner10a = BuildObject("ivatank",4,"spawn1a")
-			Mission.spawner10b = BuildObject("ivtank",4,"spawn4a")
-			Mission.spawner10c = BuildObject("ivtank",4,"spawn4b")
+			Mission.spawner10a = BuildObject("ivatank_vsr",4,"spawn1a")
+			Mission.spawner10b = BuildObject("ivtank_vsr",4,"spawn4a")
+			Mission.spawner10c = BuildObject("ivtank_vsr",4,"spawn4b")
 			SetSkill(Mission.spawner10a,1)
 			SetSkill(Mission.spawner10b,2)
 			SetSkill(Mission.spawner10c,1)
@@ -753,9 +782,9 @@ function missionCode() --
 	
 		if (Mission.repeat_spawntime < GetTime()) then
 		
-			Mission.pete = BuildObject("ivtank",4,"spawn2a")	
-			Mission.repeat_handle = BuildObject("ivatank",4,"spawn1a")	
-			Mission.repeat2 = BuildObject("ivatank",4,"spawn1b")	
+			Mission.pete = BuildObject("ivtank_vsr",4,"spawn2a")	
+			Mission.repeat_handle = BuildObject("ivatank_vsr",4,"spawn1a")	
+			Mission.repeat2 = BuildObject("ivatank_vsr",4,"spawn1b")	
 			SetSkill(Mission.pete,1)
 			SetSkill(Mission.repeat_handle,1)
 			SetSkill(Mission.repeat2,1)
