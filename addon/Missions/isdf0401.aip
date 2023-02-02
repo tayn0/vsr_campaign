@@ -1,7 +1,7 @@
 [Start]
 scrapCount = 40
-scavClass = "ivscav_vsr"
-consClass = "ivcons_vsr"
+scavClass = "ivscav"
+consClass = "ivcons"
 IdleAllCraft = false // Prevent Interrupting AI.
 
 [IdleDispatcher]
@@ -11,4 +11,4 @@ UnitIdleSeconds = 999999 // Don't send out units via Dispatch.
 planType = "BuildMinimums"
 planPriority = 100
 
-buildType1 = "ivscav_vsr"
+buildType1 = "ivscav"

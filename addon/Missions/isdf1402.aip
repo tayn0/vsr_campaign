@@ -1,88 +1,88 @@
 [Start]
 scrapCount = 160
-scavClass = "fvscav"
-consClass = "fvcons"
+scavClass = "fvscav_vsr"
+consClass = "fvcons_vsr"
 IdleAllCraft = false // Prevent Interrupting AI.
 
 [IdleDispatcher]
 UnitIdleSeconds = 999999 // Don't send out units via Dispatch.
 
 [Match]
-targetType1 = "ivtank"
-attackType1_1 = "fvsent"
+targetType1 = "ivtank_vsr"
+attackType1_1 = "fvsent_vsr"
 
-targetType2 = "ivtank"
-attackType2_1 = "fvtank"
+targetType2 = "ivtank_vsr"
+attackType2_1 = "fvtank_vsr"
 
-targetType3 = "ivtank"
-attackType3_1 = "fvscout"
-attackType3_2 = "fvscout"
+targetType3 = "ivtank_vsr"
+attackType3_1 = "fvscout_vsr"
+attackType3_2 = "fvscout_vsr"
 
-targetType4 = "ivscout"
-attackType4_1 = "fvscout"
+targetType4 = "ivscout_vsr"
+attackType4_1 = "fvscout_vsr"
 
-targetType5 = "ivscout"
-attackType5_1 = "fvsent"
+targetType5 = "ivscout_vsr"
+attackType5_1 = "fvsent_vsr"
 
-targetType6 = "ivturr"
-attackType6_1 = "fvarch"
+targetType6 = "ivturr_vsr"
+attackType6_1 = "fvarch_vsr"
 
-targetType7 = "ivturr"
-attackType7_1 = "fvsent"
+targetType7 = "ivturr_vsr"
+attackType7_1 = "fvsent_vsr"
 
-targetType8 = "ivturr"
-attackType8_1 = "fvtank"
+targetType8 = "ivturr_vsr"
+attackType8_1 = "fvtank_vsr"
 
-targetType9 = "ivmisl"
-attackType9_1 = "fvsent"
+targetType9 = "ivmisl_vsr"
+attackType9_1 = "fvsent_vsr"
 
-targetType10 = "ivmisl"
-attackType10_1 = "fvtank"
+targetType10 = "ivmisl_vsr"
+attackType10_1 = "fvtank_vsr"
 
-targetType11 = "ivatank"
-attackType11_1 = "fvwalk"
+targetType11 = "ivatank_vsr"
+attackType11_1 = "fvwalk_vsr"
 
-targetType12 = "ivatank"
-attackType12_1 = "fvatank"
+targetType12 = "ivatank_vsr"
+attackType12_1 = "fvatank_vsr"
 
-targetType13 = "ivatank"
-attackType13_1 = "fvtank"
-attackType13_2 = "fvtank"
+targetType13 = "ivatank_vsr"
+attackType13_1 = "fvtank_vsr"
+attackType13_2 = "fvtank_vsr"
 
-targetType14 = "ivrckt"
-attackType14_1 = "fvarch"
+targetType14 = "ivrckt_vsr"
+attackType14_1 = "fvarch_vsr"
 
-targetType15 = "ivrckt"
-attackType15_1 = "fvtank"
-attackType15_2 = "fvtank"
+targetType15 = "ivrckt_vsr"
+attackType15_1 = "fvtank_vsr"
+attackType15_2 = "fvtank_vsr"
 
-targetType16 = "ivwalk"
-attackType16_1 = "fvwalk"
-attackType16_2 = "fvwalk"
+targetType16 = "ivwalk_vsr"
+attackType16_1 = "fvwalk_vsr"
+attackType16_2 = "fvwalk_vsr"
 
-targetType17 = "ivwalk"
-attackType17_1 = "fvatank"
+targetType17 = "ivwalk_vsr"
+attackType17_1 = "fvatank_vsr"
 
-targetType18 = "ibgtow"
-attackType18_1 = "fvwalk"
+targetType18 = "ibgtow_vsr"
+attackType18_1 = "fvwalk_vsr"
 
-targetType19 = "ibgtow"
-attackType19_1 = "fvatank"
+targetType19 = "ibgtow_vsr"
+attackType19_1 = "fvatank_vsr"
 
-targetType20 = "ivserv"
-attackType20_1 = "fvsent"
+targetType20 = "ivserv_vsr"
+attackType20_1 = "fvsent_vsr"
 
 targetType21 = "ivapc"
-attackType21_1 = "fvscout"
+attackType21_1 = "fvscout_vsr"
 
-targetType22 = "ivtug"
-attackType22_1 = "fvtank"
+targetType22 = "ivtug_vsr"
+attackType22_1 = "fvtank_vsr"
 
-targetType23 = "ivmbike"
-attackType23_1 = "fvscout"
+targetType23 = "ivmbike_vsr"
+attackType23_1 = "fvscout_vsr"
 
-targetType24 = "ivmbike"
-attackType24_1 = "fvsent"
+targetType24 = "ivmbike_vsr"
+attackType24_1 = "fvsent_vsr"
 
 
 ///////////////////////////////////////////
@@ -92,12 +92,12 @@ attackType24_1 = "fvsent"
 planType = "Recover"
 planPriority = 100
 
-serviceUnit = "fbdowe"
-unitType1  = "fblung"
-unitType2  = "fbspir"
-unitType3  = "fbscav"
-unitType4  = "fbscup"
-unitType5  = "fvwalk"
+serviceUnit = "fbdowe_vsr"
+unitType1  = "fblung_vsr"
+unitType2  = "fbspir_vsr"
+unitType3  = "fbscav_vsr"
+unitType4  = "fbscup_vsr"
+unitType5  = "fvwalk_vsr"
 buildIfNoIdle = 1
 
 ///////////////////////////////
@@ -106,12 +106,12 @@ buildIfNoIdle = 1
 planType = "Service"
 planPriority = 100
 
-serviceUnit = "fvserv"
-unitType1  = "fblung"
-unitType2  = "fbspir"
-unitType3  = "fbscav"
-unitType4  = "fbscup"
-unitType5  = "fvwalk"
+serviceUnit = "fvserv_vsr"
+unitType1  = "fblung_vsr"
+unitType2  = "fbspir_vsr"
+unitType3  = "fbscav_vsr"
+unitType4  = "fbscup_vsr"
+unitType5  = "fvwalk_vsr"
 buildIfNoIdle = 1
 
 ///////////////////////////////////////////
@@ -129,10 +129,10 @@ buildIfNoIdle = 1
 planType = "BuildMinimums"
 planPriority = 80
 
-buildType1 = "fvtank"
+buildType1 = "fvtank_vsr"
 buildCount1 = 2
 
-buildType2 = "fvscout"
+buildType2 = "fvscout_vsr"
 buildCount2 = 2
 
 ///////////////////////////////
@@ -141,7 +141,7 @@ buildCount2 = 2
 planType = "BuildMinimums"
 planPriority = 80
 
-buildType1 = "fvsent"
+buildType1 = "fvsent_vsr"
 buildCount1 = 2
 
 ///////////////////////////////////////////
@@ -151,10 +151,10 @@ buildCount1 = 2
 planType = "BuildMinimums"
 planPriority = 60
 
-buildType1 = "fvtank"
+buildType1 = "fvtank_vsr"
 buildCount1 = 4
 
-buildType2 = "fvsent"
+buildType2 = "fvsent_vsr"
 buildCount2 = 4
 
 ///////////////////////////////////////////
@@ -164,7 +164,7 @@ buildCount2 = 4
 planType = "BuildMinimums"
 planPriority = 50
 
-buildType1 = "fvarch"
+buildType1 = "fvarch_vsr"
 buildCount1 = 4
 
 ///////////////////////////////////////////
@@ -174,7 +174,7 @@ buildCount1 = 4
 planType = "BuildMinimums"
 planPriority = 40
 
-buildType1 = "fvwalk"
+buildType1 = "fvwalk_vsr"
 buildCount1 = 2
 
 ///////////////////////////////
@@ -183,7 +183,7 @@ buildCount1 = 2
 planType = "ClearArea"
 planPriority = 40
 
-targetType = "ibscav"
+targetType = "ibscav_vsr"
 
 ///////////////////////////////////////////
 ///////////////////////////////////////////
@@ -192,7 +192,7 @@ targetType = "ibscav"
 planType = "DefendArea"
 planPriority = 20
 
-targetType = "fbspir"
+targetType = "fbspir_vsr"
 
 ///////////////////////////////
 
@@ -200,7 +200,7 @@ targetType = "fbspir"
 planType = "DefendArea"
 planPriority = 20
 
-targetType = "fbscup"
+targetType = "fbscup_vsr"
 
 ///////////////////////////////////////////
 ///////////////////////////////////////////
@@ -224,7 +224,7 @@ targetType = "burns_body"
 planType = "ClearArea"
 planPriority = 10
 
-targetType = "ibscup"
+targetType = "ibscup_vsr"
 
 ///////////////////////////////
 
@@ -232,7 +232,7 @@ targetType = "ibscup"
 planType = "BuildMinimums"
 planPriority = 10
 
-buildType1 = "fvatank"
+buildType1 = "fvatank_vsr"
 buildCount1 = 1
 
 ///////////////////////////////
@@ -242,7 +242,7 @@ planType = "Attacker"
 planPriority = 10
 
 targetType = "ibscav"
-attackType1 = "fvtank"
+attackType1 = "fvtank_vsr"
 
 ///////////////////////////////
 
@@ -250,13 +250,13 @@ attackType1 = "fvtank"
 planType = "BaseBuildMinimums"
 planPriority = 10
 
-buildType1 = "fbspir"
+buildType1 = "fbspir_vsr"
 buildLoc1 = "spire1_point"
-buildType2 = "fbspir"
+buildType2 = "fbspir_vsr"
 buildLoc2 = "spire2_point"
-buildType3 = "fbforg"
+buildType3 = "fbforg_vsr"
 buildLoc3 = "forge_point"
-buildType4 = "fbover"
+buildType4 = "fbover_vsr"
 buildLoc4 = "overseer_point"
 buildIfNoIdle = 1
 

@@ -1,7 +1,7 @@
 [Start]
 scrapCount = 100
-scavClass = "fvscav"
-consClass = "fvcons"
+scavClass = "fvscav_vsr"
+consClass = "fvcons_vsr"
 IdleAllCraft = false // Prevent Interrupting AI.
 
 [IdleDispatcher]

@@ -406,9 +406,7 @@ function Start() --This function is called upon the first frame
 	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
 	SetLabel(Mission.player, "player_ship")
 	Mission.player_ship = GetPlayerHandle()
-	GiveWeapon(Mission.player,"gchainvsr_c")
-	GiveWeapon(Mission.player,"gshadowvsr_c")
-	GiveWeapon(Mission.player,"gproxminvsr")
+
 end
 
 function UnitToVSR(h, odf, player)

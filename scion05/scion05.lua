@@ -315,7 +315,7 @@ end
 
 function Start() --This function is called upon the first frame
 --  handles
-	Mission.player = nil
+	Mission.player = GetPlayerHandle()
 	Mission.msg1 = nil
 	Mission.msg2 = nil
 	Mission.msg5 = nil
@@ -447,10 +447,13 @@ function Start() --This function is called upon the first frame
 	SetTeamColor(3,0,127,255)  --BRADDOCK
 
 	Mission.playersrecy = UnitToVSR(Mission.playersrecy, "fvrecy_vsr", 0)
+	SetGroup(Mission.playersrecy, 2)
 	Mission.bridgetank = UnitToVSR(Mission.bridgetank, "ivatank_vsr", 0)
 	Mission.bridgescout = UnitToVSR(Mission.bridgescout, "ivscout_vsr", 0)
 	Mission.cons = UnitToVSR(GetHandle("unnamed_fvcons"), "fvcons_vsr", 0)
 	SetGroup(Mission.cons,0)
+
+	Mission.player = UnitToVSR(Mission.player, "fvsent_vsr", 1)
    
 end
 
@@ -586,6 +589,11 @@ function AddObject(h) --This function is called when an object appears in the ga
 				Mission.basetank3alive = true
 			end
 		end
+
+	elseif IsOdf(h, "fvturr") then
+		h = UnitToVSR(h, "fvturr_vsr", 0)
+		SetGroup(h, 1)
+
 	end
 end
 

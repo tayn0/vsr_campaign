@@ -53,16 +53,16 @@ buildLoc2 = "aipgen2"
 planType = "BaseBuildMinimums"
 planPriority = 95
 
-buildType1 = "ibcbun"
+buildType1 = "ibcbun_vsr"
 buildLoc1 = "aicbun"
 
-buildType2 = "ibgtow"
+buildType2 = "ibgtow_vsr"
 buildLoc2 = "aigtow1"
 
 buildType3 = "ibfact_vsr"
 buildLoc3 = "aifact"
 
-buildType4 = "ibgtow"
+buildType4 = "ibgtow_vsr"
 buildLoc4 = "aigtow2"
 
 //////////////////////////
@@ -81,19 +81,6 @@ buildCount2 = 2
 //////////////////////////
 /////////////////////////
 
-
-
-[Plan7]
-planType = "BuildMinimums"
-planPriority = 93
-
-buildType1 = "ivwalk_vsr"
-buildCount1 = 2
-
-
-
-//////////////////////////
-/////////////////////////
 
 
 

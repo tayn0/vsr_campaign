@@ -399,30 +399,26 @@ function Start() --This function is called upon the first frame
 	Mission.ship1 = UnitToVSR(Mission.ship1, "ivscout_vsr", 0)
 	RemovePilot(Mission.ship1)
 	SetLabel(Mission.ship1, "ship1")
-	GiveWeapon(Mission.ship1,"gchainvsr_c")
 	GiveWeapon(Mission.ship1,"gshadowvsr_c")
-	GiveWeapon(Mission.ship1,"gproxminvsr")
 	
 	Mission.ship2 = UnitToVSR(Mission.ship2, "ivscout_vsr", 0)
 	RemovePilot(Mission.ship2)
 	SetLabel(Mission.ship2, "ship2")
-	GiveWeapon(Mission.ship2,"gchainvsr_c")
-	GiveWeapon(Mission.ship2,"gshadowvsr_c")
-	GiveWeapon(Mission.ship2,"gproxminvsr")
+
 
 	Mission.ship3 = UnitToVSR(Mission.ship3, "ivscout_vsr", 0)
 	RemovePilot(Mission.ship3)
 	SetLabel(Mission.ship3, "ship3")
-	GiveWeapon(Mission.ship3,"gchainvsr_c")
-	GiveWeapon(Mission.ship3,"gshadowvsr_c")
-	GiveWeapon(Mission.ship3,"gproxminvsr")
+
 
 	Mission.ship4 = UnitToVSR(Mission.ship4, "ivscout_vsr", 0)
 	RemovePilot(Mission.ship4)
 	SetLabel(Mission.ship4, "ship4")
-	GiveWeapon(Mission.ship4,"gchainvsr_c")
-	GiveWeapon(Mission.ship4,"gshadowvsr_c")
-	GiveWeapon(Mission.ship4,"gproxminvsr")
+
+
+	Mission.tank = UnitToVSR(GetHandle("unnamed_ivtank"), "ivtank_vsr", 0)
+	RemovePilot(Mission.tank)
+	SetTeamNum(Mission.tank, 0)
 
    
    PreloadODF("fvpcon")

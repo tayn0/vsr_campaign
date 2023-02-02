@@ -537,12 +537,12 @@ if (Mission.start_done) then
 		--SetTeamNum(Mission.turret5,1)
 		Mission.turret5_a = true
 	
-	elseif ((Mission.wingman1 == nil) and (IsOdf(h,"ivscout"))) then
+	elseif ((Mission.wingman1 == nil) and (IsOdf(h,"ivscout_vsr"))) then
 	
 		Mission.wingman1 = h
 		Mission.wingman1_a = true
 	
-	elseif ((Mission.wingman2 == nil) and (IsOdf(h,"ivscout"))) then
+	elseif ((Mission.wingman2 == nil) and (IsOdf(h,"ivscout_vsr"))) then
 	
 		Mission.wingman2 = h
 		Mission.wingman2_a = true
@@ -889,13 +889,13 @@ if (not Mission.ON_HOLD) then
 
 	-- I'm checking to see if the Mission.player looses his ship then
 
-	if ((IsOdf(Mission.player,"ivscout_vsr")) or (IsOdf(Mission.player,"ivtank")) or (IsOdf(Mission.player,"ivscav")) or (IsOdf(Mission.player,"ivturr"))) then
+	if ((IsOdf(Mission.player,"ivscout_vsr")) or (IsOdf(Mission.player,"ivtank_vsr")) or (IsOdf(Mission.player,"ivscav")) or (IsOdf(Mission.player,"ivturr"))) then
 	
 		Mission.player_on_foot = false
 		Mission.player_in_ship = true
 		Mission.player_in_enemy = false
 	
-	elseif ((IsOdf(Mission.player,"fvpsnt4")) or (IsOdf(Mission.player,"fvpscou")) or (IsOdf(Mission.player,"fvscout"))) then
+	elseif ((IsOdf(Mission.player,"fvpsnt4")) or (IsOdf(Mission.player,"fvpscou")) or (IsOdf(Mission.player,"fvscout_vsr"))) then
 	
 		Mission.player_on_foot = false
 		Mission.player_in_ship = false
@@ -1412,7 +1412,7 @@ if (not Mission.ON_HOLD) then
 
 	if ((not Mission.spawn_1) and ((Mission.scavdeploy_message) or (Mission.shab_message3))) then
 	
-		Mission.scion1 = BuildObject("fvsent",2,"path_1")
+		Mission.scion1 = BuildObject("fvsent_vsr",2,"path_1")
 		Mission.scion2 = BuildObject("fvpscou",2,"path_2")
 		Stop(Mission.scion1)
 		Stop(Mission.scion2)
@@ -1587,9 +1587,9 @@ if (not Mission.ON_HOLD) then
 
 	if ((Mission.turret1_at_john) and (Mission.turret1_scavcheck) and (Mission.first_dead) and (not Mission.turret_test)) then
 	
-		Mission.scion1 = BuildObject("fvsent",2,"path_1")
-		Mission.scion2 = BuildObject("fvsent",2,"path_2")
-		Mission.scion3 = BuildObject("fvscout",2,"path_3")
+		Mission.scion1 = BuildObject("fvsent_vsr",2,"path_1")
+		Mission.scion2 = BuildObject("fvsent_vsr",2,"path_2")
+		Mission.scion3 = BuildObject("fvscout_vsr",2,"path_3")
 		Attack(Mission.scion1,Mission.scav1,1)
 		Attack(Mission.scion2,Mission.scav1,1)
 		Attack(Mission.scion3,Mission.player)
@@ -1686,9 +1686,9 @@ if (not Mission.ON_HOLD) then
 	if ((Mission.brad_insist) and (not Mission.shab_message5) and (IsAudioMessageDone(Mission.talk))) then
 	
 		Mission.talk = AudioMessage("isdf0415.wav")--(Mission.shab) Yes sir, I'm heading out
-		Mission.scion1 = BuildObject("fvsent",2,"path_1")
-		Mission.scion2 = BuildObject("fvsent",2,"path_2")
-		--Mission.scion3 = BuildObject("fvsent",2,"path_3")
+		Mission.scion1 = BuildObject("fvsent_vsr",2,"path_1")
+		Mission.scion2 = BuildObject("fvsent_vsr",2,"path_2")
+		--Mission.scion3 = BuildObject("fvsent_vsr",2,"path_3")
 		--SetTeamNum(Mission.wingman1,1)
 		--SetTeamNum(Mission.wingman2,1)
 		Mission.john_check = GetTime() + 1.0
@@ -1780,9 +1780,9 @@ if (not Mission.ON_HOLD) then
 
 	if ((Mission.second_dead) and (not Mission.third_spawn) and (Mission.next_wave < GetTime())) then
 	
-		Mission.scion1 = BuildObject("fvsent",2,"path_1")
-		Mission.scion2 = BuildObject("fvsent",2,"path_2")
-		Mission.scion3 = BuildObject("fvsent",2,"path_3")
+		Mission.scion1 = BuildObject("fvsent_vsr",2,"path_1")
+		Mission.scion2 = BuildObject("fvsent_vsr",2,"path_2")
+		Mission.scion3 = BuildObject("fvsent_vsr",2,"path_3")
 
 		Attack(Mission.scion1,Mission.scav1)
 		Follow(Mission.scion2,Mission.scion1,0)
@@ -1825,8 +1825,8 @@ if (not Mission.ON_HOLD) then
 		if ((not IsAlive(Mission.fodder1)) and (not IsAlive(Mission.fodder2)) and (Mission.fodder_time < GetTime())) then
 		
 			Mission.fodder_time = GetTime() + 30.0
-			Mission.fodder1 = BuildObject("fvscout",2,"fodder1_spawn")
-			Mission.fodder2 = BuildObject("fvscout",2,"fodder2_spawn")
+			Mission.fodder1 = BuildObject("fvscout_vsr",2,"fodder1_spawn")
+			Mission.fodder2 = BuildObject("fvscout_vsr",2,"fodder2_spawn")
 			SetAvoidType(Mission.fodder1,0)
 			SetAvoidType(Mission.fodder2,0)
 			Goto(Mission.fodder1,"fodder1_path",0)
@@ -1876,11 +1876,11 @@ if (not Mission.ON_HOLD) then
 
 		
 			Mission.scion1 = BuildObject("fvptank",2,"path_1")
-			Mission.scion2 = BuildObject("fvsent",2,"path_2")
+			Mission.scion2 = BuildObject("fvsent_vsr",2,"path_2")
 			Mission.scion3 = BuildObject("fvptank",2,"enemy1")
-			Mission.scion4 = BuildObject("fvsent",2,"enemy2")
+			Mission.scion4 = BuildObject("fvsent_vsr",2,"enemy2")
 			Mission.scion5 = BuildObject("fvptank",2,"enemy3")
-			Mission.scion6 = BuildObject("fvsent",2,"enemy4")
+			Mission.scion6 = BuildObject("fvsent_vsr",2,"enemy4")
 
 			Attack(Mission.scion1,Mission.scav1)
 			Follow(Mission.scion2,Mission.scion1,0)

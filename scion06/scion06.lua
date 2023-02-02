@@ -342,8 +342,12 @@ function Start() --This function is called upon the first frame
 	Mission.player = GetPlayerHandle()
 	Mission.player = UnitToVSR(Mission.player, "fvsent_vsr", 1)
 	
-	Mission.cons = UnitToVSR(GetHandle("unnamed_ivcons", "ivcons_vsr", 0)
+	Mission.cons = UnitToVSR(GetHandle("unnamed_ivcons"), "ivcons_vsr", 0)
 	SetGroup(Mission.cons, 0)
+
+	Mission.gt1 = UnitToVSR(GetHandle("unnamed_ibgtow"), "ibgtow_vsr", 0)
+	Mission.gt2 = UnitToVSR(GetHandle("unnamed_ibgtow"), "ibgtow_vsr", 0)
+	Mission.gt3 = UnitToVSR(GetHandle("unnamed_ibgtow"), "ibgtow_vsr", 0)
 	
 end
 
@@ -364,6 +368,9 @@ function UnitToVSR(h, odf, player)
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
+
+
+
 	if (Mission.missionstart) then
 	
 		if ((IsOdf(h,"apwrck") and (GetTeamNum(h) == 2))) then
@@ -407,6 +414,13 @@ function AddObject(h) --This function is called when an object appears in the ga
 		
 			Mission.ass2 = h
 		end
+	end
+
+
+	if IsOdf(h, "ibgtow") then
+	
+		h = UnitToVSR(h, "ibgtow_vsr", 0)
+	
 	end
 end
 
