@@ -11,10 +11,6 @@ UnitIdleSeconds = 999999 // Don't send out units via Dispatch.
 planType = "BuildMinimums"
 planPriority = 100
 
-<<<<<<< HEAD
-buildType1 = "ivscav"
-=======
-
 buildType1 = "ivscav"
 buildCount1 = 1
->>>>>>> 47336e291e84653059aac23df66f07058fb90866
+
