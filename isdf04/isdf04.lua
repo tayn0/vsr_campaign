@@ -316,6 +316,8 @@ local Mission = {
 	dust1,
 	dust2,
 	pilot,
+
+
 	
 --  integers
 	x = 0,
@@ -1345,6 +1347,7 @@ if (not Mission.ON_HOLD) then
 		Mission.pause = GetTime() + 3.0
 		SetAIP("isdf0402.aip",1) -- builds turrets
 		Mission.shab_message2 = true
+
 	end
 	--------------------------------------------
 
