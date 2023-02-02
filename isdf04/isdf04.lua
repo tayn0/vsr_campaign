@@ -494,7 +494,7 @@ if (Mission.start_done) then
 		--SetTeamNum(Mission.recycler,0)
 		Mission.recy_building = true
 	
-	elseif ((not Mission.scav1_a) and (IsOdf(h,"ivscav"))) then
+	elseif ((not Mission.scav1_a) and (IsOdf(h,"ivscav") or IsOdf(h, "ivscav:1"))) then
 	
 		Mission.scav1 = h
 		--SetTeamNum(Mission.scav1,1)
@@ -1298,10 +1298,10 @@ if (not Mission.ON_HOLD) then
 
 	-- this sets the aip that builds the scavenger
 	
-	if ((not Mission.set_plan1) and (Mission.wait_time < GetTime())) then
-	
+	if ((not Mission.set_plan1) and (Mission.wait_time < GetTime()) ) then
+		
 		LookAt(Mission.shabayev,Mission.recycler)
-		SetAIP("isdf0401.aip",1)
+		if not IsBusy(Mission.recycler) then SetAIP("isdf0401.aip",1) end
 		Mission.wait_time = GetTime() + 999999.0
 		Mission.set_plan1 = true
 	end
@@ -1317,8 +1317,8 @@ if (not Mission.ON_HOLD) then
 			Mission.building_stopped = false
 		end
 
-		if ((not Mission.scav1_a) and (not Mission.building_stopped) and (GetScrap(1) > 21)) then
-		
+		if ((not Mission.scav1_a) and (not Mission.building_stopped) and (not IsBusy(Mission.recycler))) then
+			SetAIP("isdf0401a.aip",1)
 			AudioMessage("isdf0443.wav")--(Mission.shab) don't stop the building John
 			Mission.wait_time = GetTime() + 5.0
 			Mission.set_plan1 = false
