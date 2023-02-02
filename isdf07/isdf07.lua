@@ -127,7 +127,6 @@ function Start() --This function is called upon the first frame
 	GiveWeapon(Mission.player,"gshadowvsr_c")
 	GiveWeapon(Mission.player,"gproxminvsr")
 
-	Mission.recy = UnitToVSR(Mission.recy, "ivscout_vsr", 0)
 	SetGroup(Mission.recy,0)
    
 end
@@ -150,37 +149,52 @@ end
 
 function AddObject(h) --This function is called when an object appears in the game. --
 
-	if (IsOdf(h,"ibrecy_vsr")) then
+	if IsOdf(h, "ivscout:1") then	
+		temp = GetGroup(h)
+		h = UnitToVSR(h, "ivscout_vsr", 0)	
+		Goto(h, GetHandle("autonav"), 0)
+		SetGroup(h, temp)
+	end
+
+	if IsOdf(h, "ivturr:1") then	
+		temp = GetGroup(h)
+		h = UnitToVSR(h, "ivturr_vsr", 0)	
+		Goto(h, GetHandle("autonav"), 0)
+		SetGroup(h, temp)
+		SendEnemies(3, h)
+	end
+
+	if (IsOdf(h,"ibrecy")) then
 	
-		temp = BuildObject("fvscout", Mission.comp_team, Mission.spawn1)
+		temp = BuildObject("fvscout_vsr", Mission.comp_team, Mission.spawn1)
 		Attack(temp, h, 1)
 		Mission.recy = h
 		Mission.recyDeployed = true
 	end
 
 
-	if ((not Mission.scavBuilt) and (IsOdf(h,"ivscav_vsr:1")))  then
---		temp = BuildObject("fvsent", Mission.comp_team, Mission.spawn1)
+	if ((not Mission.scavBuilt) and (IsOdf(h,"ivscav:1")))  then
+--		temp = BuildObject("fvsent_vsr", Mission.comp_team, Mission.spawn1)
 --		Attack(temp, h, 1)
 		Mission.scavBuilt = true
 	
-	elseif ((not Mission.powerBuilt) and (IsOdf(h,"ibpgen_vsr")))	 then
+	elseif ((not Mission.powerBuilt) and (IsOdf(h,"ibpgen")))	 then
 		Mission.powerBuilt = true
 	
 	elseif ((not Mission.wallsBuilt) and (IsOdf(h,"ibwall")))  then
 		Mission.wallsBuilt = true
 
 		
-	elseif ((not Mission.constBuilt) and (IsOdf(h,"ivcons_vsr:1")))  then
+	elseif ((not Mission.constBuilt) and (IsOdf(h,"ivcons:1")))  then
 		SendEnemies(2, h)
 		Mission.constBuilt = true
 	
-	elseif ((not Mission.relayBuilt) and (IsOdf(h,"ibcbun_vsr"))) then
+	elseif ((not Mission.relayBuilt) and (IsOdf(h,"ibcbun"))) then
 	
 		SendEnemies(3,h)
 		Mission.relayBuilt = true
 	
-	elseif ((not Mission.gunTowBuilt) and (IsOdf(h,"ibgtow_vsr")))  then
+	elseif ((not Mission.gunTowBuilt) and (IsOdf(h,"ibgtow")))  then
 		SendEnemies(4, h)
 		gtow = h
 		Mission.gunTowBuilt = true
@@ -199,17 +213,17 @@ function AddObject(h) --This function is called when an object appears in the ga
 		Mission.oldPlayer = Mission.player
 	end
 
-	if (IsOdf(h,"ivtank"))   then --react to Mission.player building a tank then
-			SendEnemies(0, h)
-
-
-	
-	elseif (IsOdf(h,"ivrckt_vsr:1"))   then --react to the Mission.player building a rocket tank then
-		SendEnemies(1, h)
-
+	if (IsOdf(h,"ivtank:1"))   then --react to Mission.player building a tank then
 		
-	elseif (IsOdf(h,"ivturr_vsr:1"))   then --react to the Mission.player building a turret then
-		SendEnemies(3, h)
+		temp = GetGroup(h)
+		h = UnitToVSR(h, "ivtank_vsr", 0)	
+		Goto(h, GetHandle("autonav"), 0)
+		SetGroup(h, temp)
+		SendEnemies(0, h)
+	
+	elseif (IsOdf(h,"ivrckt:1"))   then --react to the Mission.player building a rocket tank then
+		SendEnemies(1, h)
+		
 	end
 
 end
@@ -227,42 +241,42 @@ function SendEnemies(attack_type, target)
 
 	if attack_type == 0 then --tank
 		if (not IsAlive(Mission.enemy1))  then
-			Mission.enemy1 = BuildObject("fvtank", Mission.comp_team, Mission.spawn1)
+			Mission.enemy1 = BuildObject("fvtank_vsr", Mission.comp_team, Mission.spawn1)
 			Attack(Mission.enemy1, target, 1)
 		end
 		
 	elseif attack_type == 1 then --rocket
 		if (not IsAlive(Mission.enemy1))  then
-			Mission.enemy1 = BuildObject("fvsent", Mission.comp_team, Mission.spawn1)
+			Mission.enemy1 = BuildObject("fvsent_vsr", Mission.comp_team, Mission.spawn1)
 			Attack(Mission.enemy1, target, 1)
 		end
 		if (not IsAlive(Mission.enemy2))  then
-			Mission.enemy2 = BuildObject("fvsent", Mission.comp_team, Mission.spawn2)
+			Mission.enemy2 = BuildObject("fvsent_vsr", Mission.comp_team, Mission.spawn2)
 			Attack(Mission.enemy2, target, 1)
 		end
 		
 	elseif attack_type == 2 then --constructor
 		if (not IsAlive(Mission.enemy1))  then
-			Mission.enemy1 = BuildObject("fvtank", Mission.comp_team, Mission.spawn1)
+			Mission.enemy1 = BuildObject("fvtank_vsr", Mission.comp_team, Mission.spawn1)
 			Attack(Mission.enemy1, target, 1)
 		end
 		
 	elseif attack_type == 3 then --turret
 		if (not IsAlive(Mission.enemy1))  then
-			Mission.enemy1 = BuildObject("fvarch", 2, Mission.spawn1)
+			Mission.enemy1 = BuildObject("fvarch_vsr", 2, Mission.spawn1)
 			Attack(Mission.enemy1, target, 1)
 		end
 		if (not IsAlive(Mission.enemy2))  then
-			Mission.enemy2 = BuildObject("fvarch", 2, Mission.spawn2)
+			Mission.enemy2 = BuildObject("fvarch_vsr", 2, Mission.spawn2)
 			Attack(Mission.enemy2, target, 1)
 		end
 		
 	elseif attack_type == 4 then --gun tower
 		SetIndependence(Mission.enemy1, 0)
 		SetIndependence(Mission.enemy2, 0)
-		Mission.enemy1 = BuildObject("fvtank", 2, Mission.spawn1)
-		Mission.enemy2 = BuildObject("fvtank", 2, Mission.spawn2)
-		Mission.enemy3 = BuildObject("fvsent", 2, Mission.spawn3)
+		Mission.enemy1 = BuildObject("fvtank_vsr", 2, Mission.spawn1)
+		Mission.enemy2 = BuildObject("fvtank_vsr", 2, Mission.spawn2)
+		Mission.enemy3 = BuildObject("fvsent_vsr", 2, Mission.spawn3)
 		Attack(Mission.enemy1, target, 1)
 		Attack(Mission.enemy2, target, 1)
 		Defend2(Mission.enemy3, Mission.enemy1, 1)
@@ -300,8 +314,8 @@ function CommandShab()
 
  
 	if Mission.shabState == 0 then  --setup the first batch of enemies
-		Mission.shabEnemy1 = BuildObject("fvsent", Mission.comp_team, Mission.spawn1)
-		Mission.shabEnemy2 = BuildObject("fvsent", Mission.comp_team, Mission.spawn2)
+		Mission.shabEnemy1 = BuildObject("fvsent_vsr", Mission.comp_team, Mission.spawn1)
+		Mission.shabEnemy2 = BuildObject("fvsent_vsr", Mission.comp_team, Mission.spawn2)
 		Attack(Mission.shabEnemy1, Mission.shabayev, 1)
 		Attack(Mission.shabEnemy2, Mission.shabayev, 1)
 		Attack(Mission.shabayev, Mission.shabEnemy1, 1)
@@ -337,7 +351,7 @@ function CommandShab()
 			Damage(Mission.shabEnemy2, 3000)
 		end
 		if ((not IsAlive(Mission.shabEnemy1)) and (not IsAlive(Mission.shabEnemy2)) and (not Mission.gunTowBuilt))  then
-			Mission.shabEnemy2 = BuildObject("fvsent", 2, Mission.spawn1)
+			Mission.shabEnemy2 = BuildObject("fvsent_vsr", 2, Mission.spawn1)
 			Attack(Mission.shabayev, Mission.shabEnemy2, 1)
 			Attack(Mission.shabEnemy2, Mission.shabayev, 1)
 
@@ -370,7 +384,7 @@ function CommandShab()
 			Mission.justHoped = true
 			HopOut(Mission.shabayev)
 --				SetObjectiveOn(Mission.shabOnFoot)
-			hunter=	BuildObject("fvsent",Mission.comp_team,"hunter")
+			hunter=	BuildObject("fvsent_vsr",Mission.comp_team,"hunter")
 --			Patrol(temp,"hunter_path")
 			Attack(hunter,Mission.shabayev) -- blow up shabs craft
 			CameraReady()
@@ -606,7 +620,7 @@ function missionCode() --
 		Mission.shabayev = BuildObject("ivtank",3,"spawn_shab")
 		Mission.ruins = GetHandle("ruins")
 		SetScrap(1, 40)
---			Mission.playerEnemy1 = BuildObject("fvtank", 2, Mission.spawn3)
+--			Mission.playerEnemy1 = BuildObject("fvtank_vsr", 2, Mission.spawn3)
 --			Attack(Mission.playerEnemy1, Mission.player, 1)
 		CommandShab()
 		AudioMessage("isdf0701.wav")
@@ -648,7 +662,7 @@ function missionCode() --
 			Mission.enemy1deployed = true
 		end
 		if ((not IsAlive(Mission.playerEnemy1)) and (not IsAlive(Mission.enemy1)))  then
-			Mission.playerEnemy1 = BuildObject("fvtank", Mission.comp_team, Mission.spawn3)
+			Mission.playerEnemy1 = BuildObject("fvtank_vsr", Mission.comp_team, Mission.spawn3)
 			Attack(Mission.playerEnemy1, Mission.player, 1)
 		end
 		
@@ -674,7 +688,7 @@ function missionCode() --
 			Mission.enemy1deployed = true
 		end
 		if ((not IsAlive(Mission.playerEnemy1)) and (not IsAlive(Mission.enemy1)))  then
-			Mission.playerEnemy1 = BuildObject("fvtank", 2, Mission.spawn3)
+			Mission.playerEnemy1 = BuildObject("fvtank_vsr", 2, Mission.spawn3)
 			Attack(Mission.playerEnemy1, Mission.player, 1)
 		end
 
@@ -710,7 +724,7 @@ function missionCode() --
 			Mission.getNewOrder = false
 		end
 		if ((not IsAlive(Mission.playerEnemy1)) and (not IsAlive(Mission.enemy1)))  then
-			Mission.playerEnemy1 = BuildObject("fvtank", 2, Mission.spawn3)
+			Mission.playerEnemy1 = BuildObject("fvtank_vsr", 2, Mission.spawn3)
 			Attack(Mission.playerEnemy1, Mission.player, 1)
 
 		end
@@ -741,11 +755,11 @@ function missionCode() --
 		if (Mission.gunTowBuilt)  then
 		
 			Mission.missionState = Mission.missionState + 1
-			Mission.artil = BuildObject("fvartl",2,"artil")
+			Mission.artil = BuildObject("fvartl_vsr",2,"artil")
 			Goto(Mission.artil,"artillery")
-			temp = BuildObject("fvscout",2,Mission.spawn2)
+			temp = BuildObject("fvscout_vsr",2,Mission.spawn2)
 			Follow(temp,Mission.artil)
-			BuildObject("fvscout",2,Mission.spawn3)
+			BuildObject("fvscout_vsr",2,Mission.spawn3)
 			Follow(temp,Mission.artil)
 			Mission.artil_counter = 0
 			Mission.getNewOrder = false

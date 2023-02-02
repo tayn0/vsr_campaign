@@ -176,8 +176,6 @@ function Start() --This function is called upon the first frame
 	
 	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
 
-	GiveWeapon(Mission.player,"gchainvsr_c")
-	GiveWeapon(Mission.player,"gshadowvsr_c")
 	GiveWeapon(Mission.player,"gproxminvsr")
 	
 	PreloadODF("fvsent")
@@ -203,6 +201,13 @@ function UnitToVSR(h, odf, player)
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
+
+	if IsOdf(h, "ivscout:1") then	
+		temp = GetGroup(h)
+		h = UnitToVSR(h, "ivscout_vsr", 0)	
+		Goto(h, GetHandle("autonav"), 0)
+		SetGroup(h, temp)
+	end
 
 	if (IsOdf(h,"ibrec5")) then
 	
@@ -439,7 +444,7 @@ function missionCode() --
 			Mission.MoviePlaying=true
 			CameraReady()
 			-- but danger looms..
-			Mission.atk1=BuildObject("fvscout",2,"spawn1")
+			Mission.atk1=BuildObject("fvscout_vsr",2,"spawn1")
 			Mission.wasDead1=false
 			Attack(Mission.atk1,Mission.player)
 			Mission.mission_state = Mission.mission_state + 1
@@ -497,13 +502,13 @@ function missionCode() --
 			
 				Mission.wasDead1=false
 				Mission.wasDead2=false
-				raid1=BuildObject("fvsent",2,"raid1")
+				raid1=BuildObject("fvsent_vsr",2,"raid1")
 				Goto(raid1,Mission.recy)
-				raid2=BuildObject("fvtank",2,"raid2")
+				raid2=BuildObject("fvtank_vsr",2,"raid2")
 				Goto(raid2,Mission.recy)
-				--				raid3=BuildObject("fvsent",2,"raid3")
+				--				raid3=BuildObject("fvsent_vsr",2,"raid3")
 				--				Goto(raid3,Mission.recy)
-				--				raid4=BuildObject("fvtank",2,"raid4")
+				--				raid4=BuildObject("fvtank_vsr",2,"raid4")
 				--				Goto(raid4,Mission.recy)
 				ClearObjectives()
 				AddObjective("isdf0517.otf","WHITE",10.0)
@@ -558,7 +563,7 @@ function missionCode() --
 
 				AudioMessage("isdf0507.wav")	
 				-- Add an attacked for spice
-				Mission.atk1=BuildObject("fvscout",2,"spawn1")
+				Mission.atk1=BuildObject("fvscout_vsr",2,"spawn1")
 				Goto(Mission.atk1,"attack1")
 				Patrol(Mission.shabayev,"patrol1",1)
 				SetIndependence(Mission.shabayev,1)
@@ -589,9 +594,9 @@ function missionCode() --
 					Mission.raid_count = Mission.raid_count + 1
 					AddHealth(Mission.constructor,500)
 					AddHealth(Mission.shabayev,500)
-					raid1=BuildObject("fvtank",2,"raid1")
+					raid1=BuildObject("fvtank_vsr",2,"raid1")
 					Goto(raid1,Mission.recy)
-					raid2=BuildObject("fvtank",2,"raid2")
+					raid2=BuildObject("fvtank_vsr",2,"raid2")
 					Goto(raid2,Mission.recy)
 					Mission.wasDead1=false
 					Mission.wasDead2=false
@@ -895,19 +900,19 @@ function missionCode() --
 	]]
 	if ((Mission.lurker1==nil) and (GetDistance(Mission.player,"lurker1")<150.0)) then
 	
-		Mission.lurker1=BuildObject("fvsent",2,"lurker1")
+		Mission.lurker1=BuildObject("fvsent_vsr",2,"lurker1")
 	end
 	if ((Mission.lurker2==nil) and (GetDistance(Mission.player,"lurker2")<150.0)) then
 	
-		Mission.lurker2=BuildObject("fvsent",2,"lurker1")
+		Mission.lurker2=BuildObject("fvsent_vsr",2,"lurker1")
 	end
 	if ((Mission.lurker3==nil) and (GetDistance(Mission.player,"lurker3")<250.0)) then
 	
-		Mission.lurker3=BuildObject("fvsent",2,"lurker3")
+		Mission.lurker3=BuildObject("fvsent_vsr",2,"lurker3")
 	end
 	if ((Mission.lurker4==nil) and (GetDistance(Mission.player,"lurker4")<250.0)) then
 	
-		Mission.lurker4=BuildObject("fvsent",2,"lurker4")
+		Mission.lurker4=BuildObject("fvsent_vsr",2,"lurker4")
 	end
 
 end

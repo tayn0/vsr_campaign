@@ -144,6 +144,10 @@ function UnitToVSR(h, odf, player)
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
+
+if IsOdf(h, "fvturr") then UnitToVSR(h, "fvturr_vsr", 0) end
+if IsOdf(h, "fvspir") then UnitToVSR(h, "fbspir_vsr", 0) end
+
 	if (Mission.start_done) then
 	
 		if ((Mission.cbunker==nil) and (IsOdf(h,"ibcbun"))) then
@@ -353,8 +357,8 @@ function missionCode() --
 		AddHealth(temp,-2500)
 		GiveWeapon(Mission.player, "gshadowvsr_c")
 		--[[
-		turret1=BuildObject("ivturr",3,"turret1")
-		turret2=BuildObject("ivturr",3,"turret2")
+		turret1=BuildObject("ivturr_vsr",3,"turret1")
+		turret2=BuildObject("ivturr_vsr",3,"turret2")
 		Deploy(turret1)
 		Deploy(turret2)
 		]]
@@ -384,28 +388,28 @@ function missionCode() --
 		end
 		if ((not wave_launched) and (GetTime()>attack_wave_time)) then
 		
-			Mission.atk1=BuildObject("fvtank",2,"attack_start1")
+			Mission.atk1=BuildObject("fvtank_vsr",2,"attack_start1")
 			Goto(Mission.atk1,"attack_path1")
 			SetSkill(Mission.atk1,3)
-			Mission.atk2=BuildObject("fvtank",2,"attack_start1")
+			Mission.atk2=BuildObject("fvtank_vsr",2,"attack_start1")
 			Goto(Mission.atk2,"attack_path1")
 			SetSkill(Mission.atk2,3)
-			Mission.atk3=BuildObject("fvsent",2,"attack_start1")
+			Mission.atk3=BuildObject("fvsent_vsr",2,"attack_start1")
 			Goto(Mission.atk3,"attack_path1")
 			SetSkill(Mission.atk3,3)
-			Mission.atk4=BuildObject("fvsent",2,"attack_start1")
+			Mission.atk4=BuildObject("fvsent_vsr",2,"attack_start1")
 			Goto(Mission.atk4,"attack_path1")
 			SetSkill(Mission.atk4,3)
-			Mission.atk5=BuildObject("fvtank",2,"attack_start2")
+			Mission.atk5=BuildObject("fvtank_vsr",2,"attack_start2")
 			Goto(Mission.atk5,"attack_path2")
 			SetSkill(Mission.atk5,3)
-			Mission.atk6=BuildObject("fvtank",2,"attack_start2")
+			Mission.atk6=BuildObject("fvtank_vsr",2,"attack_start2")
 			Goto(Mission.atk6,"attack_path2")
 			SetSkill(Mission.atk6,3)
-			Mission.atk7=BuildObject("fvsent",2,"attack_start2")
+			Mission.atk7=BuildObject("fvsent_vsr",2,"attack_start2")
 			Goto(Mission.atk7,"attack_path2")
 			SetSkill(Mission.atk7,3)
-	--		atk8=BuildObject("fvsent",2,"attack_start2")
+	--		atk8=BuildObject("fvsent_vsr",2,"attack_start2")
 	--		Goto(atk8,"attack_path2")
 	--		SetSkill(atk8,3)
 			wave_launched=true
@@ -436,11 +440,11 @@ function missionCode() --
 			end
 			if (Mission.wave_count==2) then
 			
-				back1=BuildObject("fvarch",2,"back1")
+				back1=BuildObject("fvarch_vsr",2,"back1")
 				Goto(back1,"back_door")
-				back2=BuildObject("fvarch",2,"back2")
+				back2=BuildObject("fvarch_vsr",2,"back2")
 				Goto(back2,"back_door")
-				back3=BuildObject("fvsent",2,"back3")
+				back3=BuildObject("fvsent_vsr",2,"back3")
 				Goto(back3,"back_door")
 				SetObjectiveOn(back1)
 				AudioMessage("isdf0614.wav")
@@ -537,8 +541,8 @@ function missionCode() --
 
 			ConstructionMessage()
 			-- spawn in attackers
-			Mission.scout1=BuildObject("fvscout",2,"patrol_spawn")
-			Mission.scout2=BuildObject("fvscout",2,"patrol_spawn")
+			Mission.scout1=BuildObject("fvscout_vsr",2,"patrol_spawn")
+			Mission.scout2=BuildObject("fvscout_vsr",2,"patrol_spawn")
 			if (IsAlive(Mission.mbike1)) then
 			
 				Attack(Mission.scout1,Mission.player)
@@ -562,8 +566,8 @@ function missionCode() --
 	elseif Mission.mission_state == 3 then
 		if ((not IsAlive(Mission.scout1)) and (not IsAlive(Mission.scout2))) then
 		
-			Mission.scout1=BuildObject("fvscout",2,"patrol_spawn")
-			Mission.scout2=BuildObject("fvscout",2,"patrol_spawn")
+			Mission.scout1=BuildObject("fvscout_vsr",2,"patrol_spawn")
+			Mission.scout2=BuildObject("fvscout_vsr",2,"patrol_spawn")
 			if (IsAlive(Mission.mbike1)) then
 			
 				Attack(Mission.scout1,Mission.mbike1)
@@ -592,9 +596,9 @@ function missionCode() --
 
 			]]
 			-- more cannon foder to get pulverized
-			Mission.atk1=BuildObject("fvtank",2,"patrol_spawn1")
+			Mission.atk1=BuildObject("fvtank_vsr",2,"patrol_spawn1")
 			Attack(Mission.atk1,Mission.guntow1)  -- cannon foder
-			Mission.atk2=BuildObject("fvtank",2,"patrol_spawn2")
+			Mission.atk2=BuildObject("fvtank_vsr",2,"patrol_spawn2")
 			Attack(Mission.atk2,Mission.guntow2)  -- cannon foder
 
 			-- FraKTal says this scav doesn't want to deploy on its
@@ -624,17 +628,17 @@ function missionCode() --
 				SetObjectiveOn(Mission.goal)
 				Mission.mission_state = Mission.mission_state + 1
 				-- spawn in patrols
-				Mission.atk1=BuildObject("fvtank",2,"patrol_spawn2")
-				Mission.atk2=BuildObject("fvtank",2,"patrol_spawn2")
-				Mission.atk3=BuildObject("fvsent",2,"patrol_spawn")
-				Mission.atk4=BuildObject("fvsent",2,"patrol_spawn")
+				Mission.atk1=BuildObject("fvtank_vsr",2,"patrol_spawn2")
+				Mission.atk2=BuildObject("fvtank_vsr",2,"patrol_spawn2")
+				Mission.atk3=BuildObject("fvsent_vsr",2,"patrol_spawn")
+				Mission.atk4=BuildObject("fvsent_vsr",2,"patrol_spawn")
 				Patrol(Mission.atk1,"patrol")
 				Patrol(Mission.atk2,"patrol")
 				Patrol(Mission.atk3,"patrol")
 				Patrol(Mission.atk4,"patrol")
 				-- spawn in attackers
-				Mission.atk1=BuildObject("ivtank",3,"constructor_spawn")
-				Mission.atk2=BuildObject("ivtank",3,"constructor_spawn")
+				Mission.atk1=BuildObject("ivtank_vsr",3,"constructor_spawn")
+				Mission.atk2=BuildObject("ivtank_vsr",3,"constructor_spawn")
 				Goto(Mission.atk1,Mission.goal)
 				Goto(Mission.atk2,Mission.goal)
 				--BuildObject("ibbomb",1,"bomber")  -- you get a bomber
@@ -650,8 +654,8 @@ function missionCode() --
 			Mission.time_counter = Mission.time_counter + 1
 			if (Mission.time_counter%1200==0) then -- every minute 1/2 then
 			
-				Mission.atk1=BuildObject("fvtank",2,"patrol_spawn2")
-				Mission.atk2=BuildObject("fvtank",2,"patrol_spawn2")
+				Mission.atk1=BuildObject("fvtank_vsr",2,"patrol_spawn2")
+				Mission.atk2=BuildObject("fvtank_vsr",2,"patrol_spawn2")
 				Patrol(Mission.atk1,"patrol")
 				Patrol(Mission.atk2,"patrol")
 			end

@@ -127,7 +127,7 @@ function Start() --This function is called upon the first frame
 	
 	Mission.fact = UnitToVSR(Mission.fact, "ibfact_vsr", 0)
 	
-	Mission.rec = UnitToVSR(Mission.rec, "ibfact_vsr", 0)
+	Mission.rec = UnitToVSR(Mission.rec, "ibrecy_vsr", 0)
 
 
    
@@ -172,6 +172,13 @@ function ShowObjectives()
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
+
+if IsOdf(h, "fvturr") then h = UnitToVSR(h, "fvturr_vsr", 0) 
+elseif IsOdf(h, "fvtank") then h = UnitToVSR(h, "fvtank_vsr", 0) 
+elseif IsOdf(h, "fbspir") then h = UnitToVSR(h, "fbspir_vsr", 0) 
+elseif IsOdf(h, "fvsent") then h = UnitToVSR(h, "fvsent_vsr", 0)
+elseif IsOdf(h, "fvscout") then h = UnitToVSR(h, "fvscout_vsr", 0)
+end
 
 end
 
@@ -244,19 +251,19 @@ function missionCode() --
 		Mission.turr4 = GetHandle("base_turr4")
 
 		Patrol(Mission.shabayev,"shab_stay")
-		Mission.sent = BuildObject("fvsent",2,"fury_patrol1")
+		Mission.sent = BuildObject("fvsent_vsr",2,"fury_patrol1")
 		Patrol(Mission.sent,"fury_patrol1")
-		Mission.sent = BuildObject("fvsent",2,"fury_patrol2")
+		Mission.sent = BuildObject("fvsent_vsr",2,"fury_patrol2")
 		Patrol(Mission.sent,"fury_patrol2")
 
 		-- We got tha boom
-		Mission.sent = BuildObject("fvtank",2,"defend1")
+		Mission.sent = BuildObject("fvtank_vsr",2,"defend1")
 		Goto(Mission.sent,"strike2")
-		Mission.sent = BuildObject("fvtank",2,"defend1")
+		Mission.sent = BuildObject("fvtank_vsr",2,"defend1")
 		Goto(Mission.sent,"strike2")
 		ShowObjectives()
 
-		SetAIP("isdf09.aip",2)
+		SetAIP("isdf0901.aip",2)
 		SetScrap(1,60)  -- so its always the same
 		Mission.start_done = true
 	end
@@ -267,7 +274,7 @@ function missionCode() --
 
 		if (IsOdf(Mission.player,"isuser"))   then -- the Mission.player needs wheels to resuce then
 		
-			Mission.atk1 = BuildObject("fvsent",2,"shab_attack")
+			Mission.atk1 = BuildObject("fvsent_vsr",2,"shab_attack")
 			Mission.shab_state = 4
 			Attack(Mission.atk1,Mission.shabayev)
 			Mission.botched_rescue = true
@@ -311,9 +318,9 @@ function missionCode() --
 
 		if (GetTime()>Mission.shab_message) then
 		
-			Mission.sent = BuildObject("fvtank",2,"defend1")
+			Mission.sent = BuildObject("fvtank_vsr",2,"defend1")
 			Goto(Mission.sent,"strike1")
-			Mission.sent = BuildObject("fvtank",2,"defend1")
+			Mission.sent = BuildObject("fvtank_vsr",2,"defend1")
 			Goto(Mission.sent,"strike1")
 			AudioMessage("isdf0903.wav")
 			-- SHABAYEV
@@ -342,8 +349,8 @@ function missionCode() --
 			-- now things get desperate
 			SetTeamNum(Mission.ruin,1)
 			SetCurHealth(Mission.ruin, static_cast<long>(0.1 * GetMaxHealth(Mission.ruin)))
-			Mission.atk1 = BuildObject("fvsent",2,"shab_attack")
-			Mission.atk2 = BuildObject("fvsent",2,"shab_attack")
+			Mission.atk1 = BuildObject("fvsent_vsr",2,"shab_attack")
+			Mission.atk2 = BuildObject("fvsent_vsr",2,"shab_attack")
 			Attack(Mission.atk1,Mission.shabayev)
 			Attack(Mission.atk2,Mission.shabayev)
 			Mission.shab_state = Mission.shab_state + 1
@@ -430,9 +437,9 @@ function missionCode() --
 			apc2 = BuildObject("ivapc",1,"spawn_apc")	
 			SetGroup(Mission.apc1, grp)
 			SetGroup(apc2,grp)
-			tank = BuildObject("fvtank",2,"defend1")
+			tank = BuildObject("fvtank_vsr",2,"defend1")
 			Patrol(tank,"defend_patrol")
-			BuildObject("fvtank",2,"defend1")
+			BuildObject("fvtank_vsr",2,"defend1")
 			Mission.mission_state = Mission.mission_state + 1
 			ShowObjectives()
 

@@ -98,6 +98,10 @@ local Mission = {
 		i_first,
 
 		i_last
+
+	PreloadODF("fvtank_vsr")
+	PreloadODF("fvsent_vsr")
+	PreloadODF("fvturr_vsr")
    
 } --End Mission
 
@@ -155,7 +159,32 @@ function Start() --This function is called upon the first frame
    
 end
 
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+	end
+
+	return h
+
+end
+
+
 function AddObject(h) --This function is called when an object appears in the game. --
+
+if IsOdf(h, "fvtank") then UnitToVSR(h, "fvtank_vsr", 0) 
+elseif IsOdf(h, "fvsent") then UnitToVSR(h, "fvsent_vsr", 0) 
+elseif IsOdf(h, "fvturr") then UnitToVSR(h, "fvturr_vsr", 0) 
+elseif IsOdf(h, "fbspir") then UnitToVSR(h, "fbspir_vsr", 0) 
+elseif IsOdf(h, "fvscout") then UnitToVSR(h, "fvscout_vsr", 0) 
+elseif IsOdf(h, "fvartl") then UnitToVSR(h, "fvartl_vsr", 0) 
+end
 
 end
 

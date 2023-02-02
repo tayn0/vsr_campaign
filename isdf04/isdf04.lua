@@ -1350,10 +1350,11 @@ if (not Mission.ON_HOLD) then
 		Mission.scav_check = GetTime() + 2.0
 		Mission.pause = GetTime() + 3.0
 		SetAIP("isdf0402.aip",1) -- builds turrets
+		
+		SetTeamNum(Mission.armory, 1)
 		Mission.shab_message2 = true
 
-
-		SetTeamNum(Mission.armory, 1)	
+	
 
 	end
 	--------------------------------------------
