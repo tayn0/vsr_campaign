@@ -443,7 +443,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 	
 
 	-- satchel charge
-	elseif ((not Mission.satch_alive) and (IsOdf(h,"satchel"))) then
+	elseif ((not Mission.satch_alive) and (IsOdf(h,"satchel1"))) then
 		Mission.satch = h
 		Mission.satch_alive = true
 	
