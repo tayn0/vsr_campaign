@@ -157,7 +157,7 @@ buildCount1 = 2
 planType = "BuildMinimums"
 planPriority = 50
 
-buildType1 = "fvtug_vsr"
+buildType1 = "fvtug"
 buildCount1 = 1
 
 ///////////////////////////////////////////

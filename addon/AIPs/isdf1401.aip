@@ -70,7 +70,7 @@ attackType17_1 = "fvwalk_vsr"
 targetType18 = "ivserv_vsr"
 attackType18_1 = "fvsent_vsr"
 
-targetType19 = "ivtug_vsr"
+targetType19 = "ivtug"
 attackType19_1 = "fvtank_vsr"
 
 

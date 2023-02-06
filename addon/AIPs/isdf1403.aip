@@ -72,7 +72,7 @@ attackType18_1 = "fvsent_vsr"
 targetType19 = "ivapc"
 attackType19_1 = "fvscout_vsr"
 
-targetType20 = "ivtug_vsr"
+targetType20 = "ivtug"
 attackType20_1 = "fvtank_vsr"
 
 
