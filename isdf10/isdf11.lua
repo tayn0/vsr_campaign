@@ -1754,7 +1754,7 @@ function missionCode() --
                     SetAnimation(Mission.cave,"crumble",1)
 					--StartAnimation(Mission.cave)
                     Mission.bridge_collapse = true
-                    SetAIP("scionidle.aip", 2)
+                    --SetAIP("scionidle.aip", 2)
                 end
             end
  

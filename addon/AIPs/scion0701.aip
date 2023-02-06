@@ -1,0 +1,87 @@
+[Start]
+scrapCount = 40
+scavClass = "ivscav_vsr"
+consClass = "ivcons_vsr"
+IdleAllCraft = false // Prevent Interrupting AI.
+
+[IdleDispatcher]
+UnitIdleSeconds = 999999 // Don't send out units via Dispatch.
+
+//////////////////////////
+/////////////////////////
+
+[Plan1]
+planType = "CollectPool"
+planPriority = 99
+buildIfNoIdle = 1
+
+//////////////////////////
+/////////////////////////
+
+[Plan2]
+planType = "CollectPool"
+planPriority = 98
+buildIfNoIdle = 1
+
+//////////////////////////
+/////////////////////////
+
+[Plan3]
+planType = "BuildMinimums"
+planPriority = 97
+
+buildType1 = "ivcons_vsr"
+buildCount1 = 1
+
+//////////////////////////
+/////////////////////////
+
+[Plan4]
+planType = "BaseBuildMinimums"
+planPriority = 96
+
+buildType1 = "ibpgen"
+buildLoc1 = "aipgen1"
+
+buildType2 = "ibpgen"
+buildLoc2 = "aipgen2"
+
+//////////////////////////
+/////////////////////////
+
+[Plan5]
+planType = "BaseBuildMinimums"
+planPriority = 95
+
+buildType1 = "ibcbun_vsr"
+buildLoc1 = "aicbun"
+
+buildType2 = "ibgtow_vsr"
+buildLoc2 = "aigtow1"
+
+buildType3 = "ibfact_vsr"
+buildLoc3 = "aifact"
+
+buildType4 = "ibgtow_vsr"
+buildLoc4 = "aigtow2"
+
+//////////////////////////
+/////////////////////////
+
+[Plan6]
+planType = "BuildMinimums"
+planPriority = 94
+
+buildType1 = "ivtank_vsr"
+buildCount1 = 2
+
+buildType2 = "ivturr_vsr"
+buildCount2 = 2
+
+//////////////////////////
+/////////////////////////
+
+
+
+
+

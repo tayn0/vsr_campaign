@@ -1,0 +1,247 @@
+[Start]
+scrapCount = 100
+scavClass = "fvscav_vsr"
+consClass = "fvcons_vsr"
+IdleAllCraft = false // Prevent Interrupting AI.
+
+[IdleDispatcher]
+UnitIdleSeconds = 999999 // Don't send out units via Dispatch.
+
+[Match]
+targetType1 = "ivtank_vsr"
+attackType1_1 = "fvtank"
+
+targetType2 = "ivtank_vsr"
+attackType2_1 = "fvsent_vsr"
+attackType2_2 = "fvsent_vsr"
+
+	targetType3 = "ivtank_vsr"
+	attackType3_1 = "fvarch_vsr"
+
+targetType4 = "ivscout_vsr"
+attackType4_1 = "fvsent_vsr"
+
+targetType5 = "ivscout_vsr"
+attackType5_1 = "fvscout_vsr"
+
+targetType6 = "ivturr_vsr"
+attackType6_1 = "fvarch_vsr"
+
+targetType7 = "ivmisl_vsr"
+attackType7_1 = "fvsent_vsr"
+
+targetType8 = "ivmisl_vsr"
+attackType8_1 = "fvtank_vsr"
+
+	targetType9 = "ivatank_vsr"
+	attackType9_1 = "fvwalk_vsr"
+
+	targetType10 = "ivatank_vsr"
+	attackType10_1 = "fvatank_vsr"
+
+	targetType11 = "ivrckt_vsr"
+	attackType11_1 = "fvatank_vsr"
+
+targetType12 = "ivwalk_vsr"
+attackType12_1 = "fvatank_vsr"
+
+targetType13 = "ibgtow_vsr"
+attackType13_1 = "fvwalk_vsr"
+attackType13_2 = "fvwalk_vsr"
+
+	targetType14 = "ivcons_vsr"
+	attackType14_1 = "fvtank_vsr"
+
+	targetType15 = "ivscav_vsr"
+	attackType15_1 = "fvsent_vsr"
+
+	targetType16 = "ivserv_vsr"
+	attackType16_1 = "fvsent_vsr"
+
+	targetType17 = "ivapc"
+	attackType17_1 = "fvscout_vsr"
+
+	targetType19 = "ivbomb_vsr"
+	attackType19_1 = "fvscout_vsr"
+
+	targetType20 = "ivtug"
+	attackType20_1 = "fvsent_vsr"
+
+	targetType21 = "ivtank_vsr"
+	attackType21_1 = "fvscout_vsr"
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+
+[Plan30]
+planType = "Service"
+planPriority = 100
+
+serviceUnit = "fvserv_vsr"
+unitType1  = "fblung_vsr"
+unitType2  = "fbspir_vsr"
+unitType3  = "fbscav_vsr"
+unitType4  = "fbscup_vsr"
+unitType5  = "fvtank_vsr"
+unitType6  = "fvarch_vsr"
+buildIfNoIdle = 1
+
+///////////////////////////////////////////
+//////////////////////////////////////////
+
+[Plan1]
+planType = "BuildMinimums"
+planPriority = 99
+
+buildType1 = "fvatank_vsr"
+buildCount1 = 1
+
+///////////////////////////////
+
+[Plan2]
+planType = "BuildMinimums"
+planPriority = 99
+
+buildType1 = "fvartl_vsr"
+buildCount1 = 2
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+
+[Plan3]
+planType = "Attacker"
+planPriority = 98
+
+maxAttacks = 20
+targetType = "ibgtow_vsr"
+attackType1 = "fvartl_vsr"
+attackType2 = "fvartl_vsr"
+
+///////////////////////////////
+
+[Plan4]
+planType = "BuildMinimums"
+planPriority = 98
+
+buildType1 = "fvtank_vsr"
+buildCount1 = 4
+
+///////////////////////////////
+
+[Plan5]
+planType = "Attacker"
+planPriority = 98
+
+maxAttacks = 20
+targetType = "ibscav_vsr"
+attackType1 = "fvtank_vsr"
+attackType2 = "fvtank_vsr"
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+
+[Plan7]
+planType = "BuildMinimums"
+planPriority = 97
+
+buildType1 = "fvtank_vsr"
+buildCount1 = 6
+buildType2 = "fvarch_vsr"
+buildCount2 = 2
+buildType3 = "fvscout_vsr"
+buildCount3 = 2
+buildType4 = "fvsent_vsr"
+buildCount4 = 2
+buildType5 = "fvatank_vsr"
+buildCount5 = 2
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+
+[Plan8]
+planType = "BaseBuildMinimums"
+planPriority = 95
+
+buildType1 = "fbspir_vsr"
+buildLoc1 = "base_spire1"
+buildType2 = "fbspir_vsr"
+buildLoc2 = "base_spire2"
+buildType3 = "fbspir_vsr"
+buildLoc3 = "base_spire3"
+buildType4 = "fbspir_vsr"
+buildLoc4 = "base_spire4"
+buildType5 = "fbspir_vsr"
+buildLoc5 = "field_spire1"
+buildIfNoIdle = 1
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+
+[Plan9]
+planType = "ClearArea"
+planPriority = 94
+
+targetType = "ibscav_vsr"
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+
+[Plan10]
+planType = "CollectField"
+planPriority = 92
+buildIfNoIdle = 1
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+
+[Plan11]
+planType = "BuildMinimums"
+planPriority = 50
+
+buildType1 = "fvarch_vsr"
+buildCount1 = 4
+
+///////////////////////////////
+
+[Plan12]
+planType = "BuildMinimums"
+planPriority = 50
+
+buildType1 = "fvtank_vsr"
+buildCount1 = 8
+
+///////////////////////////////
+
+[Plan13]
+planType = "BuildMinimums"
+planPriority = 50
+
+buildType1 = "fvwalk_vsr"
+buildCount1 = 2
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+
+[Plan14]
+planType = "ClearArea"
+planPriority = 30
+
+targetType = "ibscav_vsr"
+
+///////////////////////////////
+
+[Plan15]
+planType = "ClearArea"
+planPriority = 30
+
+targetType = "ibscup_vsr"
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+
+[Plan16]
+planType = "DistributeUnits"
+planPriority = 10
+
+///////////////////////////////////////////
+///////////////////////////////////////////

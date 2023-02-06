@@ -164,6 +164,7 @@ local Mission = {
 	boom = false,
 	last_talk = false,
 	fall_sound = false,
+	satchel_given = false,
 
 --  floats
 	recy_check = 1.0,
@@ -315,9 +316,22 @@ function Load(...)
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
+
+	if IsOdf(h, "fvturr") then
+		h = UnitToVSR(h, "fvturr_vsr", 0)
+	end
+
+	if (IsOdf(h, "ispilo") and h == GetPlayerHandle() and not Mission.satchel_given) then
+		GiveWeapon(h, "igsatc")
+		Mission.satchel_given = true
+		return
+	end
+
    	if (not Mission.start_done) then
 		return
 	end 
+	
+
 	
 	-- don't take over a vehicle if the player is in it
 	if (h == GetPlayerHandle()) then
@@ -443,11 +457,13 @@ function AddObject(h) --This function is called when an object appears in the ga
 	
 
 	-- satchel charge
-	elseif ((not Mission.satch_alive) and (IsOdf(h,"satchel"))) then
+	elseif ((not Mission.satch_alive) and (IsOdf(h,"satchel1"))) then
 		Mission.satch = h
 		Mission.satch_alive = true
 	
 	end
+	
+
 end
 
 
@@ -522,9 +538,6 @@ SetAutoGroupUnits(false)
 	Mission.wingman = UnitToVSR(Mission.wingman, "ivscout_vsr", 0)
 	Stop(Mission.wingman, 0)
 	SetGroup(Mission.wingman,0)
-	
-	Mission.forge = UnitToVSR(Mission.forge, "fbforg_vsr", 0)
-	Mission.srecycler = UnitToVSR(Mission.srecycler, "fbrecy_vsr", 0)
 
 
 
@@ -973,7 +986,7 @@ if (not Mission.ON_HOLD) then
 				OldPos = GetPosition2(Mission.recycler)
 				Where = GetPositionNear(OldPos,Mission.AllyMinRadiusAway,Mission.AllyMaxRadiusAway)
 
-				Mission.TurrH = BuildObject("ivturr",1,Where)
+				Mission.TurrH = BuildObject("ivturr_vsr",1,Where)
 				SetGroup(Mission.TurrH,2)
 				SetSkill(Mission.TurrH, 2)
 			end
