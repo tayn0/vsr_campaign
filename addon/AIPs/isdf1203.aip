@@ -134,6 +134,8 @@ buildType4 = "fbspir_vsr"
 buildLoc4 = "base_spire2"
 buildType5 = "fbspir_vsr"
 buildLoc5 = "base_spire3"
+buildType5 = "fbspir_vsr"
+buildLoc5 = "base_spire4"
 buildIfNoIdle = 1
 
 ///////////////////////////////////////////

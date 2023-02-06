@@ -1,0 +1,23 @@
+[GameObjectClass]
+classLabel = "ivrecy"
+
+/////// PROVIDES ///////////////////
+
+provideCount = 5
+provideName3 = "ivrecy10"
+provideName4 = "VIRTUAL_CLASS_RECYCLER"
+provideName5 = "VIRTUAL_CLASS_RECYCLERVEHICLE"
+
+////////////////////////////////////
+
+[CraftClass]
+DoBettyLost = false
+
+[TrackedVehicleClass]
+
+[TrackedDeployableClass]
+
+[DeployBuildingClass]
+deployName = "ibrecy10_vsr"
+
+[RecyclerVehicleClass]

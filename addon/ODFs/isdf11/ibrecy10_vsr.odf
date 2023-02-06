@@ -1,0 +1,30 @@
+[GameObjectClass]
+baseName = "ibrecy"
+
+classLabel = "ibrecy"
+
+/////// PROVIDES ///////////////////
+
+provideCount = 5
+provideName3 = "ibrecy10"
+provideName4 = "VIRTUAL_CLASS_RECYCLER"
+provideName5 = "VIRTUAL_CLASS_RECYCLERBUILDING"
+
+////////////////////////////////////
+
+[PoweredBuildingClass]
+
+[BuildingClass]
+
+[FactoryClass]
+buildItem1 = "ivscav_vsr"
+buildItem2 = "ivscout_vsr"
+buildItem3 = "ivturr_vsr"
+buildItem5 = "ivcons10_vsr"
+buildItem6 = "ivserv_vsr"
+buildItem7 = "apserv_vsr"
+buildItem8 = "ivscoutm_vsr"
+
+[RecyclerClass]
+
+[Lod1]

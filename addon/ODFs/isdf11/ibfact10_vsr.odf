@@ -1,0 +1,32 @@
+[GameObjectClass]
+classLabel = "ibfact"
+
+scrapCost = 50
+
+scrapValue = 10
+
+maxHealth = 10000
+
+/////// PROVIDES ///////////////////
+
+provideCount = 3
+provideName2 = "ibfact10"
+provideName3 = "VIRTUAL_CLASS_FACTORY"
+
+////////////////////////////////////
+
+[PoweredBuildingClass]
+
+[BuildingClass]
+
+[FactoryClass]
+buildItem1 = "ivmbike_vsr"
+buildItem2 = "ivmisl_vsr"
+buildItem3 = "ivtank_vsr"
+buildItem4 = "ivrckt_vsr"
+buildItem5 = "ivatank_vsr"
+buildItem6 = ""
+buildItem7 = ""
+buildItem8 = ""
+
+[Lod1]

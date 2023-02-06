@@ -71,7 +71,7 @@ attackType15_2 = "fvwalk_vsr"
 	targetType20 = "ivbomb_vsr"
 	attackType20_1 = "fvscout_vsr"
 
-	targetType21 = "ivtug_vsr"
+	targetType21 = "ivtug"
 	attackType21_1 = "fvsent"
 
 	targetType22 = "ivtank13"

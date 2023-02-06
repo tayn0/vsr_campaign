@@ -180,7 +180,9 @@ local Mission = {
 	start_war2,
 	start_war3,
 	cons2,
-
+	deadtank1,
+	deadtank2,
+	deadtank3,
 
 
 --  integers
@@ -209,28 +211,28 @@ function AddObject(h) --This function is called when an object appears in the ga
  	if (Mission.first_over) then
 	
 		-- ISDF POWER PLANTS
-		if ((Mission.power1 == nil) and (IsOdf(h,"ibpgen"))) then
+		if ((Mission.power1 == nil) and (IsOdf(h,"ibpgen_vsr"))) then
 		
 			Mission.power1 = h
 			Mission.power1a = true
 		
-		elseif ((Mission.power2 == nil) and (IsOdf(h,"ibpgen"))) then
+		elseif ((Mission.power2 == nil) and (IsOdf(h,"ibpgen_vsr"))) then
 		
 			Mission.power2 = h
 			Mission.power2a = true
 		
-		elseif ((Mission.power3 == nil) and (IsOdf(h,"ibpgen"))) then
+		elseif ((Mission.power3 == nil) and (IsOdf(h,"ibpgen_vsr"))) then
 		
 			Mission.power3 = h
 			Mission.power3a = true
 		
-		elseif ((Mission.power4 == nil) and (IsOdf(h,"ibpgen"))) then
+		elseif ((Mission.power4 == nil) and (IsOdf(h,"ibpgen_vsr"))) then
 		
 			Mission.power4 = h
 			Mission.power4a = true
 
 		-- SCAV DEPLOYED
-		elseif ((not Mission.scav_deployed) and (IsOdf(h,"ibscav12"))) then
+		elseif ((not Mission.scav_deployed) and (IsOdf(h,"ibscav_vsr"))) then
 		
 			a = (GetDistance(h,"scav1_point"))
 			b = (GetDistance(h,"scav2_point"))
@@ -253,7 +255,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 			Mission.scav1_deployed = true
 			Mission.scav_deployed = true
 		
-		elseif ((Mission.scav1_deployed) and (not Mission.scav2_deployed) and (IsOdf(h,"ibscav12"))) then
+		elseif ((Mission.scav1_deployed) and (not Mission.scav2_deployed) and (IsOdf(h,"ibscav_vsr"))) then
 		
 			a = (GetDistance(h,"scav1_point"))
 			b = (GetDistance(h,"scav2_point"))
@@ -273,9 +275,10 @@ function AddObject(h) --This function is called when an object appears in the ga
 			end
 
 			PrintConsoleMessage("scav2 deployed")
+			Mission.titan_time = GetTime() + 300.0
 			Mission.scav2_deployed = true
 		
-		elseif ((Mission.scav2_deployed) and (not Mission.scav3_deployed) and (IsOdf(h,"ibscav12"))) then
+		elseif ((Mission.scav2_deployed) and (not Mission.scav3_deployed) and (IsOdf(h,"ibscav_vsr"))) then
 		
 			a = (GetDistance(h,"scav1_point"))
 			b = (GetDistance(h,"scav2_point"))
@@ -295,139 +298,139 @@ function AddObject(h) --This function is called when an object appears in the ga
 			end
 
 			PrintConsoleMessage("scav3 deployed")
-			Mission.titan_time = GetTime() + 300.0
+
 			Mission.scav3_deployed = true	
 
 
 		-- ISDF GUNTOWERS
-		elseif ((Mission.guntower1 == nil) and (IsOdf(h,"ibgtow"))) then
+		elseif ((Mission.guntower1 == nil) and (IsOdf(h,"ibgtow_vsr"))) then
 		
 			Mission.guntower1 = h
 			Mission.guntower1a = true
 		
-		elseif ((Mission.guntower2 == nil) and (IsOdf(h,"ibgtow"))) then
+		elseif ((Mission.guntower2 == nil) and (IsOdf(h,"ibgtow_vsr"))) then
 		
 			Mission.guntower2 = h
 			Mission.guntower2a = true
 		
-		elseif ((Mission.guntower3 == nil) and (IsOdf(h,"ibgtow"))) then
+		elseif ((Mission.guntower3 == nil) and (IsOdf(h,"ibgtow_vsr"))) then
 		
 			Mission.guntower3 = h
 			Mission.guntower3a = true
 		
-		elseif ((Mission.guntower4 == nil) and (IsOdf(h,"ibgtow"))) then
+		elseif ((Mission.guntower4 == nil) and (IsOdf(h,"ibgtow_vsr"))) then
 		
 			Mission.guntower4 = h
 			Mission.guntower4a = true
 		end
 
 		-- SCOUT
-		if ((Mission.scout1 == nil) and (IsOdf(h,"fvscout"))) then
+		if ((Mission.scout1 == nil) and (IsOdf(h,"fvscout_vsr"))) then
 		
 			Mission.scout1 = h
 			Mission.scout1a = true
 		
-		elseif ((Mission.scout2 == nil) and (IsOdf(h,"fvscout"))) then
+		elseif ((Mission.scout2 == nil) and (IsOdf(h,"fvscout_vsr"))) then
 		
 			Mission.scout2 = h
 			Mission.scout2a = true
 		
-		elseif ((Mission.scout3 == nil) and (IsOdf(h,"fvscout"))) then
+		elseif ((Mission.scout3 == nil) and (IsOdf(h,"fvscout_vsr"))) then
 		
 			Mission.scout3 = h
 			Mission.scout3a = true
 		
-		elseif ((Mission.scout4 == nil) and (IsOdf(h,"fvscout"))) then
+		elseif ((Mission.scout4 == nil) and (IsOdf(h,"fvscout_vsr"))) then
 		
 			Mission.scout4 = h
 			Mission.scout4a = true
 		
 		-- GUARDIAN
-		elseif ((Mission.guard1 == nil) and (IsOdf(h,"fvturr"))) then
+		elseif ((Mission.guard1 == nil) and (IsOdf(h,"fvturr_vsr"))) then
 		
 			Mission.guard1 = h
 			Mission.guard1a = true
 		
-		elseif ((Mission.guard2 == nil) and (IsOdf(h,"fvturr"))) then
+		elseif ((Mission.guard2 == nil) and (IsOdf(h,"fvturr_vsr"))) then
 		
 			Mission.guard2 = h
 			Mission.guard2a = true
 		
-		elseif ((Mission.guard3 == nil) and (IsOdf(h,"fvturr"))) then
+		elseif ((Mission.guard3 == nil) and (IsOdf(h,"fvturr_vsr"))) then
 		
 			Mission.guard3 = h
 			Mission.guard3a = true
 		
-		elseif ((Mission.guard4 == nil) and (IsOdf(h,"fvturr"))) then
+		elseif ((Mission.guard4 == nil) and (IsOdf(h,"fvturr_vsr"))) then
 		
 			Mission.guard4 = h
 			Mission.guard4a = true
 
 		-- SENTRY
-		elseif ((Mission.sent1 == nil) and (IsOdf(h,"fvsent"))) then
+		elseif ((Mission.sent1 == nil) and (IsOdf(h,"fvsent_vsr"))) then
 		
 			Mission.sent1 = h
 			Mission.sent1a = true
 		
-		elseif ((Mission.sent2 == nil) and (IsOdf(h,"fvsent"))) then
+		elseif ((Mission.sent2 == nil) and (IsOdf(h,"fvsent_vsr"))) then
 		
 			Mission.sent2 = h
 			Mission.sent2a = true
 		
-		elseif ((Mission.sent3 == nil) and (IsOdf(h,"fvsent"))) then
+		elseif ((Mission.sent3 == nil) and (IsOdf(h,"fvsent_vsr"))) then
 		
 			Mission.sent3 = h
 			Mission.sent3a = true
 		
-		elseif ((Mission.sent4 == nil) and (IsOdf(h,"fvsent"))) then
+		elseif ((Mission.sent4 == nil) and (IsOdf(h,"fvsent_vsr"))) then
 		
 			Mission.sent4 = h
 			Mission.sent4a = true
 
 		-- WARRIOR
-		elseif ((Mission.war1 == nil) and (IsOdf(h,"fvtank"))) then
+		elseif ((Mission.war1 == nil) and (IsOdf(h,"fvtank_vsr"))) then
 		
 			Mission.war1 = h
 			Mission.war1a = true
 		
-		elseif ((Mission.war2 == nil) and (IsOdf(h,"fvtank"))) then
+		elseif ((Mission.war2 == nil) and (IsOdf(h,"fvtank_vsr"))) then
 		
 			Mission.war2 = h
 			Mission.war2a = true
 		
-		elseif ((Mission.war3 == nil) and (IsOdf(h,"fvtank"))) then
+		elseif ((Mission.war3 == nil) and (IsOdf(h,"fvtank_vsr"))) then
 		
 			Mission.war3 = h
 			Mission.war3a = true
 		
-		elseif ((Mission.war4 == nil) and (IsOdf(h,"fvtank"))) then
+		elseif ((Mission.war4 == nil) and (IsOdf(h,"fvtank_vsr"))) then
 		
 			Mission.war4 = h
 			Mission.war4a = true
 
 		-- LANCER
-		elseif ((Mission.lance1 == nil) and (IsOdf(h,"fvarch"))) then
+		elseif ((Mission.lance1 == nil) and (IsOdf(h,"fvarch_vsr"))) then
 		
 			Mission.lance1 = h
 			Mission.lance1a = true
 		
-		elseif ((Mission.lance2 == nil) and (IsOdf(h,"fvarch"))) then
+		elseif ((Mission.lance2 == nil) and (IsOdf(h,"fvarch_vsr"))) then
 		
 			Mission.lance2 = h
 			Mission.lance2a = true
 		
-		elseif ((Mission.lance3 == nil) and (IsOdf(h,"fvarch"))) then
+		elseif ((Mission.lance3 == nil) and (IsOdf(h,"fvarch_vsr"))) then
 		
 			Mission.lance3 = h
 			Mission.lance3a = true
 		
-		elseif ((Mission.lance4 == nil) and (IsOdf(h,"fvarch"))) then
+		elseif ((Mission.lance4 == nil) and (IsOdf(h,"fvarch_vsr"))) then
 		
 			Mission.lance4 = h
 			Mission.lance4a = true
 		
 		-- MAULERS
-		elseif ((Mission.titan == nil) and (IsOdf(h,"fvwalk"))) then
+		elseif ((Mission.titan == nil) and (IsOdf(h,"fvwalk_vsr"))) then
 		
 			Mission.titan = h
 			Mission.titana = true
@@ -475,8 +478,8 @@ function Start() --This function is called upon the first frame
 	Mission.guntower2 = GetHandle("guntower2")
 	Mission.guntower3 = GetHandle("guntower3")
 	Mission.scav1 = GetHandle("scav1")
-	Mission.empty_scav1 = GetHandle("empty_scav")
-	Mission.empty_scav2 = GetHandle("scav2")
+	Mission.empty_scav1 = GetHandle("empty_scav1")
+	Mission.empty_scav2 = GetHandle("empty_scav2")
 	Mission.sscav1 = GetHandle("sscav1")
 	Mission.sscav2 = GetHandle("sscav2")
 	Mission.sscav3 = GetHandle("sscav3")
@@ -484,12 +487,15 @@ function Start() --This function is called upon the first frame
 	Mission.overseer = GetHandle("overseer")
 	Mission.dower = GetHandle("dower")
 	Mission.stronghold = GetHandle("stronghold")
-	Mission.spire1 = GetHandle("spire1")
-	Mission.spire2 = GetHandle("spire2")
-	Mission.spire3 = GetHandle("spire3")
+	Mission.spire1 = GetHandle("base_spire1")
+	Mission.spire2 = GetHandle("base_spire2")
+	Mission.spire3 = GetHandle("base_spire3")
 	Mission.bigass_machine = GetHandle("bigass_machine")
 	Mission.tank1 = GetHandle("tank1")
 	Mission.tank2 = GetHandle("tank2")
+	Mission.deadtank1 = GetHandle("dead1")
+	Mission.deadtank2 = GetHandle("dead2")
+	Mission.deadtank3 = GetHandle("dead3")
 	Mission.tbolt1 = GetHandle("scout1")
 	Mission.tbolt2 = GetHandle("scout2")
 	Mission.rocket1 = GetHandle("rocket1")
@@ -516,30 +522,17 @@ function Start() --This function is called upon the first frame
 	Mission.sturret9 = GetHandle("sturret9")
 	Mission.sturret10 = GetHandle("sturret10")
 
-	Mission.factory = UnitToVSR(Mission.factory, "ibfact_vsr", 0)
-	Mission.armory = UnitToVSR(Mission.armory, "ibarmo_vsr", 0)
-	Mission.forge = UnitToVSR(Mission.forge, "fbforg_vsr", 0)
-	Mission.srecycler = UnitToVSR(Mission.srecycler, "fbrecy_vsr", 0)
 
-	Mission.tbolt1 = UnitToVSR(Mission.tbolt1, "ivscout_vsr", 0)
-	SetGroup(Mission.tbolt1, 0)
-	Mission.tbolt2 = UnitToVSR(Mission.tbolt2, "ivscout_vsr", 0)
-	SetGroup(Mission.tbolt2, 0)
+	
 
-	Mission.tank1 = UnitToVSR(Mission.tank1, "ivtank_vsr", 0)
-	SetGroup(Mission.tank1, 1)
-	Mission.tank2 = UnitToVSR(Mission.tank2, "ivtank_vsr", 0)
-	SetGroup(Mission.tank2, 1)
+	RemovePilot(Mission.empty_scav1)
+	RemovePilot(Mission.empty_scav2)
+	RemovePilot(Mission.deadtank1)
+	RemovePilot(Mission.deadtank2)
+	RemovePilot(Mission.deadtank3)
 
+	
 
-
-	Mission.rocket1 = UnitToVSR(Mission.rocket1, "ivrckt_vsr", 0)
-	SetGroup(Mission.rocket1, 2)
-
-
-
-	Mission.con1 = UnitToVSR(Mission.con1, "ivcons_vsr", 0)
-	SetGroup(Mission.con1, 4)
 
 
    
@@ -549,12 +542,14 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
 	SetAsUser(h, PlayerTeam)
 	else
+	SetLabel(h, label)
 	end
 
 	return h
@@ -565,11 +560,11 @@ end
 
 	Mission.a = CountUnitsNearObject(nil,99999.0,1,"ibfact_vsr")-- Mission.factory
 	Mission.b = CountUnitsNearObject(nil,99999.0,1,"ibarmo_vsr")-- Mission.armory
-	Mission.c = CountUnitsNearObject(nil,99999.0,1,"ibsbay")-- Mission.service bay
-	Mission.d = CountUnitsNearObject(nil,99999.0,1,"ibcbun")-- comm bunker
-	Mission.e = CountUnitsNearObject(nil,99999.0,1,"ibtrain")-- Mission.training facility 
-	Mission.f = CountUnitsNearObject(nil,99999.0,1,"ibgtow")-- gun towers
-	Mission.z = CountUnitsNearObject(nil,99999.0,1,"ibpgen")-- Mission.power
+	Mission.c = CountUnitsNearObject(nil,99999.0,1,"ibsbay_vsr")-- Mission.service bay
+	Mission.d = CountUnitsNearObject(nil,99999.0,1,"ibcbun_vsr")-- comm bunker
+	Mission.e = CountUnitsNearObject(nil,99999.0,1,"ibtrain_vsr")-- Mission.training facility 
+	Mission.f = CountUnitsNearObject(nil,99999.0,1,"ibgtow_vsr")-- gun towers
+	Mission.z = CountUnitsNearObject(nil,99999.0,1,"ibpgen_vsr")-- Mission.power
 
 	Mission.buildings = Mission.a+Mission.b+Mission.c+Mission.d+Mission.e+Mission.f
 	Mission.power = Mission.z
@@ -746,8 +741,7 @@ function missionCode() --
 		Mission.start_war1 = BuildObject("fvtank_vsr",2,"war1_spawn")
 		Mission.start_war2 = BuildObject("fvtank_vsr",2,"war2_spawn")
 		Mission.start_war3 = BuildObject("fvtank_vsr",2,"war3_spawn")
-		Mission.cons2 = BuildObject("ivcons_vsr",1,"train_point")
-		SetGroup(Mission.cons2,4)
+
 
 		SetSkill(Mission.spire1,3)
 		SetSkill(Mission.spire2,3)
@@ -765,7 +759,7 @@ function missionCode() --
 		Mission.scav_check = GetTime() + 2.0
 		Mission.power_check = GetTime() + 3.0
 		Mission.guntower_check = GetTime() + 2.0
-		Mission.land_time = GetTime() + 15.0
+		Mission.land_time = GetTime() + 5.0
 
 		SetObjectiveOn(Mission.pool1_nav)
 		tempstr = TranslateString("Mission1201")  -- BioMetalPool
@@ -1067,7 +1061,7 @@ function missionCode() --
 
 	-- this is the scav code
 
-	if (IsOdf(Mission.player,"ivscav")) then
+	if (IsOdf(Mission.player,"ivscav12_vsr")) then
 	
 		Mission.player_in_scav = true
 	

@@ -311,8 +311,24 @@ function Start() --This function is called upon the first frame
 	GiveWeapon(Mission.player,"gshadowvsr_c")
 	GiveWeapon(Mission.player,"gproxminvsr")
 	
+	Mission.manson = UnitToVSR(Mission.manson, "ivtank_vsr", 0)
+	Mission.tank2 = UnitToVSR(Mission.tank2, "ivtank_vsr", 0)
+	
+	Mission.builder1 = UnitToVSR(Mission.builder1, "fvcons_vsr", 0)
+	
+	Mission.sscav1 = UnitToVSR(Mission.sscav1, "fbscup_vsr",0)
+	Mission.sscav2 = UnitToVSR(Mission.sscav2, "fbscup_vsr",0)
+	Mission.sscav3 = UnitToVSR(Mission.sscav3, "fbscup_vsr",0)
+	Mission.sscav4 = UnitToVSR(Mission.sscav4, "fbscup_vsr",0)
+	Mission.sscav5 = UnitToVSR(Mission.sscav5, "fbscup_vsr",0)
+	
+	GiveWeapon(Mission.titan1, "gsonicvsr_c")
+	GiveWeapon(Mission.titan2, "gsonicvsr_c")
+	
 	PreloadODF("ivcarr")
 	PreloadODF("ivrecy_vsr")
+	
+
    
 end
 
@@ -320,29 +336,32 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
 	SetAsUser(h, PlayerTeam)
 	else
+	SetLabel(h, label)
 	end
 
 	return h
 
 end
 
+
 function AddObject(h) --This function is called when an object appears in the game. --
 
 	if (Mission.start_done) then
 	
-		if ((not Mission.builder1_a) and (IsOdf(h,"fvconst"))) then
+		if ((not Mission.builder1_a) and (IsOdf(h,"fvcons_vsr"))) then
 		
 			Mission.builder1 = h
 			Mission.builder1_a = true
 		
 
-		elseif ((not Mission.recycler_deployed) and (IsOdf(h,"ibrecy"))) then
+		elseif ((not Mission.recycler_deployed) and (IsOdf(h,"ibrecy_vsr"))) then
 		
 			SetObjectiveOff(Mission.recycler)
 			Mission.recycler = h
@@ -350,34 +369,34 @@ function AddObject(h) --This function is called when an object appears in the ga
 		
 
 		--SCAVENGERS
-		elseif ((not Mission.sscav1_a) and (IsOdf(h,"fvscav"))) then
+		elseif ((not Mission.sscav1_a) and (IsOdf(h,"fvscav_vsr"))) then
 		
 			Mission.sscav1 = h
 			Mission.sscav1_a = true
 		
-		elseif ((not Mission.sscav2_a) and (IsOdf(h,"fvscav"))) then
+		elseif ((not Mission.sscav2_a) and (IsOdf(h,"fvscav_vsr"))) then
 		
 			Mission.sscav2 = h
 			Mission.sscav2_a = true
 		
-		elseif ((not Mission.sscav3_a) and (IsOdf(h,"fvscav"))) then
+		elseif ((not Mission.sscav3_a) and (IsOdf(h,"fvscav_vsr"))) then
 		
 			Mission.sscav3 = h
 			Mission.sscav3_a = true
 		
-		elseif ((not Mission.sscav4_a) and (IsOdf(h,"fvscav"))) then
+		elseif ((not Mission.sscav4_a) and (IsOdf(h,"fvscav_vsr"))) then
 		
 			Mission.sscav4 = h
 			Mission.sscav4_a = true
 		
-		elseif ((not Mission.sscav5_a) and (IsOdf(h,"fvscav"))) then
+		elseif ((not Mission.sscav5_a) and (IsOdf(h,"fvscav_vsr"))) then
 		
 			Mission.sscav5 = h
 			Mission.sscav5_a = true
 		
 
 		-- SCOUT
-		elseif ((not Mission.scout1_a) and (IsOdf(h,"fvscout"))) then
+		elseif ((not Mission.scout1_a) and (IsOdf(h,"fvscout_vsr"))) then
 		
 			Mission.scout1 = h
 			Mission.scout1_a = true
@@ -388,7 +407,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 			end
 
 		
-		elseif ((not Mission.scout2_a) and (IsOdf(h,"fvscout"))) then
+		elseif ((not Mission.scout2_a) and (IsOdf(h,"fvscout_vsr"))) then
 		
 			Mission.scout2 = h
 			Mission.scout2_a = true
@@ -398,7 +417,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 				SetTeamNum(Mission.scout2,2)
 			end
 		
-		elseif ((not Mission.scout3_a) and (IsOdf(h,"fvscout"))) then
+		elseif ((not Mission.scout3_a) and (IsOdf(h,"fvscout_vsr"))) then
 		
 			Mission.scout3 = h
 			Mission.scout3_a = true
@@ -408,7 +427,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 				SetTeamNum(Mission.scout3,2)
 			end
 		
-		elseif ((not Mission.scout4_a) and (IsOdf(h,"fvscout"))) then
+		elseif ((not Mission.scout4_a) and (IsOdf(h,"fvscout_vsr"))) then
 		
 			Mission.scout4 = h
 			Mission.scout4_a = true
@@ -420,22 +439,22 @@ function AddObject(h) --This function is called when an object appears in the ga
 		
 		
 		-- GUARDIAN
-		elseif ((not Mission.guard1_a) and (IsOdf(h,"fvturr"))) then
+		elseif ((not Mission.guard1_a) and (IsOdf(h,"fvturr_vsr"))) then
 		
 			Mission.guard1 = h
 			Mission.guard1_a = true
 		
-		elseif ((not Mission.guard2_a) and (IsOdf(h,"fvturr"))) then
+		elseif ((not Mission.guard2_a) and (IsOdf(h,"fvturr_vsr"))) then
 		
 			Mission.guard2 = h
 			Mission.guard2_a = true
 		
-		elseif ((not Mission.guard3_a) and (IsOdf(h,"fvturr"))) then
+		elseif ((not Mission.guard3_a) and (IsOdf(h,"fvturr_vsr"))) then
 		
 			Mission.guard3 = h
 			Mission.guard3_a = true
 		
-		elseif ((not Mission.guard4_a) and (IsOdf(h,"fvturr"))) then
+		elseif ((not Mission.guard4_a) and (IsOdf(h,"fvturr_vsr"))) then
 		
 			Mission.guard4 = h
 			Mission.guard4_a = true
@@ -445,7 +464,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 		elseif (Mission.new_plan) then
 		
 			-- SENTRY
-			if ((not Mission.sent1_a) and (IsOdf(h,"fvsent"))) then
+			if ((not Mission.sent1_a) and (IsOdf(h,"fvsent_vsr"))) then
 			
 				Mission.sent1 = h
 				Mission.sent1_a = true
@@ -455,7 +474,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 					SetTeamNum(Mission.sent1,2)
 				end
 			
-			elseif ((not Mission.sent2_a) and (IsOdf(h,"fvsent"))) then
+			elseif ((not Mission.sent2_a) and (IsOdf(h,"fvsent_vsr"))) then
 			
 				Mission.sent2 = h
 				Mission.sent2_a = true
@@ -465,7 +484,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 					SetTeamNum(Mission.sent2,2)
 				end
 			
-			elseif ((not Mission.sent3_a) and (IsOdf(h,"fvsent"))) then
+			elseif ((not Mission.sent3_a) and (IsOdf(h,"fvsent_vsr"))) then
 			
 				Mission.sent3 = h
 				Mission.sent3_a = true
@@ -475,7 +494,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 					SetTeamNum(Mission.sent3,2)
 				end
 			
-			elseif ((not Mission.sent4_a) and (IsOdf(h,"fvsent"))) then
+			elseif ((not Mission.sent4_a) and (IsOdf(h,"fvsent_vsr"))) then
 			
 				Mission.sent4 = h
 				Mission.sent4_a = true
@@ -487,7 +506,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 			
 
 			-- WARRIOR
-			elseif ((not Mission.war1_a) and (IsOdf(h,"fvtank"))) then
+			elseif ((not Mission.war1_a) and (IsOdf(h,"fvtank_vsr"))) then
 			
 				Mission.war1 = h
 				Mission.war1_a = true
@@ -502,7 +521,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 				--BuildObject("apquil",0,Mission.war1)
 				--BuildObject("apdefl",0,Mission.war1)
 			
-			elseif ((not Mission.war2_a) and (IsOdf(h,"fvtank"))) then
+			elseif ((not Mission.war2_a) and (IsOdf(h,"fvtank_vsr"))) then
 			
 				Mission.war2 = h
 				Mission.war2_a = true
@@ -517,7 +536,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 				--BuildObject("apquil",0,Mission.war2)
 				--BuildObject("apdefl",0,Mission.war2)
 			
-			elseif ((not Mission.war3_a) and (IsOdf(h,"fvtank"))) then
+			elseif ((not Mission.war3_a) and (IsOdf(h,"fvtank_vsr"))) then
 			
 				Mission.war3 = h
 				Mission.war3_a = true
@@ -532,7 +551,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 				--BuildObject("apquil",0,Mission.war3)
 				--BuildObject("apdefl",0,Mission.war3)
 			
-			elseif ((not Mission.war4_a) and (IsOdf(h,"fvtank"))) then
+			elseif ((not Mission.war4_a) and (IsOdf(h,"fvtank_vsr"))) then
 			
 				Mission.war4 = h
 				Mission.war4_a = true
@@ -549,28 +568,28 @@ function AddObject(h) --This function is called when an object appears in the ga
 			
 
 			-- LANCER
-			elseif ((not Mission.lance1_a) and (IsOdf(h,"fvarch"))) then
+			elseif ((not Mission.lance1_a) and (IsOdf(h,"fvarch_vsr"))) then
 			
 				Mission.lance1 = h
 				Mission.lance1_a = true
 
 				BuildObject("apdefl",0,Mission.lance1)
 			
-			elseif ((not Mission.lance2_a) and (IsOdf(h,"fvarch"))) then
+			elseif ((not Mission.lance2_a) and (IsOdf(h,"fvarch_vsr"))) then
 			
 				Mission.lance2 = h
 				Mission.lance2_a = true
 
 				BuildObject("apdefl",0,Mission.lance2)
 			
-			elseif ((not Mission.lance3_a) and (IsOdf(h,"fvarch"))) then
+			elseif ((not Mission.lance3_a) and (IsOdf(h,"fvarch_vsr"))) then
 			
 				Mission.lance3 = h
 				Mission.lance3_a = true
 
 				BuildObject("apdefl",0,Mission.lance3)
 			
-			elseif ((not Mission.lance4_a) and (IsOdf(h,"fvarch"))) then
+			elseif ((not Mission.lance4_a) and (IsOdf(h,"fvarch_vsr"))) then
 			
 				Mission.lance4 = h
 				Mission.lance4_a = true
@@ -579,18 +598,18 @@ function AddObject(h) --This function is called when an object appears in the ga
 			
 
 			-- TITANS
-			elseif ((not Mission.titan1_a) and (IsOdf(h,"fvatank"))) then
+			elseif ((not Mission.titan1_a) and (IsOdf(h,"fvatank_vsr"))) then
 			
 				Mission.titan1 = h
 				Mission.titan_time = GetTime() + 102.0
 				Mission.titan1_a = true
 			
-			elseif ((not Mission.titan2_a) and (IsOdf(h,"fvatank"))) then
+			elseif ((not Mission.titan2_a) and (IsOdf(h,"fvatank_vsr"))) then
 			
 				Mission.titan2 = h
 				Mission.titan2_a = true
 			
-			elseif ((not Mission.titan3_a) and (IsOdf(h,"fvatank"))) then
+			elseif ((not Mission.titan3_a) and (IsOdf(h,"fvatank_vsr"))) then
 			
 				Mission.titan3 = h
 				Mission.titan3_a = true
@@ -598,18 +617,18 @@ function AddObject(h) --This function is called when an object appears in the ga
 		
 		
 		-- TITANS
-		elseif ((not Mission.titan1_a) and (IsOdf(h,"fvatank"))) then
+		elseif ((not Mission.titan1_a) and (IsOdf(h,"fvatank_vsr"))) then
 		
 			Mission.titan1 = h
 			Mission.titan_time = GetTime() + 2.0
 			Mission.titan1_a = true
 		
-		elseif ((not Mission.titan2_a) and (IsOdf(h,"fvatank"))) then
+		elseif ((not Mission.titan2_a) and (IsOdf(h,"fvatank_vsr"))) then
 		
 			Mission.titan2 = h
 			Mission.titan2_a = true
 		
-		elseif ((not Mission.titan3_a) and (IsOdf(h,"fvatank"))) then
+		elseif ((not Mission.titan3_a) and (IsOdf(h,"fvatank_vsr"))) then
 		
 			Mission.titan3 = h
 			Mission.titan3_a = true
@@ -651,9 +670,9 @@ end
 
 function HaveScav()
 
-	a = CountUnitsNearObject(nil,99999.0,2,"fbscup")
+	a = CountUnitsNearObject(nil,99999.0,2,"fbscup_vsr")
 	PrintConsoleMessage("a is"..a)
-	b = CountUnitsNearObject(nil,99999.0,2,"fbscav")
+	b = CountUnitsNearObject(nil,99999.0,2,"fbscav_vsr")
 	PrintConsoleMessage("b is"..b)
 	up_scavs = a
 	scavs = a+b
@@ -718,12 +737,12 @@ function missionCode() --
 		SetObjectiveOn(Mission.manson)
 		SetObjectiveName(Mission.manson,"Maj. Manson")
 
-		Mission.war1 = BuildObject("fvtank13",2,"b_point1")
+		Mission.war1 = BuildObject("fvtank_vsr",2,"b_point1")
 		Stop(Mission.war1)
-		Mission.walker1 = BuildObject("ivwalk",1,"walker1_spawn")
+		Mission.walker1 = BuildObject("ivwalk_vsr",1,"walker1_spawn")
 		--Stop(walker1,1)
 		LookAt(Mission.walker1,Mission.spire4)
-		Mission.walker2 = BuildObject("ivwalk",1,"walker2_spawn")
+		Mission.walker2 = BuildObject("ivwalk_vsr",1,"walker2_spawn")
 		--Stop(walker2,1)
 		LookAt(Mission.walker2,Mission.spire4)
 
@@ -1379,9 +1398,7 @@ if ((not Mission.part_two) and (not Mission.game_over)) then
 
 		if (GetDistance(Mission.player,Mission.recycler) < 150.0) then
 		
-			pos = GetPosition(Mission.recycler)
-			RemoveObject(Mission.recycler)
-			Mission.recycler = BuildObject("ivrecy_vsr",1,pos)
+			Stop(Mission.recycler,0)
 			SetGroup(Mission.recycler,0)
 			AddScrap(1,40)
 			SetObjectiveOff(Mission.nav1)

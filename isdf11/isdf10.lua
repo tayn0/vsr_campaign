@@ -317,6 +317,9 @@ end
 
 function AddObject(h) --This function is called when an object appears in the game. --
 
+	if IsOdf(h, "ivscoutm_vsr:1") then
+		RemovePilot(h)
+	end
 
 	if IsOdf(h, "fvturr") then
 		h = UnitToVSR(h, "fvturr_vsr", 0)
@@ -530,7 +533,8 @@ SetAutoGroupUnits(false)
 	Mission.builder = GetHandle("builder")
 	
 	PreloadODF("bcrhino")
-	PreloadODF("ivrecy10a")
+	PreloadODF("ivrecy10a_vsr")
+
 	
 	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
 	GiveWeapon(Mission.player,"gchainvsr_c")
@@ -549,12 +553,14 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
 	SetAsUser(h, PlayerTeam)
 	else
+	SetLabel(h, label)
 	end
 
 	return h
@@ -565,6 +571,8 @@ end
 
 function Update() --This function runs on every frame.
 	Mission.TurnCounter = Mission.TurnCounter + 1
+	
+
 
 	missionCode() --Calling our missionCode function in Update.
 end
@@ -1149,7 +1157,6 @@ if (not Mission.ON_HOLD) then
 			-- this is the wingman hinting at destroying the crash ship code
 
 			if ((IsAround(Mission.crash_ship1)) and (not Mission.destroy_hint)) then
-			--PrintConsoleMessage("test2")
 				-- player orders wing to FOLLOW
 
 				if (GetCurrentCommand(Mission.wingman) == 5) then --5=CMD_FOLLOW
@@ -2391,7 +2398,7 @@ if (not Mission.ON_HOLD) then
 			RecyGroup = GetGroup(Mission.recycler)
 			xfrm = GetTransform(Mission.recycler)
 			RemoveObject(Mission.recycler)
-			Mission.recycler = BuildObject("ivrecy10a", RecyTeam, xfrm)
+			Mission.recycler = BuildObject("ivrecy10a_vsr", RecyTeam, xfrm)
 			SetCurHealth(Mission.recycler, RecyHealth)
 
 			SetGroup(Mission.recycler, RecyGroup)
@@ -3037,7 +3044,6 @@ if (not Mission.ON_HOLD) then
 				AudioMessage("isdf1025.wav") -- (recycler) my transport is dead
 				FailMission(GetTime() + 15.0)
 				ClearObjectives()
-				PrintConsoleMessage("test1")
 				AddObjective("transport.otf", "RED")
 				Mission.game_over = true
 			
@@ -3046,7 +3052,6 @@ if (not Mission.ON_HOLD) then
 				AudioMessage("isdf1025.wav") -- (dropship pilot) my transport is dead
 				FailMission(GetTime() + 15.0)
 				ClearObjectives()
-				PrintConsoleMessage("test2")
 				AddObjective("transport.otf", "RED")
 				Mission.game_over = true
 			end
