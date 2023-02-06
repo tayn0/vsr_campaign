@@ -117,6 +117,7 @@ local Mission = {
     check_convoy = false,
     fight_message = false,
     door_open_sound = false,
+	isdf1107_played = false,
  
  
  
@@ -233,7 +234,22 @@ function Load(...)
    end
 end
 
+function PlayerEjected(h)
+
+	temp = BuildObject("ivscout_vsr", 1, "condor_center")
+	SetAsUser(temp, 1)
+	GiveWeapon(temp,"gchainvsr_c")
+	GiveWeapon(temp,"gshadowvsr_c")
+	GiveWeapon(temp,"gproxminvsr")
+
+return 2
+
+end
+
 function AddObject(h) --This function is called when an object appears in the game. --
+
+
+
    if (Mission.start_done) then
     
  
@@ -418,6 +434,8 @@ end
 
 function Update() --This function runs on every frame.
 Mission.TurnCounter = Mission.TurnCounter + 1
+Mission.player = GetPlayerHandle()
+
 
 missionCode() --Calling our missionCode function in Update.
 end
@@ -1047,15 +1065,19 @@ function missionCode() --
             
                 if (not Mission.return_message1) then
                 
-                    AudioMessage("isdf1107.wav") -- (braddock) I ordered you to not go accross - You have got 2 minutes to return to your post!
+					if  not Mission.isdf1107_played  then
+						AudioMessage("isdf1107.wav") -- (braddock) I ordered you to not go accross - You have got 2 minutes to return to your post!
+						Mission.isdf1107_played = true
+					end 
                     Mission.across_time = GetTime() + 120.0
                     Mission.return_message1 = true
+					Mission.return_message2 = true
                 end
  
  
-                if ((GetDistance(Mission.player,"bridgespire_point2")) < (GetDistance(Mission.player,"bridge_center"))) then
-                
-                    --across_time = GetTime() + 999999.9
+                if ((GetDistance(Mission.player,"cave_nav_point")) < 100) then
+
+                    Mission.across_time = GetTime() + 999999.9
                     Mission.return_message1 = false
                     Mission.return_message2 = false
                     Mission.player_across = false

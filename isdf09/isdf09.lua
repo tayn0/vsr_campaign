@@ -129,6 +129,8 @@ function Start() --This function is called upon the first frame
 	
 	Mission.rec = UnitToVSR(Mission.rec, "ibrecy_vsr", 0)
 
+	Mission.gun1 = UnitToVSR(GetHandle("gun1"), "fbspir_vsr", 0)
+
 
    
 end
@@ -175,7 +177,6 @@ function AddObject(h) --This function is called when an object appears in the ga
 
 if IsOdf(h, "fvturr") then h = UnitToVSR(h, "fvturr_vsr", 0) 
 elseif IsOdf(h, "fvtank") then h = UnitToVSR(h, "fvtank_vsr", 0) 
-elseif IsOdf(h, "fbspir") then h = UnitToVSR(h, "fbspir_vsr", 0) 
 elseif IsOdf(h, "fvsent") then h = UnitToVSR(h, "fvsent_vsr", 0)
 elseif IsOdf(h, "fvscout") then h = UnitToVSR(h, "fvscout_vsr", 0)
 end

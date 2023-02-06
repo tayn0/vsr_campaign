@@ -99,9 +99,7 @@ local Mission = {
 
 		i_last
 
-	PreloadODF("fvtank_vsr")
-	PreloadODF("fvsent_vsr")
-	PreloadODF("fvturr_vsr")
+
    
 } --End Mission
 
@@ -154,6 +152,10 @@ function Start() --This function is called upon the first frame
 	
 	PreloadODF("ivtank")
 	PreloadODF("ivmbike")
+
+	PreloadODF("fvtank_vsr")
+	PreloadODF("fvsent_vsr")
+	PreloadODF("fvturr_vsr")
 	
 
    
