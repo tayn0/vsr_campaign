@@ -317,6 +317,7 @@ end
 
 function AddObject(h) --This function is called when an object appears in the game. --
 
+
 	if IsOdf(h, "fvturr") then
 		h = UnitToVSR(h, "fvturr_vsr", 0)
 	end
@@ -326,6 +327,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 		Mission.satchel_given = true
 		return
 	end
+
 
    	if (not Mission.start_done) then
 		return
@@ -2385,12 +2387,16 @@ if (not Mission.ON_HOLD) then
 		
 			--switch in new rec
 			RecyTeam = GetTeamNum(Mission.recycler)
+			RecyHealth = GetCurHealth(Mission.recycler)
 			RecyGroup = GetGroup(Mission.recycler)
 			xfrm = GetTransform(Mission.recycler)
 			RemoveObject(Mission.recycler)
-			Mission.recycler = BuildObject("ivrecy_vsr", RecyTeam, xfrm)
+			Mission.recycler = BuildObject("ivrecy10a", RecyTeam, xfrm)
+			SetCurHealth(Mission.recycler, RecyHealth)
+
 			SetGroup(Mission.recycler, RecyGroup)
 			SetScrap(1,40)
+			
 			Follow(Mission.transport, Mission.recycler,0)
 			Mission.talk = AudioMessage("isdf1012a.wav")--(dropship) We got survivors!
 			Mission.drop_message1 = true
@@ -2548,7 +2554,7 @@ if (not Mission.ON_HOLD) then
 		end
 		--------------------------------------------
 
-		-- this is checking to see when the recycler is moving towards the dust-off location
+		-- this is checking to see when the transport is moving towards the dust-off location
 
 		if (IsAlive(Mission.transport)) then
 		
@@ -2754,7 +2760,7 @@ if (not Mission.ON_HOLD) then
 				
 				elseif (not Mission.shab_found) then
 				
-					AddObjective("dropship.otf", "RED")
+					AddObjective("search.otf", "RED")
 				end
 
 				AddObjective("transport.otf", "WHITE")
@@ -2795,7 +2801,7 @@ if (not Mission.ON_HOLD) then
 				
 				elseif (not Mission.shab_found) then
 				
-					AddObjective("dropship.otf", "RED")
+					AddObjective("search.otf", "RED")
 				end
 
 				AddObjective("transport.otf", "WHITE")
@@ -2819,7 +2825,7 @@ if (not Mission.ON_HOLD) then
 			end
 
 			if ((Mission.two_land) and (Mission.landing_time < GetTime())) then
-			
+				PrintConsoleMessage("test2")
 				RemoveObject(Mission.dropshipa)
 				RemoveObject(Mission.dropshipb)
 				Mission.dropshipa = BuildObject("ivpdrop",1,"drop_point1")
@@ -2854,7 +2860,7 @@ if (not Mission.ON_HOLD) then
 					
 					elseif (not Mission.shab_found) then
 					
-						AddObjective("dropship.otf", "RED")
+						AddObjective("search.otf", "RED")
 					end
 
 					AddObjective("transport.otf", "WHITE")
@@ -2881,7 +2887,7 @@ if (not Mission.ON_HOLD) then
 					
 					elseif (not Mission.shab_found) then
 					
-						AddObjective("dropship.otf", "RED")
+						AddObjective("search.otf", "RED")
 					end
 
 					AddObjective("transport.otf", "WHITE")
@@ -3031,6 +3037,7 @@ if (not Mission.ON_HOLD) then
 				AudioMessage("isdf1025.wav") -- (recycler) my transport is dead
 				FailMission(GetTime() + 15.0)
 				ClearObjectives()
+				PrintConsoleMessage("test1")
 				AddObjective("transport.otf", "RED")
 				Mission.game_over = true
 			
@@ -3039,6 +3046,7 @@ if (not Mission.ON_HOLD) then
 				AudioMessage("isdf1025.wav") -- (dropship pilot) my transport is dead
 				FailMission(GetTime() + 15.0)
 				ClearObjectives()
+				PrintConsoleMessage("test2")
 				AddObjective("transport.otf", "RED")
 				Mission.game_over = true
 			end
@@ -3081,7 +3089,7 @@ if (Mission.ON_HOLD) then
 			
 			elseif (not Mission.shab_found) then
 			
-				AddObjective("dropship.otf", "RED")
+				AddObjective("search.otf", "RED")
 			end
 
 			AddObjective("transport.otf", "WHITE")
@@ -3116,7 +3124,7 @@ if (Mission.ON_HOLD) then
 			
 			elseif (not Mission.shab_found) then
 			
-				AddObjective("dropship.otf", "RED")
+				AddObjective("search.otf", "RED")
 			end
 
 			AddObjective("transport.otf", "WHITE")
@@ -3138,6 +3146,7 @@ if (Mission.ON_HOLD) then
 		end
 
 		if ((Mission.two_land) and (Mission.landing_time < GetTime())) then
+			PrintConsoleMessage("test1")
 			RemoveObject(Mission.dropshipa)
 			RemoveObject(Mission.dropshipb)
 			Mission.dropshipa = BuildObject("ivpdrop",1,"drop_point1")
@@ -3169,7 +3178,7 @@ if (Mission.ON_HOLD) then
 				if (Mission.shab_found) then
 					AddObjective("search.otf", "GREEN")
 				elseif (not Mission.shab_found) then
-					AddObjective("dropship.otf", "RED")
+					AddObjective("search.otf", "RED")
 				end
 
 				AddObjective("transport.otf", "WHITE")
@@ -3193,7 +3202,7 @@ if (Mission.ON_HOLD) then
 				if (Mission.shab_found) then
 					AddObjective("search.otf", "GREEN")
 				elseif (not Mission.shab_found) then
-					AddObjective("dropship.otf", "RED")
+					AddObjective("search.otf", "RED")
 				end
 
 				AddObjective("transport.otf", "WHITE")
