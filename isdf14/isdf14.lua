@@ -240,7 +240,7 @@ local Mission = {
 	cheat4,
 	cheat5,
 	cheat6,
-
+	shabayev,
 
 	--  integers
 	a = 0,
@@ -1730,8 +1730,10 @@ function missionCode() --
 				
 					Ally(2,1)
 					SetAIP("isdf1403.aip",2)
-					shabayev = BuildObject("fvtank_vsr",1,"end_point")
-					Follow(shabayev,Mission.player,1)
+
+					Mission.shabayev = BuildObject("fvtank",1,"end_point")
+					Follow(Mission.shabayev,Mission.player,1)
+
 					Mission.talk = AudioMessage("isdf1407.wav")--(shab) John Stopnot 
 					Mission.encouter_check = GetTime() + 1.0
 					Mission.tug_wait = true
@@ -1742,9 +1744,9 @@ function missionCode() --
 
 				if ((Mission.stop_john) and (not Mission.shab_meeting)) then
 				
-					if (GetCurHealth(shabayev) < 2000) then
+					if (GetCurHealth(Mission.shabayev) < 2000) then
 					
-						SetCurHealth(shabayev,2000)
+						SetCurHealth(Mission.shabayev,2000)
 					end
 				end
 
@@ -1774,8 +1776,8 @@ function missionCode() --
 					if ((Mission.encounter_message1) and (not Mission.encounter_message2) and (IsAudioMessageDone(Mission.talk))) then
 					
 						Mission.talk = AudioMessage("isdf1409.wav")--(shab) stop John - its me Yelena, I'm on my way to younot 
-						SetObjectiveOn(shabayev)
-						SetObjectiveName(shabayev,"Yelena")			
+						SetObjectiveOn(Mission.shabayev)
+						SetObjectiveName(Mission.shabayev,"Yelena")			
 						Mission.encounter_message2 = true
 					end
 				end
@@ -1789,10 +1791,10 @@ function missionCode() --
 					Mission.encouter_check = GetTime() + 1.0
 
 
-					if (GetDistance(shabayev,Mission.player) < 70.0) then
+					if (GetDistance(Mission.shabayev,Mission.player) < 70.0) then
 					
 						StopAudioMessage(Mission.talk)
-						LookAt(shabayev,Mission.player)
+						LookAt(Mission.shabayev,Mission.player)
 						--SetObjectiveOn(shabayev)
 						--SetObjectiveName(shabayev,"Yelena")
 						Mission.talk2 = AudioMessage("isdf1410.wav")-- (shab) *long speach*
@@ -1862,13 +1864,13 @@ function missionCode() --
 						if (Mission.tug_is_player) then
 						
 
-							pos = GetPosition(shabayev)
-							RemoveObject(shabayev)
-							shabayev = BuildObject("fvtank14x",0,pos)
-							SetObjectiveOn(shabayev)
-							SetObjectiveName(shabayev,"Yelena")
+							pos = GetPosition(Mission.shabayev)
+							RemoveObject(Mission.shabayev)
+							Mission.shabayev = BuildObject("fvtank14x",0,pos)
+							SetObjectiveOn(Mission.shabayev)
+							SetObjectiveName(Mission.shabayev,"Yelena")
 
-							Retreat(shabayev,"end_point")
+							Retreat(Mission.shabayev,"end_point")
 							Mission.end_check = GetTime() + 1.0
 							Mission.talk2 = AudioMessage("isdf1413.wav")--(shab) follow me
 							Mission.was_in = true
@@ -1928,7 +1930,7 @@ function missionCode() --
 					
 						if (not Mission.was_in) then
 						
-							if (not IsAlive(shabayev)) then
+							if (not IsAlive(Mission.shabayev)) then
 							
 								AudioMessage("isdf1418.wav")--(brad) well Mission.done now get Mission.burns to the Mission.recycler
 								UnAlly(2,1)
@@ -1942,7 +1944,7 @@ function missionCode() --
 							
 								Mission.leader = GetCurrentWho(Mission.tugger)
 
-								if ((IsAround(shabayev)) and (Mission.leader == shabayev)) then
+								if ((IsAround(Mission.shabayev)) and (Mission.leader == Mission.shabayev)) then
 								
 									AllLookAt(1,Mission.player,1)
 
@@ -1967,16 +1969,16 @@ function missionCode() --
 										Mission.armory = BuildObject("ibarmo_vsr",0,pos)
 									end
 
-									pos = GetPosition(shabayev)
-									RemoveObject(shabayev)
-									shabayev = BuildObject("fvtank14x",0,pos)
-									SetObjectiveOn(shabayev)
-									SetObjectiveName(shabayev,"Yelena")
+									pos = GetPosition(Mission.shabayev)
+									RemoveObject(Mission.shabayev)
+									Mission.shabayev = BuildObject("fvtank14x",0,pos)
+									SetObjectiveOn(Mission.shabayev)
+									SetObjectiveName(Mission.shabayev,"Yelena")
 
-									Follow(Mission.tugger,shabayev,1)
+									Follow(Mission.tugger,Mission.shabayev,1)
 									StopAudioMessage(Mission.talk2)
 									Mission.talk3 = AudioMessage("isdf1419.wav")--(shab) goodnot  Follow menot 
-									Retreat(shabayev,"shabayev_tug")
+									Retreat(Mission.shabayev,"shabayev_tug")
 									Mission.end_check = GetTime() + 1.0
 									Mission.game_over_check = GetTime() + 2.0
 									SetTeamNum(Mission.player,3)
@@ -1996,15 +1998,15 @@ function missionCode() --
 								Mission.end_check = GetTime() + 1.0
 
 
-								if ((not Mission.shab_look) and (GetDistance(shabayev,"end_point") < 40.0)) then
+								if ((not Mission.shab_look) and (GetDistance(Mission.shabayev,"end_point") < 40.0)) then
 								
-									LookAt(shabayev,Mission.player)
+									LookAt(Mission.shabayev,Mission.player)
 									Mission.shab_look = true
 								end
 
 								if (Mission.shab_look) then
 								
-									if (GetDistance(shabayev,Mission.player) < 50.0) then
+									if (GetDistance(Mission.shabayev,Mission.player) < 50.0) then
 									
 										AllLookAt(1,Mission.player,1)
 
@@ -2070,11 +2072,11 @@ function missionCode() --
 
 			if ((Mission.decision_made) and (Mission.good)) then
 			
-				if (IsAround(shabayev)) then
+				if (IsAround(Mission.shabayev)) then
 				
-					if (GetCurHealth(shabayev) < 2000) then
+					if (GetCurHealth(Mission.shabayev) < 2000) then
 					
-						SetCurHealth(shabayev,2000)
+						SetCurHealth(Mission.shabayev,2000)
 					end
 				end
 			end
@@ -2107,17 +2109,17 @@ function missionCode() --
 			if ((Mission.decision_made) and (Mission.game_over_check < GetTime())) then
 			
 				Mission.game_over_check = GetTime() + 2.0
-				if ((not Mission.tug_on_the_way) and (GetDistance(shabayev,"shabayev_tug")<100.0)) then
+				if ((not Mission.tug_on_the_way) and (GetDistance(Mission.shabayev,"shabayev_tug")<100.0)) then
 				
 					Mission.tug_on_the_way = true
-					Retreat(shabayev,"end_point")
+					Retreat(Mission.shabayev,"end_point")
 				end
 
 
 				if (Mission.good) then
 				
-					if ((GetDistance(shabayev,"end_point") < 40.0) and
-						(GetDistance(Mission.player,shabayev) < 30.0)) then
+					if ((GetDistance(Mission.shabayev,"end_point") < 40.0) and
+						(GetDistance(Mission.player,Mission.shabayev) < 30.0)) then
 					
 						Mission.start_movie = true
 						Mission.game_over = true
@@ -2154,7 +2156,7 @@ function missionCode() --
 
 			if ((not Mission.go_to_cave) and (Mission.raise_road) and (Mission.road_time < GetTime())) then
 			
-				Goto(shabayev,"road_path")
+				Goto(Mission.shabayev,"road_path")
 				StopEarthQuake()
 				Mission.road_time = GetTime() + 2.0
 				Mission.go_to_cave = true
@@ -2165,9 +2167,9 @@ function missionCode() --
 
 			if ((not Mission.shab_at_cave) and (Mission.go_to_cave) and (Mission.road_time < GetTime())) then
 			
-				if (GetCurrentCommand(shabayev) == 0) then
+				if (GetCurrentCommand(Mission.shabayev) == 0) then
 				
-					LookAt(shabayev,Mission.player)
+					LookAt(Mission.shabayev,Mission.player)
 					Mission.shab_at_cave = true
 				end
 			end
@@ -2177,9 +2179,9 @@ function missionCode() --
 
 			if ((not Mission.raise_cave) and (Mission.shab_at_cave)) then
 			
-				if (GetDistance(Mission.player,shabayev) < 30.0) then
+				if (GetDistance(Mission.player,Mission.shabayev) < 30.0) then
 				
-					LookAt(shabayev,Mission.cave)
+					LookAt(Mission.shabayev,Mission.cave)
 					SetAnimation(Mission.cave,"open",1)
 					StartEarthQuake(5.0)
 					Mission.road_time = GetTime() + 5.0
@@ -2192,7 +2194,7 @@ function missionCode() --
 
 			if ((not Mission.shab_into_cave) and (Mission.raise_cave) and (Mission.road_time < GetTime())) then
 			
-				Goto(shabayev,"into_cave_path")
+				Goto(Mission.shabayev,"into_cave_path")
 				SucceedMission(GetTime() + 6.0,"isdf14w2.txt")
 				-- you are Scion
 				ChangeSide()
