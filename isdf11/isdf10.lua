@@ -2780,7 +2780,7 @@ if (not Mission.ON_HOLD) then
 			end
 
 			if ((Mission.two_land) and (Mission.landing_time < GetTime())) then
-			
+				PrintConsoleMessage("test2")
 				RemoveObject(Mission.dropshipa)
 				RemoveObject(Mission.dropshipb)
 				Mission.dropshipa = BuildObject("ivpdrop",1,"drop_point1")
@@ -3101,6 +3101,7 @@ if (Mission.ON_HOLD) then
 		end
 
 		if ((Mission.two_land) and (Mission.landing_time < GetTime())) then
+			PrintConsoleMessage("test1")
 			RemoveObject(Mission.dropshipa)
 			RemoveObject(Mission.dropshipb)
 			Mission.dropshipa = BuildObject("ivpdrop",1,"drop_point1")
