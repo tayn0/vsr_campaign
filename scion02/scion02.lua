@@ -37,7 +37,10 @@ local Mission = {
 	power1,
 	power2,
 	objective2,
-	constructor,
+	con1,
+	con2,
+	con3,
+	con4,
 	jammer = nil,
 	artillery = nil,
 	artillery2 = nil,  -- fail safe
@@ -126,6 +129,24 @@ function AddObject(h) --This function is called when an object appears in the ga
 	
 		Mission.artillery2 = h
 	end
+	
+	if ((IsOdf(h, "fvcos2") or IsOdf(h, "fvcos2:1")) and Mission.con1 == nil) then 
+		PrintConsoleMessage("con1 built")
+		Mission.con1 = h
+		return
+	elseif ((IsOdf(h, "fvcos2") or IsOdf(h, "fvcos2:1")) and Mission.con2 == nil) then 
+		PrintConsoleMessage("con2 built")
+		Mission.con2 = h
+		return
+	elseif ((IsOdf(h, "fvcos2") or IsOdf(h, "fvcos2:1")) and Mission.con3 == nil) then 
+		PrintConsoleMessage("con3 built")
+		Mission.con3 = h
+		return
+	elseif ((IsOdf(h, "fvcos2") or IsOdf(h, "fvcos2:1")) and Mission.con4 == nil) then 
+		PrintConsoleMessage("con4 built")
+		Mission.con4 = h
+		return
+	end
 
 --[[
     if ((Mission.ant_mound == nil) and (IsOdf(h,"fbantm"))) then
@@ -142,6 +163,21 @@ end
 
 
 function DeleteObject(h) --This function is called when an object is deleted in the game.
+
+	if Mission.con1 == h then
+		Mission.con1 = nil
+		return
+	elseif Mission.con2 == h then
+		Mission.con2 = nil
+		return
+	elseif Mission.con3 == h then
+		Mission.con3 = nil
+		return
+	elseif Mission.con4 == h then
+		Mission.con4 = nil
+		return
+	end
+
 end
 
 function InitialSetup()
@@ -307,8 +343,8 @@ function missionCode() --
 			SetGroup(Mission.sent2,Mission.grp)
 
 			Mission.grp = Mission.grp + 1
-			Mission.constructor = BuildObject("fvcos2",1,"cons_1")
-			SetGroup(Mission.constructor,Mission.grp)
+			Mission.con1 = BuildObject("fvcos2",1,"cons_1")
+			SetGroup(Mission.con1,Mission.grp)
 
 			Mission.objective = BuildObject("ibnav",1,"Jammer")
 
@@ -368,7 +404,8 @@ function missionCode() --
 	elseif Mission.mission_state == 3 then -- wait for the Mission.constructor to show up
 			
 			
-			if (GetDistance(Mission.constructor,"Jammer")<75.0) then
+			if ((GetDistance(Mission.con1,"Jammer")<75.0) or (GetDistance(Mission.con2,"Jammer")<75.0) 
+			or (GetDistance(Mission.con3,"Jammer")<75.0) or (GetDistance(Mission.con4,"Jammer")<75.0))  then
 				
 				AudioMessage("scion0204.wav") -- Good, now build a Mission.jammer
 				ClearObjectives()
