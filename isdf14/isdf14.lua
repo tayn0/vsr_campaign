@@ -359,7 +359,7 @@ function Start() --This function is called upon the first frame
 	GiveWeapon(Mission.player,"gshadowvsr_c")
 	GiveWeapon(Mission.player,"gproxminvsr")
 
-	Mission.tbolt1 = UnitToVSR(Mission.tbolt, "ivscout_vsr", 0)
+	Mission.tbolt1 = UnitToVSR(Mission.tbolt1, "ivscout_vsr", 0)
 	SetGroup(Mission.tbolt1,2)
 
 	Mission.tank1 = UnitToVSR(Mission.tank1, "ivtank_vsr", 0)
@@ -374,15 +374,31 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
 	SetAsUser(h, PlayerTeam)
 	else
+
 	end
 
+	SetLabel(h, label)
+
 	return h
+
+end
+
+function PlayerEjected(h)
+
+	temp = BuildObject("ivscout_vsr", 1, "attack_point1")
+	SetAsUser(temp, 1)
+	GiveWeapon(temp,"gchainvsr_c")
+	GiveWeapon(temp,"gshadowvsr_c")
+	GiveWeapon(temp,"gproxminvsr")
+
+return 2
 
 end
 
