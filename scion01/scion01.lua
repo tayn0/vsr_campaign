@@ -914,7 +914,7 @@ function missionCode() --
 			Mission.vo7 = true
 		end
 
-		if ((not Mission.vo8) and (Mission.vo7) and (IsAlive(Mission.shab) and (not IsAlive(Mission.attack1tanka) and (not IsAlive(attack1tankb))))) then
+		if ((not Mission.vo8) and (Mission.vo7) and (IsAlive(Mission.shab) and (not IsAlive(Mission.attack1tanka) and (not IsAlive(Mission.attack1tankb))))) then
 		
 			Mission.praise1time = (GetTime() + 1.3)
 			Patrol(Mission.shab,"shab_patrol")
