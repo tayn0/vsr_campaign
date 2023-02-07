@@ -37,7 +37,10 @@ local Mission = {
 	power1,
 	power2,
 	objective2,
-	constructor,
+	con1,
+	con2,
+	con3,
+	con4,
 	jammer = nil,
 	artillery = nil,
 	artillery2 = nil,  -- fail safe
@@ -68,6 +71,7 @@ local Mission = {
 	scout1,
 	basetank1,
 	basetank2,
+
 
 --  integers
 	mission_state = 0,
@@ -126,7 +130,9 @@ function AddObject(h) --This function is called when an object appears in the ga
 	
 		Mission.recycler = h
 	end
-	if (IsOdf(h,"fbjamm_vsr")) then
+
+	if (IsOdf(h,"fbjamm_vsr") and GetDistance(h, "Jammer") < 75) then
+
 	
 		Mission.jammer_exists = true
 		Mission.jammer = h
@@ -147,6 +153,24 @@ function AddObject(h) --This function is called when an object appears in the ga
 	
 		Mission.artillery2 = h
 	end
+	
+	if ((IsOdf(h, "fvcons_vsr") or IsOdf(h, "fvcons_vsr:1")) and Mission.con1 == nil) then 
+		PrintConsoleMessage("con1 built")
+		Mission.con1 = h
+		return
+	elseif ((IsOdf(h, "fvcons_vsr") or IsOdf(h, "fvcons_vsr:1")) and Mission.con2 == nil) then 
+		PrintConsoleMessage("con2 built")
+		Mission.con2 = h
+		return
+	elseif ((IsOdf(h, "fvcons_vsr") or IsOdf(h, "fvcons_vsr:1")) and Mission.con3 == nil) then 
+		PrintConsoleMessage("con3 built")
+		Mission.con3 = h
+		return
+	elseif ((IsOdf(h, "fvcons_vsr") or IsOdf(h, "fvcons_vsr:1")) and Mission.con4 == nil) then 
+		PrintConsoleMessage("con4 built")
+		Mission.con4 = h
+		return
+	end
 
 	if IsOdf(h, "fvtank_vsr:1") then 
 	
@@ -162,6 +186,21 @@ end
 
 
 function DeleteObject(h) --This function is called when an object is deleted in the game.
+
+	if Mission.con1 == h then
+		Mission.con1 = nil
+		return
+	elseif Mission.con2 == h then
+		Mission.con2 = nil
+		return
+	elseif Mission.con3 == h then
+		Mission.con3 = nil
+		return
+	elseif Mission.con4 == h then
+		Mission.con4 = nil
+		return
+	end
+
 end
 
 function InitialSetup()
@@ -252,6 +291,7 @@ end
 
 function missionCode() --
 
+
 	Mission.player = GetPlayerHandle()
 
 
@@ -265,6 +305,10 @@ function missionCode() --
 		
 		
 	end
+
+		
+		
+
 	
 
 	if ((not been_detected) and (Mission.mission_state<5))  then -- 5 =  ambush is set then
@@ -327,8 +371,10 @@ function missionCode() --
 			SetGroup(Mission.sent2,Mission.grp)
 
 			Mission.grp = Mission.grp + 1
-			Mission.constructor = BuildObject("fvcons_vsr",1,"cons_1")
-			SetGroup(Mission.constructor,Mission.grp)
+
+			Mission.con1 = BuildObject("fvcons_vsr",1,"cons_1")
+			SetGroup(Mission.con1,Mission.grp)
+
 
 			Mission.objective = BuildObject("ibnav",1,"Jammer")
 
@@ -375,7 +421,7 @@ function missionCode() --
 		end
 		
 	elseif Mission.mission_state == 2 then  -- Mission.player arrives at ambush site
-		if (GetDistance(Mission.player,Mission.objective)<75.0)	 then
+		if (GetDistance(Mission.player,"Jammer")<75.0)	 then
 		
 			AudioMessage("scion0203.wav")  -- good now set up
 			ClearObjectives()
@@ -386,7 +432,10 @@ function missionCode() --
 		end
 		
 	elseif Mission.mission_state == 3 then -- wait for the Mission.constructor to show up
-			if (GetDistance(Mission.constructor,Mission.objective)<75.0) then
+			
+			
+			if ((GetDistance(Mission.con1,"Jammer")<75.0) or (GetDistance(Mission.con2,"Jammer")<75.0) 
+			or (GetDistance(Mission.con3,"Jammer")<75.0) or (GetDistance(Mission.con4,"Jammer")<75.0))  then
 				
 				AudioMessage("scion0204.wav") -- Good, now build a Mission.jammer
 				ClearObjectives()
