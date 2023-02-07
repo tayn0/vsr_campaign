@@ -445,16 +445,12 @@ function Start() --This function is called upon the first frame
 
 	Mission.player = UnitToVSR(Mission.player, "fvsent_vsr", 0)
 	RemovePilot(Mission.player)
-	Mission.kiln = UnitToVSR(Mission.kiln, "fbkiln_vsr", 0)
-	Mission.lung_built = false
 
-	Mission.playersrecy = UnitToVSR(Mission.playersrecy, "fbrecy_vsr", 0)
-	
-	Mission.lung = GetHandle("unnamed_fblung_vsr")
-	RemoveObject(Mission.lung)
-	
-	Mission.fvcons1 = UnitToVSR(Mission.fvcons1, "fvcons_vsr",0)
-	SetGroup(Mission.fvcons1, 0)
+	Mission.shab = UnitToVSR(Mission.shab, "fvsent_vsr", 0)
+	RemovePilot(Mission.shab)
+
+
+
 
 
    
@@ -464,13 +460,17 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
 	SetAsUser(h, PlayerTeam)
 	else
+
 	end
+
+	SetLabel(h, label)
 
 	return h
 
@@ -892,8 +892,8 @@ function missionCode() --
 		--WAVE1
 		if ((not Mission.baseattack1) and (Mission.baseattack1time < GetTime())) then
 		
-			Mission.attack1tanka = BuildObject("ivscout",2,"attack1a")
-			Mission.attack1tankb = BuildObject("ivscout",2,"attack1b")
+			Mission.attack1tanka = BuildObject("ivscout_vsr",2,"attack1a")
+			Mission.attack1tankb = BuildObject("ivscout_vsr",2,"attack1b")
 			SetSkill(Mission.attack1tanka,1)
 			SetSkill(Mission.attack1tankb,1) 
 			Attack(Mission.shab,Mission.attack1tanka)
@@ -931,8 +931,8 @@ function missionCode() --
 		--/WAVE2
 		if ((not Mission.attack2) and (Mission.attack2time < GetTime())) then
 		
-			Mission.attack2tanka = BuildObject("ivscout",2,"attack2a")
-			Mission.attack2tankb = BuildObject("ivscout",2,"attack2b")
+			Mission.attack2tanka = BuildObject("ivscout_vsr",2,"attack2a")
+			Mission.attack2tankb = BuildObject("ivscout_vsr",2,"attack2b")
 			SetSkill(Mission.attack2tanka,1)
 			SetSkill(Mission.attack2tankb,1) 
 			Attack(Mission.shab,Mission.attack2tanka)
@@ -967,8 +967,8 @@ function missionCode() --
 
 		if ((not Mission.attack3) and (Mission.attack3time < GetTime())) then
 		
-			Mission.attack3tanka = BuildObject("ivscout",2,"attack1a")
-			Mission.attack3tankb = BuildObject("ivtank",2,"attack1b")
+			Mission.attack3tanka = BuildObject("ivscout_vsr",2,"attack1a")
+			Mission.attack3tankb = BuildObject("ivtank_vsr",2,"attack1b")
 			SetSkill(Mission.attack3tanka,1)
 			SetSkill(Mission.attack3tankb,1) 
 			Attack(Mission.shab,Mission.attack3tanka)
@@ -1001,8 +1001,8 @@ function missionCode() --
 
 		if ((not Mission.attack4) and (Mission.attack4time < GetTime())) then
 		
-			Mission.attack4tanka = BuildObject("ivscout",2,"attack2a")
-			Mission.attack4tankb = BuildObject("ivtank",2,"attack2b")
+			Mission.attack4tanka = BuildObject("ivscout_vsr",2,"attack2a")
+			Mission.attack4tankb = BuildObject("ivtank_vsr",2,"attack2b")
 			SetSkill(Mission.attack4tanka,1)
 			SetSkill(Mission.attack4tankb,1) 
 			Attack(Mission.shab,Mission.attack4tanka)
@@ -1035,8 +1035,8 @@ function missionCode() --
 		if ((not Mission.escortcall) and (Mission.escortcalltime < GetTime())) then
 		
 			AudioMessage("scion0109.wav")-- Delta wing--We have the Mission.power source, ETA to rondevous is 3 minutes.
-			Mission.escort1a = BuildObject("fvscout",1,"escort1a")
-			Mission.escort1b = BuildObject("fvscout",1,"escort1b")
+			Mission.escort1a = BuildObject("fvscout_vsr",1,"escort1a")
+			Mission.escort1b = BuildObject("fvscout_vsr",1,"escort1b")
 			Mission.tug1 = BuildObject("fvtug",1,"tug1")
 			Mission.power = BuildObject("cotran01",0,"power")
 			Stop(Mission.escort1a)
@@ -1129,8 +1129,8 @@ function missionCode() --
 		--ambush when Mission.player first meets tug
 		if ((not Mission.ambush1spawn) and (Mission.vo23) and (IsAudioMessageDone(Mission.msg23))) then
 		
-			Mission.ambush1tanka = BuildObject("ivtank",2,"ambush1a")
-			Mission.ambush1tankb = BuildObject("ivscout",2,"ambush1b")
+			Mission.ambush1tanka = BuildObject("ivtank_vsr",2,"ambush1a")
+			Mission.ambush1tankb = BuildObject("ivscout_vsr",2,"ambush1b")
 			SetSkill(Mission.ambush1tanka,2)
 			SetSkill(Mission.ambush1tankb,1)
 			Attack(Mission.ambush1tanka,Mission.tug1)
@@ -1225,11 +1225,11 @@ function missionCode() --
 			Mission.vo16time = (GetTime() + 15)
 			Retreat(Mission.escort1a,"escort1a_go2")
 			Retreat(Mission.escort1b,"escort1b_go2") 
-			Mission.routeattacker1 = BuildObject("ivscout",2,"routeattack1a")
-			Mission.routeattacker1b = BuildObject("ivscout",2,"routeattack1b")
-			Mission.routeattacker1c = BuildObject("ivscout",2,"routeattack1c")
-			Mission.routeattacker2a = BuildObject("ivscout",2,"routeattack2a")
-			Mission.routeattacker2b = BuildObject("ivtank",2,"routeattack2b")
+			Mission.routeattacker1 = BuildObject("ivscout_vsr",2,"routeattack1a")
+			Mission.routeattacker1b = BuildObject("ivscout_vsr",2,"routeattack1b")
+			Mission.routeattacker1c = BuildObject("ivscout_vsr",2,"routeattack1c")
+			Mission.routeattacker2a = BuildObject("ivscout_vsr",2,"routeattack2a")
+			Mission.routeattacker2b = BuildObject("ivtank_vsr",2,"routeattack2b")
 			SetSkill(Mission.routeattacker1,2)
 			SetSkill(Mission.routeattacker1b,1)
 			SetSkill(Mission.routeattacker1c,1)
@@ -1395,15 +1395,15 @@ function missionCode() --
 		
 			AudioMessage("scion0129.wav") -- Ambushnot   Ambushnot   Protect the haulernot 
 
-			Mission.routeattacker3a = BuildObject("ivscout",2,"routeattack3a")	
+			Mission.routeattacker3a = BuildObject("ivscout_vsr",2,"routeattack3a")	
 			SetSkill(Mission.routeattacker3a,1)
 			Goto(Mission.routeattacker3a,Mission.player)	
 
-			Mission.routeattacker3b = BuildObject("ivscout",2,"routeattack3b")	
+			Mission.routeattacker3b = BuildObject("ivscout_vsr",2,"routeattack3b")	
 			SetSkill(Mission.routeattacker3b,1)
 			Goto(Mission.routeattacker3b,Mission.tug1)	
 
-			Mission.routeattacker3c = BuildObject("ivtank",2,"routeattack3c")	
+			Mission.routeattacker3c = BuildObject("ivtank_vsr",2,"routeattack3c")	
 			SetSkill(Mission.routeattacker3c,1)
 			Goto(Mission.routeattacker3c,Mission.player)
 			
@@ -1458,7 +1458,7 @@ function missionCode() --
 				if (not Mission.setup_on_foot_shot1) then
 				
 					Mission.pilo_on_foot = BuildObject("fspilo",0,"pilo_on_foot_spawn")
-					Mission.amini = BuildObject("fvsent",5,"amini_spawn")
+					Mission.amini = BuildObject("fvsent_vsr",5,"amini_spawn")
 					SetIndependence(Mission.amini,0)
 					CameraReady()
 					Mission.setup_on_foot_shot1 = true
@@ -1550,8 +1550,8 @@ function missionCode() --
 			SetObjectiveOff(Mission.tug1)
 			ClearObjectives()
 			AddObjective("scion0107.otf", "WHITE")--find an alt route for the hauler
-			Mission.routeattacker4a = BuildObject("ivscout",2,"routeattack4a")
-			Mission.routeattacker4b = BuildObject("ivatank",2,"routeattack4b")
+			Mission.routeattacker4a = BuildObject("ivscout_vsr",2,"routeattack4a")
+			Mission.routeattacker4b = BuildObject("ivatank_vsr",2,"routeattack4b")
 			SetSkill(Mission.routeattacker4a,0)
 			SetSkill(Mission.routeattacker4b,1)
 			LookAt(Mission.routeattacker4a,Mission.player)
