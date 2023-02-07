@@ -461,13 +461,17 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
 	SetAsUser(h, PlayerTeam)
 	else
+
 	end
+
+	SetLabel(h, label)
 
 	return h
 
@@ -590,9 +594,6 @@ function AddObject(h) --This function is called when an object appears in the ga
 			end
 		end
 
-	elseif IsOdf(h, "fvturr") then
-		h = UnitToVSR(h, "fvturr_vsr", 0)
-		SetGroup(h, 1)
 
 	end
 end

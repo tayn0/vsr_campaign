@@ -272,6 +272,27 @@ function Load(...)
    end
 end
 
+function UnitToVSR(h, odf, player)
+
+	PlayerTeam = GetTeamNum(h)
+	xfrm = GetTransform(h)
+	label = GetLabel(h)
+	group = GetGroup(h)
+	RemoveObject(h)
+	h = BuildObject(odf, PlayerTeam, xfrm)
+
+	if player == 1 then
+	SetAsUser(h, PlayerTeam)
+	else
+
+	end
+
+	SetLabel(h, label)
+	SetGroup(h, group)
+	return h
+
+end
+
 function Start() --This function is called upon the first frame
 
 	Mission.tug1 = GetHandle("tug1")
@@ -350,6 +371,23 @@ function Start() --This function is called upon the first frame
 	Mission.cutmsg4 = nil
 	Mission.cutmsg5 = nil
 	Mission.cutmsg6 = nil
+	
+	Mission.fvarch1 = UnitToVSR(Mission.fvarch1, "fvarch_vsr", 0)
+	Mission.fvarch2 = UnitToVSR(Mission.fvarch2, "fvarch_vsr", 0)
+
+	Mission.fvtank1 = UnitToVSR(Mission.fvtank1, "fvtank_vsr", 0)
+	Mission.fvtank2 = UnitToVSR(Mission.fvtank2, "fvtank_vsr", 0)
+	Mission.fvtank3 = UnitToVSR(Mission.fvtank3, "fvtank_vsr", 0)
+	
+	Mission.fvsent1 = UnitToVSR(Mission.fvsent1, "fvsent_vsr", 0)
+	Mission.fvsent2 = UnitToVSR(Mission.fvsent2, "fvsent_vsr", 0)
+	Mission.fvsent3 = UnitToVSR(Mission.fvsent3, "fvsent_vsr", 0)
+	
+	Mission.fvserv1 = UnitToVSR(Mission.fvserv1, "fvserv_vsr", 0)
+	
+	Mission.player = GetPlayerHandle()
+	Mission.player = UnitToVSR(GetPlayerHandle(), "fvsent_vsr", 1)
+
 
 	SetTeamColor(3,85,255,85)  --REBELS		
 	SetTeamColor(2,85,255,85)  --REBELS
@@ -405,15 +443,15 @@ function missionCode() --
 	--	Patrol(scout1,"scoutpath")
 	--	Patrol(scout2,"scoutpath")
 		SetAvoidType(Mission.tug1,0)
-		SetAvoidType(Mission.fvserv1,0)
-		SetAvoidType(Mission.fvtank1,0)
-		SetAvoidType(Mission.fvtank2,0)
-		SetAvoidType(Mission.fvtank3,0)
-		SetAvoidType(Mission.fvsent1,0)
-		SetAvoidType(Mission.fvsent2,0)
-		SetAvoidType(Mission.fvsent3,0)
-		SetAvoidType(Mission.fvarch1,0)
-		SetAvoidType(Mission.fvarch2,0)
+		--SetAvoidType(Mission.fvserv1,0)
+		--SetAvoidType(Mission.fvtank1,0)
+		--SetAvoidType(Mission.fvtank2,0)
+		--SetAvoidType(Mission.fvtank3,0)
+		--SetAvoidType(Mission.fvsent1,0)
+		--SetAvoidType(Mission.fvsent2,0)
+		--SetAvoidType(Mission.fvsent3,0)
+		--SetAvoidType(Mission.fvarch1,0)
+		--SetAvoidType(Mission.fvarch2,0)
 
 		SetSkill(Mission.tug1,2)
 		SetSkill(Mission.fvserv1,2)
@@ -563,9 +601,9 @@ function missionCode() --
 		RemoveObject(Mission.evil1) 
 		RemoveObject(Mission.evil2)		
 		RemoveObject(Mission.evil3)
-		Mission.evil1 = BuildObject("fvscout",2,"evil1respawn")
-		Mission.evil2 = BuildObject("fvscout",2,"evil2respawn")
-		Mission.evil3 = BuildObject("fvscout",2,"evil3respawn")
+		Mission.evil1 = BuildObject("fvscout_vsr",2,"evil1respawn")
+		Mission.evil2 = BuildObject("fvscout_vsr",2,"evil2respawn")
+		Mission.evil3 = BuildObject("fvscout_vsr",2,"evil3respawn")
 		SetSkill(Mission.evil1,2)
 		SetSkill(Mission.evil2,2)
 		SetSkill(Mission.evil3,2)
@@ -1725,7 +1763,7 @@ function missionCode() --
 		--Mission.circle_tank1
 		if ((not Mission.spawn_circle_tank1) and (Mission.spawn_circle_tank1time < GetTime())) then
 		
-			Mission.circle_tank1 = BuildObject("ivtank",4,"circle4")
+			Mission.circle_tank1 = BuildObject("ivtank_vsr",4,"circle4")
 			SetSkill(Mission.circle_tank1,2)
 			Patrol(Mission.circle_tank1,"scoutpath2")
 			Mission.circle_tank1_dead = false
@@ -1743,7 +1781,7 @@ function missionCode() --
 		--Mission.circle_tank2
 		if ((not Mission.spawn_circle_tank2) and (Mission.spawn_circle_tank2time < GetTime())) then
 		
-			Mission.circle_tank2 = BuildObject("ivtank",4,"circle2")
+			Mission.circle_tank2 = BuildObject("ivtank_vsr",4,"circle2")
 			SetSkill(Mission.circle_tank2,2)
 			Patrol(Mission.circle_tank2,"scoutpath2")
 			Mission.circle_tank2_dead = false
@@ -1760,7 +1798,7 @@ function missionCode() --
 		--Mission.circle_scout1
 		if ((not Mission.spawn_circle_scout1) and (Mission.spawn_circle_scout1time < GetTime())) then
 		
-			Mission.circle_scout1 = BuildObject("ivscout",4,"circle1")
+			Mission.circle_scout1 = BuildObject("ivscout_vsr",4,"circle1")
 			SetSkill(Mission.circle_scout1,2)
 			Patrol(Mission.circle_scout1,"scoutpath")
 			Mission.circle_scout1_dead = false
@@ -1778,7 +1816,7 @@ function missionCode() --
 		--Mission.circle_scout2
 		if ((not Mission.spawn_circle_scout2) and (Mission.spawn_circle_scout2time < GetTime())) then
 		
-			Mission.circle_scout2 = BuildObject("ivscout",4,"circle3")
+			Mission.circle_scout2 = BuildObject("ivscout_vsr",4,"circle3")
 			SetSkill(Mission.circle_scout2,2)
 			Patrol(Mission.circle_scout2,"scoutpath")
 			Mission.circle_scout2_dead = false

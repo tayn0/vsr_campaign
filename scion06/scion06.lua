@@ -344,10 +344,17 @@ function Start() --This function is called upon the first frame
 	
 	Mission.cons = UnitToVSR(GetHandle("unnamed_ivcons"), "ivcons_vsr", 0)
 	SetGroup(Mission.cons, 0)
+	
+	UnitToVSR(GetHandle("unnamed_ibsbay"), "ibsbay_vsr", 0)
+	UnitToVSR(GetHandle("unnamed_ibarmo"), "ibarmo_vsr", 0)
 
-	Mission.gt1 = UnitToVSR(GetHandle("unnamed_ibgtow"), "ibgtow_vsr", 0)
-	Mission.gt2 = UnitToVSR(GetHandle("unnamed_ibgtow"), "ibgtow_vsr", 0)
-	Mission.gt3 = UnitToVSR(GetHandle("unnamed_ibgtow"), "ibgtow_vsr", 0)
+	Mission.convoy_scout1 = UnitToVSR(Mission.convoy_scout1, "fvscout_vsr", 0)
+	Mission.convoy_scout2 = UnitToVSR(Mission.convoy_scout2, "fvtank_vsr", 0)
+	
+	Mission.convoy_sent1 = UnitToVSR(Mission.convoy_sent1, "fvtank_vsr", 0)
+	Mission.convoy_sent2 = UnitToVSR(Mission.convoy_sent2, "fvtank_vsr", 0)
+
+	
 	
 end
 
@@ -355,12 +362,18 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
-	SetAsUser(h, PlayerTeam)
+		SetAsUser(h, PlayerTeam)
 	else
+
+	end
+
+	if label ~= nil then
+		SetLabel(h, label)
 	end
 
 	return h
@@ -415,13 +428,16 @@ function AddObject(h) --This function is called when an object appears in the ga
 			Mission.ass2 = h
 		end
 	end
-
-
+	
 	if IsOdf(h, "ibgtow") then
-	
 		h = UnitToVSR(h, "ibgtow_vsr", 0)
-	
 	end
+	
+	if IsOdf(h, "ibpgen") and GetTeamNum(h) == 2 then
+		h = UnitToVSR(h, "ibpgen_vsr", 0)
+	end
+
+
 end
 
 

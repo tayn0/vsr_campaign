@@ -6,7 +6,7 @@ binarySave [1] =
 false
 msn_filename = scion03.bzn
 seq_count [1] =
-4247
+4283
 saveType [1] =
 0
 g_TerrainName = scion03
@@ -8974,408 +8974,6 @@ false
 independence [1] =
 1
 [GameObject]
-objClass = ibfact
-seqno [1] =
-80092e
-team [1] =
-34
-isUser [1] =
-false
-objAddr = 0000005F
-transform [1] =
-  right.x [1] =
--1.00000000e+00
-  right.y [1] =
-0.00000000e+00
-  right.z [1] =
-0.00000000e+00
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-1.00000000e+00
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
-0.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
--1.00000000e+00
-  posit.x [1] =
-9.60000000e+01
-  posit.y [1] =
-2.66000004e+01
-  posit.z [1] =
--2.56000000e+02
-buildTime [1] =
-0.00000000e+00
-buildActive [1] =
-false
-buildCount [1] =
-0
-navHandle [1] =
-774901908
-saveClass = 
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-1.18520390e+07
- mass_inv [1] =
-8.43736672e-08
- v_mag [1] =
-0.00000000e+00
- v_mag_inv [1] =
-1.00000002e+30
- I [1] =
-1.07015270e+10
- k_i [1] =
-9.34446062e-11
- v [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
-name = Factory
-saveFlags [1] =
-100
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-5
-groupNumber [1] =
--1
-curHealth [1] =
-5.94000000e+03
-maxHealth [1] =
-6.00000000e+03
-addHealth [1] =
-0.00000000e+00
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-true
-independence [1] =
-1
-[GameObject]
-objClass = ibarmo
-seqno [1] =
-80092f
-team [1] =
-34
-isUser [1] =
-false
-objAddr = 00000060
-transform [1] =
-  right.x [1] =
-0.00000000e+00
-  right.y [1] =
-0.00000000e+00
-  right.z [1] =
--1.00000000e+00
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-1.00000000e+00
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
-1.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
-0.00000000e+00
-  posit.x [1] =
-4.80000000e+01
-  posit.y [1] =
-2.66000004e+01
-  posit.z [1] =
--2.40000000e+02
-buildDoneTime [1] =
-0.00000000e+00
-buildActive [1] =
-false
-buildCount [1] =
-0
-navHandle [1] =
-775950485
-saveClass = 
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-1.58718825e+06
- mass_inv [1] =
-6.30045008e-07
- v_mag [1] =
-0.00000000e+00
- v_mag_inv [1] =
-1.00000002e+30
- I [1] =
-3.63187808e+08
- k_i [1] =
-2.75339640e-09
- v [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
-name = Armory
-saveFlags [1] =
-108
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-5
-groupNumber [1] =
--1
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-true
-independence [1] =
-1
-[GameObject]
-objClass = ibpgen
-seqno [1] =
-800931
-team [1] =
-34
-isUser [1] =
-false
-objAddr = 00000061
-transform [1] =
-  right.x [1] =
-0.00000000e+00
-  right.y [1] =
-0.00000000e+00
-  right.z [1] =
-1.00000000e+00
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-1.00000000e+00
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
--1.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
-0.00000000e+00
-  posit.x [1] =
-1.12000000e+02
-  posit.y [1] =
-2.66000004e+01
-  posit.z [1] =
--2.08000000e+02
-saveClass = 
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-2.05312013e+06
- mass_inv [1] =
-4.87063573e-07
- v_mag [1] =
-0.00000000e+00
- v_mag_inv [1] =
-1.00000002e+30
- I [1] =
-5.03014912e+08
- k_i [1] =
-1.98801264e-09
- v [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
-name = Power
-saveFlags [1] =
-108
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-5
-groupNumber [1] =
--1
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-false
-independence [1] =
-1
-[GameObject]
-objClass = ibpgen
-seqno [1] =
-800934
-team [1] =
-34
-isUser [1] =
-false
-objAddr = 00000062
-transform [1] =
-  right.x [1] =
-0.00000000e+00
-  right.y [1] =
-0.00000000e+00
-  right.z [1] =
-1.00000000e+00
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-1.00000000e+00
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
--1.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
-0.00000000e+00
-  posit.x [1] =
-1.60000000e+01
-  posit.y [1] =
-2.66000004e+01
-  posit.z [1] =
--2.40000000e+02
-saveClass = 
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-2.05312013e+06
- mass_inv [1] =
-4.87063573e-07
- v_mag [1] =
-0.00000000e+00
- v_mag_inv [1] =
-1.00000002e+30
- I [1] =
-5.03014912e+08
- k_i [1] =
-1.98801264e-09
- v [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
-name = Power
-saveFlags [1] =
-108
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-5
-groupNumber [1] =
--1
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-false
-independence [1] =
-1
-[GameObject]
 objClass = nepool01
 seqno [1] =
 80096b
@@ -9383,7 +8981,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000063
+objAddr = 0000005F
 transform [1] =
   right.x [1] =
 1.00000000e+00
@@ -9471,101 +9069,6 @@ false
 independence [1] =
 1
 [GameObject]
-objClass = ibpgen
-seqno [1] =
-800971
-team [1] =
-34
-isUser [1] =
-false
-objAddr = 00000064
-transform [1] =
-  right.x [1] =
-1.00000000e+00
-  right.y [1] =
-0.00000000e+00
-  right.z [1] =
-0.00000000e+00
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-1.00000000e+00
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
-0.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
-1.00000000e+00
-  posit.x [1] =
-2.08000000e+02
-  posit.y [1] =
-2.66000004e+01
-  posit.z [1] =
--2.40000000e+02
-saveClass = 
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-2.05312013e+06
- mass_inv [1] =
-4.87063573e-07
- v_mag [1] =
-0.00000000e+00
- v_mag_inv [1] =
-1.00000002e+30
- I [1] =
-5.03014912e+08
- k_i [1] =
-1.98801264e-09
- v [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
-name = Power
-saveFlags [1] =
-108
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-5
-groupNumber [1] =
--1
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-false
-independence [1] =
-1
-[GameObject]
 objClass = nepool01
 seqno [1] =
 800978
@@ -9573,7 +9076,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000065
+objAddr = 00000060
 transform [1] =
   right.x [1] =
 1.00000000e+00
@@ -9669,7 +9172,7 @@ team [1] =
 label = alpha1
 isUser [1] =
 false
-objAddr = 00000066
+objAddr = 00000061
 transform [1] =
   right.x [1] =
 7.58326054e-01
@@ -9782,7 +9285,7 @@ team [1] =
 label = alpha2
 isUser [1] =
 false
-objAddr = 00000067
+objAddr = 00000062
 transform [1] =
   right.x [1] =
 9.82668459e-01
@@ -9881,258 +9384,6 @@ true
 independence [1] =
 1
 [GameObject]
-objClass = ivturr
-seqno [1] =
-8009de
-team [1] =
-34
-isUser [1] =
-false
-objAddr = 00000068
-transform [1] =
-  right.x [1] =
--9.77249086e-01
-  right.y [1] =
-0.00000000e+00
-  right.z [1] =
-2.12075010e-01
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-9.99995649e-01
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
--2.12074086e-01
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
--9.77244854e-01
-  posit.x [1] =
-1.57923004e+02
-  posit.y [1] =
-2.60089874e+01
-  posit.z [1] =
--3.10542999e+02
-turretAligned [1] =
-false
-state = 02000000
-deployTimer [1] =
--1.81794003e-05
-abandoned [1] =
-0
-curAmmo [1] =
-2.50000000e+03
-maxAmmo [1] =
-2.50000000e+03
-addAmmo [1] =
-0.00000000e+00
-curPilot = ispilo
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-7.20821143e+03
- mass_inv [1] =
-1.38730669e-04
- v_mag [1] =
-0.00000000e+00
- v_mag_inv [1] =
-1.00000002e+30
- I [1] =
-5.39524375e+04
- k_i [1] =
-1.85348435e-05
- v [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
-name = Turret
-saveFlags [1] =
-100
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-5
-groupNumber [1] =
-1
-curHealth [1] =
-1.25000000e+03
-maxHealth [1] =
-1.25000000e+03
-addHealth [1] =
-0.00000000e+00
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-true
-independence [1] =
-1
-[GameObject]
-objClass = fvrecy
-seqno [1] =
-9e5
-team [1] =
-17
-label = playersrecy
-isUser [1] =
-false
-objAddr = 00000069
-transform [1] =
-  right.x [1] =
-9.99982893e-01
-  right.y [1] =
--0.00000000e+00
-  right.z [1] =
-5.04641002e-03
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-9.99995649e-01
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
--5.04638813e-03
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
-9.99978542e-01
-  posit.x [1] =
--8.99928894e+01
-  posit.y [1] =
-3.49552269e+01
-  posit.z [1] =
--1.30821008e+03
-buildMatrix [1] =
-  right.x [1] =
-1.00000000e+00
-  right.y [1] =
-0.00000000e+00
-  right.z [1] =
-0.00000000e+00
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-1.00000000e+00
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
-0.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
-1.00000000e+00
-  posit.x [1] =
--9.60000000e+01
-  posit.y [1] =
-3.48999939e+01
-  posit.z [1] =
--1.31200000e+03
-state = 00000000
-deployTimer [1] =
--1.00000002e+30
-abandoned [1] =
-0
-curAmmo [1] =
-0.00000000e+00
-maxAmmo [1] =
-0.00000000e+00
-addAmmo [1] =
-0.00000000e+00
-curPilot = 
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-9.55544125e+05
- mass_inv [1] =
-1.04652418e-06
- v_mag [1] =
-0.00000000e+00
- v_mag_inv [1] =
-1.00000002e+30
- I [1] =
-1.33944992e+08
- k_i [1] =
-7.46575157e-09
- v [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
-name = Matriarch
-saveFlags [1] =
-100
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-3
-groupNumber [1] =
-0
-curHealth [1] =
-5.99445605e+03
-maxHealth [1] =
-6.00000000e+03
-addHealth [1] =
-0.00000000e+00
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-true
-independence [1] =
-1
-[GameObject]
 objClass = mcjak01
 seqno [1] =
 9eb
@@ -10141,7 +9392,7 @@ team [1] =
 label = jak2
 isUser [1] =
 false
-objAddr = 0000006A
+objAddr = 00000063
 transform [1] =
   right.x [1] =
 -8.64995837e-01
@@ -10251,7 +9502,7 @@ team [1] =
 label = jak3
 isUser [1] =
 false
-objAddr = 0000006B
+objAddr = 00000064
 transform [1] =
   right.x [1] =
 -8.96489441e-01
@@ -10361,7 +9612,7 @@ team [1] =
 label = jak4
 isUser [1] =
 false
-objAddr = 0000006C
+objAddr = 00000065
 transform [1] =
   right.x [1] =
 8.42850208e-01
@@ -10465,7 +9716,7 @@ team [1] =
 label = jak5
 isUser [1] =
 false
-objAddr = 0000006D
+objAddr = 00000066
 transform [1] =
   right.x [1] =
 6.15159333e-01
@@ -10575,7 +9826,7 @@ team [1] =
 label = jak6
 isUser [1] =
 false
-objAddr = 0000006E
+objAddr = 00000067
 transform [1] =
   right.x [1] =
 -9.58133459e-01
@@ -10679,7 +9930,7 @@ team [1] =
 label = jak7
 isUser [1] =
 false
-objAddr = 0000006F
+objAddr = 00000068
 transform [1] =
   right.x [1] =
 7.55531549e-01
@@ -10782,7 +10033,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000070
+objAddr = 00000069
 transform [1] =
   right.x [1] =
 -8.04014742e-01
@@ -10891,7 +10142,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000071
+objAddr = 0000006A
 transform [1] =
   right.x [1] =
 7.66538799e-01
@@ -11000,7 +10251,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000072
+objAddr = 0000006B
 transform [1] =
   right.x [1] =
 9.46037173e-01
@@ -11103,7 +10354,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000073
+objAddr = 0000006C
 transform [1] =
   right.x [1] =
 9.89372969e-01
@@ -11206,7 +10457,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000074
+objAddr = 0000006D
 transform [1] =
   right.x [1] =
 6.06438935e-01
@@ -11315,7 +10566,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000075
+objAddr = 0000006E
 transform [1] =
   right.x [1] =
 -8.50879252e-01
@@ -11418,7 +10669,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000076
+objAddr = 0000006F
 transform [1] =
   right.x [1] =
 3.62343699e-01
@@ -11521,7 +10772,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000077
+objAddr = 00000070
 transform [1] =
   right.x [1] =
 -1.77282035e-01
@@ -11624,7 +10875,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000078
+objAddr = 00000071
 transform [1] =
   right.x [1] =
 -4.84296143e-01
@@ -11727,7 +10978,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000079
+objAddr = 00000072
 transform [1] =
   right.x [1] =
 -9.70426857e-01
@@ -11830,7 +11081,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000007A
+objAddr = 00000073
 transform [1] =
   right.x [1] =
 4.38349128e-01
@@ -11933,7 +11184,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000007B
+objAddr = 00000074
 transform [1] =
   right.x [1] =
 1.00000000e+00
@@ -12028,7 +11279,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000007C
+objAddr = 00000075
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -12122,7 +11373,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000007D
+objAddr = 00000076
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -12216,7 +11467,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000007E
+objAddr = 00000077
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -12310,7 +11561,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000007F
+objAddr = 00000078
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -12404,7 +11655,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000080
+objAddr = 00000079
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -12498,7 +11749,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000081
+objAddr = 0000007A
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -12592,7 +11843,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000082
+objAddr = 0000007B
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -12686,7 +11937,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000083
+objAddr = 0000007C
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -12780,7 +12031,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000084
+objAddr = 0000007D
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -12874,7 +12125,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000085
+objAddr = 0000007E
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -12968,7 +12219,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000086
+objAddr = 0000007F
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -13062,7 +12313,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000087
+objAddr = 00000080
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -13156,7 +12407,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000088
+objAddr = 00000081
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -13250,7 +12501,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000089
+objAddr = 00000082
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -13345,7 +12596,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000008A
+objAddr = 00000083
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -13440,7 +12691,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000008B
+objAddr = 00000084
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -13535,7 +12786,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000008C
+objAddr = 00000085
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -13630,7 +12881,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000008D
+objAddr = 00000086
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -13725,7 +12976,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000008E
+objAddr = 00000087
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -13820,7 +13071,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000008F
+objAddr = 00000088
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -13915,7 +13166,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000090
+objAddr = 00000089
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -14010,7 +13261,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000091
+objAddr = 0000008A
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -14105,7 +13356,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000092
+objAddr = 0000008B
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -14200,7 +13451,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000093
+objAddr = 0000008C
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -14295,7 +13546,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000094
+objAddr = 0000008D
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -14390,7 +13641,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000095
+objAddr = 0000008E
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -14485,7 +13736,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000096
+objAddr = 0000008F
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -14580,7 +13831,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000097
+objAddr = 00000090
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -14675,7 +13926,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000098
+objAddr = 00000091
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -14770,7 +14021,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000099
+objAddr = 00000092
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -14865,7 +14116,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000009A
+objAddr = 00000093
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -14960,7 +14211,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000009B
+objAddr = 00000094
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -15055,7 +14306,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000009C
+objAddr = 00000095
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -15150,7 +14401,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000009D
+objAddr = 00000096
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -15245,7 +14496,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000009E
+objAddr = 00000097
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -15340,7 +14591,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000009F
+objAddr = 00000098
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -15435,7 +14686,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000A0
+objAddr = 00000099
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -15530,7 +14781,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000A1
+objAddr = 0000009A
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -15625,7 +14876,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000A2
+objAddr = 0000009B
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -15720,7 +14971,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000A3
+objAddr = 0000009C
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -15815,7 +15066,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000A4
+objAddr = 0000009D
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -15910,7 +15161,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000A5
+objAddr = 0000009E
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -16005,7 +15256,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000A6
+objAddr = 0000009F
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -16100,7 +15351,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000A7
+objAddr = 000000A0
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -16195,7 +15446,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000A8
+objAddr = 000000A1
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -16290,7 +15541,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000A9
+objAddr = 000000A2
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -16385,7 +15636,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000AA
+objAddr = 000000A3
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -16480,7 +15731,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000AB
+objAddr = 000000A4
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -16575,7 +15826,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000AC
+objAddr = 000000A5
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -16670,7 +15921,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000AD
+objAddr = 000000A6
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -16765,7 +16016,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000AE
+objAddr = 000000A7
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -16860,7 +16111,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000AF
+objAddr = 000000A8
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -16955,7 +16206,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000B0
+objAddr = 000000A9
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -17050,7 +16301,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000B1
+objAddr = 000000AA
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -17145,7 +16396,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000B2
+objAddr = 000000AB
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -17240,7 +16491,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000B3
+objAddr = 000000AC
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -17335,7 +16586,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000B4
+objAddr = 000000AD
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -17430,7 +16681,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000B5
+objAddr = 000000AE
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -17525,7 +16776,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000B6
+objAddr = 000000AF
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -17620,7 +16871,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000B7
+objAddr = 000000B0
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -17715,7 +16966,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000B8
+objAddr = 000000B1
 transform [1] =
   right.x [1] =
 -8.87000918e-01
@@ -17810,7 +17061,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000B9
+objAddr = 000000B2
 transform [1] =
   right.x [1] =
 -8.87000918e-01
@@ -17905,7 +17156,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000BA
+objAddr = 000000B3
 transform [1] =
   right.x [1] =
 -9.99870598e-01
@@ -18000,7 +17251,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000BB
+objAddr = 000000B4
 transform [1] =
   right.x [1] =
 -8.86310279e-01
@@ -18095,7 +17346,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000BC
+objAddr = 000000B5
 transform [1] =
   right.x [1] =
 -1.58739239e-02
@@ -18190,7 +17441,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000BD
+objAddr = 000000B6
 transform [1] =
   right.x [1] =
 -1.58739239e-02
@@ -18285,7 +17536,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000BE
+objAddr = 000000B7
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -18380,7 +17631,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000BF
+objAddr = 000000B8
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -18475,7 +17726,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000C0
+objAddr = 000000B9
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -18570,7 +17821,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000C1
+objAddr = 000000BA
 transform [1] =
   right.x [1] =
 -6.65949211e-02
@@ -18665,7 +17916,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000C2
+objAddr = 000000BB
 transform [1] =
   right.x [1] =
 -9.12075460e-01
@@ -18760,7 +18011,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000C3
+objAddr = 000000BC
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -18855,7 +18106,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000C4
+objAddr = 000000BD
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -18950,7 +18201,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000C5
+objAddr = 000000BE
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -19045,7 +18296,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000C6
+objAddr = 000000BF
 transform [1] =
   right.x [1] =
 2.42534354e-01
@@ -19140,7 +18391,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000C7
+objAddr = 000000C0
 transform [1] =
   right.x [1] =
 2.42534354e-01
@@ -19235,7 +18486,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000C8
+objAddr = 000000C1
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -19330,7 +18581,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000C9
+objAddr = 000000C2
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -19425,7 +18676,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000CA
+objAddr = 000000C3
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -19520,7 +18771,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000CB
+objAddr = 000000C4
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -19615,7 +18866,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000CC
+objAddr = 000000C5
 transform [1] =
   right.x [1] =
 -4.58720773e-02
@@ -19710,7 +18961,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000CD
+objAddr = 000000C6
 transform [1] =
   right.x [1] =
 7.12934285e-02
@@ -19805,7 +19056,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000CE
+objAddr = 000000C7
 transform [1] =
   right.x [1] =
 7.12934285e-02
@@ -19900,7 +19151,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000CF
+objAddr = 000000C8
 transform [1] =
   right.x [1] =
 6.23699784e-01
@@ -19995,7 +19246,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000D0
+objAddr = 000000C9
 transform [1] =
   right.x [1] =
 9.98312235e-01
@@ -20090,7 +19341,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000D1
+objAddr = 000000CA
 transform [1] =
   right.x [1] =
 -8.09346020e-01
@@ -20185,7 +19436,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000D2
+objAddr = 000000CB
 transform [1] =
   right.x [1] =
 -8.09346020e-01
@@ -20280,7 +19531,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000D3
+objAddr = 000000CC
 transform [1] =
   right.x [1] =
 7.49519348e-01
@@ -20375,7 +19626,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000D4
+objAddr = 000000CD
 transform [1] =
   right.x [1] =
 7.49519348e-01
@@ -20470,7 +19721,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000D5
+objAddr = 000000CE
 transform [1] =
   right.x [1] =
 -5.37481368e-01
@@ -20565,7 +19816,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000D6
+objAddr = 000000CF
 transform [1] =
   right.x [1] =
 8.30767751e-01
@@ -20660,7 +19911,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000D7
+objAddr = 000000D0
 transform [1] =
   right.x [1] =
 8.37173343e-01
@@ -20755,7 +20006,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000D8
+objAddr = 000000D1
 transform [1] =
   right.x [1] =
 -2.57083178e-01
@@ -20850,7 +20101,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000D9
+objAddr = 000000D2
 transform [1] =
   right.x [1] =
 -2.57083178e-01
@@ -20945,7 +20196,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000DA
+objAddr = 000000D3
 transform [1] =
   right.x [1] =
 -6.34597838e-01
@@ -21040,7 +20291,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000DB
+objAddr = 000000D4
 transform [1] =
   right.x [1] =
 2.08510101e-01
@@ -21135,7 +20386,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000DC
+objAddr = 000000D5
 transform [1] =
   right.x [1] =
 3.24758142e-01
@@ -21230,7 +20481,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000DD
+objAddr = 000000D6
 transform [1] =
   right.x [1] =
 6.17498636e-01
@@ -21325,7 +20576,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000DE
+objAddr = 000000D7
 transform [1] =
   right.x [1] =
 6.17498636e-01
@@ -21420,7 +20671,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000DF
+objAddr = 000000D8
 transform [1] =
   right.x [1] =
 6.17498636e-01
@@ -21515,7 +20766,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000E0
+objAddr = 000000D9
 transform [1] =
   right.x [1] =
 -9.89687204e-01
@@ -21610,7 +20861,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000E1
+objAddr = 000000DA
 transform [1] =
   right.x [1] =
 -9.89687204e-01
@@ -21705,7 +20956,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000E2
+objAddr = 000000DB
 transform [1] =
   right.x [1] =
 8.90519202e-01
@@ -21800,7 +21051,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000E3
+objAddr = 000000DC
 transform [1] =
   right.x [1] =
 -9.94695365e-01
@@ -21895,7 +21146,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000E4
+objAddr = 000000DD
 transform [1] =
   right.x [1] =
 -9.94695365e-01
@@ -21990,7 +21241,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000E5
+objAddr = 000000DE
 transform [1] =
   right.x [1] =
 -9.96728599e-01
@@ -22085,7 +21336,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000E6
+objAddr = 000000DF
 transform [1] =
   right.x [1] =
 -9.96728599e-01
@@ -22180,7 +21431,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000E7
+objAddr = 000000E0
 transform [1] =
   right.x [1] =
 -9.67131257e-01
@@ -22275,7 +21526,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000E8
+objAddr = 000000E1
 transform [1] =
   right.x [1] =
 -5.73225915e-01
@@ -22370,7 +21621,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000E9
+objAddr = 000000E2
 transform [1] =
   right.x [1] =
 9.71171141e-01
@@ -22465,7 +21716,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000EA
+objAddr = 000000E3
 transform [1] =
   right.x [1] =
 9.89693642e-01
@@ -22560,7 +21811,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000EB
+objAddr = 000000E4
 transform [1] =
   right.x [1] =
 9.93187785e-01
@@ -22655,7 +21906,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000EC
+objAddr = 000000E5
 transform [1] =
   right.x [1] =
 9.80680227e-01
@@ -22750,7 +22001,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000ED
+objAddr = 000000E6
 transform [1] =
   right.x [1] =
 9.94540572e-01
@@ -22845,7 +22096,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000EE
+objAddr = 000000E7
 transform [1] =
   right.x [1] =
 9.73216653e-01
@@ -22940,7 +22191,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000EF
+objAddr = 000000E8
 transform [1] =
   right.x [1] =
 9.44117069e-01
@@ -23035,7 +22286,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000F0
+objAddr = 000000E9
 transform [1] =
   right.x [1] =
 9.80594456e-01
@@ -23130,7 +22381,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000F1
+objAddr = 000000EA
 transform [1] =
   right.x [1] =
 9.98297989e-01
@@ -23225,7 +22476,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000F2
+objAddr = 000000EB
 transform [1] =
   right.x [1] =
 9.99586403e-01
@@ -23320,7 +22571,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000F3
+objAddr = 000000EC
 transform [1] =
   right.x [1] =
 9.99631405e-01
@@ -23415,7 +22666,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000F4
+objAddr = 000000ED
 transform [1] =
   right.x [1] =
 9.99929368e-01
@@ -23510,7 +22761,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000F5
+objAddr = 000000EE
 transform [1] =
   right.x [1] =
 9.98659372e-01
@@ -23605,7 +22856,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000F6
+objAddr = 000000EF
 transform [1] =
   right.x [1] =
 9.15025473e-01
@@ -23700,7 +22951,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000F7
+objAddr = 000000F0
 transform [1] =
   right.x [1] =
 9.84308839e-01
@@ -23795,7 +23046,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000F8
+objAddr = 000000F1
 transform [1] =
   right.x [1] =
 9.99785423e-01
@@ -23890,7 +23141,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000F9
+objAddr = 000000F2
 transform [1] =
   right.x [1] =
 9.64355528e-01
@@ -23985,7 +23236,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000FA
+objAddr = 000000F3
 transform [1] =
   right.x [1] =
 9.92744148e-01
@@ -24080,7 +23331,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000FB
+objAddr = 000000F4
 transform [1] =
   right.x [1] =
 9.99324858e-01
@@ -24175,7 +23426,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000FC
+objAddr = 000000F5
 transform [1] =
   right.x [1] =
 9.85501468e-01
@@ -24270,7 +23521,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000FD
+objAddr = 000000F6
 transform [1] =
   right.x [1] =
 9.98641074e-01
@@ -24365,7 +23616,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000FE
+objAddr = 000000F7
 transform [1] =
   right.x [1] =
 9.31492567e-01
@@ -24460,7 +23711,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000000FF
+objAddr = 000000F8
 transform [1] =
   right.x [1] =
 9.35105503e-01
@@ -24555,7 +23806,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000100
+objAddr = 000000F9
 transform [1] =
   right.x [1] =
 9.99525785e-01
@@ -24650,7 +23901,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000101
+objAddr = 000000FA
 transform [1] =
   right.x [1] =
 9.99389231e-01
@@ -24745,7 +23996,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000102
+objAddr = 000000FB
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -24840,7 +24091,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000103
+objAddr = 000000FC
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -24935,7 +24186,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000104
+objAddr = 000000FD
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -25030,7 +24281,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000105
+objAddr = 000000FE
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -25125,7 +24376,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000106
+objAddr = 000000FF
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -25220,7 +24471,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000107
+objAddr = 00000100
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -25315,7 +24566,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000108
+objAddr = 00000101
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -25410,7 +24661,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000109
+objAddr = 00000102
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -25505,7 +24756,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000010A
+objAddr = 00000103
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -25600,7 +24851,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000010B
+objAddr = 00000104
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -25695,7 +24946,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000010C
+objAddr = 00000105
 transform [1] =
   right.x [1] =
 4.58814621e-01
@@ -25790,7 +25041,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000010D
+objAddr = 00000106
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -25885,7 +25136,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000010E
+objAddr = 00000107
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -25980,7 +25231,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000010F
+objAddr = 00000108
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26075,7 +25326,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000110
+objAddr = 00000109
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26170,7 +25421,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000111
+objAddr = 0000010A
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26265,7 +25516,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000112
+objAddr = 0000010B
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26360,7 +25611,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000113
+objAddr = 0000010C
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26455,7 +25706,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000114
+objAddr = 0000010D
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26550,7 +25801,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000115
+objAddr = 0000010E
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26645,7 +25896,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000116
+objAddr = 0000010F
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26740,7 +25991,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000117
+objAddr = 00000110
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26835,7 +26086,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000118
+objAddr = 00000111
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26930,7 +26181,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000119
+objAddr = 00000112
 transform [1] =
   right.x [1] =
 1.89027548e-01
@@ -27025,7 +26276,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000011A
+objAddr = 00000113
 transform [1] =
   right.x [1] =
 9.90618348e-01
@@ -27120,7 +26371,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000011B
+objAddr = 00000114
 transform [1] =
   right.x [1] =
 9.76642787e-01
@@ -27215,7 +26466,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000011C
+objAddr = 00000115
 transform [1] =
   right.x [1] =
 9.98931944e-01
@@ -27310,7 +26561,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000011D
+objAddr = 00000116
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -27405,7 +26656,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000011E
+objAddr = 00000117
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -27500,7 +26751,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000011F
+objAddr = 00000118
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -27595,7 +26846,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000120
+objAddr = 00000119
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -27690,7 +26941,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000121
+objAddr = 0000011A
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -27785,7 +27036,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000122
+objAddr = 0000011B
 transform [1] =
   right.x [1] =
 9.11548078e-01
@@ -27880,7 +27131,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000123
+objAddr = 0000011C
 transform [1] =
   right.x [1] =
 9.11548078e-01
@@ -27975,7 +27226,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000124
+objAddr = 0000011D
 transform [1] =
   right.x [1] =
 -9.80344713e-01
@@ -28070,7 +27321,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000125
+objAddr = 0000011E
 transform [1] =
   right.x [1] =
 -9.80344713e-01
@@ -28165,7 +27416,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000126
+objAddr = 0000011F
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -28260,7 +27511,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000127
+objAddr = 00000120
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -28355,7 +27606,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000128
+objAddr = 00000121
 transform [1] =
   right.x [1] =
 9.78019714e-01
@@ -28450,7 +27701,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000129
+objAddr = 00000122
 transform [1] =
   right.x [1] =
 9.39993858e-01
@@ -28545,7 +27796,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000012A
+objAddr = 00000123
 transform [1] =
   right.x [1] =
 1.97931468e-01
@@ -28640,7 +27891,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000012B
+objAddr = 00000124
 transform [1] =
   right.x [1] =
 1.97931468e-01
@@ -28735,7 +27986,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000012C
+objAddr = 00000125
 transform [1] =
   right.x [1] =
 1.97931468e-01
@@ -28830,7 +28081,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000012D
+objAddr = 00000126
 transform [1] =
   right.x [1] =
 -5.19439340e-01
@@ -28925,7 +28176,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000012E
+objAddr = 00000127
 transform [1] =
   right.x [1] =
 -9.20686662e-01
@@ -29020,7 +28271,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000012F
+objAddr = 00000128
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -29115,7 +28366,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000130
+objAddr = 00000129
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -29210,7 +28461,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000131
+objAddr = 0000012A
 transform [1] =
   right.x [1] =
 4.15973932e-01
@@ -29305,7 +28556,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000132
+objAddr = 0000012B
 transform [1] =
   right.x [1] =
 8.18150878e-01
@@ -29400,7 +28651,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000133
+objAddr = 0000012C
 transform [1] =
   right.x [1] =
 8.18150878e-01
@@ -29495,7 +28746,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000134
+objAddr = 0000012D
 transform [1] =
   right.x [1] =
 -9.99974608e-01
@@ -29590,7 +28841,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000135
+objAddr = 0000012E
 transform [1] =
   right.x [1] =
 -9.99974608e-01
@@ -29685,7 +28936,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000136
+objAddr = 0000012F
 transform [1] =
   right.x [1] =
 -9.99974608e-01
@@ -29780,7 +29031,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000137
+objAddr = 00000130
 transform [1] =
   right.x [1] =
 -9.99974608e-01
@@ -29875,7 +29126,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000138
+objAddr = 00000131
 transform [1] =
   right.x [1] =
 -9.99974608e-01
@@ -29970,7 +29221,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000139
+objAddr = 00000132
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -30065,7 +29316,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000013A
+objAddr = 00000133
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -30160,7 +29411,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000013B
+objAddr = 00000134
 transform [1] =
   right.x [1] =
 -2.54030645e-01
@@ -30255,7 +29506,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000013C
+objAddr = 00000135
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -30350,7 +29601,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000013D
+objAddr = 00000136
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -30445,7 +29696,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000013E
+objAddr = 00000137
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -30540,7 +29791,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000013F
+objAddr = 00000138
 transform [1] =
   right.x [1] =
 -8.27700496e-01
@@ -30635,7 +29886,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000140
+objAddr = 00000139
 transform [1] =
   right.x [1] =
 -9.75922227e-01
@@ -30730,7 +29981,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000141
+objAddr = 0000013A
 transform [1] =
   right.x [1] =
 -9.75922227e-01
@@ -30825,7 +30076,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000142
+objAddr = 0000013B
 transform [1] =
   right.x [1] =
 -9.75922227e-01
@@ -30920,7 +30171,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000143
+objAddr = 0000013C
 transform [1] =
   right.x [1] =
 -1.32162794e-01
@@ -31015,7 +30266,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000144
+objAddr = 0000013D
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -31110,7 +30361,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000145
+objAddr = 0000013E
 transform [1] =
   right.x [1] =
 9.65790868e-01
@@ -31205,7 +30456,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000146
+objAddr = 0000013F
 transform [1] =
   right.x [1] =
 -6.50918186e-01
@@ -31300,7 +30551,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000147
+objAddr = 00000140
 transform [1] =
   right.x [1] =
 -6.50918186e-01
@@ -31395,7 +30646,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000148
+objAddr = 00000141
 transform [1] =
   right.x [1] =
 3.83814394e-01
@@ -31490,7 +30741,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000149
+objAddr = 00000142
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -31585,7 +30836,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000014A
+objAddr = 00000143
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -31680,7 +30931,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000014B
+objAddr = 00000144
 transform [1] =
   right.x [1] =
 -9.89416242e-01
@@ -31775,7 +31026,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000014C
+objAddr = 00000145
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -31870,7 +31121,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000014D
+objAddr = 00000146
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -31965,7 +31216,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000014E
+objAddr = 00000147
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -32060,7 +31311,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000014F
+objAddr = 00000148
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -32155,7 +31406,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000150
+objAddr = 00000149
 transform [1] =
   right.x [1] =
 3.04745257e-01
@@ -32250,7 +31501,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000151
+objAddr = 0000014A
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -32345,7 +31596,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000152
+objAddr = 0000014B
 transform [1] =
   right.x [1] =
 9.63469505e-01
@@ -32440,7 +31691,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000153
+objAddr = 0000014C
 transform [1] =
   right.x [1] =
 9.63469505e-01
@@ -32535,7 +31786,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000154
+objAddr = 0000014D
 transform [1] =
   right.x [1] =
 9.41629171e-01
@@ -32630,7 +31881,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000155
+objAddr = 0000014E
 transform [1] =
   right.x [1] =
 -4.91177857e-01
@@ -32725,7 +31976,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000156
+objAddr = 0000014F
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -32820,7 +32071,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000157
+objAddr = 00000150
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -32915,7 +32166,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000158
+objAddr = 00000151
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -33010,7 +32261,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000159
+objAddr = 00000152
 transform [1] =
   right.x [1] =
 -3.76316875e-01
@@ -33105,7 +32356,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000015A
+objAddr = 00000153
 transform [1] =
   right.x [1] =
 -7.52174020e-01
@@ -33200,7 +32451,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000015B
+objAddr = 00000154
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -33295,7 +32546,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000015C
+objAddr = 00000155
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -33390,7 +32641,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000015D
+objAddr = 00000156
 transform [1] =
   right.x [1] =
 -5.72859168e-01
@@ -33485,7 +32736,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000015E
+objAddr = 00000157
 transform [1] =
   right.x [1] =
 -7.37486482e-01
@@ -33580,7 +32831,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000015F
+objAddr = 00000158
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -33675,7 +32926,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000160
+objAddr = 00000159
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -33770,7 +33021,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000161
+objAddr = 0000015A
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -33865,7 +33116,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000162
+objAddr = 0000015B
 transform [1] =
   right.x [1] =
 -9.23911512e-01
@@ -33960,7 +33211,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000163
+objAddr = 0000015C
 transform [1] =
   right.x [1] =
 9.84155536e-02
@@ -34055,7 +33306,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000164
+objAddr = 0000015D
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -34150,7 +33401,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000165
+objAddr = 0000015E
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -34245,7 +33496,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000166
+objAddr = 0000015F
 transform [1] =
   right.x [1] =
 -4.71524119e-01
@@ -34340,7 +33591,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000167
+objAddr = 00000160
 transform [1] =
   right.x [1] =
 -4.71524119e-01
@@ -34435,7 +33686,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000168
+objAddr = 00000161
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -34530,7 +33781,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000169
+objAddr = 00000162
 transform [1] =
   right.x [1] =
 -6.24323010e-01
@@ -34625,7 +33876,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000016A
+objAddr = 00000163
 transform [1] =
   right.x [1] =
 -6.24323010e-01
@@ -34720,7 +33971,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000016B
+objAddr = 00000164
 transform [1] =
   right.x [1] =
 -8.98646355e-01
@@ -34815,7 +34066,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000016C
+objAddr = 00000165
 transform [1] =
   right.x [1] =
 -8.98646355e-01
@@ -34910,7 +34161,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000016D
+objAddr = 00000166
 transform [1] =
   right.x [1] =
 -8.98646355e-01
@@ -35005,7 +34256,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000016E
+objAddr = 00000167
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -35100,7 +34351,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000016F
+objAddr = 00000168
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -35195,7 +34446,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000170
+objAddr = 00000169
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -35290,7 +34541,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000171
+objAddr = 0000016A
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -35385,7 +34636,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000172
+objAddr = 0000016B
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -35480,7 +34731,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000173
+objAddr = 0000016C
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -35575,7 +34826,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000174
+objAddr = 0000016D
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -35670,7 +34921,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000175
+objAddr = 0000016E
 transform [1] =
   right.x [1] =
 -8.99441242e-01
@@ -35765,7 +35016,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000176
+objAddr = 0000016F
 transform [1] =
   right.x [1] =
 -8.99441242e-01
@@ -35860,7 +35111,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000177
+objAddr = 00000170
 transform [1] =
   right.x [1] =
 1.40712991e-01
@@ -35955,7 +35206,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000178
+objAddr = 00000171
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -36050,7 +35301,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000179
+objAddr = 00000172
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -36145,7 +35396,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000017A
+objAddr = 00000173
 transform [1] =
   right.x [1] =
 4.31947529e-01
@@ -36240,7 +35491,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000017B
+objAddr = 00000174
 transform [1] =
   right.x [1] =
 4.31947529e-01
@@ -36335,7 +35586,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000017C
+objAddr = 00000175
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -36430,7 +35681,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000017D
+objAddr = 00000176
 transform [1] =
   right.x [1] =
 -2.13356223e-02
@@ -36525,7 +35776,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000017E
+objAddr = 00000177
 transform [1] =
   right.x [1] =
 -2.13356223e-02
@@ -36620,7 +35871,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000017F
+objAddr = 00000178
 transform [1] =
   right.x [1] =
 -2.13356223e-02
@@ -36715,7 +35966,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000180
+objAddr = 00000179
 transform [1] =
   right.x [1] =
 -2.13356223e-02
@@ -36810,7 +36061,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000181
+objAddr = 0000017A
 transform [1] =
   right.x [1] =
 -5.74788213e-01
@@ -36905,7 +36156,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000182
+objAddr = 0000017B
 transform [1] =
   right.x [1] =
 -5.87123096e-01
@@ -37000,7 +36251,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000183
+objAddr = 0000017C
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -37095,7 +36346,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000184
+objAddr = 0000017D
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -37190,7 +36441,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000185
+objAddr = 0000017E
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -37285,7 +36536,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000186
+objAddr = 0000017F
 transform [1] =
   right.x [1] =
 -1.95106566e-01
@@ -37380,7 +36631,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000187
+objAddr = 00000180
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -37475,7 +36726,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000188
+objAddr = 00000181
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -37570,7 +36821,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000189
+objAddr = 00000182
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -37665,7 +36916,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000018A
+objAddr = 00000183
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -37760,7 +37011,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000018B
+objAddr = 00000184
 transform [1] =
   right.x [1] =
 2.69666612e-01
@@ -37855,7 +37106,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000018C
+objAddr = 00000185
 transform [1] =
   right.x [1] =
 2.69666612e-01
@@ -37950,7 +37201,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000018D
+objAddr = 00000186
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -38045,7 +37296,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000018E
+objAddr = 00000187
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -38140,7 +37391,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000018F
+objAddr = 00000188
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -38235,7 +37486,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000190
+objAddr = 00000189
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -38330,7 +37581,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000191
+objAddr = 0000018A
 transform [1] =
   right.x [1] =
 -7.86095679e-01
@@ -38425,7 +37676,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000192
+objAddr = 0000018B
 transform [1] =
   right.x [1] =
 -7.86095679e-01
@@ -38520,7 +37771,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000193
+objAddr = 0000018C
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -38615,7 +37866,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000194
+objAddr = 0000018D
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -38710,7 +37961,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000195
+objAddr = 0000018E
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -38805,7 +38056,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000196
+objAddr = 0000018F
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -38900,7 +38151,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000197
+objAddr = 00000190
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -38995,7 +38246,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000198
+objAddr = 00000191
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -39090,7 +38341,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000199
+objAddr = 00000192
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -39185,7 +38436,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000019A
+objAddr = 00000193
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -39280,7 +38531,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000019B
+objAddr = 00000194
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -39375,7 +38626,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000019C
+objAddr = 00000195
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -39470,7 +38721,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000019D
+objAddr = 00000196
 transform [1] =
   right.x [1] =
 -5.63670337e-01
@@ -39565,7 +38816,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000019E
+objAddr = 00000197
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -39660,7 +38911,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000019F
+objAddr = 00000198
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -39755,7 +39006,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001A0
+objAddr = 00000199
 transform [1] =
   right.x [1] =
 9.21240449e-01
@@ -39850,7 +39101,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001A1
+objAddr = 0000019A
 transform [1] =
   right.x [1] =
 9.96442556e-01
@@ -39945,7 +39196,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001A2
+objAddr = 0000019B
 transform [1] =
   right.x [1] =
 5.10894477e-01
@@ -40040,7 +39291,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001A3
+objAddr = 0000019C
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -40135,7 +39386,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001A4
+objAddr = 0000019D
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -40230,7 +39481,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001A5
+objAddr = 0000019E
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -40325,7 +39576,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001A6
+objAddr = 0000019F
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -40420,7 +39671,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001A7
+objAddr = 000001A0
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -40515,7 +39766,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001A8
+objAddr = 000001A1
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -40610,7 +39861,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001A9
+objAddr = 000001A2
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -40705,7 +39956,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001AA
+objAddr = 000001A3
 transform [1] =
   right.x [1] =
 -8.07811260e-01
@@ -40800,7 +40051,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001AB
+objAddr = 000001A4
 transform [1] =
   right.x [1] =
 -8.07811260e-01
@@ -40895,7 +40146,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001AC
+objAddr = 000001A5
 transform [1] =
   right.x [1] =
 6.82589859e-02
@@ -40990,7 +40241,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001AD
+objAddr = 000001A6
 transform [1] =
   right.x [1] =
 6.82590902e-02
@@ -41085,7 +40336,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001AE
+objAddr = 000001A7
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -41180,7 +40431,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001AF
+objAddr = 000001A8
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -41275,7 +40526,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001B0
+objAddr = 000001A9
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -41370,7 +40621,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001B1
+objAddr = 000001AA
 transform [1] =
   right.x [1] =
 -1.59900054e-01
@@ -41465,7 +40716,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001B2
+objAddr = 000001AB
 transform [1] =
   right.x [1] =
 -4.60832603e-02
@@ -41560,7 +40811,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001B3
+objAddr = 000001AC
 transform [1] =
   right.x [1] =
 -4.60832603e-02
@@ -41655,7 +40906,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001B4
+objAddr = 000001AD
 transform [1] =
   right.x [1] =
 -4.60832603e-02
@@ -41750,7 +41001,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001B5
+objAddr = 000001AE
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -41845,7 +41096,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001B6
+objAddr = 000001AF
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -41940,7 +41191,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001B7
+objAddr = 000001B0
 transform [1] =
   right.x [1] =
 6.26520291e-02
@@ -42035,7 +41286,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001B8
+objAddr = 000001B1
 transform [1] =
   right.x [1] =
 6.26520291e-02
@@ -42130,7 +41381,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001B9
+objAddr = 000001B2
 transform [1] =
   right.x [1] =
 7.21069098e-01
@@ -42225,7 +41476,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001BA
+objAddr = 000001B3
 transform [1] =
   right.x [1] =
 5.73735893e-01
@@ -42320,7 +41571,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001BB
+objAddr = 000001B4
 transform [1] =
   right.x [1] =
 9.94904459e-01
@@ -42415,7 +41666,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001BC
+objAddr = 000001B5
 transform [1] =
   right.x [1] =
 9.99032140e-01
@@ -42510,7 +41761,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001BD
+objAddr = 000001B6
 transform [1] =
   right.x [1] =
 9.89503860e-01
@@ -42605,7 +41856,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001BE
+objAddr = 000001B7
 transform [1] =
   right.x [1] =
 8.07575226e-01
@@ -42700,7 +41951,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001BF
+objAddr = 000001B8
 transform [1] =
   right.x [1] =
 -8.13613296e-01
@@ -42795,7 +42046,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001C0
+objAddr = 000001B9
 transform [1] =
   right.x [1] =
 -8.70106936e-01
@@ -42890,7 +42141,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001C1
+objAddr = 000001BA
 transform [1] =
   right.x [1] =
 3.99147481e-01
@@ -42985,7 +42236,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001C2
+objAddr = 000001BB
 transform [1] =
   right.x [1] =
 -4.75712776e-01
@@ -43080,7 +42331,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001C3
+objAddr = 000001BC
 transform [1] =
   right.x [1] =
 -4.74393725e-01
@@ -43175,7 +42426,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001C4
+objAddr = 000001BD
 transform [1] =
   right.x [1] =
 -8.74390543e-01
@@ -43270,7 +42521,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001C5
+objAddr = 000001BE
 transform [1] =
   right.x [1] =
 9.18322861e-01
@@ -43365,7 +42616,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001C6
+objAddr = 000001BF
 transform [1] =
   right.x [1] =
 8.14436197e-01
@@ -43460,7 +42711,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001C7
+objAddr = 000001C0
 transform [1] =
   right.x [1] =
 8.30285311e-01
@@ -43555,7 +42806,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001C8
+objAddr = 000001C1
 transform [1] =
   right.x [1] =
 -5.16003728e-01
@@ -43650,7 +42901,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001C9
+objAddr = 000001C2
 transform [1] =
   right.x [1] =
 -9.88706350e-01
@@ -43745,7 +42996,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001CA
+objAddr = 000001C3
 transform [1] =
   right.x [1] =
 -9.34496880e-01
@@ -43840,7 +43091,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001CB
+objAddr = 000001C4
 transform [1] =
   right.x [1] =
 -9.97509062e-01
@@ -43935,7 +43186,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001CC
+objAddr = 000001C5
 transform [1] =
   right.x [1] =
 -9.29823339e-01
@@ -44030,7 +43281,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001CD
+objAddr = 000001C6
 transform [1] =
   right.x [1] =
 -1.67043991e-02
@@ -44125,7 +43376,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001CE
+objAddr = 000001C7
 transform [1] =
   right.x [1] =
 3.35638300e-02
@@ -44220,7 +43471,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001CF
+objAddr = 000001C8
 transform [1] =
   right.x [1] =
 3.03538684e-02
@@ -44315,7 +43566,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001D0
+objAddr = 000001C9
 transform [1] =
   right.x [1] =
 1.57888122e-02
@@ -44410,7 +43661,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001D1
+objAddr = 000001CA
 transform [1] =
   right.x [1] =
 6.78402901e-01
@@ -44505,7 +43756,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001D2
+objAddr = 000001CB
 transform [1] =
   right.x [1] =
 5.55530131e-01
@@ -44600,7 +43851,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001D3
+objAddr = 000001CC
 transform [1] =
   right.x [1] =
 -9.65325236e-01
@@ -44695,7 +43946,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001D4
+objAddr = 000001CD
 transform [1] =
   right.x [1] =
 -8.94260168e-01
@@ -44790,7 +44041,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001D5
+objAddr = 000001CE
 transform [1] =
   right.x [1] =
 8.41700435e-01
@@ -44885,7 +44136,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001D6
+objAddr = 000001CF
 transform [1] =
   right.x [1] =
 8.89501035e-01
@@ -44980,7 +44231,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001D7
+objAddr = 000001D0
 transform [1] =
   right.x [1] =
 8.87313485e-01
@@ -45075,7 +44326,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001D8
+objAddr = 000001D1
 transform [1] =
   right.x [1] =
 6.85152471e-01
@@ -45170,7 +44421,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001D9
+objAddr = 000001D2
 transform [1] =
   right.x [1] =
 8.74328315e-01
@@ -45265,7 +44516,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001DA
+objAddr = 000001D3
 transform [1] =
   right.x [1] =
 4.64789867e-01
@@ -45360,7 +44611,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001DB
+objAddr = 000001D4
 transform [1] =
   right.x [1] =
 5.00969648e-01
@@ -45455,7 +44706,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001DC
+objAddr = 000001D5
 transform [1] =
   right.x [1] =
 5.06455004e-01
@@ -45550,7 +44801,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001DD
+objAddr = 000001D6
 transform [1] =
   right.x [1] =
 4.99287397e-01
@@ -45645,7 +44896,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001DE
+objAddr = 000001D7
 transform [1] =
   right.x [1] =
 9.45948601e-01
@@ -45740,7 +44991,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001DF
+objAddr = 000001D8
 transform [1] =
   right.x [1] =
 -5.49510181e-01
@@ -45835,7 +45086,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001E0
+objAddr = 000001D9
 transform [1] =
   right.x [1] =
 -8.96902263e-01
@@ -45930,7 +45181,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001E1
+objAddr = 000001DA
 transform [1] =
   right.x [1] =
 -8.90466571e-01
@@ -46025,7 +45276,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001E2
+objAddr = 000001DB
 transform [1] =
   right.x [1] =
 -3.41078401e-01
@@ -46120,7 +45371,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001E3
+objAddr = 000001DC
 transform [1] =
   right.x [1] =
 9.92694259e-01
@@ -46215,7 +45466,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001E4
+objAddr = 000001DD
 transform [1] =
   right.x [1] =
 -8.75438452e-01
@@ -46310,7 +45561,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001E5
+objAddr = 000001DE
 transform [1] =
   right.x [1] =
 -8.77176881e-01
@@ -46405,7 +45656,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001E6
+objAddr = 000001DF
 transform [1] =
   right.x [1] =
 -7.55619824e-01
@@ -46500,7 +45751,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001E7
+objAddr = 000001E0
 transform [1] =
   right.x [1] =
 5.10968208e-01
@@ -46595,7 +45846,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001E8
+objAddr = 000001E1
 transform [1] =
   right.x [1] =
 2.23629057e-01
@@ -46690,7 +45941,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001E9
+objAddr = 000001E2
 transform [1] =
   right.x [1] =
 2.18193099e-01
@@ -46785,7 +46036,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001EA
+objAddr = 000001E3
 transform [1] =
   right.x [1] =
 2.11503983e-01
@@ -46880,7 +46131,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001EB
+objAddr = 000001E4
 transform [1] =
   right.x [1] =
 2.20525250e-01
@@ -46975,7 +46226,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001EC
+objAddr = 000001E5
 transform [1] =
   right.x [1] =
 2.18532994e-01
@@ -47070,7 +46321,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001ED
+objAddr = 000001E6
 transform [1] =
   right.x [1] =
 -7.98215389e-01
@@ -47165,7 +46416,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001EE
+objAddr = 000001E7
 transform [1] =
   right.x [1] =
 -7.50645161e-01
@@ -47260,7 +46511,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001EF
+objAddr = 000001E8
 transform [1] =
   right.x [1] =
 -8.21814358e-01
@@ -47355,7 +46606,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001F0
+objAddr = 000001E9
 transform [1] =
   right.x [1] =
 -8.67501318e-01
@@ -47450,7 +46701,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001F1
+objAddr = 000001EA
 transform [1] =
   right.x [1] =
 -8.98248851e-01
@@ -47545,7 +46796,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001F2
+objAddr = 000001EB
 transform [1] =
   right.x [1] =
 -9.44135547e-01
@@ -47640,7 +46891,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001F3
+objAddr = 000001EC
 transform [1] =
   right.x [1] =
 -5.23523688e-01
@@ -47735,7 +46986,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001F4
+objAddr = 000001ED
 transform [1] =
   right.x [1] =
 7.83485413e-01
@@ -47830,7 +47081,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001F5
+objAddr = 000001EE
 transform [1] =
   right.x [1] =
 7.70310819e-01
@@ -47925,7 +47176,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001F6
+objAddr = 000001EF
 transform [1] =
   right.x [1] =
 7.92404830e-01
@@ -48020,7 +47271,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001F7
+objAddr = 000001F0
 transform [1] =
   right.x [1] =
 9.41643417e-01
@@ -48115,7 +47366,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001F8
+objAddr = 000001F1
 transform [1] =
   right.x [1] =
 9.42681193e-01
@@ -48210,7 +47461,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001F9
+objAddr = 000001F2
 transform [1] =
   right.x [1] =
 8.95128250e-01
@@ -48305,7 +47556,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001FA
+objAddr = 000001F3
 transform [1] =
   right.x [1] =
 1.73708610e-02
@@ -48400,7 +47651,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001FB
+objAddr = 000001F4
 transform [1] =
   right.x [1] =
 -3.34868059e-02
@@ -48495,7 +47746,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001FC
+objAddr = 000001F5
 transform [1] =
   right.x [1] =
 3.25028300e-01
@@ -48590,7 +47841,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001FD
+objAddr = 000001F6
 transform [1] =
   right.x [1] =
 3.04793745e-01
@@ -48685,7 +47936,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001FE
+objAddr = 000001F7
 transform [1] =
   right.x [1] =
 2.91825265e-01
@@ -48780,7 +48031,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000001FF
+objAddr = 000001F8
 transform [1] =
   right.x [1] =
 9.39058781e-01
@@ -48875,7 +48126,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000200
+objAddr = 000001F9
 transform [1] =
   right.x [1] =
 9.40370977e-01
@@ -48970,7 +48221,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000201
+objAddr = 000001FA
 transform [1] =
   right.x [1] =
 9.02200580e-01
@@ -49065,7 +48316,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000202
+objAddr = 000001FB
 transform [1] =
   right.x [1] =
 -8.88882995e-01
@@ -49160,7 +48411,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000203
+objAddr = 000001FC
 transform [1] =
   right.x [1] =
 9.70899165e-01
@@ -49255,7 +48506,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000204
+objAddr = 000001FD
 transform [1] =
   right.x [1] =
 9.99880970e-01
@@ -49350,7 +48601,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000205
+objAddr = 000001FE
 transform [1] =
   right.x [1] =
 9.99978006e-01
@@ -49445,7 +48696,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000206
+objAddr = 000001FF
 transform [1] =
   right.x [1] =
 8.90697479e-01
@@ -49540,7 +48791,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000207
+objAddr = 00000200
 transform [1] =
   right.x [1] =
 9.99185503e-01
@@ -49635,7 +48886,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000208
+objAddr = 00000201
 transform [1] =
   right.x [1] =
 9.99822497e-01
@@ -49730,7 +48981,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000209
+objAddr = 00000202
 transform [1] =
   right.x [1] =
 9.89884198e-01
@@ -49825,7 +49076,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000020A
+objAddr = 00000203
 transform [1] =
   right.x [1] =
 9.89802480e-01
@@ -49920,7 +49171,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000020B
+objAddr = 00000204
 transform [1] =
   right.x [1] =
 9.91997123e-01
@@ -50015,7 +49266,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000020C
+objAddr = 00000205
 transform [1] =
   right.x [1] =
 -8.63650888e-02
@@ -50110,7 +49361,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000020D
+objAddr = 00000206
 transform [1] =
   right.x [1] =
 -8.40556920e-02
@@ -50205,7 +49456,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000020E
+objAddr = 00000207
 transform [1] =
   right.x [1] =
 -8.28911588e-02
@@ -50300,7 +49551,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000020F
+objAddr = 00000208
 transform [1] =
   right.x [1] =
 -7.32807368e-02
@@ -50395,7 +49646,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000210
+objAddr = 00000209
 transform [1] =
   right.x [1] =
 6.00561142e-01
@@ -50490,7 +49741,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000211
+objAddr = 0000020A
 transform [1] =
   right.x [1] =
 6.06374860e-01
@@ -50585,7 +49836,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000212
+objAddr = 0000020B
 transform [1] =
   right.x [1] =
 6.09606624e-01
@@ -50680,7 +49931,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000213
+objAddr = 0000020C
 transform [1] =
   right.x [1] =
 7.21963882e-01
@@ -50775,7 +50026,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000214
+objAddr = 0000020D
 transform [1] =
   right.x [1] =
 7.22132146e-01
@@ -50870,7 +50121,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000215
+objAddr = 0000020E
 transform [1] =
   right.x [1] =
 7.22503304e-01
@@ -50965,7 +50216,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000216
+objAddr = 0000020F
 transform [1] =
   right.x [1] =
 7.22162962e-01
@@ -51060,7 +50311,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000217
+objAddr = 00000210
 transform [1] =
   right.x [1] =
 7.16536939e-01
@@ -51155,7 +50406,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000218
+objAddr = 00000211
 transform [1] =
   right.x [1] =
 7.22544551e-01
@@ -51250,7 +50501,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000219
+objAddr = 00000212
 transform [1] =
   right.x [1] =
 5.42355537e-01
@@ -51345,7 +50596,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000021A
+objAddr = 00000213
 transform [1] =
   right.x [1] =
 5.43080986e-01
@@ -51440,7 +50691,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000021B
+objAddr = 00000214
 transform [1] =
   right.x [1] =
 5.19939303e-01
@@ -51535,7 +50786,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000021C
+objAddr = 00000215
 transform [1] =
   right.x [1] =
 5.40766895e-01
@@ -51630,7 +50881,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000021D
+objAddr = 00000216
 transform [1] =
   right.x [1] =
 -2.15277150e-01
@@ -51725,7 +50976,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000021E
+objAddr = 00000217
 transform [1] =
   right.x [1] =
 -2.15870664e-01
@@ -51820,7 +51071,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000021F
+objAddr = 00000218
 transform [1] =
   right.x [1] =
 -2.05409214e-01
@@ -51915,7 +51166,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000220
+objAddr = 00000219
 transform [1] =
   right.x [1] =
 -2.05680400e-01
@@ -52010,7 +51261,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000221
+objAddr = 0000021A
 transform [1] =
   right.x [1] =
 -9.85038504e-02
@@ -52105,7 +51356,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000222
+objAddr = 0000021B
 transform [1] =
   right.x [1] =
 -1.38953760e-01
@@ -52200,7 +51451,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000223
+objAddr = 0000021C
 transform [1] =
   right.x [1] =
 -2.10147113e-01
@@ -52295,7 +51546,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000224
+objAddr = 0000021D
 transform [1] =
   right.x [1] =
 -2.16301128e-01
@@ -52390,7 +51641,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000225
+objAddr = 0000021E
 transform [1] =
   right.x [1] =
 -2.16211915e-01
@@ -52485,7 +51736,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000226
+objAddr = 0000021F
 transform [1] =
   right.x [1] =
 8.09699178e-01
@@ -52580,7 +51831,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000227
+objAddr = 00000220
 transform [1] =
   right.x [1] =
 8.23823392e-01
@@ -52675,7 +51926,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000228
+objAddr = 00000221
 transform [1] =
   right.x [1] =
 8.31131637e-01
@@ -52770,7 +52021,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000229
+objAddr = 00000222
 transform [1] =
   right.x [1] =
 8.88119161e-01
@@ -52865,7 +52116,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000022A
+objAddr = 00000223
 transform [1] =
   right.x [1] =
 8.88143182e-01
@@ -52960,7 +52211,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000022B
+objAddr = 00000224
 transform [1] =
   right.x [1] =
 8.75029802e-01
@@ -53055,7 +52306,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000022C
+objAddr = 00000225
 transform [1] =
   right.x [1] =
 8.86342406e-01
@@ -53150,7 +52401,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000022D
+objAddr = 00000226
 transform [1] =
   right.x [1] =
 8.88064265e-01
@@ -53245,7 +52496,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000022E
+objAddr = 00000227
 transform [1] =
   right.x [1] =
 8.88076723e-01
@@ -53340,7 +52591,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000022F
+objAddr = 00000228
 transform [1] =
   right.x [1] =
 8.92292261e-01
@@ -53435,7 +52686,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000230
+objAddr = 00000229
 transform [1] =
   right.x [1] =
 8.84333074e-01
@@ -53530,7 +52781,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000231
+objAddr = 0000022A
 transform [1] =
   right.x [1] =
 8.87970150e-01
@@ -53625,7 +52876,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000232
+objAddr = 0000022B
 transform [1] =
   right.x [1] =
 8.84170473e-01
@@ -53720,7 +52971,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000233
+objAddr = 0000022C
 transform [1] =
   right.x [1] =
 8.87754560e-01
@@ -53815,7 +53066,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000234
+objAddr = 0000022D
 transform [1] =
   right.x [1] =
 8.86909902e-01
@@ -53910,7 +53161,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000235
+objAddr = 0000022E
 transform [1] =
   right.x [1] =
 8.86641264e-01
@@ -54005,7 +53256,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000236
+objAddr = 0000022F
 transform [1] =
   right.x [1] =
 8.83585215e-01
@@ -54100,7 +53351,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000237
+objAddr = 00000230
 transform [1] =
   right.x [1] =
 8.84049237e-01
@@ -54195,7 +53446,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000238
+objAddr = 00000231
 transform [1] =
   right.x [1] =
 8.73450041e-01
@@ -54290,7 +53541,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000239
+objAddr = 00000232
 transform [1] =
   right.x [1] =
 8.24449480e-01
@@ -54385,7 +53636,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000023A
+objAddr = 00000233
 transform [1] =
   right.x [1] =
 8.85960817e-01
@@ -54480,7 +53731,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000023B
+objAddr = 00000234
 transform [1] =
   right.x [1] =
 8.88068318e-01
@@ -54575,7 +53826,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000023C
+objAddr = 00000235
 transform [1] =
   right.x [1] =
 8.70085299e-01
@@ -54670,7 +53921,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000023D
+objAddr = 00000236
 transform [1] =
   right.x [1] =
 8.58124137e-01
@@ -54765,7 +54016,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000023E
+objAddr = 00000237
 transform [1] =
   right.x [1] =
 8.50598037e-01
@@ -54860,7 +54111,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000023F
+objAddr = 00000238
 transform [1] =
   right.x [1] =
 9.11585927e-01
@@ -54955,7 +54206,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000240
+objAddr = 00000239
 transform [1] =
   right.x [1] =
 2.67976373e-01
@@ -55050,7 +54301,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000241
+objAddr = 0000023A
 transform [1] =
   right.x [1] =
 3.00758481e-01
@@ -55145,7 +54396,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000242
+objAddr = 0000023B
 transform [1] =
   right.x [1] =
 2.49253839e-01
@@ -55240,7 +54491,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000243
+objAddr = 0000023C
 transform [1] =
   right.x [1] =
 2.29475334e-01
@@ -55335,7 +54586,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000244
+objAddr = 0000023D
 transform [1] =
   right.x [1] =
 2.54196197e-01
@@ -55430,7 +54681,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000245
+objAddr = 0000023E
 transform [1] =
   right.x [1] =
 2.65926391e-01
@@ -55525,7 +54776,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000246
+objAddr = 0000023F
 transform [1] =
   right.x [1] =
 2.69811451e-01
@@ -55620,7 +54871,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000247
+objAddr = 00000240
 transform [1] =
   right.x [1] =
 2.68004298e-01
@@ -55715,7 +54966,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000248
+objAddr = 00000241
 transform [1] =
   right.x [1] =
 2.68229991e-01
@@ -55810,7 +55061,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000249
+objAddr = 00000242
 transform [1] =
   right.x [1] =
 2.64401942e-01
@@ -55905,7 +55156,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000024A
+objAddr = 00000243
 transform [1] =
   right.x [1] =
 2.69582510e-01
@@ -56000,7 +55251,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000024B
+objAddr = 00000244
 transform [1] =
   right.x [1] =
 2.66229570e-01
@@ -56095,7 +55346,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000024C
+objAddr = 00000245
 transform [1] =
   right.x [1] =
 2.63322473e-01
@@ -56190,7 +55441,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000024D
+objAddr = 00000246
 transform [1] =
   right.x [1] =
 2.66431719e-01
@@ -56285,7 +55536,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000024E
+objAddr = 00000247
 transform [1] =
   right.x [1] =
 2.67184049e-01
@@ -56380,7 +55631,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000024F
+objAddr = 00000248
 transform [1] =
   right.x [1] =
 2.64816761e-01
@@ -56475,7 +55726,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000250
+objAddr = 00000249
 transform [1] =
   right.x [1] =
 2.68378019e-01
@@ -56570,7 +55821,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000251
+objAddr = 0000024A
 transform [1] =
   right.x [1] =
 2.65245348e-01
@@ -56665,7 +55916,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000252
+objAddr = 0000024B
 transform [1] =
   right.x [1] =
 2.72478908e-01
@@ -56760,7 +56011,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000253
+objAddr = 0000024C
 transform [1] =
   right.x [1] =
 2.68940091e-01
@@ -56855,7 +56106,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000254
+objAddr = 0000024D
 transform [1] =
   right.x [1] =
 2.64822781e-01
@@ -56950,7 +56201,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000255
+objAddr = 0000024E
 transform [1] =
   right.x [1] =
 2.72634476e-01
@@ -57045,7 +56296,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000256
+objAddr = 0000024F
 transform [1] =
   right.x [1] =
 2.69494116e-01
@@ -57140,7 +56391,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000257
+objAddr = 00000250
 transform [1] =
   right.x [1] =
 2.66733438e-01
@@ -57235,7 +56486,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000258
+objAddr = 00000251
 transform [1] =
   right.x [1] =
 2.64295757e-01
@@ -57330,7 +56581,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000259
+objAddr = 00000252
 transform [1] =
   right.x [1] =
 2.62338996e-01
@@ -57425,7 +56676,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000025A
+objAddr = 00000253
 transform [1] =
   right.x [1] =
 2.69912452e-01
@@ -57520,7 +56771,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000025B
+objAddr = 00000254
 transform [1] =
   right.x [1] =
 -2.57147551e-01
@@ -57615,7 +56866,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000025C
+objAddr = 00000255
 transform [1] =
   right.x [1] =
 5.04794955e-01
@@ -57710,7 +56961,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000025D
+objAddr = 00000256
 transform [1] =
   right.x [1] =
 5.00181079e-01
@@ -57805,7 +57056,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000025E
+objAddr = 00000257
 transform [1] =
   right.x [1] =
 5.07010281e-01
@@ -57900,7 +57151,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000025F
+objAddr = 00000258
 transform [1] =
   right.x [1] =
 4.99978453e-01
@@ -57995,7 +57246,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000260
+objAddr = 00000259
 transform [1] =
   right.x [1] =
 5.04397333e-01
@@ -58090,7 +57341,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000261
+objAddr = 0000025A
 transform [1] =
   right.x [1] =
 5.01956403e-01
@@ -58185,7 +57436,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000262
+objAddr = 0000025B
 transform [1] =
   right.x [1] =
 5.04069448e-01
@@ -58280,7 +57531,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000263
+objAddr = 0000025C
 transform [1] =
   right.x [1] =
 5.05785584e-01
@@ -58375,7 +57626,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000264
+objAddr = 0000025D
 transform [1] =
   right.x [1] =
 -9.06857610e-01
@@ -58470,7 +57721,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000265
+objAddr = 0000025E
 transform [1] =
   right.x [1] =
 -9.06857610e-01
@@ -58565,7 +57816,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000266
+objAddr = 0000025F
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -58660,7 +57911,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000267
+objAddr = 00000260
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -58755,7 +58006,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000268
+objAddr = 00000261
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -58850,7 +58101,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000269
+objAddr = 00000262
 transform [1] =
   right.x [1] =
 5.35735071e-01
@@ -58945,7 +58196,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000026A
+objAddr = 00000263
 transform [1] =
   right.x [1] =
 5.35735071e-01
@@ -59040,7 +58291,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000026B
+objAddr = 00000264
 transform [1] =
   right.x [1] =
 5.35735071e-01
@@ -59135,7 +58386,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000026C
+objAddr = 00000265
 transform [1] =
   right.x [1] =
 5.35735071e-01
@@ -59230,7 +58481,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000026D
+objAddr = 00000266
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -59325,7 +58576,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000026E
+objAddr = 00000267
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -59420,7 +58671,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000026F
+objAddr = 00000268
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -59515,7 +58766,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000270
+objAddr = 00000269
 transform [1] =
   right.x [1] =
 1.75378341e-02
@@ -59610,7 +58861,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000271
+objAddr = 0000026A
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -59705,7 +58956,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000272
+objAddr = 0000026B
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -59800,7 +59051,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000273
+objAddr = 0000026C
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -59895,7 +59146,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000274
+objAddr = 0000026D
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -59990,7 +59241,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000275
+objAddr = 0000026E
 transform [1] =
   right.x [1] =
 9.75752413e-01
@@ -60085,7 +59336,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000276
+objAddr = 0000026F
 transform [1] =
   right.x [1] =
 9.75752413e-01
@@ -60180,7 +59431,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000277
+objAddr = 00000270
 transform [1] =
   right.x [1] =
 -7.77902067e-01
@@ -60275,7 +59526,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000278
+objAddr = 00000271
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -60370,7 +59621,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000279
+objAddr = 00000272
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -60465,7 +59716,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000027A
+objAddr = 00000273
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -60560,7 +59811,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000027B
+objAddr = 00000274
 transform [1] =
   right.x [1] =
 9.69043553e-01
@@ -60655,7 +59906,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000027C
+objAddr = 00000275
 transform [1] =
   right.x [1] =
 9.69043553e-01
@@ -60750,7 +60001,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000027D
+objAddr = 00000276
 transform [1] =
   right.x [1] =
 9.69043553e-01
@@ -60845,7 +60096,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000027E
+objAddr = 00000277
 transform [1] =
   right.x [1] =
 9.69043553e-01
@@ -60940,7 +60191,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000027F
+objAddr = 00000278
 transform [1] =
   right.x [1] =
 -4.42943096e-01
@@ -61035,7 +60286,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000280
+objAddr = 00000279
 transform [1] =
   right.x [1] =
 -4.42943096e-01
@@ -61130,7 +60381,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000281
+objAddr = 0000027A
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -61225,7 +60476,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000282
+objAddr = 0000027B
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -61320,7 +60571,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000283
+objAddr = 0000027C
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -61415,7 +60666,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000284
+objAddr = 0000027D
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -61510,7 +60761,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000285
+objAddr = 0000027E
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -61605,7 +60856,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000286
+objAddr = 0000027F
 transform [1] =
   right.x [1] =
 4.66459095e-01
@@ -61700,7 +60951,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000287
+objAddr = 00000280
 transform [1] =
   right.x [1] =
 4.66459095e-01
@@ -61795,7 +61046,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000288
+objAddr = 00000281
 transform [1] =
   right.x [1] =
 1.69036478e-01
@@ -61890,7 +61141,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000289
+objAddr = 00000282
 transform [1] =
   right.x [1] =
 2.42534354e-01
@@ -61985,7 +61236,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000028A
+objAddr = 00000283
 transform [1] =
   right.x [1] =
 -3.39749515e-01
@@ -62080,7 +61331,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000028B
+objAddr = 00000284
 transform [1] =
   right.x [1] =
 -6.69848800e-01
@@ -62175,7 +61426,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000028C
+objAddr = 00000285
 transform [1] =
   right.x [1] =
 9.35947895e-01
@@ -62270,7 +61521,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000028D
+objAddr = 00000286
 transform [1] =
   right.x [1] =
 8.77429008e-01
@@ -62365,7 +61616,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000028E
+objAddr = 00000287
 transform [1] =
   right.x [1] =
 1.31306320e-01
@@ -62460,7 +61711,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000028F
+objAddr = 00000288
 transform [1] =
   right.x [1] =
 1.31306320e-01
@@ -62555,7 +61806,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000290
+objAddr = 00000289
 transform [1] =
   right.x [1] =
 3.31597924e-01
@@ -62650,7 +61901,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000291
+objAddr = 0000028A
 transform [1] =
   right.x [1] =
 -5.30581586e-02
@@ -62745,7 +61996,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000292
+objAddr = 0000028B
 transform [1] =
   right.x [1] =
 -5.30581586e-02
@@ -62840,7 +62091,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000293
+objAddr = 0000028C
 transform [1] =
   right.x [1] =
 -5.30581586e-02
@@ -62935,7 +62186,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000294
+objAddr = 0000028D
 transform [1] =
   right.x [1] =
 -8.61505449e-01
@@ -63030,7 +62281,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000295
+objAddr = 0000028E
 transform [1] =
   right.x [1] =
 4.33971107e-01
@@ -63125,7 +62376,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000296
+objAddr = 0000028F
 transform [1] =
   right.x [1] =
 4.33971107e-01
@@ -63220,7 +62471,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000297
+objAddr = 00000290
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -63315,7 +62566,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000298
+objAddr = 00000291
 transform [1] =
   right.x [1] =
 -7.46996164e-01
@@ -63410,7 +62661,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000299
+objAddr = 00000292
 transform [1] =
   right.x [1] =
 -7.46996164e-01
@@ -63506,7 +62757,7 @@ team [1] =
 label = jak1
 isUser [1] =
 false
-objAddr = 0000029A
+objAddr = 00000293
 transform [1] =
   right.x [1] =
 -4.45933461e-01
@@ -63610,7 +62861,7 @@ team [1] =
 label = ivrckt1
 isUser [1] =
 false
-objAddr = 0000029B
+objAddr = 00000294
 transform [1] =
   right.x [1] =
 -6.26412749e-01
@@ -63720,7 +62971,7 @@ team [1] =
 label = power
 isUser [1] =
 false
-objAddr = 0000029C
+objAddr = 00000295
 transform [1] =
   right.x [1] =
 8.88434470e-01
@@ -63816,7 +63067,7 @@ team [1] =
 label = isdf_scav1
 isUser [1] =
 false
-objAddr = 0000029D
+objAddr = 00000296
 transform [1] =
   right.x [1] =
 1.00000000e+00
@@ -63946,7 +63197,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000029E
+objAddr = 00000297
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -64041,7 +63292,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000029F
+objAddr = 00000298
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -64136,7 +63387,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002A0
+objAddr = 00000299
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -64231,7 +63482,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002A1
+objAddr = 0000029A
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -64326,7 +63577,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002A2
+objAddr = 0000029B
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -64421,7 +63672,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002A3
+objAddr = 0000029C
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -64516,7 +63767,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002A4
+objAddr = 0000029D
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -64611,7 +63862,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002A5
+objAddr = 0000029E
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -64706,7 +63957,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002A6
+objAddr = 0000029F
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -64801,7 +64052,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002A7
+objAddr = 000002A0
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -64896,7 +64147,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002A8
+objAddr = 000002A1
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -64991,7 +64242,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002A9
+objAddr = 000002A2
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -65086,7 +64337,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002AA
+objAddr = 000002A3
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -65181,7 +64432,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002AB
+objAddr = 000002A4
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -65276,7 +64527,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002AC
+objAddr = 000002A5
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -65371,7 +64622,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002AD
+objAddr = 000002A6
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -65466,7 +64717,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002AE
+objAddr = 000002A7
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -65561,7 +64812,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002AF
+objAddr = 000002A8
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -65656,7 +64907,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 000002B0
+objAddr = 000002A9
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -65752,7 +65003,7 @@ team [1] =
 label = ivrckt2
 isUser [1] =
 false
-objAddr = 000002B1
+objAddr = 000002AA
 transform [1] =
   right.x [1] =
 -9.53835130e-01
@@ -65862,7 +65113,7 @@ team [1] =
 label = ivrckt3
 isUser [1] =
 false
-objAddr = 000002B2
+objAddr = 000002AB
 transform [1] =
   right.x [1] =
 -9.60384369e-01
@@ -65972,7 +65223,7 @@ team [1] =
 label = ivrckt7
 isUser [1] =
 false
-objAddr = 000002B3
+objAddr = 000002AC
 transform [1] =
   right.x [1] =
 -7.90534914e-01
@@ -66082,7 +65333,7 @@ team [1] =
 label = ivrckt4
 isUser [1] =
 false
-objAddr = 000002B4
+objAddr = 000002AD
 transform [1] =
   right.x [1] =
 -9.99443054e-01
@@ -66192,7 +65443,7 @@ team [1] =
 label = ivrckt5
 isUser [1] =
 false
-objAddr = 000002B5
+objAddr = 000002AE
 transform [1] =
   right.x [1] =
 -8.69956851e-01
@@ -66302,7 +65553,7 @@ team [1] =
 label = ivrckt6
 isUser [1] =
 false
-objAddr = 000002B6
+objAddr = 000002AF
 transform [1] =
   right.x [1] =
 -9.81235683e-01
@@ -66404,22 +65655,22 @@ true
 independence [1] =
 1
 [GameObject]
-objClass = ibsbay
+objClass = fvrecy_vsr
 seqno [1] =
-1076
+1097
 team [1] =
-34
-label = aisbay
+17
+label = playersrecy
 isUser [1] =
 false
-objAddr = 000002B7
+objAddr = 000002B0
 transform [1] =
   right.x [1] =
-0.00000000e+00
+1.00000000e+00
   right.y [1] =
 0.00000000e+00
   right.z [1] =
-1.00000000e+00
+0.00000000e+00
   up.x [1] =
 0.00000000e+00
   up.y [1] =
@@ -66427,33 +65678,165 @@ transform [1] =
   up.z [1] =
 0.00000000e+00
   front.x [1] =
--1.00000000e+00
+0.00000000e+00
   front.y [1] =
 0.00000000e+00
   front.z [1] =
-0.00000000e+00
+1.00000000e+00
   posit.x [1] =
-2.24000000e+02
+-9.24476013e+01
   posit.y [1] =
-2.66000004e+01
+3.49552155e+01
   posit.z [1] =
--2.88000000e+02
-saveClass = 
+-1.30551965e+03
+buildMatrix [1] =
+  right.x [1] =
+1.00000000e+00
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+0.00000000e+00
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+0.00000000e+00
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+1.00000000e+00
+  posit.x [1] =
+-9.60000000e+01
+  posit.y [1] =
+3.49552155e+01
+  posit.z [1] =
+-1.31200000e+03
+state = 00000000
+deployTimer [1] =
+-1.00000002e+30
+abandoned [1] =
+0
+curAmmo [1] =
+0.00000000e+00
+maxAmmo [1] =
+0.00000000e+00
+addAmmo [1] =
+0.00000000e+00
+curPilot = 
 illumination [1] =
 1.00000000e+00
 euler =
  mass [1] =
-1.10599360e+07
+9.55544125e+05
  mass_inv [1] =
-9.04164352e-08
+1.04652418e-06
  v_mag [1] =
 0.00000000e+00
  v_mag_inv [1] =
 1.00000002e+30
  I [1] =
-9.86667622e+09
+1.33944992e+08
  k_i [1] =
-1.01351254e-10
+7.46575157e-09
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+8.00000012e-01
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Matriarch
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+0
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+true
+independence [1] =
+1
+[GameObject]
+objClass = ibcbun_vsr
+seqno [1] =
+10a0
+team [1] =
+34
+label = bunk
+isUser [1] =
+false
+objAddr = 000002B1
+transform [1] =
+  right.x [1] =
+-1.00000000e+00
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+0.00000000e+00
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+0.00000000e+00
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+-1.00000000e+00
+  posit.x [1] =
+1.60000000e+01
+  posit.y [1] =
+2.65999985e+01
+  posit.z [1] =
+-2.72000000e+02
+saveClass = 
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+1.02160831e+06
+ mass_inv [1] =
+9.78848675e-07
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+2.19393808e+08
+ k_i [1] =
+4.55801397e-09
  v [1] =
   x [1] =
 0.00000000e+00
@@ -66475,7 +65858,7 @@ euler =
 0.00000000e+00
   z [1] =
 0.00000000e+00
-name = Service Bay
+name = Relay Bunker
 saveFlags [1] =
 108
 isVisible [1] =
@@ -66483,7 +65866,103 @@ isVisible [1] =
 EffectsMask [1] =
 65535
 isSeen [1] =
-5
+0
+groupNumber [1] =
+-1
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+true
+independence [1] =
+1
+[GameObject]
+objClass = ibpgen_vsr
+seqno [1] =
+10a1
+team [1] =
+34
+label = power1
+isUser [1] =
+false
+objAddr = 000002B2
+transform [1] =
+  right.x [1] =
+1.00000000e+00
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+0.00000000e+00
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+0.00000000e+00
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+1.00000000e+00
+  posit.x [1] =
+1.60000000e+01
+  posit.y [1] =
+2.65999908e+01
+  posit.z [1] =
+-2.40000015e+02
+saveClass = 
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+2.05312013e+06
+ mass_inv [1] =
+4.87063573e-07
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+5.03014912e+08
+ k_i [1] =
+1.98801264e-09
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Power
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
 groupNumber [1] =
 -1
 undefaicmd =
@@ -66500,12 +65979,510 @@ false
 independence [1] =
 1
 [GameObject]
-objClass = ibrecy
+objClass = ibpgen_vsr
 seqno [1] =
-1077
+10a2
 team [1] =
 34
-label = recy1
+label = power2
+isUser [1] =
+false
+objAddr = 000002B3
+transform [1] =
+  right.x [1] =
+1.00000000e+00
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+0.00000000e+00
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+0.00000000e+00
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+1.00000000e+00
+  posit.x [1] =
+1.12000000e+02
+  posit.y [1] =
+2.65999985e+01
+  posit.z [1] =
+-2.08000000e+02
+saveClass = 
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+2.05312013e+06
+ mass_inv [1] =
+4.87063573e-07
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+5.03014912e+08
+ k_i [1] =
+1.98801264e-09
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Power
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+-1
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+false
+independence [1] =
+1
+[GameObject]
+objClass = ibpgen_vsr
+seqno [1] =
+10a3
+team [1] =
+34
+label = power3
+isUser [1] =
+false
+objAddr = 000002B4
+transform [1] =
+  right.x [1] =
+1.00000000e+00
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+0.00000000e+00
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+0.00000000e+00
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+1.00000000e+00
+  posit.x [1] =
+2.08000000e+02
+  posit.y [1] =
+2.65999985e+01
+  posit.z [1] =
+-2.40000000e+02
+saveClass = 
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+2.05312013e+06
+ mass_inv [1] =
+4.87063573e-07
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+5.03014912e+08
+ k_i [1] =
+1.98801264e-09
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Power
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+-1
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+false
+independence [1] =
+1
+[GameObject]
+objClass = ibfact_vsr
+seqno [1] =
+10a6
+team [1] =
+34
+label = fac
+isUser [1] =
+false
+objAddr = 000002B5
+transform [1] =
+  right.x [1] =
+-1.00000000e+00
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+0.00000000e+00
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+0.00000000e+00
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+-1.00000000e+00
+  posit.x [1] =
+9.60000000e+01
+  posit.y [1] =
+2.65999985e+01
+  posit.z [1] =
+-2.56000000e+02
+buildTime [1] =
+0.00000000e+00
+buildActive [1] =
+false
+buildCount [1] =
+0
+navHandle [1] =
+794824871
+saveClass = 
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+1.18520390e+07
+ mass_inv [1] =
+8.43736672e-08
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+1.07015270e+10
+ k_i [1] =
+9.34446062e-11
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Factory
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+-1
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+true
+independence [1] =
+1
+[GameObject]
+objClass = ipdrop
+seqno [1] =
+10a7
+team [1] =
+34
+label = autonav
+isUser [1] =
+false
+objAddr = 000002B6
+transform [1] =
+  right.x [1] =
+1.00000000e+00
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+0.00000000e+00
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+0.00000000e+00
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+1.00000000e+00
+  posit.x [1] =
+9.60000000e+01
+  posit.y [1] =
+2.65999985e+01
+  posit.z [1] =
+-2.16000000e+02
+name = Factory Drop Off
+navSlot [1] =
+-1
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+2.70674487e+03
+ mass_inv [1] =
+3.69447458e-04
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+1.38510283e+04
+ k_i [1] =
+7.21968026e-05
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Factory Drop Off
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+-1
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+false
+independence [1] =
+1
+[GameObject]
+objClass = ibarmo_vsr
+seqno [1] =
+10a8
+team [1] =
+34
+label = arm
+isUser [1] =
+false
+objAddr = 000002B7
+transform [1] =
+  right.x [1] =
+0.00000000e+00
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+-1.00000000e+00
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+1.00000000e+00
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+0.00000000e+00
+  posit.x [1] =
+4.80000000e+01
+  posit.y [1] =
+2.65999985e+01
+  posit.z [1] =
+-2.40000015e+02
+buildDoneTime [1] =
+0.00000000e+00
+buildActive [1] =
+false
+buildCount [1] =
+0
+navHandle [1] =
+796922025
+saveClass = 
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+1.58718825e+06
+ mass_inv [1] =
+6.30045008e-07
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+3.63187808e+08
+ k_i [1] =
+2.75339640e-09
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Armory
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+-1
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+true
+independence [1] =
+1
+[GameObject]
+objClass = ipdrop
+seqno [1] =
+10a9
+team [1] =
+34
+label = autonav
 isUser [1] =
 false
 objAddr = 000002B8
@@ -66529,37 +66506,29 @@ transform [1] =
   front.z [1] =
 1.00000000e+00
   posit.x [1] =
-1.60000000e+02
+6.40000000e+01
   posit.y [1] =
-2.66000004e+01
+2.66000023e+01
   posit.z [1] =
--2.56000000e+02
-scrapTimer [1] =
-3.00000000e+00
-buildTime [1] =
-0.00000000e+00
-buildActive [1] =
-false
-buildCount [1] =
-0
-navHandle [1] =
-776999062
-saveClass = 
+-2.40000015e+02
+name = Armory Drop Off
+navSlot [1] =
+-1
 illumination [1] =
 1.00000000e+00
 euler =
  mass [1] =
-6.24676050e+06
+2.70674487e+03
  mass_inv [1] =
-1.60082976e-07
+3.69447458e-04
  v_mag [1] =
 0.00000000e+00
  v_mag_inv [1] =
 1.00000002e+30
  I [1] =
-5.26264013e+09
+1.38510283e+04
  k_i [1] =
-1.90018695e-10
+7.21968026e-05
  v [1] =
   x [1] =
 0.00000000e+00
@@ -66581,7 +66550,7 @@ euler =
 0.00000000e+00
   z [1] =
 0.00000000e+00
-name = Recycler
+name = Armory Drop Off
 saveFlags [1] =
 108
 isVisible [1] =
@@ -66589,9 +66558,118 @@ isVisible [1] =
 EffectsMask [1] =
 65535
 isSeen [1] =
-5
+0
 groupNumber [1] =
 -1
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+false
+independence [1] =
+1
+[GameObject]
+objClass = ivturr_vsr
+seqno [1] =
+10aa
+team [1] =
+34
+label = unnamed_ivturr_vsr
+isUser [1] =
+false
+objAddr = 000002B9
+transform [1] =
+  right.x [1] =
+-8.74709785e-01
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+4.84647095e-01
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+-4.84644979e-01
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+-8.74705970e-01
+  posit.x [1] =
+1.55047623e+02
+  posit.y [1] =
+2.65997639e+01
+  posit.z [1] =
+-3.12615234e+02
+turretAligned [1] =
+true
+state = 00000000
+deployTimer [1] =
+-1.00000002e+30
+abandoned [1] =
+0
+curAmmo [1] =
+3.00000000e+03
+maxAmmo [1] =
+3.00000000e+03
+addAmmo [1] =
+4.00000000e+00
+curPilot = ispilo
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+7.08712988e+03
+ mass_inv [1] =
+1.41100842e-04
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+5.30461602e+04
+ k_i [1] =
+1.88515060e-05
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Turret
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+1
 undefaicmd =
 priority [1] =
 0
@@ -66606,14 +66684,223 @@ true
 independence [1] =
 1
 [GameObject]
-objClass = ibgtow
+objClass = ivmisl_vsr
 seqno [1] =
-801078
+10ad
 team [1] =
 34
+label = misl1
 isUser [1] =
 false
-objAddr = 000002B9
+objAddr = 000002BA
+transform [1] =
+  right.x [1] =
+-9.98855770e-01
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+4.78174835e-02
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+-4.78172749e-02
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+-9.98851418e-01
+  posit.x [1] =
+7.42829437e+01
+  posit.y [1] =
+2.86546669e+01
+  posit.z [1] =
+-3.51431152e+02
+abandoned [1] =
+0
+curAmmo [1] =
+2.50000000e+03
+maxAmmo [1] =
+2.50000000e+03
+addAmmo [1] =
+1.00000000e+00
+curPilot = ispilo
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+1.36665420e+04
+ mass_inv [1] =
+7.31714026e-05
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+1.69041688e+05
+ k_i [1] =
+5.91570051e-06
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Missile Scout
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+0
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+true
+independence [1] =
+1
+[GameObject]
+objClass = ivmisl_vsr
+seqno [1] =
+10b1
+team [1] =
+34
+label = misl2
+isUser [1] =
+false
+objAddr = 000002BB
+transform [1] =
+  right.x [1] =
+-9.96746957e-01
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+-8.05866718e-02
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+8.05863217e-02
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+-9.96742606e-01
+  posit.x [1] =
+1.34147156e+02
+  posit.y [1] =
+2.86546669e+01
+  posit.z [1] =
+-3.51717285e+02
+abandoned [1] =
+0
+curAmmo [1] =
+2.50000000e+03
+maxAmmo [1] =
+2.50000000e+03
+addAmmo [1] =
+1.00000000e+00
+curPilot = ispilo
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+1.36665420e+04
+ mass_inv [1] =
+7.31714026e-05
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+1.69041688e+05
+ k_i [1] =
+5.91570051e-06
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Missile Scout
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+0
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+true
+independence [1] =
+1
+[GameObject]
+objClass = ibgtow_vsr
+seqno [1] =
+10b5
+team [1] =
+34
+label = gt1
+isUser [1] =
+false
+objAddr = 000002BC
 transform [1] =
   right.x [1] =
 -1.00000000e+00
@@ -66636,7 +66923,7 @@ transform [1] =
   posit.x [1] =
 4.80000000e+01
   posit.y [1] =
-2.66000004e+01
+2.65999985e+01
   posit.z [1] =
 -3.04000000e+02
 saveClass = 
@@ -66687,21 +66974,15 @@ euler =
 0.00000000e+00
 name = Gun Tower
 saveFlags [1] =
-4
+76
 isVisible [1] =
 65535
 EffectsMask [1] =
 65535
 isSeen [1] =
-5
+0
 groupNumber [1] =
 -1
-curHealth [1] =
-2.50000000e+03
-maxHealth [1] =
-2.50000000e+03
-addHealth [1] =
-0.00000000e+00
 undefaicmd =
 priority [1] =
 1
@@ -66716,373 +66997,56 @@ true
 independence [1] =
 1
 [GameObject]
-objClass = ibcbun
+objClass = ibsbay_vsr
 seqno [1] =
-80107b
+10b8
 team [1] =
 34
-isUser [1] =
-false
-objAddr = 000002BA
-transform [1] =
-  right.x [1] =
--1.00000000e+00
-  right.y [1] =
-0.00000000e+00
-  right.z [1] =
-0.00000000e+00
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-1.00000000e+00
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
-0.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
--1.00000000e+00
-  posit.x [1] =
-1.60000000e+01
-  posit.y [1] =
-2.66000004e+01
-  posit.z [1] =
--2.72000000e+02
-saveClass = 
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-1.02160831e+06
- mass_inv [1] =
-9.78848675e-07
- v_mag [1] =
-0.00000000e+00
- v_mag_inv [1] =
-1.00000002e+30
- I [1] =
-2.19393808e+08
- k_i [1] =
-4.55801397e-09
- v [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
-name = Relay Bunker
-saveFlags [1] =
-108
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-5
-groupNumber [1] =
--1
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-true
-independence [1] =
-1
-[GameObject]
-objClass = ivmisl
-seqno [1] =
-107f
-team [1] =
-34
-label = misl1
-isUser [1] =
-false
-objAddr = 000002BB
-transform [1] =
-  right.x [1] =
--9.99995768e-01
-  right.y [1] =
-9.59440968e-07
-  right.z [1] =
-0.00000000e+00
-  up.x [1] =
-9.59440854e-07
-  up.y [1] =
-9.99995649e-01
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
-0.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
--9.99991417e-01
-  posit.x [1] =
-6.97894974e+01
-  posit.y [1] =
-2.86546650e+01
-  posit.z [1] =
--3.49888000e+02
-abandoned [1] =
-0
-curAmmo [1] =
-2.50000000e+03
-maxAmmo [1] =
-2.50000000e+03
-addAmmo [1] =
-1.00000000e+00
-curPilot = ispilo
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-1.36665420e+04
- mass_inv [1] =
-7.31714026e-05
- v_mag [1] =
-1.47211123e-02
- v_mag_inv [1] =
-6.79296494e+01
- I [1] =
-1.69041688e+05
- k_i [1] =
-5.91570051e-06
- v [1] =
-  x [1] =
-2.37287895e-06
-  y [1] =
--1.47211123e-02
-  z [1] =
-0.00000000e+00
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
-8.49868229e-08
-  y [1] =
-3.02219391e-02
-  z [1] =
-0.00000000e+00
-name = MSL Scout
-saveFlags [1] =
-100
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-5
-groupNumber [1] =
-0
-curHealth [1] =
-1.00000000e+03
-maxHealth [1] =
-1.00000000e+03
-addHealth [1] =
-0.00000000e+00
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-true
-independence [1] =
-1
-[GameObject]
-objClass = ivmisl
-seqno [1] =
-1090
-team [1] =
-34
-label = misl2
-isUser [1] =
-false
-objAddr = 000002BC
-transform [1] =
-  right.x [1] =
--9.99995768e-01
-  right.y [1] =
--9.59440968e-07
-  right.z [1] =
--5.43245841e-13
-  up.x [1] =
--9.59440854e-07
-  up.y [1] =
-9.99995649e-01
-  up.z [1] =
-9.59472573e-07
-  front.x [1] =
--3.77313794e-13
-  front.y [1] =
-9.59468480e-07
-  front.z [1] =
--9.99991417e-01
-  posit.x [1] =
-1.34257004e+02
-  posit.y [1] =
-2.86546650e+01
-  posit.z [1] =
--3.51873993e+02
-abandoned [1] =
-0
-curAmmo [1] =
-2.50000000e+03
-maxAmmo [1] =
-2.50000000e+03
-addAmmo [1] =
-1.00000000e+00
-curPilot = ispilo
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-1.36665420e+04
- mass_inv [1] =
-7.31714026e-05
- v_mag [1] =
-1.47211123e-02
- v_mag_inv [1] =
-6.79296494e+01
- I [1] =
-1.69041688e+05
- k_i [1] =
-5.91570051e-06
- v [1] =
-  x [1] =
--2.37287895e-06
-  y [1] =
--1.47211123e-02
-  z [1] =
-2.37289851e-06
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
--8.49868229e-08
-  y [1] =
-3.02219391e-02
-  z [1] =
-8.49777280e-08
-name = MSL Scout
-saveFlags [1] =
-100
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-5
-groupNumber [1] =
-0
-curHealth [1] =
-1.00000000e+03
-maxHealth [1] =
-1.00000000e+03
-addHealth [1] =
-0.00000000e+00
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-true
-independence [1] =
-1
-[GameObject]
-objClass = ipdrop
-seqno [1] =
-1094
-team [1] =
-34
-label = autonav
+label = bay
 isUser [1] =
 false
 objAddr = 000002BD
 transform [1] =
   right.x [1] =
-9.99995768e-01
+0.00000000e+00
   right.y [1] =
 0.00000000e+00
   right.z [1] =
-0.00000000e+00
+1.00000000e+00
   up.x [1] =
 0.00000000e+00
   up.y [1] =
-9.99995649e-01
+1.00000000e+00
   up.z [1] =
 0.00000000e+00
   front.x [1] =
-0.00000000e+00
+-1.00000000e+00
   front.y [1] =
 0.00000000e+00
   front.z [1] =
-9.99991417e-01
+0.00000000e+00
   posit.x [1] =
-9.60000000e+01
+2.24000000e+02
   posit.y [1] =
-2.66000004e+01
+2.65999985e+01
   posit.z [1] =
--2.20750000e+02
-name = Factory Drop Off
-navSlot [1] =
--1
+-2.88000000e+02
+saveClass = 
 illumination [1] =
 1.00000000e+00
 euler =
  mass [1] =
-2.70674487e+03
+1.10599360e+07
  mass_inv [1] =
-3.69447458e-04
+9.04164352e-08
  v_mag [1] =
 0.00000000e+00
  v_mag_inv [1] =
 1.00000002e+30
  I [1] =
-1.38510283e+04
+9.86667622e+09
  k_i [1] =
-7.21968026e-05
+1.01351254e-10
  v [1] =
   x [1] =
 0.00000000e+00
@@ -67104,7 +67068,7 @@ euler =
 0.00000000e+00
   z [1] =
 0.00000000e+00
-name = Factory Drop Off
+name = Service Bay
 saveFlags [1] =
 108
 isVisible [1] =
@@ -67112,7 +67076,7 @@ isVisible [1] =
 EffectsMask [1] =
 65535
 isSeen [1] =
-5
+0
 groupNumber [1] =
 -1
 undefaicmd =
@@ -67129,18 +67093,18 @@ false
 independence [1] =
 1
 [GameObject]
-objClass = ipdrop
+objClass = ibrecy_vsr
 seqno [1] =
-1095
+10b9
 team [1] =
 34
-label = autonav
+label = rec
 isUser [1] =
 false
 objAddr = 000002BE
 transform [1] =
   right.x [1] =
-9.99995768e-01
+1.00000000e+00
   right.y [1] =
 0.00000000e+00
   right.z [1] =
@@ -67148,7 +67112,7 @@ transform [1] =
   up.x [1] =
 0.00000000e+00
   up.y [1] =
-9.99995649e-01
+1.00000000e+00
   up.z [1] =
 0.00000000e+00
   front.x [1] =
@@ -67156,31 +67120,39 @@ transform [1] =
   front.y [1] =
 0.00000000e+00
   front.z [1] =
-9.99991417e-01
+1.00000000e+00
   posit.x [1] =
-8.00000000e+01
+1.60000000e+02
   posit.y [1] =
-3.24042282e+01
+2.65999985e+01
   posit.z [1] =
--2.40000000e+02
-name = Armory Drop Off
-navSlot [1] =
--1
+-2.56000000e+02
+scrapTimer [1] =
+3.00000000e+00
+buildTime [1] =
+0.00000000e+00
+buildActive [1] =
+false
+buildCount [1] =
+0
+navHandle [1] =
+814747834
+saveClass = 
 illumination [1] =
 1.00000000e+00
 euler =
  mass [1] =
-2.70674487e+03
+6.24676050e+06
  mass_inv [1] =
-3.69447458e-04
+1.60082976e-07
  v_mag [1] =
 0.00000000e+00
  v_mag_inv [1] =
 1.00000002e+30
  I [1] =
-1.38510283e+04
+5.26264013e+09
  k_i [1] =
-7.21968026e-05
+1.90018695e-10
  v [1] =
   x [1] =
 0.00000000e+00
@@ -67202,7 +67174,7 @@ euler =
 0.00000000e+00
   z [1] =
 0.00000000e+00
-name = Armory Drop Off
+name = Recycler
 saveFlags [1] =
 108
 isVisible [1] =
@@ -67210,7 +67182,7 @@ isVisible [1] =
 EffectsMask [1] =
 65535
 isSeen [1] =
-5
+0
 groupNumber [1] =
 -1
 undefaicmd =
@@ -67223,13 +67195,13 @@ where = 00000000
 param [1] =
 0
 aiProcess [1] =
-false
+true
 independence [1] =
 1
 [GameObject]
 objClass = ipdrop
 seqno [1] =
-1096
+10ba
 team [1] =
 34
 label = autonav
@@ -67238,7 +67210,7 @@ false
 objAddr = 000002BF
 transform [1] =
   right.x [1] =
-9.99995768e-01
+1.00000000e+00
   right.y [1] =
 0.00000000e+00
   right.z [1] =
@@ -67246,7 +67218,7 @@ transform [1] =
   up.x [1] =
 0.00000000e+00
   up.y [1] =
-9.99995649e-01
+1.00000000e+00
   up.z [1] =
 0.00000000e+00
   front.x [1] =
@@ -67254,13 +67226,13 @@ transform [1] =
   front.y [1] =
 0.00000000e+00
   front.z [1] =
-9.99991417e-01
+1.00000000e+00
   posit.x [1] =
 1.60000000e+02
   posit.y [1] =
 2.66000004e+01
   posit.z [1] =
--3.04362305e+02
+-3.04750000e+02
 name = Recycler Drop Off
 navSlot [1] =
 -1
@@ -67308,7 +67280,7 @@ isVisible [1] =
 EffectsMask [1] =
 65535
 isSeen [1] =
-5
+0
 groupNumber [1] =
 -1
 undefaicmd =
@@ -67546,6 +67518,19 @@ pathType = 00000000
 name = AiPath
 sObject = 000002C6
 size [1] =
+6
+label = aifact
+pointCount [1] =
+1
+points [1] =
+  x [1] =
+9.62273026e+01
+  z [1] =
+-2.56449005e+02
+pathType = 00000000
+name = AiPath
+sObject = 000002C7
+size [1] =
 9
 label = edge_path
 pointCount [1] =
@@ -67573,7 +67558,20 @@ points [5] =
 -1.70665002e+03
 pathType = 00000000
 name = AiPath
-sObject = 000002C7
+sObject = 000002C8
+size [1] =
+6
+label = aigtow
+pointCount [1] =
+1
+points [1] =
+  x [1] =
+4.81922989e+01
+  z [1] =
+-3.04282990e+02
+pathType = 00000000
+name = AiPath
+sObject = 000002C9
 size [1] =
 6
 label = path_3
@@ -67586,7 +67584,7 @@ points [1] =
 -1.19098999e+02
 pathType = 00000000
 name = AiPath
-sObject = 000002C8
+sObject = 000002CA
 size [1] =
 12
 label = misl1_patrol
@@ -67611,7 +67609,7 @@ points [4] =
 -3.18212006e+02
 pathType = 00000000
 name = AiPath
-sObject = 000002C9
+sObject = 000002CB
 size [1] =
 10
 label = playerbase
@@ -67624,7 +67622,7 @@ points [1] =
 -1.28407996e+03
 pathType = 00000000
 name = AiPath
-sObject = 000002CA
+sObject = 000002CC
 size [1] =
 11
 label = scout3point
@@ -67637,7 +67635,7 @@ points [1] =
 -3.53819000e+02
 pathType = 00000000
 name = AiPath
-sObject = 000002CB
+sObject = 000002CD
 size [1] =
 6
 label = spawn2
@@ -67650,7 +67648,7 @@ points [1] =
 -9.56354004e+02
 pathType = 00000000
 name = AiPath
-sObject = 000002CC
+sObject = 000002CE
 size [1] =
 9
 label = enemybase
@@ -67663,7 +67661,7 @@ points [1] =
 -3.07220001e+02
 pathType = 00000000
 name = AiPath
-sObject = 000002CD
+sObject = 000002CF
 size [1] =
 12
 label = jak_6_7_path
@@ -67688,33 +67686,20 @@ points [4] =
 -6.31421997e+02
 pathType = 00000000
 name = AiPath
-sObject = 000002CE
-size [1] =
-6
-label = aifact
-pointCount [1] =
-1
-points [1] =
-  x [1] =
-9.62273026e+01
-  z [1] =
--2.56449005e+02
-pathType = 00000000
-name = AiPath
-sObject = 000002CF
-size [1] =
-6
-label = aigtow
-pointCount [1] =
-1
-points [1] =
-  x [1] =
-4.81922989e+01
-  z [1] =
--3.04282990e+02
-pathType = 00000000
-name = AiPath
 sObject = 000002D0
+size [1] =
+6
+label = spawn1
+pointCount [1] =
+1
+points [1] =
+  x [1] =
+-5.21710999e+02
+  z [1] =
+-9.82693970e+02
+pathType = 00000000
+name = AiPath
+sObject = 000002D1
 size [1] =
 7
 label = aipgen2
@@ -67727,7 +67712,24 @@ points [1] =
 -2.07914001e+02
 pathType = 00000000
 name = AiPath
-sObject = 000002D1
+sObject = 000002D2
+size [1] =
+10
+label = jak_4_path
+pointCount [1] =
+2
+points [2] =
+  x [1] =
+3.82730988e+02
+  z [1] =
+-1.40072998e+02
+  x [1] =
+-9.31399994e+01
+  z [1] =
+-4.85812988e+02
+pathType = 00000000
+name = AiPath
+sObject = 000002D3
 size [1] =
 6
 label = spawn3
@@ -67740,7 +67742,20 @@ points [1] =
 -1.10643005e+03
 pathType = 00000000
 name = AiPath
-sObject = 000002D2
+sObject = 000002D4
+size [1] =
+7
+label = aipgen1
+pointCount [1] =
+1
+points [1] =
+  x [1] =
+2.08048004e+02
+  z [1] =
+-2.39947998e+02
+pathType = 00000000
+name = AiPath
+sObject = 000002D5
 size [1] =
 7
 label = aipgen3
@@ -67753,7 +67768,7 @@ points [1] =
 -2.40276001e+02
 pathType = 00000000
 name = AiPath
-sObject = 000002D3
+sObject = 000002D6
 size [1] =
 12
 label = misl2_patrol
@@ -67770,7 +67785,7 @@ points [2] =
 -4.69101990e+02
 pathType = 00000000
 name = AiPath
-sObject = 000002D4
+sObject = 000002D7
 size [1] =
 6
 label = aicbun
@@ -67783,7 +67798,7 @@ points [1] =
 -2.71764008e+02
 pathType = 00000000
 name = AiPath
-sObject = 000002D5
+sObject = 000002D8
 size [1] =
 6
 label = aisbay
@@ -67796,7 +67811,7 @@ points [1] =
 -2.87316010e+02
 pathType = 00000000
 name = AiPath
-sObject = 000002D6
+sObject = 000002D9
 size [1] =
 10
 label = jak_3_path
@@ -67821,7 +67836,7 @@ points [4] =
 -4.81843994e+02
 pathType = 00000000
 name = AiPath
-sObject = 000002D7
+sObject = 000002DA
 size [1] =
 12
 label = jak_1_2_path
@@ -67874,49 +67889,6 @@ points [11] =
 -1.01737000e+03
 pathType = 00000000
 name = AiPath
-sObject = 000002D8
-size [1] =
-6
-label = spawn1
-pointCount [1] =
-1
-points [1] =
-  x [1] =
--5.21710999e+02
-  z [1] =
--9.82693970e+02
-pathType = 00000000
-name = AiPath
-sObject = 000002D9
-size [1] =
-10
-label = jak_4_path
-pointCount [1] =
-2
-points [2] =
-  x [1] =
-3.82730988e+02
-  z [1] =
--1.40072998e+02
-  x [1] =
--9.31399994e+01
-  z [1] =
--4.85812988e+02
-pathType = 00000000
-name = AiPath
-sObject = 000002DA
-size [1] =
-7
-label = aipgen1
-pointCount [1] =
-1
-points [1] =
-  x [1] =
-2.08048004e+02
-  z [1] =
--2.39947998e+02
-pathType = 00000000
-name = AiPath
 sObject = 000002DB
 size [1] =
 5
@@ -67937,5 +67909,5 @@ ownerObj [1] =
 0
 ownerObj [1] =
 0
-PadData = 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+PadData = 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 PadData2 = 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

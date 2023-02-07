@@ -216,7 +216,7 @@ function Start() --This function is called upon the first frame
 	Mission.msg11 = nil
 	Mission.msg12 = nil
 	Mission.power = GetHandle("power")
-	Mission.recy1 = GetHandle("recy1")
+	Mission.recy1 = GetHandle("rec")
 	Mission.alpha1 = GetHandle("alpha1")
 	Mission.alpha2 = GetHandle("alpha2")
 	Mission.misl1 = GetHandle("misl1")
@@ -261,14 +261,8 @@ function Start() --This function is called upon the first frame
 	Mission.ivrckt6 = UnitToVSR(Mission.ivrckt6, "ivrckt_vsr", 0)
 	Mission.ivrckt7 = UnitToVSR(Mission.ivrckt7, "ivrckt_vsr", 0)
 
-	Mission.playersrecy = UnitToVSR(Mission.playersrecy, "fvrecy_vsr", 0)
-	SetGroup(Mission.playersrecy, 0)
 
-	Mission.misl1 = UnitToVSR(Mission.misl1, "ivmisl_vsr", 0)
-	Mission.misl2 = UnitToVSR(Mission.misl2, "ivmisl_vsr", 0)
-
-	Mission.recy1 = UnitToVSR(Mission.recy1, "ibrecy_vsr", 0)
-	Mission.fact = UnitToVSR(GetHandle("unnamed_ibfact"), "ibfact_vsr", 0)
+	Mission.isdf_scav1 = UnitToVSR(Mission.isdf_scav1, "ibscav_vsr", 0)
 
    
 end
@@ -277,35 +271,39 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
 	SetAsUser(h, PlayerTeam)
 	else
+
 	end
+
+	SetLabel(h, label)
 
 	return h
 
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
-	if ((Mission.aitank1 == nil) and (GetTeamNum(h) == 2) and (IsOdf(h,"ivtank"))) then
+	if ((Mission.aitank1 == nil) and (GetTeamNum(h) == 2) and (IsOdf(h,"ivtank_vsr"))) then
 	
 		Mission.aitank1 = h
 	
 
-	elseif ((Mission.aitank2 == nil) and (GetTeamNum(h) == 2) and (IsOdf(h,"ivtank"))) then
+	elseif ((Mission.aitank2 == nil) and (GetTeamNum(h) == 2) and (IsOdf(h,"ivtank_vsr"))) then
 	
 		Mission.aitank2 = h
 	
 
-	elseif ((Mission.aitank3 == nil) and (GetTeamNum(h) == 2) and (IsOdf(h,"ivtank"))) then
+	elseif ((Mission.aitank3 == nil) and (GetTeamNum(h) == 2) and (IsOdf(h,"ivtank_vsr"))) then
 	
 		Mission.aitank3 = h
 	
 	end
-	if (IsOdf(h,"fblung")) then
+	if (IsOdf(h,"fblung_vsr")) then
 	
 		Mission.lung = h
 	end
@@ -313,6 +311,17 @@ function AddObject(h) --This function is called when an object appears in the ga
 	if (IsOdf(h,"fvtug")) then
 	
 		Mission.hauler = h
+	end
+	
+	if IsOdf(h, "fvtank_vsr:1") then 
+	
+		if Mission.newwar == nil then 
+			Mission.newwar = h
+			Mission.newwar_wait = GetTime() + 1
+			Mission.newwar_morphed = false
+		end
+	
+
 	end
 end
 
@@ -337,6 +346,17 @@ function missionCode() --
 
 	
 	Mission.player = GetPlayerHandle()
+	
+	if not Mission.newwar_morphed and IsAlive(Mission.newwar) and Mission.newwar_wait < GetTime() then
+
+		if GetWeaponConfig( Mission.newwar,  0) == "garcvsr_c" then
+			SetCommand(Mission.newwar, 48)
+			Mission.newwar_morphed = true
+			Mission.newwar = nil
+		end
+		
+		
+	end
 
 --	AddScrap(2,10)
 	if (not Mission.missionstart) then

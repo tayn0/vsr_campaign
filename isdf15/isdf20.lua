@@ -121,18 +121,21 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
 	SetAsUser(h, PlayerTeam)
 	else
+
 	end
+
+	SetLabel(h, label)
 
 	return h
 
 end
-
 
 function AddObject(h) --This function is called when an object appears in the game. --
 

@@ -109,7 +109,7 @@ planType = "BaseBuildMinimums"
 planPriority = 94
 
 buildType1 = "ibsbay_vsr"
-buildLoc1 = "aisbay_vsr"
+buildLoc1 = "aisbay"
 
 //////////////////////////
 /////////////////////////
