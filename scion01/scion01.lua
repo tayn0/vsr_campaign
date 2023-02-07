@@ -169,6 +169,7 @@ local Mission = {
 	suprise_jaks = false,
 	too_long_build_lung = false,
 	take_off_sound = false,
+	newwar_morphed = false,
 
 --  floats
 	escort_reaction_time = 999999.9,
@@ -237,6 +238,8 @@ local Mission = {
 	on_foot_shot3_overtime = 999999.9,
 	too_long_build_lungtime = 999999.9,
 	take_off_soundtime = 999999.9,
+	newwar_wait = 999999.9,
+	
 --  handles
 	nav1,
 	nav2,
@@ -321,6 +324,7 @@ local Mission = {
 	escort_cin2,
 	tug_cin,
 	power_cin,
+	newwar,
 
 	dropship_cam1look,
 	amini,
@@ -438,6 +442,7 @@ function Start() --This function is called upon the first frame
 	Mission.stall = nil
 	Mission.stall2 = nil
 	Mission.blah1 = nil
+	Mission.newwar = nil
 	
 	SetTeamColor(5,85,255,85) --Amini (rebel scion)
 
@@ -481,6 +486,17 @@ function AddObject(h) --This function is called when an object appears in the ga
 	
 		Mission.lung_built = true  
 	end
+	
+	if IsOdf(h, "fvtank_vsr:1") then 
+	
+		if Mission.newwar == nil then 
+			Mission.newwar = h
+			Mission.newwar_wait = GetTime() + 1
+			Mission.newwar_morphed = false
+		end
+	
+
+	end
 end
 
 
@@ -505,6 +521,17 @@ function missionCode() --
 	Here is where you put what happens every frame.  
 ]]
 	Mission.player = GetPlayerHandle()
+	
+	if not Mission.newwar_morphed and IsAlive(Mission.newwar) and Mission.newwar_wait < GetTime() then
+
+		if GetWeaponConfig( Mission.newwar,  0) == "garcvsr_c" then
+			SetCommand(Mission.newwar, 48)
+			Mission.newwar_morphed = true
+			Mission.newwar = nil
+		end
+		
+		
+	end
 
 	--INTRO CINERACTIVE.  
 	if (not Mission.cin1over) then

@@ -105,13 +105,17 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
 	SetAsUser(h, PlayerTeam)
 	else
+
 	end
+
+	SetLabel(h, label)
 
 	return h
 
@@ -144,17 +148,16 @@ function AddObject(h) --This function is called when an object appears in the ga
 		Mission.artillery2 = h
 	end
 
---[[
-    if ((Mission.ant_mound == nil) and (IsOdf(h,"fbantm_vsr"))) then
+	if IsOdf(h, "fvtank_vsr:1") then 
 	
-		Mission.ant_mound = h
-	end
+		if Mission.newwar == nil then 
+			Mission.newwar = h
+			Mission.newwar_wait = GetTime() + 1
+			Mission.newwar_morphed = false
+		end
+	
 
-	if ((Mission.tap == nil) and (IsOdf(h,"fbatap"))) then
-	
-		Mission.tap = h
 	end
-]]
 end
 
 
@@ -249,17 +252,19 @@ end
 
 function missionCode() --
 
-		Mission.player = GetPlayerHandle()
---[[
-	Here is where you put what happens every frame.  
-]]
-	-- paths
-	-- spawn_scout1  >> strike1 
-	-- spawn_scout2  >> strike2
-	
-	--	SetCurAmmo(Mission.player,1500)--TEMP	
-	--	SetCurHealth(Mission.player,2000)--TEMP
---STARTING PARAMETERS
+	Mission.player = GetPlayerHandle()
+
+
+	if not Mission.newwar_morphed and IsAlive(Mission.newwar) and Mission.newwar_wait < GetTime() then
+
+		if GetWeaponConfig( Mission.newwar,  0) == "garcvsr_c" then
+			SetCommand(Mission.newwar, 48)
+			Mission.newwar_morphed = true
+			Mission.newwar = nil
+		end
+		
+		
+	end
 	
 
 	if ((not been_detected) and (Mission.mission_state<5))  then -- 5 =  ambush is set then
@@ -536,10 +541,7 @@ function missionCode() --
 		
 		
 	elseif Mission.mission_state == 102 then
-		--[[
-			You lose, movie etc.  
 
-		]]
 		
 			FailMission(GetTime()+15.0,"scion0201.otf")
 			Mission.mission_state = Mission.mission_state + 1
@@ -548,45 +550,6 @@ function missionCode() --
 				
 
 
-	--making sure isdf base guardians stay in the area
---[[
-	if ((not Mission.tank1toofar) and (GetDistance(Mission.basetank1,"goback") > 250)) then
-	
-		Retreat(Mission.basetank1,"goback")
-		Mission.tank1toofar = true
-	end
-
-	if ((not Mission.tank2toofar) and (GetDistance(Mission.basetank2,"goback") > 250)) then
-	
-		Retreat(Mission.basetank2,"goback")
-		Mission.tank2toofar = true
-	end
-
-	if ((not Mission.scout1toofar) and (GetDistance(Mission.scout1,"goback") > 250)) then
-	
-		Retreat(Mission.scout1,"goback")
-		Mission.scout1toofar = true
-	end
-
---/
-	if ((Mission.tank1toofar) and (GetDistance(Mission.basetank1,"goback") <100)) then
-	
-		Attack(Mission.basetank1,Mission.player)
-		Mission.tank1toofar = false
-	end
-	
-	if ((Mission.tank2toofar) and (GetDistance(Mission.basetank2,"goback") <100)) then
-	
-		Attack(Mission.basetank2,Mission.player)
-		Mission.tank2toofar = false
-	end
-
-	if ((Mission.scout1toofar) and (GetDistance(Mission.scout1,"goback") <100)) then
-	
-		Attack(Mission.scout1,Mission.player)
-		Mission.scout1toofar = false
-	end
-]]
 	if ((Mission.mission_state<102) and (not IsAlive(Mission.recycler))) then
 	
 		Mission.mission_state = 102
