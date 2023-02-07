@@ -69,6 +69,7 @@ local Mission = {
 	basetank1,
 	basetank2,
 
+
 --  integers
 	mission_state = 0,
 	scout_state = 99,
@@ -104,7 +105,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 	
 		Mission.recycler = h
 	end
-	if (IsOdf(h,"fbjas2")) then
+	if (IsOdf(h,"fbjas2") and GetDistance(h, "Jammer") < 75) then
 	
 		Mission.jammer_exists = true
 		Mission.jammer = h
@@ -232,6 +233,8 @@ end
 function missionCode() --
 
 		Mission.player = GetPlayerHandle()
+		
+		
 --[[
 	Here is where you put what happens every frame.  
 ]]
@@ -352,7 +355,7 @@ function missionCode() --
 		end
 		
 	elseif Mission.mission_state == 2 then  -- Mission.player arrives at ambush site
-		if (GetDistance(Mission.player,Mission.objective)<75.0)	 then
+		if (GetDistance(Mission.player,"Jammer")<75.0)	 then
 		
 			AudioMessage("scion0203.wav")  -- good now set up
 			ClearObjectives()
@@ -363,7 +366,9 @@ function missionCode() --
 		end
 		
 	elseif Mission.mission_state == 3 then -- wait for the Mission.constructor to show up
-			if (GetDistance(Mission.constructor,Mission.objective)<75.0) then
+			
+			
+			if (GetDistance(Mission.constructor,"Jammer")<75.0) then
 				
 				AudioMessage("scion0204.wav") -- Good, now build a Mission.jammer
 				ClearObjectives()
