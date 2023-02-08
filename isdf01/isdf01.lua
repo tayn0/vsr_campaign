@@ -400,6 +400,9 @@ function Start() --This function is called upon the first frame
 	
 	Ally(1,3)
 	Ally(3,1)
+	
+	SetObjectiveName(Mission.shabayev, "Cmd. Shabayev")
+	SetObjectiveName(Mission.wingman, "Lt. Simms")
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
