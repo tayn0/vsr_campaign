@@ -164,11 +164,7 @@ function Start() --This function is called upon the first frame
 	Ally(Mission.comp_teamb,Mission.comp_teamc)
 	
 	PreloadODF("fvatank")
-	PreloadODF("")
-	PreloadODF("")
-	PreloadODF("")
-	PreloadODF("")
-	PreloadODF("")
+
    
 end
 
@@ -481,17 +477,17 @@ function missionCode() --
 		Mission.start_takeoff = true
 		SetAnimation(Mission.dropship,"takeoff",1)
 		SetAnimation(Mission.dropship2,"takeoff",1)
-		emit_time = GetTime() + 3.0
+		Mission.emit_time = GetTime() + 3.0
 		condor1_remove_time = GetTime() + 20.0
 	end
 	
-	if (emit_time < GetTime()) then
+	if (Mission.emit_time < GetTime()) then
 	
 		StartEmitter(Mission.dropship, 1)
 		StartEmitter(Mission.dropship, 2)
 		--smoker1 = BuildObject("kickup",0,"smoker1_a")
 		--smoker2 = BuildObject("kickup",0,"smoker1_b")
-		emit_time = GetTime() + 999999.9
+		Mission.emit_time = GetTime() + 999999.9
 	end
 	if (not Mission.takeoff) then
 	
