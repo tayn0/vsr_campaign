@@ -167,11 +167,7 @@ function Start() --This function is called upon the first frame
 	Ally(Mission.comp_teamb,Mission.comp_teamc)
 	
 	PreloadODF("fvatank")
-	PreloadODF("")
-	PreloadODF("")
-	PreloadODF("")
-	PreloadODF("")
-	PreloadODF("")
+
 
 
 	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
@@ -181,6 +177,8 @@ function Start() --This function is called upon the first frame
 	
 	Mission.recy = UnitToVSR(Mission.recy, "ivrecy_vsr", 0)
 	SetGroup(Mission.recy,0)
+
+>>>>>>> 69a65059847199a133e85d62b02b69a1c25a2c6c
    
 end
 
@@ -517,17 +515,17 @@ function missionCode() --
 		Mission.start_takeoff = true
 		SetAnimation(Mission.dropship,"takeoff",1)
 		SetAnimation(Mission.dropship2,"takeoff",1)
-		emit_time = GetTime() + 3.0
+		Mission.emit_time = GetTime() + 3.0
 		condor1_remove_time = GetTime() + 20.0
 	end
 	
-	if (emit_time < GetTime()) then
+	if (Mission.emit_time < GetTime()) then
 	
 		StartEmitter(Mission.dropship, 1)
 		StartEmitter(Mission.dropship, 2)
 		--smoker1 = BuildObject("kickup",0,"smoker1_a")
 		--smoker2 = BuildObject("kickup",0,"smoker1_b")
-		emit_time = GetTime() + 999999.9
+		Mission.emit_time = GetTime() + 999999.9
 	end
 	if (not Mission.takeoff) then
 	
