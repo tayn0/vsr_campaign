@@ -403,6 +403,7 @@ function Start() --This function is called upon the first frame
 	
 	SetObjectiveName(Mission.shabayev, "Cmd. Shabayev")
 	SetObjectiveName(Mission.wingman, "Lt. Simms")
+
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
@@ -515,6 +516,7 @@ if (not Mission.ON_HOLD) then
 			Mission.holder2 = BuildObject("stayput",0,Mission.shabayev)
 			Mission.holder3 = BuildObject("stayput",0,Mission.wingman)
 
+			
 			RemoveObject(Mission.squad1_a)
 			RemoveObject(Mission.squad1_b)
 			RemoveObject(Mission.squad1_c)
@@ -2320,6 +2322,7 @@ if ((Mission.left_base) and (not Mission.base_return) and (IsAlive(Mission.shaba
 			end
 
 			Mission.wingman = BuildObject("p1scout", 1,"combat1a")
+			SetObjectiveName(Mission.wingman, "Lt. Simms")
 			SetAvoidType(Mission.wingman,0)
 			Mission.scion1 = BuildObject("fvpsnt", 2,"combat1c")
 			Mission.scion2 = BuildObject("fvpsnt", 2,"combat1b")
