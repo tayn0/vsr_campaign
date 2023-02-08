@@ -23,6 +23,7 @@ local Mission = {
 	scav_strike = false,
 	start_takeoff = false,
 	takeoff = false,
+	start_done = false,
 
 --  floats
 
@@ -90,8 +91,9 @@ local Mission = {
 	comp_teamb = 4,
 	comp_teamc = 5,
 	sneak_timer,
-	emit_time,
-
+	emit_time = 999999,
+	condor1_remove_time = 999999,
+	
 	mission_state = 0
    
 } --End Mission
@@ -203,7 +205,7 @@ function UnitToVSR(h, odf, player)
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
-	if (start_done) then
+	if (Mission.start_done) then
 	
 		if (IsOdf(h,"ibpgen_vsr") and ((Mission.power1==nil) or (not IsAlive(Mission.power1)))) then
 		
@@ -342,10 +344,10 @@ function LateAttacks()
 				GiveWeapon(Mission.atk2_4,"glockvsr_c")
 				GiveWeapon(Mission.atk2_4,"gshield")
 				Mission.atk2_5 = BuildObject("fvsent_vsr",Mission.comp_teamc,"convoy5")
-				GiveWeapon(Mission.atk2_5,"apgaus_c")
+				GiveWeapon(Mission.atk2_5,"gauss_c")
 				GiveWeapon(Mission.atk2_5,"gshield")
 				Mission.atk2_6 = BuildObject("fvsent_vsr",Mission.comp_teamc,"convoy6")
-				GiveWeapon(Mission.atk2_6,"apgaus_c")
+				GiveWeapon(Mission.atk2_6,"gauss_c")
 				GiveWeapon(Mission.atk2_6,"gshield")
 
 				Follow(Mission.atk2_4,Mission.atk2_1)
@@ -452,7 +454,7 @@ function missionCode() --
 
 	CounterAttacks()	-- only executes if boolean Mission.power_strike = true and Mission.power1 ~= nil then
 
-	if (not start_done) then
+	if (not Mission.start_done) then
 	
 		-- AudioMessage("isdf1601.wav")
 		--[[
@@ -496,9 +498,9 @@ function missionCode() --
 		BuildObject("fvrecy_vsr",Mission.comp_teamb,"base2") -- buh hah hahnot not 
 		SetScrap(1,60)
 		SetScrap(Mission.comp_team,40)
-		SetAIP("misn16.aip",Mission.comp_team)
+		SetAIP("isdf16.aip",Mission.comp_team)
 		SetScrap(Mission.comp_teamb,40)
-		SetAIP("misn16b.aip",Mission.comp_teamb)
+		SetAIP("isdf16b.aip",Mission.comp_teamb)
 		ClearObjectives()
 		AddObjective("isdf1601.otf","WHITE",10.0)
 		AudioMessage("isdf1601.wav")
@@ -506,8 +508,8 @@ function missionCode() --
 		-- this is for the drop ship
  		takeoff_time = GetTime()+10.0
 		SetAnimation(Mission.dropship,"deploy",1)
-		start_done = true
-	end	-- not start_done
+		Mission.start_done = true
+	end	-- not Mission.start_done
 
 	if ((not Mission.start_takeoff) and (GetTime()>takeoff_time)) then
 	
@@ -515,7 +517,7 @@ function missionCode() --
 		SetAnimation(Mission.dropship,"takeoff",1)
 		SetAnimation(Mission.dropship2,"takeoff",1)
 		Mission.emit_time = GetTime() + 3.0
-		condor1_remove_time = GetTime() + 20.0
+		Mission.condor1_remove_time = GetTime() + 20.0
 	end
 	
 	if (Mission.emit_time < GetTime()) then
@@ -528,7 +530,7 @@ function missionCode() --
 	end
 	if (not Mission.takeoff) then
 	
-		if (condor1_remove_time < GetTime()) then
+		if (Mission.condor1_remove_time < GetTime()) then
 		
 			RemoveObject(Mission.dropship)
 			--RemoveObject(smoker1)

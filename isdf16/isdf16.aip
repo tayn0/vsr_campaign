@@ -1,0 +1,139 @@
+[Start]
+scrapCount = 40
+scavClass = "fvscav"
+consClass = "fvcons"
+IdleAllCraft = false // Prevent Interrupting AI.
+
+[IdleDispatcher]
+UnitIdleSeconds = 999999 // Don't send out units via Dispatch.
+
+[Match]
+targetType1 = "ivscout"
+attackType1_1 = "fvsent"
+
+targetType2 = "ivtank"
+attackType2_1 = "fvscout"
+attackType2_2 = "fvscout"
+
+targetType3 = "ivturr"
+attackType3_1 = "fvsent"
+attackType3_2 = "fvsent"
+
+targetType4 = "ivscout"
+attackType4_1 = "fvtank"
+
+[Plan1]
+planType = "CollectPool"
+planPriority = 200
+buildIfNoIdle = 1
+
+[Plan2]
+planType = "CollectPool"
+planPriority = 195
+buildIfNoIdle = 1
+
+
+[Plan3]
+planType = "CollectPool"
+planPriority = 190
+buildIfNoIdle = 1
+
+[Plan4]
+planType = "CollectField"
+planPriority = 180
+buildIfNoIdle=1 
+
+
+[Plan5]
+planType = "BuildMinimums"
+planPriority = 170
+buildType1 = "fvcons"
+buildType2 = "fvcons"
+
+[Plan6]
+planType = "Upgrade"
+planCondition = "NotExists"
+planConditionClass = "fbscup"
+planConditionCount = 2
+planPriority = 160
+unitType = "fbscav"
+
+[Plan7]
+planType = "BaseBuildMinimums"
+planPriority = 155
+buildType1 = "fbspir"
+buildLoc1 = "gtow1"
+doNextOnFail = 1
+
+[Plan8]
+planType = "BaseBuildMinimums"
+planPriority = 150
+buildType1 = "fbspir"
+buildLoc1 = "gtow2"
+doNextOnFail = 1
+
+[Plan9]
+planType = "BaseBuildMinimums"
+planPriority = 145
+buildType1 = "fbspir"
+buildLoc1 = "gtow3"
+doNextOnFail = 1
+
+[Plan10]
+planType = "BaseBuildMinimums"
+planPriority = 140
+buildType1 = "fbspir"
+buildLoc1 = "gtow4"
+doNextOnFail = 1
+
+[Plan11]
+planCondition="NotExists"
+planConditionClass="fbforg"
+planConditionCount=1
+planType = "BaseBuildMinimums"
+planPriority = 135
+buildType1 = "fbkiln"
+
+[Plan12]
+planType = "BuildMinimums"
+planPriority = 130
+buildType = "fvsent"
+
+[Plan13]
+planCondition="NotExists"
+planConditionClass="fbforg"
+planConditionCount=1
+planType = "Upgrade"
+planPriority = 125
+unitType = "fbkiln"
+
+[Plan14]
+planType = "BaseBuildMinimums"
+planPriority= 120
+buildType1 = "fbdowe"
+buildCount1=1
+buildType2= "fbstro"
+buildCount2=1
+
+[Plan15]
+planType = "BuildMinimums"
+planPriority = 110
+buildType1 = "fvwalk"
+buildCount1 = 4
+
+[Plan16]
+planType = "Attacker"
+planPriority = 100
+targetType = "ivatank"
+attackType1 = "fvwalk"
+attackType2 = "fvwalk"
+
+[Plan17]
+planType = "Attacker"
+planPriority = 100
+targetType = "ibgtow"
+attackType1 = "fvwalk"
+attackType2 = "fvwalk"
+
+
+
