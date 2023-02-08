@@ -87,7 +87,8 @@ local Mission = {
 	comp_teamb = 4,
 	comp_teamc = 5,
 	sneak_timer,
-	emit_time,
+	emit_time = 999999,
+	condor1_remove_time = 999999,
 
 	mission_state = 0
    
@@ -478,7 +479,7 @@ function missionCode() --
 		SetAnimation(Mission.dropship,"takeoff",1)
 		SetAnimation(Mission.dropship2,"takeoff",1)
 		Mission.emit_time = GetTime() + 3.0
-		condor1_remove_time = GetTime() + 20.0
+		Mission.condor1_remove_time = GetTime() + 20.0
 	end
 	
 	if (Mission.emit_time < GetTime()) then
@@ -491,7 +492,7 @@ function missionCode() --
 	end
 	if (not Mission.takeoff) then
 	
-		if (condor1_remove_time < GetTime()) then
+		if (Mission.condor1_remove_time < GetTime()) then
 		
 			RemoveObject(Mission.dropship)
 			--RemoveObject(smoker1)
