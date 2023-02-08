@@ -1,26 +1,26 @@
 [Start]
 scrapCount = 40
-scavClass = "fvscav"
-consClass = "ivcons"
+scavClass = "fvscav_vsr"
+consClass = "ivcons_vsr"
 IdleAllCraft = false // Prevent Interrupting AI.
 
 [IdleDispatcher]
 UnitIdleSeconds = 999999 // Don't send out units via Dispatch.
 
 [Match]
-targetType1 = "ivscout"
-attackType1_1 = "fvsent"
+targetType1 = "ivscout_vsr"
+attackType1_1 = "fvsent_vsr"
 
-targetType2 = "ivtank"
-attackType2_1 = "fvscout"
-attackType2_2 = "fvscout"
+targetType2 = "ivtank_vsr"
+attackType2_1 = "fvscout_vsr"
+attackType2_2 = "fvscout_vsr"
 
-targetType3 = "ivturr"
-attackType3_1 = "fvsent"
-attackType3_2 = "fvsent"
+targetType3 = "ivturr_vsr"
+attackType3_1 = "fvsent_vsr"
+attackType3_2 = "fvsent_vsr"
 
-targetType4 = "ivscout"
-attackType4_1 = "fvtank"
+targetType4 = "ivscout_vsr"
+attackType4_1 = "fvtank_vsr"
 
 [Plan1]
 planType = "CollectPool"
@@ -46,14 +46,14 @@ buildType1 = "fvcons"
 [Plan5]
 planType = "Upgrade"
 planCondition = "NotExists"
-planConditionClass = "fbscup"
+planConditionClass = "fbscup_vsr"
 planConditionCount = 2
 planPriority = 125
-unitType = "fbscav"
+unitType = "fbscav_vsr"
 
 [Plan6]
 planCondition = "NotExists"
-planConditionClass = "fbforg"
+planConditionClass = "fbforg_vsr"
 planConditionCount = 1
 planType = "BaseBuildMinimums"
 planPriority = 110
@@ -62,54 +62,54 @@ buildType1 = "fbkiln"
 [Plan7]
 planType = "Upgrade"
 planCondition = "NotExists"
-planConditionClass = "fbforg"
+planConditionClass = "fbforg_vsr"
 planConditionCount = 1
 planPriority = 100
-unitType = "fbkiln"
+unitType = "fbkiln_vsr"
 
 
 [Plan9]
 planType = "Attacker"
 planPriority = 90
 maxAttacks= 4
-targetType = "ivtank"
-attackType1 = "fvtank"
-attackType2 = "fvtank"
-attackType3 = "fvtank"
+targetType = "ivtank_vsr"
+attackType1 = "fvtank_vsr"
+attackType2 = "fvtank_vsr"
+attackType3 = "fvtank_vsr"
 buildIfNoIdle = 1
 
 [Plan10]
 planType = "Attacker"
 planPriority = 80
-targetType = "ibpgen"
-attackType1 = "fvtank"
-attackType2 = "fvtank"
-attackType3 = "fvtank"
-attackType4 = "fvtank"
+targetType = "ibpgen_vsr"
+attackType1 = "fvtank_vsr"
+attackType2 = "fvtank_vsr"
+attackType3 = "fvtank_vsr"
+attackType4 = "fvtank_vsr"
 buildIfNoIdle = 1
 
 [Plan11]
 planType = "BaseBuildMinimums"
 planPriority = 70
-buildType1 = "fbspir"
+buildType1 = "fbspir_vsr"
 buildLoc1 = "gun2_1"
 
 [Plan12]
 planType = "BaseBuildMinimums"
 planPriority = 65
-buildType1 = "fbspir"
+buildType1 = "fbspir_vsr"
 buildLoc1 = "gun2_2"
 
 [Plan13]
 planType = "BaseBuildMinimums"
 planPriority = 60
-buildType1 = "fbspir"
+buildType1 = "fbspir_vsr"
 buildLoc1 = "gun2_3"
 
 [Plan14]
 planType = "BaseBuildMinimums"
 planPriority = 55
-buildType1 = "fbspir"
+buildType1 = "fbspir_vsr"
 buildLoc1 = "gun2_4"
 
 

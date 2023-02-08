@@ -1,26 +1,26 @@
 [Start]
 scrapCount = 40
-scavClass = "fvscav"
-consClass = "fvcons"
+scavClass = "fvscav_vsr"
+consClass = "fvcons_vsr"
 IdleAllCraft = false // Prevent Interrupting AI.
 
 [IdleDispatcher]
 UnitIdleSeconds = 999999 // Don't send out units via Dispatch.
 
 [Match]
-targetType1 = "ivscout"
-attackType1_1 = "fvsent"
+targetType1 = "ivscout_vsr"
+attackType1_1 = "fvsent_vsr"
 
-targetType2 = "ivtank"
-attackType2_1 = "fvscout"
-attackType2_2 = "fvscout"
+targetType2 = "ivtank_vsr"
+attackType2_1 = "fvscout_vsr"
+attackType2_2 = "fvscout_vsr"
 
-targetType3 = "ivturr"
-attackType3_1 = "fvsent"
-attackType3_2 = "fvsent"
+targetType3 = "ivturr_vsr"
+attackType3_1 = "fvsent_vsr"
+attackType3_2 = "fvsent_vsr"
 
-targetType4 = "ivscout"
-attackType4_1 = "fvtank"
+targetType4 = "ivscout_vsr"
+attackType4_1 = "fvtank_vsr"
 
 [Plan1]
 planType = "CollectPool"
@@ -47,93 +47,93 @@ buildIfNoIdle=1
 [Plan5]
 planType = "BuildMinimums"
 planPriority = 170
-buildType1 = "fvcons"
-buildType2 = "fvcons"
+buildType1 = "fvcons_vsr"
+buildType2 = "fvcons_vsr"
 
 [Plan6]
 planType = "Upgrade"
 planCondition = "NotExists"
-planConditionClass = "fbscup"
+planConditionClass = "fbscup_vsr"
 planConditionCount = 2
 planPriority = 160
-unitType = "fbscav"
+unitType = "fbscav_vsr"
 
 [Plan7]
 planType = "BaseBuildMinimums"
 planPriority = 155
-buildType1 = "fbspir"
+buildType1 = "fbspir_vsr"
 buildLoc1 = "gtow1"
 doNextOnFail = 1
 
 [Plan8]
 planType = "BaseBuildMinimums"
 planPriority = 150
-buildType1 = "fbspir"
+buildType1 = "fbspir_vsr"
 buildLoc1 = "gtow2"
 doNextOnFail = 1
 
 [Plan9]
 planType = "BaseBuildMinimums"
 planPriority = 145
-buildType1 = "fbspir"
+buildType1 = "fbspir_vsr"
 buildLoc1 = "gtow3"
 doNextOnFail = 1
 
 [Plan10]
 planType = "BaseBuildMinimums"
 planPriority = 140
-buildType1 = "fbspir"
+buildType1 = "fbspir_vsr"
 buildLoc1 = "gtow4"
 doNextOnFail = 1
 
 [Plan11]
 planCondition="NotExists"
-planConditionClass="fbforg"
+planConditionClass="fbforg_vsr"
 planConditionCount=1
 planType = "BaseBuildMinimums"
 planPriority = 135
-buildType1 = "fbkiln"
+buildType1 = "fbkiln_vsr"
 
 [Plan12]
 planType = "BuildMinimums"
 planPriority = 130
-buildType = "fvsent"
+buildType = "fvsent_vsr"
 
 [Plan13]
 planCondition="NotExists"
-planConditionClass="fbforg"
+planConditionClass="fbforg_vsr"
 planConditionCount=1
 planType = "Upgrade"
 planPriority = 125
-unitType = "fbkiln"
+unitType = "fbkiln_vsr"
 
 [Plan14]
 planType = "BaseBuildMinimums"
 planPriority= 120
-buildType1 = "fbdowe"
+buildType1 = "fbdowe_vsr"
 buildCount1=1
-buildType2= "fbstro"
+buildType2= "fbstro_vsr"
 buildCount2=1
 
 [Plan15]
 planType = "BuildMinimums"
 planPriority = 110
-buildType1 = "fvwalk"
+buildType1 = "fvwalk_vsr"
 buildCount1 = 4
 
 [Plan16]
 planType = "Attacker"
 planPriority = 100
-targetType = "ivatank"
-attackType1 = "fvwalk"
-attackType2 = "fvwalk"
+targetType = "ivatank_vsr"
+attackType1 = "fvwalk_vsr"
+attackType2 = "fvwalk_vsr"
 
 [Plan17]
 planType = "Attacker"
 planPriority = 100
-targetType = "ibgtow"
-attackType1 = "fvwalk"
-attackType2 = "fvwalk"
+targetType = "ibgtow_vsr"
+attackType1 = "fvwalk_vsr"
+attackType2 = "fvwalk_vsr"
 
 
 

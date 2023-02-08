@@ -498,9 +498,9 @@ function missionCode() --
 		BuildObject("fvrecy_vsr",Mission.comp_teamb,"base2") -- buh hah hahnot not 
 		SetScrap(1,60)
 		SetScrap(Mission.comp_team,40)
-		SetAIP("isdf16.aip",Mission.comp_team)
+		SetAIP("isdf1601.aip",Mission.comp_team)
 		SetScrap(Mission.comp_teamb,40)
-		SetAIP("isdf16b.aip",Mission.comp_teamb)
+		SetAIP("isdf1602.aip",Mission.comp_teamb)
 		ClearObjectives()
 		AddObjective("isdf1601.otf","WHITE",10.0)
 		AudioMessage("isdf1601.wav")
