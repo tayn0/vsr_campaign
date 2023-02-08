@@ -437,7 +437,6 @@ function AddObject(h) --This function is called when an object appears in the ga
 		h = UnitToVSR(h, "ibpgen_vsr", 0)
 	end
 
-
 end
 
 

@@ -303,9 +303,6 @@ function Start() --This function is called upon the first frame
 	Mission.player = GetPlayerHandle()
 	Mission.player = UnitToVSR(Mission.player, "fvsent_vsr", 1)
 	
-	Mission.ibrecy1 = UnitToVSR(Mission.ibrecy1, "ibrecy_vsr", 0)
-	Mission.enemyfact = UnitToVSR(GetHandle("unnamed_ibfact"), "ibfact_vsr", 0)
-	
 	Mission.tank1 = UnitToVSR(Mission.tank1, "ivtank_vsr", 0)
 	Mission.tank2 = UnitToVSR(Mission.tank2, "ivtank_vsr", 0)
 	Mission.tank3 = UnitToVSR(Mission.tank3, "ivtank_vsr", 0)
@@ -321,6 +318,16 @@ function Start() --This function is called upon the first frame
    Mission.rover4 = UnitToVSR(Mission.rover4, "ivscout_vsr", 0)
    Mission.rover5 = UnitToVSR(Mission.rover5, "ivscout_vsr", 0)
    Mission.rover6 = UnitToVSR(Mission.rover6, "ivscout_vsr", 0)
+   
+   Mission.ivwalk1 = UnitToVSR(Mission.ivwalk1, "ivwalk_vsr", 0)
+   Mission.ivwalk2 = UnitToVSR(Mission.ivwalk2, "ivwalk_vsr", 0)
+   Mission.braddock = UnitToVSR(Mission.braddock, "ivwalk_vsr", 0)
+   
+   Mission.ivscav1 = UnitToVSR(Mission.ivscav1, "ibscav_vsr", 0)
+   Mission.ivscav2 = UnitToVSR(Mission.ivscav2, "ibscav_vsr", 0)
+   Mission.ivscav2 = UnitToVSR(Mission.ivscav3, "ibscav_vsr", 0)
+
+   
 end
 
 function UnitToVSR(h, odf, player)
@@ -347,7 +354,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 
 	if (Mission.missionstart) then
 	
-		if ((IsOdf(h,"fbscav"))) then
+		if ((IsOdf(h,"fbscav_vsr"))) then
 		
 			Mission.extractor1 = h
 		
@@ -387,6 +394,19 @@ function AddObject(h) --This function is called when an object appears in the ga
 			Mission.basescout3 = h	
 		end
 	end
+	
+	if IsOdf(h, "fvtank_vsr:1") then 
+	
+		if Mission.newwar == nil then 
+			Mission.newwar = h
+			Mission.newwar_wait = GetTime() + 1
+			Mission.newwar_morphed = false
+		end
+	
+
+	end
+	
+	
 end
 
 
@@ -574,6 +594,18 @@ function missionCode() --
 	
 		Mission.msg1 = AudioMessage("scion0701.wav") --scion0701.wav --the best place to start is with the biometal pools...
 		Mission.vo1 = true
+	end
+	
+	--force arc warriors to unmorph
+	if not Mission.newwar_morphed and IsAlive(Mission.newwar) and Mission.newwar_wait < GetTime() then
+
+		if GetWeaponConfig( Mission.newwar,  0) == "garcvsr_c" then
+			SetCommand(Mission.newwar, 48)
+			Mission.newwar_morphed = true
+			Mission.newwar = nil
+		end
+		
+		
 	end
 
 	----------------------------/

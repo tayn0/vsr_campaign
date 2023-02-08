@@ -208,21 +208,21 @@ end
 function AddObject(h) --This function is called when an object appears in the game. --
 	if (start_done) then
 	
-		if (IsOdf(h,"ibpgen") and ((Mission.power1==nil) or (not IsAlive(Mission.power1)))) then
+		if (IsOdf(h,"ibpgen_vsr") and ((Mission.power1==nil) or (not IsAlive(Mission.power1)))) then
 		
 			Mission.power1 = h
 		end
-		if (IsOdf(h,"ibgtow") and ((Mission.gtow1==nil) or (not IsAlive(Mission.gtow1)))) then
+		if (IsOdf(h,"ibgtow_vsr") and ((Mission.gtow1==nil) or (not IsAlive(Mission.gtow1)))) then
 		
 			Mission.gtow1 = h
 		end
-		if ((IsOdf(h,"ibscav")) and (Mission.scav1==nil)) then
+		if ((IsOdf(h,"ibscav_vsr")) and (Mission.scav1==nil)) then
 		
 			Mission.scav1 = h
 		end
 	end
 
-	if (IsOdf(h,"ibrecy")) then
+	if (IsOdf(h,"ibrecy_vsr")) then
 	
 		Mission.recy = h
 --SetObjectiveOn(Mission.recy)
@@ -271,7 +271,7 @@ function CounterAttacks()
 		Attack(Mission.atk1,Mission.power1)
 		Attack(Mission.atk2,Mission.power1)
 --		Attack(Mission.atk3,Mission.power1)
-		if (IsOdf(Mission.atk3,"fvserv")) then
+		if (IsOdf(Mission.atk3,"fvserv_vsr")) then
 		
 			if (IsAlive(Mission.atk1)) then
 				Follow(Mission.atk3,Mission.atk1)
@@ -319,15 +319,15 @@ function LateAttacks()
 			if ((not IsAlive(Mission.atk2_7)) and (not IsAlive(Mission.atk2_8)) and (not IsAlive(Mission.atk2_9))) then
 			
 				Mission.atk2_7 = BuildObject("fvscout_vsr",Mission.comp_teamc,"attack1")
-				GiveWeapon(Mission.atk2_7,"garc_c")
+				GiveWeapon(Mission.atk2_7,"garcvsr_c")
 				GiveWeapon(Mission.atk2_7,"gseekervsr")
 				GiveWeapon(Mission.atk2_7,"gshield")
 				Mission.atk2_8 = BuildObject("fvscout_vsr",Mission.comp_teamc,"attack2")
-				GiveWeapon(Mission.atk2_8,"garc_c")
+				GiveWeapon(Mission.atk2_8,"garcvsr_c")
 				GiveWeapon(Mission.atk2_8,"gseekervsr")
 				GiveWeapon(Mission.atk2_8,"gshield")
 				Mission.atk2_9 = BuildObject("fvscout_vsr",Mission.comp_teamc,"attack3")
-				GiveWeapon(Mission.atk2_9,"garc_c")
+				GiveWeapon(Mission.atk2_9,"garcvsr_c")
 				GiveWeapon(Mission.atk2_9,"gseekervsr")
 				GiveWeapon(Mission.atk2_9,"gshield")
 --		SetObjectiveOn(Mission.atk2_7)
@@ -342,13 +342,13 @@ function LateAttacks()
 			and (not IsAlive(Mission.atk2_4)) and (not IsAlive(Mission.atk2_5)) and (not IsAlive(Mission.atk2_6))) then
 			
 				Mission.atk2_4 = BuildObject("fvsent_vsr",Mission.comp_teamc,"convoy4")
-				GiveWeapon(Mission.atk2_4,"glock_c")
+				GiveWeapon(Mission.atk2_4,"glockvsr_c")
 				GiveWeapon(Mission.atk2_4,"gshield")
 				Mission.atk2_5 = BuildObject("fvsent_vsr",Mission.comp_teamc,"convoy5")
-				GiveWeapon(Mission.atk2_5,"glock_c")
+				GiveWeapon(Mission.atk2_5,"apgaus_c")
 				GiveWeapon(Mission.atk2_5,"gshield")
 				Mission.atk2_6 = BuildObject("fvsent_vsr",Mission.comp_teamc,"convoy6")
-				GiveWeapon(Mission.atk2_6,"glock_c")
+				GiveWeapon(Mission.atk2_6,"apgaus_c")
 				GiveWeapon(Mission.atk2_6,"gshield")
 
 				Follow(Mission.atk2_4,Mission.atk2_1)
@@ -599,7 +599,7 @@ function missionCode() --
 
 	if (Mission.time_counter%50==0)	 then -- every 5 seconds then
 	
-		if (IsOdf(Mission.atk6,"fvserv")) then
+		if (IsOdf(Mission.atk6,"fvserv_vsr")) then
 		
 			if (IsAlive(Mission.atk4)) then
 				Follow(Mission.atk6,Mission.atk4)
@@ -618,7 +618,7 @@ function missionCode() --
 			end
 		end
 
-		if (IsOdf(Mission.atk3,"fvserv")) then
+		if (IsOdf(Mission.atk3,"fvserv_vsr")) then
 		
 			if (IsAlive(Mission.atk1)) then
 				Follow(Mission.atk3,Mission.atk1)
@@ -709,7 +709,7 @@ function missionCode() --
 			Attack(Mission.atk1,Mission.recy)
 			Attack(Mission.atk2,Mission.recy)
 
-			if (IsOdf(Mission.atk3,"fvserv")) then
+			if (IsOdf(Mission.atk3,"fvserv_vsr")) then
 			
 				if (IsAlive(Mission.atk1)) then
 					Follow(Mission.atk3,Mission.atk1)
@@ -735,7 +735,7 @@ function missionCode() --
 				Attack(Mission.atk4,Mission.recy)
 				Attack(Mission.atk5,Mission.recy)
 
-				if (IsOdf(Mission.atk6,"fvserv")) then
+				if (IsOdf(Mission.atk6,"fvserv_vsr")) then
 				
 					if (IsAlive(Mission.atk4)) then
 						Follow(Mission.atk6,Mission.atk4)
@@ -761,7 +761,7 @@ function missionCode() --
 				Attack(Mission.atk4,Mission.power1)
 				Attack(Mission.atk5,Mission.power1)
 
-				if (IsOdf(Mission.atk6,"fvserv")) then
+				if (IsOdf(Mission.atk6,"fvserv_vsr")) then
 				
 					if (IsAlive(Mission.atk4)) then
 						Follow(Mission.atk6,Mission.atk4)
@@ -799,7 +799,7 @@ function missionCode() --
 			]]
 			Attack(Mission.atk1,Mission.recy)
 			Attack(Mission.atk2,Mission.recy)
-			if (IsOdf(Mission.atk3,"fvserv")) then
+			if (IsOdf(Mission.atk3,"fvserv_vsr")) then
 			
 				if (IsAlive(Mission.atk1)) then
 					Follow(Mission.atk3,Mission.atk1)
@@ -828,7 +828,7 @@ function missionCode() --
 			
 				Attack(Mission.atk4,Mission.recy)
 				Attack(Mission.atk5,Mission.recy)
-				if (IsOdf(Mission.atk6,"fvserv")) then
+				if (IsOdf(Mission.atk6,"fvserv_vsr")) then
 				
 					if (IsAlive(Mission.atk4)) then
 						Follow(Mission.atk6,Mission.atk4)
@@ -853,7 +853,7 @@ function missionCode() --
 			
 				Attack(Mission.atk4,Mission.power1)
 				Attack(Mission.atk5,Mission.power1)
-				if (IsOdf(Mission.atk6,"fvserv")) then
+				if (IsOdf(Mission.atk6,"fvserv_vsr")) then
 				
 					if (IsAlive(Mission.atk4)) then
 						Follow(Mission.atk6,Mission.atk4)
