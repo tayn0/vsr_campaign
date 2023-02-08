@@ -402,6 +402,8 @@ function Start() --This function is called upon the first frame
 	Ally(3,1)
 	
 
+	SetObjectiveName(Mission.shabayev, "Cmd. Shabayev")
+	SetObjectiveName(Mission.wingman, "Lt. Simms")
 
 	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
 	SetLabel(Mission.player, "player_ship")
@@ -428,6 +430,7 @@ function UnitToVSR(h, odf, player)
 	end
 
 	return h
+
 
 end
 
