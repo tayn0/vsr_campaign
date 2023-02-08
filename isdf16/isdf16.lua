@@ -93,7 +93,7 @@ local Mission = {
 	sneak_timer,
 	emit_time = 999999,
 	condor1_remove_time = 999999,
-	
+
 	mission_state = 0
    
 } --End Mission
