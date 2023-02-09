@@ -68,6 +68,18 @@ function Load(...)
    end
 end
 
+function PlayerEjected(h)
+	PrintConsoleMessage("reseting")
+	temp = BuildObject("ivscout_vsr", 1, "isdf_base1")
+	SetAsUser(temp, 1)
+	GiveWeapon(temp,"gchainvsr_c")
+	GiveWeapon(temp,"gshadowvsr_c")
+	GiveWeapon(temp,"gproxminvsr")
+
+return 2
+
+end
+
 function Start() --This function is called upon the first frame
 
 --  bools

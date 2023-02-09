@@ -350,6 +350,18 @@ function UnitToVSR(h, odf, player)
 
 end
 
+function PlayerEjected(h)
+
+	temp = BuildObject("ivscout_vsr", 1, "scrap_spawn1")
+	SetAsUser(temp, 1)
+	GiveWeapon(temp,"gchainvsr_c")
+	GiveWeapon(temp,"gshadowvsr_c")
+	GiveWeapon(temp,"gproxminvsr")
+
+return 2
+
+end
+
 
 function AddObject(h) --This function is called when an object appears in the game. --
 

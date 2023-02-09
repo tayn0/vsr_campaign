@@ -235,7 +235,7 @@ function Load(...)
 end
 
 function PlayerEjected(h)
-
+	PrintConsoleMessage("reseting")
 	temp = BuildObject("ivscout_vsr", 1, "condor_center")
 	SetAsUser(temp, 1)
 	GiveWeapon(temp,"gchainvsr_c")

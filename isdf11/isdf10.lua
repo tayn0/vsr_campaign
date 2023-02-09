@@ -315,6 +315,18 @@ function Load(...)
    end
 end
 
+function PlayerEjected(h)
+	PrintConsoleMessage("reseting")
+	temp = BuildObject("ivscout_vsr", 1, "respawn")
+	SetAsUser(temp, 1)
+	GiveWeapon(temp,"gchainvsr_c")
+	GiveWeapon(temp,"gshadowvsr_c")
+	GiveWeapon(temp,"gproxminvsr")
+
+return 2
+
+end
+
 function AddObject(h) --This function is called when an object appears in the game. --
 
 	if IsOdf(h, "ivscoutm_vsr:1") then

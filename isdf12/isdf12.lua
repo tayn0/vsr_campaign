@@ -207,6 +207,17 @@ function Load(...)
    end
 end
 
+function PlayerEjected(h)
+
+	temp = BuildObject("ivmisl_vsr", 1, "sent2_spawn")
+	SetAsUser(temp, 1)
+	GiveWeapon(temp,"gshadowvsr_c")
+	GiveWeapon(temp,"gproxminvsr")
+
+return 2
+
+end
+
 function AddObject(h) --This function is called when an object appears in the game. --
  	if (Mission.first_over) then
 	
