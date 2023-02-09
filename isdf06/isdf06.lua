@@ -131,22 +131,27 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
-	SetAsUser(h, PlayerTeam)
+		SetAsUser(h, PlayerTeam)
 	else
+
+	end
+
+	if label ~= nil then
+		SetLabel(h, label)
 	end
 
 	return h
+
 
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
 
-if IsOdf(h, "fvturr") then UnitToVSR(h, "fvturr_vsr", 0) end
-if IsOdf(h, "fvspir") then UnitToVSR(h, "fbspir_vsr", 0) end
 
 	if (Mission.start_done) then
 	
@@ -202,19 +207,19 @@ if IsOdf(h, "fvspir") then UnitToVSR(h, "fbspir_vsr", 0) end
 			Mission.escav=h
 		end
 
-		if (IsOdf(h,"ivbomb")) then
+		if (IsOdf(h,"ivbomb_vsr")) then
 		
 			SetPerceivedTeam(h,2)  -- so they won't shoot it
 			Stop(h,1)
 		end
 	end
-	if (IsOdf(h,"ibscav"))  then
+	if (IsOdf(h,"ibscav_vsr"))  then
 		Mission.scav_count = Mission.scav_count + 1
 	end
 
 	-- Tweak NM 12/20/03 if the spawned-in scav dies, use any built scav then
 	-- as a replacement
-	if((Mission.mission_state == 4) and (Mission.scav == nil) and (IsOdf(h,"ivscav"))) then
+	if((Mission.mission_state == 4) and (Mission.scav == nil) and (IsOdf(h,"ivscav_vsr"))) then
 		Mission.scav = h
 		Goto(Mission.scav,"pool")
 	end
@@ -269,7 +274,7 @@ function ConstructionMessage()
 end
 
 function DeleteObject(h) --This function is called when an object is deleted in the game.
-	if (IsOdf(h,"ivscav"))  then
+	if (IsOdf(h,"ivscav_vsr"))  then
 		Mission.scav_count = Mission.scav_count - 1
 	end
 end
@@ -643,7 +648,7 @@ function missionCode() --
 				Goto(Mission.atk2,Mission.goal)
 				--BuildObject("ibbomb",1,"bomber")  -- you get a bomber
 --				BuildObject("ivbomb",1,"bomber")
-				Mission.bomber = GetHandle("unnamed_ivbomb")
+				Mission.bomber = GetHandle("unnamed_ivbomb_vsr")
 				Stop(Mission.bomber,0)
 				SetBestGroup(Mission.bomber)
 				ClearObjectives()

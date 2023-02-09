@@ -320,8 +320,25 @@ function AddObject(h) --This function is called when an object appears in the ga
 	if IsOdf(h, "ivscoutm_vsr:1") then
 		RemovePilot(h)
 	end
+	
+	if IsOdf(h, "fvscout") or IsOdf(h, "fvscout10x") then
+		h = UnitToVSR(h, "fvscout_vsr", 0)
+	end
+	
+	
+	if IsOdf(h, "fvscav") then
+		h = UnitToVSR(h, "fvscav_vsr", 0)
+	end
+	
+	if IsOdf(h, "fbscav") then
+		h = UnitToVSR(h, "fbscav_vsr", 0)
+	end
+	
+	if IsOdf(h, "fbscup") then
+		h = UnitToVSR(h, "fbscup_vsr", 0)
+	end
 
-	if IsOdf(h, "fvturr") then
+	if IsOdf(h, "fvturr") or IsOdf(h, "fvturr13") then
 		h = UnitToVSR(h, "fvturr_vsr", 0)
 	end
 
@@ -344,120 +361,120 @@ function AddObject(h) --This function is called when an object appears in the ga
 	end 
 	
 	-- SCOUT
-	if ((not Mission.scout1_a) and (IsOdf(h,"fvscout"))) then
+	if ((not Mission.scout1_a) and (IsOdf(h,"fvscout_vsr"))) then
 		Mission.scout1 = h
 		Mission.scout1_a = true
 	
 	
-	elseif ((not Mission.scout2_a) and (IsOdf(h,"fvscout"))) then
+	elseif ((not Mission.scout2_a) and (IsOdf(h,"fvscout_vsr"))) then
 		Mission.scout2 = h
 		Mission.scout2_a = true
 	
 	
-	elseif ((not Mission.scout3_a) and (IsOdf(h,"fvscout"))) then
+	elseif ((not Mission.scout3_a) and (IsOdf(h,"fvscout_vsr"))) then
 		Mission.scout3 = h
 		Mission.scout3_a = true
 	
 	
-	elseif ((not Mission.scout4_a) and (IsOdf(h,"fvscout"))) then
+	elseif ((not Mission.scout4_a) and (IsOdf(h,"fvscout_vsr"))) then
 		Mission.scout4 = h
 		Mission.scout4_a = true
 	
 
 	-- SENTRY
-	elseif ((not Mission.sent1_a) and (IsOdf(h,"fvsent"))) then
+	elseif ((not Mission.sent1_a) and (IsOdf(h,"fvsent_vsr"))) then
 		Mission.sent1 = h
 		Mission.sent1_attack_recy = false
 		Mission.sent1_a = true
 	
 	
-	elseif ((not Mission.sent2_a) and (IsOdf(h,"fvsent"))) then
+	elseif ((not Mission.sent2_a) and (IsOdf(h,"fvsent_vsr"))) then
 		Mission.sent2 = h
 		Mission.sent2_attack_recy = false
 		Mission.sent2_a = true
 	
 	
-	elseif ((not Mission.sent3_a) and (IsOdf(h,"fvsent"))) then
+	elseif ((not Mission.sent3_a) and (IsOdf(h,"fvsent_vsr"))) then
 		Mission.sent3 = h
 		Mission.sent3_a = true
 	
 	
-	elseif ((not Mission.sent4_a) and (IsOdf(h,"fvsent"))) then
+	elseif ((not Mission.sent4_a) and (IsOdf(h,"fvsent_vsr"))) then
 		Mission.sent4 = h
 		Mission.sent4_a = true
 	
 
 	-- WARRIOR 
-	elseif ((not Mission.war1_a) and (IsOdf(h,"fvtank"))) then
+	elseif ((not Mission.war1_a) and (IsOdf(h,"fvtank_vsr"))) then
 		Mission.war1 = h
 		Mission.war1_attack_recy = false
 		Mission.war1_a = true
 	
 	
-	elseif ((not Mission.war2_a) and (IsOdf(h,"fvtank"))) then
+	elseif ((not Mission.war2_a) and (IsOdf(h,"fvtank_vsr"))) then
 		Mission.war2 = h
 		Mission.war1_attack_recy = false
 		Mission.war2_a = true
 	
 	
-	elseif ((not Mission.war3_a) and (IsOdf(h,"fvtank"))) then
+	elseif ((not Mission.war3_a) and (IsOdf(h,"fvtank_vsr"))) then
 		Mission.war3 = h
 		Mission.war3_a = true
 	
 	
-	elseif ((not Mission.war4_a) and (IsOdf(h,"fvtank"))) then
+	elseif ((not Mission.war4_a) and (IsOdf(h,"fvtank_vsr"))) then
 		Mission.war4 = h
 		Mission.war4_a = true
 	
 
 	-- LANCER
-	elseif ((not Mission.lance1_a) and (IsOdf(h,"fvarch"))) then
+	elseif ((not Mission.lance1_a) and (IsOdf(h,"fvarch_vsr"))) then
 		Mission.lance1 = h
 		Mission.lance1_a = true
 	
 	
-	elseif ((not Mission.lance2_a) and (IsOdf(h,"fvarch"))) then
+	elseif ((not Mission.lance2_a) and (IsOdf(h,"fvarch_vsr"))) then
 		Mission.lance2 = h
 		Mission.lance2_a = true
 	
 	
-	elseif ((not Mission.lance3_a) and (IsOdf(h,"fvarch"))) then
+	elseif ((not Mission.lance3_a) and (IsOdf(h,"fvarch_vsr"))) then
 
 		Mission.lance3 = h
 		Mission.lance3_a = true
 	
 	
-	elseif ((not Mission.lance4_a) and (IsOdf(h,"fvarch"))) then
+	elseif ((not Mission.lance4_a) and (IsOdf(h,"fvarch_vsr"))) then
 
 		Mission.lance4 = h
 		Mission.lance4_a = true
 	
 	
 	-- MAULER
-	elseif ((not Mission.maul1_a) and (IsOdf(h,"fvwalk"))) then
+	elseif ((not Mission.maul1_a) and (IsOdf(h,"fvwalk_vsr"))) then
 		Mission.maul1 = h
 		Mission.maul1_attack_recy = false
 		Mission.maul1_a = true
 	
 	
-	elseif ((not Mission.maul2_a) and (IsOdf(h,"fvwalk"))) then
+	elseif ((not Mission.maul2_a) and (IsOdf(h,"fvwalk_vsr"))) then
 		Mission.maul2 = h
 		Mission.maul2_attack_recy = false
 		Mission.maul2_a = true
 	
 	
-	elseif ((not Mission.maul3_a) and (IsOdf(h,"fvwalk"))) then
+	elseif ((not Mission.maul3_a) and (IsOdf(h,"fvwalk_vsr"))) then
 		Mission.maul3 = h
 		Mission.maul3_a = true
 	
 	
-	elseif ((not Mission.maul4_a) and (IsOdf(h,"fvwalk"))) then
+	elseif ((not Mission.maul4_a) and (IsOdf(h,"fvwalk_vsr"))) then
 		Mission.maul4 = h
 		Mission.maul4_a = true
 	
 
 	-- first isdf scav
-	elseif ((not Mission.first_scav) and (IsOdf(h,"ibscav"))) then
+	elseif ((not Mission.first_scav) and (IsOdf(h,"ibscav_vsr"))) then
 		Mission.first_scav = true
 	
 
@@ -544,6 +561,8 @@ SetAutoGroupUnits(false)
 	Mission.wingman = UnitToVSR(Mission.wingman, "ivscout_vsr", 0)
 	Stop(Mission.wingman, 0)
 	SetGroup(Mission.wingman,0)
+	
+	temp = UnitToVSR(GetHandle("dower"), "fbdowe_vsr", 0)
 
 
 
@@ -553,17 +572,25 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	group = GetGroup(h)
 	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
-	SetAsUser(h, PlayerTeam)
+		SetAsUser(h, PlayerTeam)
 	else
-	SetLabel(h, label)
+
 	end
 
+	if label ~= nil then
+		SetLabel(h, label)
+	end
+	
+	SetGroup(h, group)
+
 	return h
+
 
 end
 
@@ -2936,6 +2963,7 @@ if (not Mission.ON_HOLD) then
 				SetPerceivedTeam(Mission.transport,2)
 				Retreat(Mission.transport,"into_drop_path")
 				Mission.start_end_movie = true
+				SucceedMission(GetTime() + 10,"isdf10w1.txt")
 			end
 
 			if (GetDistance(Mission.transport,Mission.dropshipb) < 150.0) then
@@ -2945,6 +2973,7 @@ if (not Mission.ON_HOLD) then
 				SetPerceivedTeam(Mission.transport,2)
 				Retreat(Mission.transport,"into_drop_path")
 				Mission.start_end_movie = true
+				SucceedMission(GetTime() + 10,"isdf10w1.txt")
 			end
 		end
 		--------------------------------------------
@@ -2975,7 +3004,7 @@ if (not Mission.ON_HOLD) then
 
 		if ((not Mission.remove_transport) and (Mission.shot2) and (Mission.carrier_time < GetTime())) then
 		
-			SucceedMission(GetTime() + 0.1,"isdf10w1.txt")
+			
 			Mission.remove_transport = true
 		end
 		--------------------------------------------

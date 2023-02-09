@@ -10,5 +10,5 @@ UnitIdleSeconds = 999999 // Don't send out units via Dispatch.
 planType = "BuildMinimums"
 planPriority = 100
 
-buildType1 = "ivturr"
+buildType1 = "ivturr_vsr"
 buildCount1 = 1

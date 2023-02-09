@@ -128,6 +128,7 @@ function Start() --This function is called upon the first frame
 	GiveWeapon(Mission.player,"gproxminvsr")
 
 	SetGroup(Mission.recy,0)
+	Mission.recy = UnitToVSR(Mission.recy, "ivrecy_vsr", 0)
    
 end
 
@@ -135,36 +136,37 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	group = GetGroup(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
-	SetAsUser(h, PlayerTeam)
+		SetAsUser(h, PlayerTeam)
 	else
+
 	end
 
+	if label ~= nil then
+		SetLabel(h, label)
+	end
+	
+	SetGroup(h, group)
+
 	return h
+
 
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
 
-	if IsOdf(h, "ivscout:1") then	
-		temp = GetGroup(h)
-		h = UnitToVSR(h, "ivscout_vsr", 0)	
-		Goto(h, GetHandle("autonav"), 0)
-		SetGroup(h, temp)
-	end
 
-	if IsOdf(h, "ivturr:1") then	
-		temp = GetGroup(h)
-		h = UnitToVSR(h, "ivturr_vsr", 0)	
-		Goto(h, GetHandle("autonav"), 0)
-		SetGroup(h, temp)
+	if IsOdf(h, "ivturr_vsr:1") then	
+
 		SendEnemies(3, h)
 	end
 
-	if (IsOdf(h,"ibrecy")) then
+	if (IsOdf(h,"ibrecy_vsr")) then
 	
 		temp = BuildObject("fvscout_vsr", Mission.comp_team, Mission.spawn1)
 		Attack(temp, h, 1)
@@ -173,28 +175,28 @@ function AddObject(h) --This function is called when an object appears in the ga
 	end
 
 
-	if ((not Mission.scavBuilt) and (IsOdf(h,"ivscav:1")))  then
+	if ((not Mission.scavBuilt) and (IsOdf(h,"ivscav_vsr:1")))  then
 --		temp = BuildObject("fvsent_vsr", Mission.comp_team, Mission.spawn1)
 --		Attack(temp, h, 1)
 		Mission.scavBuilt = true
 	
-	elseif ((not Mission.powerBuilt) and (IsOdf(h,"ibpgen")))	 then
+	elseif ((not Mission.powerBuilt) and (IsOdf(h,"ibpgen_vsr")))	 then
 		Mission.powerBuilt = true
 	
 	elseif ((not Mission.wallsBuilt) and (IsOdf(h,"ibwall")))  then
 		Mission.wallsBuilt = true
 
 		
-	elseif ((not Mission.constBuilt) and (IsOdf(h,"ivcons:1")))  then
+	elseif ((not Mission.constBuilt) and (IsOdf(h,"ivcons_vsr:1")))  then
 		SendEnemies(2, h)
 		Mission.constBuilt = true
 	
-	elseif ((not Mission.relayBuilt) and (IsOdf(h,"ibcbun"))) then
+	elseif ((not Mission.relayBuilt) and (IsOdf(h,"ibcbun_vsr"))) then
 	
 		SendEnemies(3,h)
 		Mission.relayBuilt = true
 	
-	elseif ((not Mission.gunTowBuilt) and (IsOdf(h,"ibgtow")))  then
+	elseif ((not Mission.gunTowBuilt) and (IsOdf(h,"ibgtow_vsr")))  then
 		SendEnemies(4, h)
 		gtow = h
 		Mission.gunTowBuilt = true
@@ -221,7 +223,7 @@ function AddObject(h) --This function is called when an object appears in the ga
 		SetGroup(h, temp)
 		SendEnemies(0, h)
 	
-	elseif (IsOdf(h,"ivrckt:1"))   then --react to the Mission.player building a rocket tank then
+	elseif (IsOdf(h,"ivrckt_vsr:1"))   then --react to the Mission.player building a rocket tank then
 		SendEnemies(1, h)
 		
 	end

@@ -1,0 +1,29 @@
+[GameObjectClass]
+baseName = "ibrecy"
+
+classLabel = "ibrecy"
+
+/////// PROVIDES ///////////////////
+
+provideCount = 5
+provideName3 = "ibrecy4a"
+provideName4 = "VIRTUAL_CLASS_RECYCLER"
+provideName5 = "VIRTUAL_CLASS_RECYCLERBUILDING"
+
+////////////////////////////////////
+
+[PoweredBuildingClass]
+
+[BuildingClass]
+
+[FactoryClass]
+buildItem1 = ""
+buildItem2 = ""
+buildItem3 = "ivturr_vsr"
+buildItem4 = ""
+buildItem5 = ""
+buildItem6 = ""
+
+[RecyclerClass]
+
+[Lod1]

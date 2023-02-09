@@ -1,7 +1,7 @@
 [Start]
 scrapCount = 40
-scavClass = "fvscav"
-consClass = "fvcons"
+scavClass = "fvscav_vsr"
+consClass = "fvcons_vsr"
 IdleAllCraft = false // Prevent Interrupting AI.
 
 [IdleDispatcher]
@@ -38,14 +38,14 @@ buildCount1 = 1
 [Plan5]
 planType = "BaseBuildMinimums"
 planPriority= 90
-buildType1 = "fbspir"
+buildType1 = "fbspir_vsr"
 buildLoc1 = "new_gun1"
 buildCount1=1
 
 [Plan6]
 planType = "BaseBuildMinimums"
 planPriority= 90
-buildType1 = "fbspir"
+buildType1 = "fbspir_vsr"
 buildLoc1 = "new_gun2"
 buildCount1=1
 

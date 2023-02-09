@@ -130,6 +130,8 @@ function Start() --This function is called upon the first frame
 	Mission.rec = UnitToVSR(Mission.rec, "ibrecy_vsr", 0)
 
 	Mission.gun1 = UnitToVSR(GetHandle("gun1"), "fbspir_vsr", 0)
+	
+	temp = UnitToVSR(GetHandle("unnamed_fvcons"), "fvcons_vsr", 0)
 
 
    
@@ -139,15 +141,25 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	group = GetGroup(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
-	SetAsUser(h, PlayerTeam)
+		SetAsUser(h, PlayerTeam)
 	else
+
 	end
 
+	if label ~= nil then
+		SetLabel(h, label)
+	end
+	
+	SetGroup(h, group)
+
 	return h
+
 
 end
 
@@ -179,6 +191,10 @@ if IsOdf(h, "fvturr") then h = UnitToVSR(h, "fvturr_vsr", 0)
 elseif IsOdf(h, "fvtank") then h = UnitToVSR(h, "fvtank_vsr", 0) 
 elseif IsOdf(h, "fvsent") then h = UnitToVSR(h, "fvsent_vsr", 0)
 elseif IsOdf(h, "fvscout") then h = UnitToVSR(h, "fvscout_vsr", 0)
+elseif IsOdf(h, "fbscav") then h = UnitToVSR(h, "fbscav_vsr",0)
+elseif IsOdf(h, "ibpgen") then h = UnitToVSR(h, "ibpgen_vsr",0)
+elseif IsOdf(h, "ibgtow") then h = UnitToVSR(h, "ibgtow_vsr",0)
+elseif IsOdf(h, "ibscav") then h = UnitToVSR(h, "ibscav_vsr",0)
 end
 
 end
@@ -273,7 +289,7 @@ function missionCode() --
 		and (not Mission.botched_rescue)) then 
 	
 
-		if (IsOdf(Mission.player,"isuser"))   then -- the Mission.player needs wheels to resuce then
+		if (IsOdf(Mission.player,"ispilo"))   then -- the Mission.player needs wheels to resuce then
 		
 			Mission.atk1 = BuildObject("fvsent_vsr",2,"shab_attack")
 			Mission.shab_state = 4

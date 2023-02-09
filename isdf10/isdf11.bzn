@@ -6,7 +6,7 @@ binarySave [1] =
 false
 msn_filename = isdf11.bzn
 seq_count [1] =
-7650
+7658
 saveType [1] =
 0
 g_TerrainName = isdf11
@@ -25438,295 +25438,6 @@ false
 independence [1] =
 1
 [GameObject]
-objClass = fbover
-seqno [1] =
-1ca2
-team [1] =
-34
-label = overseer
-isUser [1] =
-false
-objAddr = 0000010B
-transform [1] =
-  right.x [1] =
-1.00000000e+00
-  right.y [1] =
-0.00000000e+00
-  right.z [1] =
-0.00000000e+00
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-1.00000000e+00
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
-0.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
-1.00000000e+00
-  posit.x [1] =
-1.37600000e+03
-  posit.y [1] =
-1.63699997e+02
-  posit.z [1] =
--4.16000000e+02
-powerHandle [2] =
-287317158
-288365735
-saveClass = 
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-1.75477240e+07
- mass_inv [1] =
-5.69874459e-08
- v_mag [1] =
-0.00000000e+00
- v_mag_inv [1] =
-1.00000002e+30
- I [1] =
-1.75957361e+10
- k_i [1] =
-5.68319489e-11
- v [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
-name = Overseer Array
-saveFlags [1] =
-44
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-4
-groupNumber [1] =
--1
-undefaicmd =
-priority [1] =
-1
-what = 1c000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-false
-independence [1] =
-1
-[GameObject]
-objClass = fblung
-seqno [1] =
-801ca6
-team [1] =
-34
-isUser [1] =
-false
-objAddr = 0000010C
-transform [1] =
-  right.x [1] =
-9.99995768e-01
-  right.y [1] =
-0.00000000e+00
-  right.z [1] =
-0.00000000e+00
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-9.99995649e-01
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
-0.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
-9.99991417e-01
-  posit.x [1] =
-1.38622290e+03
-  posit.y [1] =
-1.69003998e+02
-  posit.z [1] =
--4.26226196e+02
-saveClass = 
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-2.57307891e+04
- mass_inv [1] =
-3.88639455e-05
- v_mag [1] =
-0.00000000e+00
- v_mag_inv [1] =
-1.00000002e+30
- I [1] =
-3.31991125e+05
- k_i [1] =
-3.01212867e-06
- v [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
-name = Lung
-saveFlags [1] =
-108
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-4
-groupNumber [1] =
--1
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-false
-independence [1] =
-1
-[GameObject]
-objClass = fblung
-seqno [1] =
-801ca7
-team [1] =
-34
-isUser [1] =
-false
-objAddr = 0000010D
-transform [1] =
-  right.x [1] =
-9.99995768e-01
-  right.y [1] =
-0.00000000e+00
-  right.z [1] =
-0.00000000e+00
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-9.99995649e-01
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
-0.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
-9.99991417e-01
-  posit.x [1] =
-1.36561426e+03
-  posit.y [1] =
-1.69003998e+02
-  posit.z [1] =
--4.05762421e+02
-saveClass = 
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-2.57307891e+04
- mass_inv [1] =
-3.88639455e-05
- v_mag [1] =
-0.00000000e+00
- v_mag_inv [1] =
-1.00000002e+30
- I [1] =
-3.31991125e+05
- k_i [1] =
-3.01212867e-06
- v [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
-name = Lung
-saveFlags [1] =
-108
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-4
-groupNumber [1] =
--1
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-false
-independence [1] =
-1
-[GameObject]
 objClass = bocryst02
 seqno [1] =
 801ca8
@@ -25734,7 +25445,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000010E
+objAddr = 0000010B
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -25829,7 +25540,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000010F
+objAddr = 0000010C
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -25924,7 +25635,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000110
+objAddr = 0000010D
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26019,7 +25730,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000111
+objAddr = 0000010E
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -26114,7 +25825,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000112
+objAddr = 0000010F
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26209,7 +25920,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000113
+objAddr = 00000110
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26304,7 +26015,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000114
+objAddr = 00000111
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -26399,7 +26110,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000115
+objAddr = 00000112
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26494,7 +26205,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000116
+objAddr = 00000113
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26589,7 +26300,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000117
+objAddr = 00000114
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26684,7 +26395,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000118
+objAddr = 00000115
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -26779,7 +26490,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000119
+objAddr = 00000116
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26874,7 +26585,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000011A
+objAddr = 00000117
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -26969,7 +26680,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000011B
+objAddr = 00000118
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -27065,7 +26776,7 @@ team [1] =
 label = ruin3
 isUser [1] =
 false
-objAddr = 0000011C
+objAddr = 00000119
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -27161,7 +26872,7 @@ team [1] =
 label = ruin2
 isUser [1] =
 false
-objAddr = 0000011D
+objAddr = 0000011A
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -27257,7 +26968,7 @@ team [1] =
 label = ruin1
 isUser [1] =
 false
-objAddr = 0000011E
+objAddr = 0000011B
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -27353,7 +27064,7 @@ team [1] =
 label = ruin4
 isUser [1] =
 false
-objAddr = 0000011F
+objAddr = 0000011C
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -27448,7 +27159,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000120
+objAddr = 0000011D
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -27543,7 +27254,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000121
+objAddr = 0000011E
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -27638,7 +27349,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000122
+objAddr = 0000011F
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -27733,7 +27444,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000123
+objAddr = 00000120
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -27828,7 +27539,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000124
+objAddr = 00000121
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -27923,7 +27634,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000125
+objAddr = 00000122
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -28018,7 +27729,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000126
+objAddr = 00000123
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -28113,7 +27824,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000127
+objAddr = 00000124
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -28208,7 +27919,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000128
+objAddr = 00000125
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -28303,7 +28014,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000129
+objAddr = 00000126
 transform [1] =
   right.x [1] =
 5.53750955e-02
@@ -28398,7 +28109,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000012A
+objAddr = 00000127
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -28493,7 +28204,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000012B
+objAddr = 00000128
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -28588,7 +28299,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000012C
+objAddr = 00000129
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -28683,7 +28394,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 0000012D
+objAddr = 0000012A
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -28779,7 +28490,7 @@ team [1] =
 label = ruin4
 isUser [1] =
 false
-objAddr = 0000012E
+objAddr = 0000012B
 transform [1] =
   right.x [1] =
 1.00000000e+00
@@ -28875,7 +28586,7 @@ team [1] =
 label = ruin4
 isUser [1] =
 false
-objAddr = 0000012F
+objAddr = 0000012C
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -28970,7 +28681,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000130
+objAddr = 0000012D
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -29065,7 +28776,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000131
+objAddr = 0000012E
 transform [1] =
   right.x [1] =
 -8.13672245e-01
@@ -29160,7 +28871,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000132
+objAddr = 0000012F
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -29255,7 +28966,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000133
+objAddr = 00000130
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -29350,7 +29061,7 @@ team [1] =
 0
 isUser [1] =
 false
-objAddr = 00000134
+objAddr = 00000131
 transform [1] =
   right.x [1] =
 1.00000000e+00
@@ -29445,7 +29156,7 @@ team [1] =
 51
 isUser [1] =
 false
-objAddr = 00000135
+objAddr = 00000132
 transform [1] =
   right.x [1] =
 1.00000000e+00
@@ -29542,7 +29253,7 @@ team [1] =
 51
 isUser [1] =
 false
-objAddr = 00000136
+objAddr = 00000133
 transform [1] =
   right.x [1] =
 1.00000000e+00
@@ -29638,7 +29349,7 @@ team [1] =
 label = transmitter
 isUser [1] =
 false
-objAddr = 00000137
+objAddr = 00000134
 transform [1] =
   right.x [1] =
 -6.60928011e-01
@@ -29726,153 +29437,6 @@ false
 independence [1] =
 1
 [GameObject]
-objClass = fvcons
-seqno [1] =
-1d50
-team [1] =
-34
-label = convoy_cons
-isUser [1] =
-false
-objAddr = 00000138
-transform [1] =
-  right.x [1] =
--7.49544621e-01
-  right.y [1] =
--3.02649196e-03
-  right.z [1] =
-6.61940455e-01
-  up.x [1] =
-1.40121928e-03
-  up.y [1] =
-9.99975741e-01
-  up.z [1] =
-6.15870301e-03
-  front.x [1] =
--6.61943078e-01
-  front.y [1] =
-5.54374652e-03
-  front.z [1] =
--7.49522209e-01
-  posit.x [1] =
-1.04228748e+03
-  posit.y [1] =
-1.89227585e+02
-  posit.z [1] =
--5.25814758e+02
-buildQueued [1] =
-false
-buildActive [1] =
-false
-buildTime [1] =
-9.33191990e-36
-buildMatrix [1] =
-  right.x [1] =
-1.00000000e+00
-  right.y [1] =
-0.00000000e+00
-  right.z [1] =
-0.00000000e+00
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-1.00000000e+00
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
-0.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
-1.00000000e+00
-  posit.x [1] =
-0.00000000e+00
-  posit.y [1] =
-0.00000000e+00
-  posit.z [1] =
-0.00000000e+00
-buildClass = 
-upgradeHandle [1] =
-0
-state = 00000000
-deployTimer [1] =
--1.00000002e+30
-abandoned [1] =
-0
-curAmmo [1] =
-0.00000000e+00
-maxAmmo [1] =
-0.00000000e+00
-addAmmo [1] =
-0.00000000e+00
-curPilot = 
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-1.09159521e+04
- mass_inv [1] =
-9.16090503e-05
- v_mag [1] =
-9.87828011e-04
- v_mag_inv [1] =
-1.01232196e+03
- I [1] =
-8.41649766e+04
- k_i [1] =
-1.18814269e-05
- v [1] =
-  x [1] =
--6.53842289e-04
-  y [1] =
-5.80740470e-06
-  z [1] =
--7.40446267e-04
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
--4.50760126e-07
-  y [1] =
--1.07257627e-04
-  z [1] =
--1.98185444e-06
-name = Builder
-saveFlags [1] =
-100
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-4
-groupNumber [1] =
-5
-curHealth [1] =
-1.00000000e+03
-maxHealth [1] =
-1.00000000e+03
-addHealth [1] =
-0.00000000e+00
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-true
-independence [1] =
-1
-[GameObject]
 objClass = bepool01
 seqno [1] =
 1d51
@@ -29881,7 +29445,7 @@ team [1] =
 label = cpool1
 isUser [1] =
 false
-objAddr = 00000139
+objAddr = 00000135
 transform [1] =
   right.x [1] =
 1.00000000e+00
@@ -29977,7 +29541,7 @@ team [1] =
 label = cpool2
 isUser [1] =
 false
-objAddr = 0000013A
+objAddr = 00000136
 transform [1] =
   right.x [1] =
 1.00000000e+00
@@ -30073,7 +29637,7 @@ team [1] =
 label = convoy_scav1
 isUser [1] =
 false
-objAddr = 0000013B
+objAddr = 00000137
 transform [1] =
   right.x [1] =
 1.15834564e-01
@@ -30186,7 +29750,7 @@ team [1] =
 label = convoy_scav2
 isUser [1] =
 false
-objAddr = 0000013C
+objAddr = 00000138
 transform [1] =
   right.x [1] =
 1.57905325e-01
@@ -30299,7 +29863,7 @@ team [1] =
 label = sent1
 isUser [1] =
 false
-objAddr = 0000013D
+objAddr = 00000139
 transform [1] =
   right.x [1] =
 5.94248921e-02
@@ -30412,7 +29976,7 @@ team [1] =
 label = sent2
 isUser [1] =
 false
-objAddr = 0000013E
+objAddr = 0000013A
 transform [1] =
   right.x [1] =
 1.09499983e-01
@@ -30525,7 +30089,7 @@ team [1] =
 label = war1
 isUser [1] =
 false
-objAddr = 0000013F
+objAddr = 0000013B
 transform [1] =
   right.x [1] =
 6.77553341e-02
@@ -30638,7 +30202,7 @@ team [1] =
 label = war2
 isUser [1] =
 false
-objAddr = 00000140
+objAddr = 0000013C
 transform [1] =
   right.x [1] =
 9.50853303e-02
@@ -30751,7 +30315,7 @@ team [1] =
 label = s1_turret1
 isUser [1] =
 false
-objAddr = 00000141
+objAddr = 0000013D
 transform [1] =
   right.x [1] =
 -5.25562108e-01
@@ -30866,7 +30430,7 @@ team [1] =
 label = s1_turret2
 isUser [1] =
 false
-objAddr = 00000142
+objAddr = 0000013E
 transform [1] =
   right.x [1] =
 -3.99862379e-01
@@ -30981,7 +30545,7 @@ team [1] =
 label = s1_turret3
 isUser [1] =
 false
-objAddr = 00000143
+objAddr = 0000013F
 transform [1] =
   right.x [1] =
 4.02514249e-01
@@ -31096,7 +30660,7 @@ team [1] =
 label = s1_turret4
 isUser [1] =
 false
-objAddr = 00000144
+objAddr = 00000140
 transform [1] =
   right.x [1] =
 4.93066311e-02
@@ -31211,7 +30775,7 @@ team [1] =
 label = start_scout3
 isUser [1] =
 false
-objAddr = 00000145
+objAddr = 00000141
 transform [1] =
   right.x [1] =
 9.58604589e-02
@@ -31324,7 +30888,7 @@ team [1] =
 label = start_scout2
 isUser [1] =
 false
-objAddr = 00000146
+objAddr = 00000142
 transform [1] =
   right.x [1] =
 3.94962505e-02
@@ -31437,7 +31001,7 @@ team [1] =
 label = start_scout1
 isUser [1] =
 false
-objAddr = 00000147
+objAddr = 00000143
 transform [1] =
   right.x [1] =
 9.99984324e-01
@@ -31550,7 +31114,7 @@ team [1] =
 label = start_scout4
 isUser [1] =
 false
-objAddr = 00000148
+objAddr = 00000144
 transform [1] =
   right.x [1] =
 4.38625455e-01
@@ -31663,7 +31227,7 @@ team [1] =
 label = condor2
 isUser [1] =
 false
-objAddr = 00000149
+objAddr = 00000145
 transform [1] =
   right.x [1] =
 9.99995708e-01
@@ -31759,7 +31323,7 @@ team [1] =
 label = cave
 isUser [1] =
 false
-objAddr = 0000014A
+objAddr = 00000146
 transform [1] =
   right.x [1] =
 1.00000000e+00
@@ -31855,7 +31419,7 @@ team [1] =
 label = center_ruin
 isUser [1] =
 false
-objAddr = 0000014B
+objAddr = 00000147
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -31951,7 +31515,7 @@ team [1] =
 label = srecycler
 isUser [1] =
 false
-objAddr = 0000014C
+objAddr = 00000148
 transform [1] =
   right.x [1] =
 2.76803912e-04
@@ -32089,7 +31653,7 @@ team [1] =
 label = ivturr1
 isUser [1] =
 false
-objAddr = 0000014D
+objAddr = 00000149
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -32198,7 +31762,7 @@ team [1] =
 label = ivturr2
 isUser [1] =
 false
-objAddr = 0000014E
+objAddr = 0000014A
 transform [1] =
   right.x [1] =
 -9.99995708e-01
@@ -32299,199 +31863,6 @@ true
 independence [1] =
 1
 [GameObject]
-objClass = fbdowe
-seqno [1] =
-1dcc
-team [1] =
-34
-label = dower
-isUser [1] =
-false
-objAddr = 0000014F
-transform [1] =
-  right.x [1] =
--1.00000000e+00
-  right.y [1] =
-0.00000000e+00
-  right.z [1] =
-0.00000000e+00
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-1.00000000e+00
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
-0.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
--1.00000000e+00
-  posit.x [1] =
-1.53600000e+03
-  posit.y [1] =
-1.46400009e+02
-  posit.z [1] =
--2.56000000e+02
-powerHandle [1] =
-406855117
-saveClass = 
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-1.70867680e+07
- mass_inv [1] =
-5.85248188e-08
- v_mag [1] =
-0.00000000e+00
- v_mag_inv [1] =
-1.00000002e+30
- I [1] =
-1.69709251e+10
- k_i [1] =
-5.89243099e-11
- v [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
-name = Dower
-saveFlags [1] =
-108
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-4
-groupNumber [1] =
--1
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-false
-independence [1] =
-1
-[GameObject]
-objClass = fblung
-seqno [1] =
-801dcd
-team [1] =
-34
-isUser [1] =
-false
-objAddr = 00000150
-transform [1] =
-  right.x [1] =
--9.99995708e-01
-  right.y [1] =
-0.00000000e+00
-  right.z [1] =
-0.00000000e+00
-  up.x [1] =
-0.00000000e+00
-  up.y [1] =
-9.99995649e-01
-  up.z [1] =
-0.00000000e+00
-  front.x [1] =
-0.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
--9.99991357e-01
-  posit.x [1] =
-1.55989136e+03
-  posit.y [1] =
-1.50697006e+02
-  posit.z [1] =
--2.32379578e+02
-saveClass = 
-illumination [1] =
-1.00000000e+00
-euler =
- mass [1] =
-2.57307891e+04
- mass_inv [1] =
-3.88639455e-05
- v_mag [1] =
-0.00000000e+00
- v_mag_inv [1] =
-1.00000002e+30
- I [1] =
-3.31991125e+05
- k_i [1] =
-3.01212867e-06
- v [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- omega [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
- Accel [1] =
-  x [1] =
-0.00000000e+00
-  y [1] =
-0.00000000e+00
-  z [1] =
-0.00000000e+00
-name = Lung
-saveFlags [1] =
-108
-isVisible [1] =
-65535
-EffectsMask [1] =
-65535
-isSeen [1] =
-4
-groupNumber [1] =
--1
-undefaicmd =
-priority [1] =
-0
-what = 00000000
-who [1] =
-0
-where = 00000000
-param [1] =
-0
-aiProcess [1] =
-false
-independence [1] =
-1
-[GameObject]
 objClass = ipdrop
 seqno [1] =
 1dce
@@ -32500,7 +31871,7 @@ team [1] =
 label = autonav
 isUser [1] =
 false
-objAddr = 00000151
+objAddr = 0000014B
 transform [1] =
   right.x [1] =
 9.99995768e-01
@@ -32597,7 +31968,7 @@ team [1] =
 51
 isUser [1] =
 false
-objAddr = 00000152
+objAddr = 0000014C
 transform [1] =
   right.x [1] =
 -4.34447795e-01
@@ -32707,7 +32078,7 @@ team [1] =
 51
 isUser [1] =
 false
-objAddr = 00000153
+objAddr = 0000014D
 transform [1] =
   right.x [1] =
 8.09246153e-02
@@ -32815,17 +32186,17 @@ seqno [1] =
 1dd2
 team [1] =
 34
-label = unnamed_fbspir_vsr
+label = spire1
 isUser [1] =
 false
-objAddr = 00000154
+objAddr = 0000014E
 transform [1] =
   right.x [1] =
-1.00000000e+00
+0.00000000e+00
   right.y [1] =
 0.00000000e+00
   right.z [1] =
-0.00000000e+00
+-1.00000000e+00
   up.x [1] =
 0.00000000e+00
   up.y [1] =
@@ -32833,11 +32204,11 @@ transform [1] =
   up.z [1] =
 0.00000000e+00
   front.x [1] =
-0.00000000e+00
+1.00000000e+00
   front.y [1] =
 0.00000000e+00
   front.z [1] =
-1.00000000e+00
+0.00000000e+00
   posit.x [1] =
 9.76000000e+02
   posit.y [1] =
@@ -32924,14 +32295,14 @@ team [1] =
 34
 isUser [1] =
 false
-objAddr = 00000155
+objAddr = 0000014F
 transform [1] =
   right.x [1] =
-1.00000000e+00
+0.00000000e+00
   right.y [1] =
 0.00000000e+00
   right.z [1] =
-0.00000000e+00
+-1.00000000e+00
   up.x [1] =
 0.00000000e+00
   up.y [1] =
@@ -32939,17 +32310,17 @@ transform [1] =
   up.z [1] =
 0.00000000e+00
   front.x [1] =
-0.00000000e+00
-  front.y [1] =
-0.00000000e+00
-  front.z [1] =
 1.00000000e+00
+  front.y [1] =
+-0.00000000e+00
+  front.z [1] =
+0.00000000e+00
   posit.x [1] =
-9.68268555e+02
+9.83697083e+02
   posit.y [1] =
 1.95614807e+02
   posit.z [1] =
--3.60302948e+02
+-3.60268524e+02
 saveClass = 
 illumination [1] =
 1.00000000e+00
@@ -33017,13 +32388,13 @@ seqno [1] =
 1dd5
 team [1] =
 34
-label = unnamed_fbspir_vsr
+label = spire2
 isUser [1] =
 false
-objAddr = 00000156
+objAddr = 00000150
 transform [1] =
   right.x [1] =
-1.00000000e+00
+-1.00000000e+00
   right.y [1] =
 0.00000000e+00
   right.z [1] =
@@ -33039,13 +32410,13 @@ transform [1] =
   front.y [1] =
 0.00000000e+00
   front.z [1] =
-1.00000000e+00
+-1.00000000e+00
   posit.x [1] =
-1.20000000e+03
+1.55200000e+03
   posit.y [1] =
-1.66900009e+02
+1.46600006e+02
   posit.z [1] =
--2.08000000e+02
+-4.32000000e+02
 powerHandle [1] =
 417340887
 saveClass = 
@@ -33126,10 +32497,10 @@ team [1] =
 34
 isUser [1] =
 false
-objAddr = 00000157
+objAddr = 00000151
 transform [1] =
   right.x [1] =
-1.00000000e+00
+-1.00000000e+00
   right.y [1] =
 0.00000000e+00
   right.z [1] =
@@ -33145,13 +32516,13 @@ transform [1] =
   front.y [1] =
 0.00000000e+00
   front.z [1] =
-1.00000000e+00
+-1.00000000e+00
   posit.x [1] =
-1.19226855e+03
+1.55973145e+03
   posit.y [1] =
-1.70914810e+02
+1.50614807e+02
   posit.z [1] =
--2.00302933e+02
+-4.39697052e+02
 saveClass = 
 illumination [1] =
 1.00000000e+00
@@ -33219,17 +32590,17 @@ seqno [1] =
 1dd8
 team [1] =
 34
-label = unnamed_fbspir_vsr
+label = spire3
 isUser [1] =
 false
-objAddr = 00000158
+objAddr = 00000152
 transform [1] =
   right.x [1] =
-1.00000000e+00
+0.00000000e+00
   right.y [1] =
 0.00000000e+00
   right.z [1] =
-0.00000000e+00
+1.00000000e+00
   up.x [1] =
 0.00000000e+00
   up.y [1] =
@@ -33237,11 +32608,11 @@ transform [1] =
   up.z [1] =
 0.00000000e+00
   front.x [1] =
-0.00000000e+00
+-1.00000000e+00
   front.y [1] =
 0.00000000e+00
   front.z [1] =
-1.00000000e+00
+0.00000000e+00
   posit.x [1] =
 1.39200000e+03
   posit.y [1] =
@@ -33328,14 +32699,14 @@ team [1] =
 34
 isUser [1] =
 false
-objAddr = 00000159
+objAddr = 00000153
 transform [1] =
   right.x [1] =
-1.00000000e+00
+0.00000000e+00
   right.y [1] =
 0.00000000e+00
   right.z [1] =
-0.00000000e+00
+1.00000000e+00
   up.x [1] =
 0.00000000e+00
   up.y [1] =
@@ -33343,17 +32714,17 @@ transform [1] =
   up.z [1] =
 0.00000000e+00
   front.x [1] =
-0.00000000e+00
+-1.00000000e+00
   front.y [1] =
 0.00000000e+00
   front.z [1] =
-1.00000000e+00
+0.00000000e+00
   posit.x [1] =
-1.38426855e+03
+1.38430298e+03
   posit.y [1] =
 1.50414810e+02
   posit.z [1] =
--1.68302933e+02
+-1.83731476e+02
 saveClass = 
 illumination [1] =
 1.00000000e+00
@@ -33418,20 +32789,20 @@ independence [1] =
 [GameObject]
 objClass = fbspir_vsr
 seqno [1] =
-1ddb
+1ddd
 team [1] =
 34
-label = unnamed_fbspir_vsr
+label = spire4
 isUser [1] =
 false
-objAddr = 0000015A
+objAddr = 00000154
 transform [1] =
   right.x [1] =
-1.00000000e+00
+0.00000000e+00
   right.y [1] =
 0.00000000e+00
   right.z [1] =
-0.00000000e+00
+1.00000000e+00
   up.x [1] =
 0.00000000e+00
   up.y [1] =
@@ -33439,19 +32810,19 @@ transform [1] =
   up.z [1] =
 0.00000000e+00
   front.x [1] =
-0.00000000e+00
+-1.00000000e+00
   front.y [1] =
 0.00000000e+00
   front.z [1] =
-1.00000000e+00
+0.00000000e+00
   posit.x [1] =
-1.55200000e+03
+1.20000000e+03
   posit.y [1] =
-1.46600006e+02
+1.66900009e+02
   posit.z [1] =
--4.32000000e+02
+-2.08000000e+02
 powerHandle [1] =
-423632349
+426778079
 saveClass = 
 abandoned [1] =
 0
@@ -33525,15 +32896,111 @@ independence [1] =
 [GameObject]
 objClass = fblung_vsr
 seqno [1] =
-801ddd
+801ddf
 team [1] =
 34
 isUser [1] =
 false
-objAddr = 0000015B
+objAddr = 00000155
 transform [1] =
   right.x [1] =
+0.00000000e+00
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
 1.00000000e+00
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+-1.00000000e+00
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+0.00000000e+00
+  posit.x [1] =
+1.19230298e+03
+  posit.y [1] =
+1.70914810e+02
+  posit.z [1] =
+-2.15731476e+02
+saveClass = 
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+2.57307891e+04
+ mass_inv [1] =
+3.88639455e-05
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+3.31991125e+05
+ k_i [1] =
+3.01212867e-06
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Lung
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+-1
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+false
+independence [1] =
+1
+[GameObject]
+objClass = fbdowe_vsr
+seqno [1] =
+1de0
+team [1] =
+34
+label = dower
+isUser [1] =
+false
+objAddr = 00000156
+transform [1] =
+  right.x [1] =
+-1.00000000e+00
   right.y [1] =
 0.00000000e+00
   right.z [1] =
@@ -33549,13 +33016,110 @@ transform [1] =
   front.y [1] =
 0.00000000e+00
   front.z [1] =
-1.00000000e+00
+-1.00000000e+00
   posit.x [1] =
-1.54426855e+03
+1.53600000e+03
   posit.y [1] =
-1.50614807e+02
+1.46400009e+02
   posit.z [1] =
--4.24302948e+02
+-2.56000000e+02
+powerHandle [1] =
+428875233
+saveClass = 
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+1.70867680e+07
+ mass_inv [1] =
+5.85248188e-08
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+1.69709251e+10
+ k_i [1] =
+5.89243099e-11
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Dower
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+-1
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+false
+independence [1] =
+1
+[GameObject]
+objClass = fblung_vsr
+seqno [1] =
+801de1
+team [1] =
+34
+isUser [1] =
+false
+objAddr = 00000157
+transform [1] =
+  right.x [1] =
+-1.17145535e-15
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+-1.00000000e+00
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+1.00000000e+00
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+-1.17145535e-15
+  posit.x [1] =
+1.55969702e+03
+  posit.y [1] =
+1.50900009e+02
+  posit.z [1] =
+-2.32304245e+02
 saveClass = 
 illumination [1] =
 1.00000000e+00
@@ -33620,13 +33184,13 @@ independence [1] =
 [GameObject]
 objClass = fbforg_vsr
 seqno [1] =
-1dde
+1de2
 team [1] =
 34
 label = forge
 isUser [1] =
 false
-objAddr = 0000015C
+objAddr = 00000158
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -33659,10 +33223,10 @@ false
 buildCount [1] =
 0
 navHandle [1] =
-427826657
+433069541
 powerHandle [2] =
-425729503
-426778080
+430972387
+432020964
 saveClass = 
 illumination [1] =
 1.00000000e+00
@@ -33727,12 +33291,12 @@ independence [1] =
 [GameObject]
 objClass = fblung_vsr
 seqno [1] =
-801ddf
+801de3
 team [1] =
 34
 isUser [1] =
 false
-objAddr = 0000015D
+objAddr = 00000159
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -33822,12 +33386,12 @@ independence [1] =
 [GameObject]
 objClass = fblung_vsr
 seqno [1] =
-801de0
+801de4
 team [1] =
 34
 isUser [1] =
 false
-objAddr = 0000015E
+objAddr = 0000015A
 transform [1] =
   right.x [1] =
 0.00000000e+00
@@ -33917,13 +33481,13 @@ independence [1] =
 [GameObject]
 objClass = ipdrop
 seqno [1] =
-1de1
+1de5
 team [1] =
 34
 label = autonav
 isUser [1] =
 false
-objAddr = 0000015F
+objAddr = 0000015B
 transform [1] =
   right.x [1] =
 1.00000000e+00
@@ -34012,6 +33576,436 @@ aiProcess [1] =
 false
 independence [1] =
 1
+[GameObject]
+objClass = fbover_vsr
+seqno [1] =
+1de6
+team [1] =
+34
+label = overseer
+isUser [1] =
+false
+objAddr = 0000015C
+transform [1] =
+  right.x [1] =
+1.00000000e+00
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+0.00000000e+00
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+0.00000000e+00
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+1.00000000e+00
+  posit.x [1] =
+1.37600000e+03
+  posit.y [1] =
+1.63699997e+02
+  posit.z [1] =
+-4.16000000e+02
+powerHandle [2] =
+435166695
+436215272
+saveClass = 
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+1.75477240e+07
+ mass_inv [1] =
+5.69874459e-08
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+1.75957361e+10
+ k_i [1] =
+5.68319489e-11
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Overseer Array
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+-1
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+true
+independence [1] =
+1
+[GameObject]
+objClass = fblung_vsr
+seqno [1] =
+801de7
+team [1] =
+34
+isUser [1] =
+false
+objAddr = 0000015D
+transform [1] =
+  right.x [1] =
+1.00000000e+00
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+0.00000000e+00
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+0.00000000e+00
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+1.00000000e+00
+  posit.x [1] =
+1.38631482e+03
+  posit.y [1] =
+1.69801529e+02
+  posit.z [1] =
+-4.26315887e+02
+saveClass = 
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+2.57307891e+04
+ mass_inv [1] =
+3.88639455e-05
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+3.31991125e+05
+ k_i [1] =
+3.01212867e-06
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Lung
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+-1
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+false
+independence [1] =
+1
+[GameObject]
+objClass = fblung_vsr
+seqno [1] =
+801de8
+team [1] =
+34
+isUser [1] =
+false
+objAddr = 0000015E
+transform [1] =
+  right.x [1] =
+1.00000000e+00
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+0.00000000e+00
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+0.00000000e+00
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+1.00000000e+00
+  posit.x [1] =
+1.36568518e+03
+  posit.y [1] =
+1.69801529e+02
+  posit.z [1] =
+-4.05684113e+02
+saveClass = 
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+2.57307891e+04
+ mass_inv [1] =
+3.88639455e-05
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+3.31991125e+05
+ k_i [1] =
+3.01212867e-06
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Lung
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+-1
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+false
+independence [1] =
+1
+[GameObject]
+objClass = fvcons_vsr
+seqno [1] =
+1de9
+team [1] =
+34
+label = convoy_cons
+isUser [1] =
+false
+objAddr = 0000015F
+transform [1] =
+  right.x [1] =
+-7.49040127e-01
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+6.62524760e-01
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+-6.62521899e-01
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+-7.49036849e-01
+  posit.x [1] =
+1.03899902e+03
+  posit.y [1] =
+1.89228912e+02
+  posit.z [1] =
+-5.26349121e+02
+buildQueued [1] =
+false
+buildActive [1] =
+false
+buildTime [1] =
+0.00000000e+00
+buildMatrix [1] =
+  right.x [1] =
+1.00000000e+00
+  right.y [1] =
+0.00000000e+00
+  right.z [1] =
+0.00000000e+00
+  up.x [1] =
+0.00000000e+00
+  up.y [1] =
+1.00000000e+00
+  up.z [1] =
+0.00000000e+00
+  front.x [1] =
+0.00000000e+00
+  front.y [1] =
+0.00000000e+00
+  front.z [1] =
+1.00000000e+00
+  posit.x [1] =
+0.00000000e+00
+  posit.y [1] =
+0.00000000e+00
+  posit.z [1] =
+0.00000000e+00
+buildClass = 
+upgradeHandle [1] =
+0
+state = 00000000
+deployTimer [1] =
+-1.00000002e+30
+abandoned [1] =
+0
+curAmmo [1] =
+0.00000000e+00
+maxAmmo [1] =
+0.00000000e+00
+addAmmo [1] =
+0.00000000e+00
+curPilot = 
+illumination [1] =
+1.00000000e+00
+euler =
+ mass [1] =
+7.00000000e+03
+ mass_inv [1] =
+1.42857141e-04
+ v_mag [1] =
+0.00000000e+00
+ v_mag_inv [1] =
+1.00000002e+30
+ I [1] =
+5.39719141e+04
+ k_i [1] =
+1.85281551e-05
+ v [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ omega [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+ Accel [1] =
+  x [1] =
+0.00000000e+00
+  y [1] =
+0.00000000e+00
+  z [1] =
+0.00000000e+00
+name = Builder
+saveFlags [1] =
+108
+isVisible [1] =
+65535
+EffectsMask [1] =
+65535
+isSeen [1] =
+0
+groupNumber [1] =
+5
+undefaicmd =
+priority [1] =
+0
+what = 00000000
+who [1] =
+0
+where = 00000000
+param [1] =
+0
+aiProcess [1] =
+true
+independence [1] =
+1
 groupTargets = 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 dllName = luamission.dll
 [AiMission]
@@ -34024,32 +34018,6 @@ count [1] =
 name = AiPath
 sObject = 00000160
 size [1] =
-12
-label = condor_spawn
-pointCount [1] =
-1
-points [1] =
-  x [1] =
-8.99783020e+02
-  z [1] =
-1.56119995e+02
-pathType = 00000000
-name = AiPath
-sObject = 00000161
-size [1] =
-13
-label = sbase1_spawn8
-pointCount [1] =
-1
-points [1] =
-  x [1] =
-1.47531995e+03
-  z [1] =
--3.93739990e+02
-pathType = 00000000
-name = AiPath
-sObject = 00000162
-size [1] =
 14
 label = sturret_point2
 pointCount [1] =
@@ -34061,7 +34029,7 @@ points [1] =
 -1.01167999e+03
 pathType = 00000000
 name = AiPath
-sObject = 00000163
+sObject = 00000161
 size [1] =
 13
 label = tobridge_path
@@ -34098,7 +34066,7 @@ points [7] =
 -4.17423004e+02
 pathType = 00000000
 name = AiPath
-sObject = 00000164
+sObject = 00000162
 size [1] =
 13
 label = bridge_check2
@@ -34111,7 +34079,7 @@ points [1] =
 -5.51262024e+02
 pathType = 00000000
 name = AiPath
-sObject = 00000165
+sObject = 00000163
 size [1] =
 13
 label = sbase1_spawn1
@@ -34124,7 +34092,7 @@ points [1] =
 -3.14464996e+02
 pathType = 00000000
 name = AiPath
-sObject = 00000166
+sObject = 00000164
 size [1] =
 14
 label = bomber_remove1
@@ -34137,7 +34105,7 @@ points [1] =
 -1.86038000e+03
 pathType = 00000000
 name = AiPath
-sObject = 00000167
+sObject = 00000165
 size [1] =
 8
 label = s1_point
@@ -34154,7 +34122,72 @@ points [2] =
 -1.14048999e+03
 pathType = 00000000
 name = AiPath
+sObject = 00000166
+size [1] =
+14
+label = sturret_point4
+pointCount [1] =
+1
+points [1] =
+  x [1] =
+-1.60358994e+02
+  z [1] =
+-8.06931030e+02
+pathType = 00000000
+name = AiPath
+sObject = 00000167
+size [1] =
+12
+label = condor_spawn
+pointCount [1] =
+1
+points [1] =
+  x [1] =
+8.99783020e+02
+  z [1] =
+1.56119995e+02
+pathType = 00000000
+name = AiPath
 sObject = 00000168
+size [1] =
+13
+label = sbase1_spawn2
+pointCount [1] =
+1
+points [1] =
+  x [1] =
+1.40315002e+03
+  z [1] =
+-3.31339996e+02
+pathType = 00000000
+name = AiPath
+sObject = 00000169
+size [1] =
+13
+label = sbase1_spawn8
+pointCount [1] =
+1
+points [1] =
+  x [1] =
+1.47531995e+03
+  z [1] =
+-3.93739990e+02
+pathType = 00000000
+name = AiPath
+sObject = 0000016A
+size [1] =
+13
+label = sbase2_spawn1
+pointCount [1] =
+1
+points [1] =
+  x [1] =
+-4.23937012e+02
+  z [1] =
+-1.16252002e+03
+pathType = 00000000
+name = AiPath
+sObject = 0000016B
 size [1] =
 18
 label = bridgespire_point2
@@ -34171,33 +34204,7 @@ points [2] =
 -4.08226990e+02
 pathType = 00000000
 name = AiPath
-sObject = 00000169
-size [1] =
-14
-label = sturret_point4
-pointCount [1] =
-1
-points [1] =
-  x [1] =
--1.60358994e+02
-  z [1] =
--8.06931030e+02
-pathType = 00000000
-name = AiPath
-sObject = 0000016A
-size [1] =
-8
-label = smoke2_a
-pointCount [1] =
-1
-points [1] =
-  x [1] =
--4.71658997e+02
-  z [1] =
-1.78197006e+02
-pathType = 00000000
-name = AiPath
-sObject = 0000016B
+sObject = 0000016C
 size [1] =
 6
 label = path_1
@@ -34208,19 +34215,6 @@ points [1] =
 6.35103027e+02
   z [1] =
 -4.73799988e+02
-pathType = 00000000
-name = AiPath
-sObject = 0000016C
-size [1] =
-13
-label = sbase2_spawn3
-pointCount [1] =
-1
-points [1] =
-  x [1] =
--3.96473999e+02
-  z [1] =
--1.19016003e+03
 pathType = 00000000
 name = AiPath
 sObject = 0000016D
@@ -34366,31 +34360,57 @@ pathType = 00000000
 name = AiPath
 sObject = 00000172
 size [1] =
-13
-label = sbase1_spawn2
+11
+label = first_point
 pointCount [1] =
 1
 points [1] =
   x [1] =
-1.40315002e+03
+2.54648991e+01
   z [1] =
--3.31339996e+02
+-4.77154999e+02
 pathType = 00000000
 name = AiPath
 sObject = 00000173
 size [1] =
-13
-label = sbase2_spawn1
+8
+label = smoke2_a
 pointCount [1] =
 1
 points [1] =
   x [1] =
--4.23937012e+02
+-4.71658997e+02
   z [1] =
--1.16252002e+03
+1.78197006e+02
 pathType = 00000000
 name = AiPath
 sObject = 00000174
+size [1] =
+14
+label = sturret_point1
+pointCount [1] =
+1
+points [1] =
+  x [1] =
+-5.68546021e+02
+  z [1] =
+-9.25244019e+02
+pathType = 00000000
+name = AiPath
+sObject = 00000175
+size [1] =
+13
+label = sbase2_spawn3
+pointCount [1] =
+1
+points [1] =
+  x [1] =
+-3.96473999e+02
+  z [1] =
+-1.19016003e+03
+pathType = 00000000
+name = AiPath
+sObject = 00000176
 size [1] =
 14
 label = sturret_point3
@@ -34403,7 +34423,7 @@ points [1] =
 -7.66054993e+02
 pathType = 00000000
 name = AiPath
-sObject = 00000175
+sObject = 00000177
 size [1] =
 13
 label = sbase2_spawn4
@@ -34416,24 +34436,7 @@ points [1] =
 -1.20339001e+03
 pathType = 00000000
 name = AiPath
-sObject = 00000176
-size [1] =
-10
-label = srecy_drop
-pointCount [1] =
-2
-points [2] =
-  x [1] =
--5.18729004e+02
-  z [1] =
--1.26230005e+03
-  x [1] =
--5.13890015e+02
-  z [1] =
--1.27145996e+03
-pathType = 00000000
-name = AiPath
-sObject = 00000177
+sObject = 00000178
 size [1] =
 13
 label = bridge_check3
@@ -34444,19 +34447,6 @@ points [1] =
 7.53499023e+02
   z [1] =
 -1.45720993e+02
-pathType = 00000000
-name = AiPath
-sObject = 00000178
-size [1] =
-13
-label = sbase1_spawn4
-pointCount [1] =
-1
-points [1] =
-  x [1] =
-1.43222998e+03
-  z [1] =
--3.76351990e+02
 pathType = 00000000
 name = AiPath
 sObject = 00000179
@@ -34549,31 +34539,81 @@ pathType = 00000000
 name = AiPath
 sObject = 0000017D
 size [1] =
-11
-label = first_point
+12
+label = attack_path2
 pointCount [1] =
-1
-points [1] =
+6
+points [6] =
   x [1] =
-2.54648991e+01
+2.01599998e+01
   z [1] =
--4.77154999e+02
+-4.32476013e+02
+  x [1] =
+-1.57423996e+02
+  z [1] =
+-2.04822006e+02
+  x [1] =
+-2.68429993e+02
+  z [1] =
+-1.42016006e+02
+  x [1] =
+-3.03484985e+02
+  z [1] =
+-3.59753990e+01
+  x [1] =
+-3.38539001e+02
+  z [1] =
+9.08049011e+01
+  x [1] =
+-4.15950989e+02
+  z [1] =
+2.39785995e+02
 pathType = 00000000
 name = AiPath
 sObject = 0000017E
 size [1] =
-14
-label = sturret_point1
+10
+label = srecy_drop
+pointCount [1] =
+2
+points [2] =
+  x [1] =
+-5.18729004e+02
+  z [1] =
+-1.26230005e+03
+  x [1] =
+-5.13890015e+02
+  z [1] =
+-1.27145996e+03
+pathType = 00000000
+name = AiPath
+sObject = 0000017F
+size [1] =
+13
+label = sbase1_spawn3
 pointCount [1] =
 1
 points [1] =
   x [1] =
--5.68546021e+02
+1.41900000e+03
   z [1] =
--9.25244019e+02
+-3.55562988e+02
 pathType = 00000000
 name = AiPath
-sObject = 0000017F
+sObject = 00000180
+size [1] =
+13
+label = sbase1_spawn4
+pointCount [1] =
+1
+points [1] =
+  x [1] =
+1.43222998e+03
+  z [1] =
+-3.76351990e+02
+pathType = 00000000
+name = AiPath
+sObject = 00000181
 size [1] =
 12
 label = attack_path1
@@ -34606,7 +34646,7 @@ points [6] =
 1.63544006e+02
 pathType = 00000000
 name = AiPath
-sObject = 00000180
+sObject = 00000182
 size [1] =
 13
 label = bridge_center
@@ -34619,24 +34659,7 @@ points [1] =
 -4.11994995e+02
 pathType = 00000000
 name = AiPath
-sObject = 00000181
-size [1] =
-9
-label = edge_path
-pointCount [1] =
-2
-points [2] =
-  x [1] =
--1.11219995e+03
-  z [1] =
-9.92518005e+02
-  x [1] =
-1.63477002e+03
-  z [1] =
--1.77082996e+03
-pathType = 00000000
-name = AiPath
-sObject = 00000182
+sObject = 00000183
 size [1] =
 13
 label = sbase1_spawn6
@@ -34647,47 +34670,6 @@ points [1] =
 1.44885999e+03
   z [1] =
 -3.55941010e+02
-pathType = 00000000
-name = AiPath
-sObject = 00000183
-size [1] =
-10
-label = war_attack
-pointCount [1] =
-8
-points [8] =
-  x [1] =
-1.30193005e+03
-  z [1] =
--3.27765991e+02
-  x [1] =
-9.92736023e+02
-  z [1] =
--4.51411011e+02
-  x [1] =
-7.92351013e+02
-  z [1] =
--5.19216980e+02
-  x [1] =
-4.69437988e+02
-  z [1] =
--4.17109985e+02
-  x [1] =
-1.32893997e+02
-  z [1] =
--4.08583008e+02
-  x [1] =
--9.74150009e+01
-  z [1] =
--1.65990997e+02
-  x [1] =
--4.82717987e+02
-  z [1] =
--1.08399002e+02
-  x [1] =
--4.70424988e+02
-  z [1] =
-1.65376999e+02
 pathType = 00000000
 name = AiPath
 sObject = 00000184
@@ -34748,48 +34730,60 @@ pathType = 00000000
 name = AiPath
 sObject = 00000188
 size [1] =
-12
-label = attack_path2
+9
+label = edge_path
 pointCount [1] =
-6
-points [6] =
+2
+points [2] =
   x [1] =
-2.01599998e+01
+-1.11219995e+03
   z [1] =
--4.32476013e+02
+9.92518005e+02
   x [1] =
--1.57423996e+02
+1.63477002e+03
   z [1] =
--2.04822006e+02
-  x [1] =
--2.68429993e+02
-  z [1] =
--1.42016006e+02
-  x [1] =
--3.03484985e+02
-  z [1] =
--3.59753990e+01
-  x [1] =
--3.38539001e+02
-  z [1] =
-9.08049011e+01
-  x [1] =
--4.15950989e+02
-  z [1] =
-2.39785995e+02
+-1.77082996e+03
 pathType = 00000000
 name = AiPath
 sObject = 00000189
 size [1] =
-13
-label = sbase1_spawn3
+10
+label = war_attack
 pointCount [1] =
-1
-points [1] =
+8
+points [8] =
   x [1] =
-1.41900000e+03
+1.30193005e+03
   z [1] =
--3.55562988e+02
+-3.27765991e+02
+  x [1] =
+9.92736023e+02
+  z [1] =
+-4.51411011e+02
+  x [1] =
+7.92351013e+02
+  z [1] =
+-5.19216980e+02
+  x [1] =
+4.69437988e+02
+  z [1] =
+-4.17109985e+02
+  x [1] =
+1.32893997e+02
+  z [1] =
+-4.08583008e+02
+  x [1] =
+-9.74150009e+01
+  z [1] =
+-1.65990997e+02
+  x [1] =
+-4.82717987e+02
+  z [1] =
+-1.08399002e+02
+  x [1] =
+-4.70424988e+02
+  z [1] =
+1.65376999e+02
 pathType = 00000000
 name = AiPath
 sObject = 0000018A
@@ -34871,5 +34865,5 @@ ownerObj [1] =
 0
 ownerObj [1] =
 0
-PadData = 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+PadData = 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 PadData2 = 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

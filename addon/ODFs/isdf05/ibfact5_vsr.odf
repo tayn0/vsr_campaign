@@ -1,0 +1,33 @@
+[GameObjectClass]
+classLabel = "ibfact"
+
+scrapCost = 0
+
+scrapValue = 0
+
+maxHealth = 10000
+
+heatSignature = 0.1
+imageSignature = 4.0
+
+/////// PROVIDES ///////////////////
+
+provideCount = 3
+provideName2 = "ibfact5"
+provideName3 = "VIRTUAL_CLASS_FACTORY"
+
+////////////////////////////////////
+
+[BuildingClass]
+
+[FactoryClass]
+buildItem1 = "ivmbik5"
+buildItem2 = ""
+buildItem3 = ""
+buildItem4 = ""
+buildItem5 = ""
+buildItem6 = ""
+buildItem7 = ""
+buildItem8 = ""
+
+[Lod1]

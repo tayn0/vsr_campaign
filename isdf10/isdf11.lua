@@ -248,6 +248,22 @@ end
 
 function AddObject(h) --This function is called when an object appears in the game. --
 
+	if IsOdf(h, "fvscout") then
+		h = UnitToVSR(h, "fvscout_vsr", 0)
+	end
+	
+	if IsOdf(h, "fvscav") then
+		h = UnitToVSR(h, "fvscav_vsr", 0)
+	end
+	
+	if IsOdf(h, "fbscav") then
+		h = UnitToVSR(h, "fbscav_vsr", 0)
+	end
+
+	if IsOdf(h, "fvturr") or IsOdf(h, "fvturr13") then
+		h = UnitToVSR(h, "fvturr_vsr", 0)
+	end
+
 
 
    if (Mission.start_done) then
@@ -260,22 +276,22 @@ function AddObject(h) --This function is called when an object appears in the ga
 
  
         -- GUARDIAN
-    elseif ((not Mission.guard1_a) and (IsOdf(h,"fvturr"))) then
+    elseif ((not Mission.guard1_a) and (IsOdf(h,"fvturr_vsr"))) then
         
             Mission.guard1 = h
             Mission.guard1_a = true
         
-    elseif ((not Mission.guard2_a) and (IsOdf(h,"fvturr"))) then
+    elseif ((not Mission.guard2_a) and (IsOdf(h,"fvturr_vsr"))) then
         
             Mission.guard2 = h
             Mission.guard2_a = true
         
-    elseif ((not Mission.guard3_a) and (IsOdf(h,"fvturr"))) then
+    elseif ((not Mission.guard3_a) and (IsOdf(h,"fvturr_vsr"))) then
         
             Mission.guard3 = h
             Mission.guard3_a = true
         
-    elseif ((not Mission.guard4_a) and (IsOdf(h,"fvturr"))) then
+    elseif ((not Mission.guard4_a) and (IsOdf(h,"fvturr_vsr"))) then
         
             Mission.guard4 = h
             Mission.guard4_a = true
@@ -283,40 +299,40 @@ function AddObject(h) --This function is called when an object appears in the ga
         
  
     -- SCAVENGERS
-    elseif ((Mission.sscav1 == nil) and (IsOdf(h,"fvscav"))) then
+    elseif ((Mission.sscav1 == nil) and (IsOdf(h,"fvscav_vsr"))) then
         
             Mission.sscav1 = h
         
-    elseif ((Mission.sscav2 == nil) and (IsOdf(h,"fvscav"))) then
+    elseif ((Mission.sscav2 == nil) and (IsOdf(h,"fvscav_vsr"))) then
         
             Mission.sscav2 = h
         
  
     -- BUILDERS
-    elseif ((not Mission.builder1_a) and (IsOdf(h,"fvcons"))) then
+    elseif ((not Mission.builder1_a) and (IsOdf(h,"fvcons_vsr"))) then
         
             Mission.builder1 = h
             Mission.builder1_a = true
  
         
-    elseif ((not Mission.builder2_a) and (IsOdf(h,"fvcons"))) then
+    elseif ((not Mission.builder2_a) and (IsOdf(h,"fvcons_vsr"))) then
         
             Mission.builder2 = h
             Mission.builder2_a = true
         
  
     -- SPIRES
-    elseif ((not Mission.spire1_a) and (IsOdf(h,"fbspir"))) then
+    elseif ((not Mission.spire1_a) and (IsOdf(h,"fbspir_vsr"))) then
         
             Mission.spire1 = h
             Mission.spire1_a = true
         
-    elseif ((not Mission.spire2_a) and (IsOdf(h,"fbspir"))) then
+    elseif ((not Mission.spire2_a) and (IsOdf(h,"fbspir_vsr"))) then
         
             Mission.spire2 = h
             Mission.spire2_a = true
         
-    elseif ((not Mission.bridgespire_a) and (IsOdf(h,"fbspir"))) then
+    elseif ((not Mission.bridgespire_a) and (IsOdf(h,"fbspir_vsr"))) then
         
             Mission.bridgespire = h
             Mission.bridgespire_a = true
@@ -412,6 +428,8 @@ SetAutoGroupUnits(false)
 	
 	Mission.start_scout1 = UnitToVSR(Mission.start_scout1, "fvscout_vsr", 0)
 	Mission.start_scout2 = UnitToVSR(Mission.start_scout2, "fvscout_vsr", 0)
+	
+	
  
    
 end
@@ -420,15 +438,25 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	group = GetGroup(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
-	SetAsUser(h, PlayerTeam)
+		SetAsUser(h, PlayerTeam)
 	else
+
 	end
 
+	if label ~= nil then
+		SetLabel(h, label)
+	end
+	
+	SetGroup(h, group)
+
 	return h
+
 
 end
 

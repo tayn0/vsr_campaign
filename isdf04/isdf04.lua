@@ -353,11 +353,7 @@ function Start() --This function is called upon the first frame
 	Ally(4,1)
 	Ally(3,4)
 	Ally(4,3)
-	
 
-	PreloadODF("ivscav")
-	PreloadODF("ibscav")
-	PreloadODF("ibrecy")
 	
 --  handles
 	Mission.player = GetPlayerHandle()
@@ -465,6 +461,8 @@ function Start() --This function is called upon the first frame
 
 
 	SetTeamNum(Mission.armory, 0)
+	
+	Mission.recycler = UnitToVSR(Mission.recycler, "ivrecy4_vsr", 0)
 
 end
 
@@ -472,15 +470,22 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
-	SetAsUser(h, PlayerTeam)
+		SetAsUser(h, PlayerTeam)
 	else
+
+	end
+
+	if label ~= nil then
+		SetLabel(h, label)
 	end
 
 	return h
+
 
 end
 
@@ -488,56 +493,56 @@ function AddObject(h) --This function is called when an object appears in the ga
 
 if (Mission.start_done) then
 
-	if ((not Mission.recy_building) and (IsOdf(h,"ibrecy4"))) then
+	if ((not Mission.recy_building) and (IsOdf(h,"ibrecy4_vsr"))) then
 	
 		Mission.recycler = h
 		--SetTeamNum(Mission.recycler,0)
 		Mission.recy_building = true
 	
-	elseif ((not Mission.scav1_a) and (IsOdf(h,"ivscav") or IsOdf(h, "ivscav:1"))) then
+	elseif ((not Mission.scav1_a) and (IsOdf(h,"ivscav_vsr") or IsOdf(h, "ivscav_vsr:1"))) then
 	
 		Mission.scav1 = h
 		--SetTeamNum(Mission.scav1,1)
 		Mission.scav1_a = true
 	
-	elseif ((not Mission.scav2_a) and (IsOdf(h,"ivscav"))) then
+	elseif ((not Mission.scav2_a) and (IsOdf(h,"ivscav_vsr"))) then
 	
 		Mission.scav2 = h
 		--SetTeamNum(Mission.scav2,1)
 		Mission.scav2_a = true
 	
-	elseif ((not Mission.deployscav_a) and (IsOdf(h,"ibscav"))) then
+	elseif ((not Mission.deployscav_a) and (IsOdf(h,"ibscav_vsr"))) then
 	
 		Mission.scav1 = h
 		--SetTeamNum(Mission.scav1,0)
 		Mission.deployscav_a = true
 	
-	elseif ((Mission.turret1 == nil) and (IsOdf(h,"ivturr"))) then
+	elseif ((Mission.turret1 == nil) and (IsOdf(h,"ivturr_vsr"))) then
 	
 		Mission.turret1 = h
 		Mission.pause = GetTime() + 2.0
 		--SetTeamNum(Mission.turret1,1)
 		Mission.turret1_a = true
 	
-	elseif ((Mission.turret2 == nil) and (IsOdf(h,"ivturr"))) then
+	elseif ((Mission.turret2 == nil) and (IsOdf(h,"ivturr_vsr"))) then
 	
 		Mission.turret2 = h
 		--SetTeamNum(Mission.turret2,1)
 		Mission.turret2_a = true
 	
-	elseif ((Mission.turret3 == nil) and (IsOdf(h,"ivturr"))) then
+	elseif ((Mission.turret3 == nil) and (IsOdf(h,"ivturr_vsr"))) then
 	
 		Mission.turret3 = h
 		--SetTeamNum(Mission.turret3,1)
 		Mission.turret3_a = true
 	
-	elseif ((Mission.turret4 == nil) and (IsOdf(h,"ivturr"))) then
+	elseif ((Mission.turret4 == nil) and (IsOdf(h,"ivturr_vsr"))) then
 	
 		Mission.turret4 = h
 		--SetTeamNum(Mission.turret4,1)
 		Mission.turret4_a = true
 	
-	elseif ((Mission.turret5 == nil) and (IsOdf(h,"ivturr"))) then
+	elseif ((Mission.turret5 == nil) and (IsOdf(h,"ivturr_vsr"))) then
 	
 		Mission.turret5 = h
 		--SetTeamNum(Mission.turret5,1)
@@ -643,7 +648,7 @@ if (not Mission.ON_HOLD) then
 	
 		if (IsAround(Mission.recycler)) then
 		
-			if (IsOdf(Mission.recycler,"ivrecy4")) then
+			if (IsOdf(Mission.recycler,"ivrecy4_vsr")) then
 			
 				Mission.recy_building = false
 			
@@ -895,7 +900,7 @@ if (not Mission.ON_HOLD) then
 
 	-- I'm checking to see if the Mission.player looses his ship then
 
-	if ((IsOdf(Mission.player,"ivscout_vsr")) or (IsOdf(Mission.player,"ivtank_vsr")) or (IsOdf(Mission.player,"ivscav")) or (IsOdf(Mission.player,"ivturr"))) then
+	if ((IsOdf(Mission.player,"ivscout_vsr")) or (IsOdf(Mission.player,"ivtank_vsr")) or (IsOdf(Mission.player,"ivscav_vsr")) or (IsOdf(Mission.player,"ivturr_vsr"))) then
 	
 		Mission.player_on_foot = false
 		Mission.player_in_ship = true
@@ -1335,7 +1340,7 @@ if (not Mission.ON_HOLD) then
 
 			pos = GetTransform(Mission.recycler)
 			RemoveObject(Mission.recycler)
-			Mission.recycler = BuildObject("ibrecy4a",1,pos)
+			Mission.recycler = BuildObject("ibrecy4a_vsr",1,pos)
 
 		--Goto(Mission.scav1,"scav_point",0)
 		AddScrap(1,15)

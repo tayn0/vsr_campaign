@@ -165,27 +165,33 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	group = GetGroup(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
-	SetAsUser(h, PlayerTeam)
+		SetAsUser(h, PlayerTeam)
 	else
+
 	end
 
+	if label ~= nil then
+		SetLabel(h, label)
+	end
+	
+	SetGroup(h, group)
+
 	return h
+
 
 end
 
 
 function AddObject(h) --This function is called when an object appears in the game. --
 
-if IsOdf(h, "fvtank") then UnitToVSR(h, "fvtank_vsr", 0) 
-elseif IsOdf(h, "fvsent") then UnitToVSR(h, "fvsent_vsr", 0) 
+if IsOdf(h, "fvsent") then UnitToVSR(h, "fvsent_vsr", 0) 
 elseif IsOdf(h, "fvturr") then UnitToVSR(h, "fvturr_vsr", 0) 
-elseif IsOdf(h, "fbspir") then UnitToVSR(h, "fbspir_vsr", 0) 
-elseif IsOdf(h, "fvscout") then UnitToVSR(h, "fvscout_vsr", 0) 
-elseif IsOdf(h, "fvartl") then UnitToVSR(h, "fvartl_vsr", 0) 
 end
 
 end
@@ -250,8 +256,8 @@ function missionCode() --
 
 
 -- These turrets block the path to the south
-    Mission.turret1 = BuildObject("fvturr",2,"turret_1")
-		Mission.turret2 = BuildObject("fvturr",2,"turret_2")
+    Mission.turret1 = BuildObject("fvturr_vsr",2,"turret_1")
+		Mission.turret2 = BuildObject("fvturr_vsr",2,"turret_2")
 
 -- These jaks inhabit the swamp just west of the starting point
 		Mission.jak1 = BuildObject("mcjak01",0,"jak_1")
@@ -265,7 +271,7 @@ function missionCode() --
 		SetIndependence(Mission.jak3,1)
 
 -- This spire guards the entrance to the Scion base
-    Mission.espir1 = BuildObject("fbspir",2,"espir_1")
+    Mission.espir1 = BuildObject("fbspir_vsr",2,"espir_1")
  --   SetIndependence(Mission.espir1,0)
 
 -- These 3 ships patrol different areas
@@ -305,7 +311,7 @@ function missionCode() --
 		BuildObject("aprepa",0,"health_2")
 		BuildObject("apammo",0,"ammo_2")
 		SetAnimation(Mission.shab,"speak")
-		Mission.fvartl = BuildObject("fvartl",2,"fvartl")
+		Mission.fvartl = BuildObject("fvartl_vsr",2,"fvartl")
 		Mission.start_done = true
 		
 

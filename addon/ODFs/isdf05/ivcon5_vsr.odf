@@ -1,0 +1,25 @@
+[GameObjectClass]
+classLabel = "ivcons"
+
+scrapCost = 0
+buildTime = 2.0
+
+aiAddHealth = 1000
+
+provideCount = 3
+provideName1 = "Builder"
+provideName2 = "ivconsB"
+provideName3 = "ivcons"
+
+isSingle = 1
+
+[CraftClass]
+
+[HoverCraftClass]
+
+[DeployableClass]
+
+[ConstructionRigClass]
+buildItem1 = "ibpge5"
+buildItem2 = "ibfact5_vsr"
+buildItem3 = "ibcbu5"

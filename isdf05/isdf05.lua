@@ -91,6 +91,7 @@ local Mission = {
 	lurker3,
 	lurker4,
 	gun1,
+	scav_comp,
 
 	scav1,
 	scav2,
@@ -134,22 +135,14 @@ function Start() --This function is called upon the first frame
 	--  handles
 	Mission.player = GetPlayerHandle()
 	Mission.condor1 = GetHandle("unnamed_ivpdrop2")
-	--	player_ship = GetHandle("player_ship")
-	--	recycler = GetHandle("unnamed_ivrec5")
-	--	wingman1 = GetHandle("wingman1")
 	Mission.off_power = GetHandle("off_power")
 	Mission.off_service = GetHandle("off_service")
 	Mission.teleportal = GetHandle("unnamed_ibtele")
-	--	empty_scav1 = GetHandle("empty_scav1")
-	--	empty_scav2 = GetHandle("empty_scav2")
-	--	empty_scav3 = GetHandle("empty_scav3")
-	--	empty_construct1 = GetHandle("empty_construct1")
-	--	empty_construct2 = GetHandle("empty_construct2")
-	--	empty_construct3 = GetHandle("empty_construct3")
-	--	recycler2 = GetHandle("recycler2")
+
 
 	Mission.pool1 = GetHandle("pool1")
 	Mission.pool2 = GetHandle("pool2")
+	
 
 	Mission.sturret1 = GetHandle("sturret1")
 	Mission.sturret2 = GetHandle("sturret2")
@@ -175,12 +168,27 @@ function Start() --This function is called upon the first frame
 	Mission.cbunker = nil
 	
 	Mission.player = UnitToVSR(Mission.player, "ivscout_vsr", 1)
+	
+	Mission.sturret1 = UnitToVSR(Mission.sturret1, "fvturr_vsr", 0)
+	Mission.sturret2 = UnitToVSR(Mission.sturret2, "fvturr_vsr", 0)
+	Mission.sturret3 = UnitToVSR(Mission.sturret3, "fvturr_vsr", 0)
+	Mission.sturret4 = UnitToVSR(Mission.sturret4, "fvturr_vsr", 0)
+	Mission.sturret5 = UnitToVSR(Mission.sturret5, "fvturr_vsr", 0)
+	Mission.sturret6 = UnitToVSR(Mission.sturret6, "fvturr_vsr", 0)
+	
+	Mission.ivscav1 = UnitToVSR(GetHandle("ivscav1"), "ivscav_vsr", 0)
+	RemovePilot(Mission.ivscav1)
+	
+	Mission.ivscav2 = UnitToVSR(GetHandle("ivscav2"), "ivscav_vsr", 0)
+	RemovePilot(Mission.ivscav2)
 
 	GiveWeapon(Mission.player,"gproxminvsr")
 	
-	PreloadODF("fvsent")
-	PreloadODF("ivtank")
-	PreloadODF("fvtank")
+	Mission.scav_comp = UnitToVSR(GetHandle("scav3"), "ivscav_vsr", 0)
+	
+	PreloadODF("fvsent_vsr")
+	PreloadODF("ivtank_vsr")
+	PreloadODF("fvtank_vsr")
    
 end
 
@@ -188,28 +196,29 @@ function UnitToVSR(h, odf, player)
 
 	PlayerTeam = GetTeamNum(h)
 	xfrm = GetTransform(h)
+	label = GetLabel(h)
 	RemoveObject(h)
 	h = BuildObject(odf, PlayerTeam, xfrm)
 
 	if player == 1 then
-	SetAsUser(h, PlayerTeam)
+		SetAsUser(h, PlayerTeam)
 	else
+
+	end
+
+	if label ~= nil then
+		SetLabel(h, label)
 	end
 
 	return h
+
 
 end
 
 function AddObject(h) --This function is called when an object appears in the game. --
 
-	if IsOdf(h, "ivscout:1") then	
-		temp = GetGroup(h)
-		h = UnitToVSR(h, "ivscout_vsr", 0)	
-		Goto(h, GetHandle("autonav"), 0)
-		SetGroup(h, temp)
-	end
 
-	if (IsOdf(h,"ibrec5")) then
+	if (IsOdf(h,"ibrec5_vsr")) then
 	
 		Mission.recy=h
 	end
@@ -236,30 +245,30 @@ function AddObject(h) --This function is called when an object appears in the ga
 	end
 	if (Mission.start_done) then
 	
-		if ((Mission.scav1  == nil) and (IsOdf(h,"ivscav"))) then
+		if ((Mission.scav1  == nil) and (IsOdf(h,"ivscav_vsr")) or IsOdf(h, "ivscav_vsr:1")) then
 		
 			Mission.scav1 = h
 		
-		elseif ((Mission.scav2 == nil) and (IsOdf(h,"ivscav"))) then
+		elseif ((Mission.scav2 == nil) and (IsOdf(h,"ivscav_vsr:1"))) then
 		
 			Mission.scav2 = h
 		
-		elseif ((scav3==nil) and (IsOdf(h,"ivscav"))) then
+		elseif ((Mission.scav3==nil) and (IsOdf(h,"ivscav_vsr:1"))) then
 		
-			scav3=h
+			Mission.scav3=h
 		
-		elseif ((scav4==nil) and (IsOdf(h,"ivscav"))) then
+		elseif ((scav4==nil) and (IsOdf(h,"ivscav_vsr:1"))) then
 		
 			scav4=h
 		
-		elseif (IsOdf(h,"ibscav"))  then
+		elseif (IsOdf(h,"ibscav_vsr"))  then
 		
 			if (not Mission.scav1_deployed) then
-			
+				PrintConsoleMessage("scav1 deployed")
 				Mission.scav1_deployed=true
 			
 			else
-			
+				PrintConsoleMessage("scav2 deployed")
 				Mission.scav2_deployed=true
 			end
 		end
@@ -276,6 +285,9 @@ end
 
 
 function DeleteObject(h) --This function is called when an object is deleted in the game.
+
+
+
 end
 
 function InitialSetup()
@@ -323,13 +335,13 @@ function missionCode() --
 		If it looks safe, deploy the recycler.  
 		]]
 		Mission.shabayev = BuildObject("ivtan5",1,"shab_start")--"patrol_east")
-		Mission.constructor = BuildObject("ivcon5",1,"spawn_constructor")
+		Mission.constructor = BuildObject("ivcon5_vsr",1,"spawn_constructor")
 		Stop(Mission.constructor,1)
 
-		scav_comp= GetHandle("scav3")
-		SetGroup(scav_comp,-1)
+		
+		SetGroup(Mission.scav_comp,-1)
 		temppool=GetHandle("poolx")
-		Goto(scav_comp,temppool,1)
+		Goto(Mission.scav_comp,temppool,1)
 		--	SetAIP("isdf05.aip",3)  -- build stuff
 		AudioMessage("isdf0500.wav")
 		SetObjectiveOn(Mission.shabayev)
@@ -340,16 +352,13 @@ function missionCode() --
 		Mission.patrol_phase=true
 		Mission.start_done = true
 
-		tempscav=GetHandle("ivscav1")
-		KillPilot(tempscav)
-		tempscav=GetHandle("ivscav2")
-		KillPilot(tempscav)
+
 		--		Handle fv=BuildObject("fvarch",2,"scrap_field1")
 		--		SetSkill(fv,3)
 		SetSkill(Mission.shabayev,3)
 		--		Patrol(Mission.shabayev,"patrol1",1)
 		--		Attack(Mission.shabayev,fv,1)
-		Mission.recy=BuildObject("ivrec5",1,"recy_start")
+		Mission.recy=BuildObject("ivrec5_vsr",1,"recy_start")
 		--		Goto(Mission.recy,"recy_deploy")
 		Dropoff(Mission.recy, "recy_deploy")
 		Follow(Mission.shabayev,Mission.recy,1)
@@ -677,7 +686,7 @@ function missionCode() --
 			Here are some mortar bikes.  
 			]]
 
-			Build(Mission.constructor,"ibfact5",1)
+			Build(Mission.constructor,"ibfact5_vsr",1)
 			Mission.factory=true
 
 			audmsg=AudioMessage("isdf0527.wav")
@@ -706,7 +715,7 @@ function missionCode() --
 		
 
 	elseif (Mission.mission_state == 6) then 
-	PrintConsoleMessage("missionstate 6")
+	--PrintConsoleMessage("missionstate 6")
 		--[[
 		First check to see if you blew up then
 		Mission.sturret1-4
